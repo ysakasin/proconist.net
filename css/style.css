@@ -52,6 +52,10 @@ li {
   margin-bottom: 50px;
 }
 
+.no-margin {
+  margin-bottom: 0px;
+}
+
 /* Icons
 --------------------------------------------------------- */
 /* ----- Github ----- */
@@ -76,7 +80,7 @@ li {
 /* Logo
 --------------------------------------------------------- */
 .logo {
-  width: 468px;
+  max-width: 468px;
 }
 
 .description {
@@ -150,6 +154,11 @@ li {
 --------------------------------------------------------- */
 .competition-section-content-title {
   font-size: 25px;
+}
+
+.github-link,
+.twitter-link {
+  font-size: 30px;
 }
 
 /* Footer
