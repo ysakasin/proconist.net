@@ -20,7 +20,7 @@ Proconist.net - style.css
 --------------------------------------------------------- */
 html, body {
   font-size: 20px; ,Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Arial, Meiryo, sans-ser
-  font-family: "Lato", "Helvetica Neue", Helvetica,if;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
   height: 100%;
   background-color:#f5f5f5;
 }
