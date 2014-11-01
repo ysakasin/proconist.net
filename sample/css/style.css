@@ -74,6 +74,30 @@ li {
   color: #55acee;
 }
 
+/* ----- SlideShare ----- */
+.fa-slideshare,
+.slideshare-icon,
+.slideshare-icon:hover,
+.slideshare-icon:visited {
+  color: #07a;
+}
+
+/* ----- Blog etc... ----- */
+.fa-bitbucket,
+.bitbucket-icon,
+.bitbucket-icon:hover,
+.bitbucket-icon:visited {
+  color: #205081;
+}
+
+/* ----- Blog etc... ----- */
+.fa-globe,
+.other-icon,
+.other-icon:hover,
+.other-icon:visited {
+  color: #00a7a9;
+}
+
 /* =========================================================
  Each settings
 ========================================================= */
@@ -156,8 +180,15 @@ li {
   font-size: 25px;
 }
 
+.competition-section-content-title .twitter-icon {
+  position: absolute;
+  right: 50px;
+}
+
 .github-link,
-.twitter-link {
+.slideshare-link,
+.other-link,
+.bitbucket-link {
   font-size: 30px;
 }
 
