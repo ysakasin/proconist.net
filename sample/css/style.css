@@ -1,0 +1,176 @@
+/*------------------------------------
+
+Proconist.net - style.css
+
+  Site URL: http://proconist.net/
+  File name: style.css (http://proconist.net/style.css)
+  Summary: additional styles
+  Created: 2014-10-30
+  Last update: 2014-10-30 by Ryosuke hagihara
+  Author: Proconist.net 運営委員会
+  Copyright: &copy; 2014 Proconist.net 運営委員会
+
+------------------------------------*/
+
+/* =========================================================
+ Common settings
+========================================================= */
+
+/* Body
+--------------------------------------------------------- */
+html, body {
+  font-size: 20px; ,Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Arial, Meiryo, sans-ser
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: 100%;
+  background-color:#f5f5f5;
+}
+
+/* h1-h6
+--------------------------------------------------------- */
+h3 {
+  font-size: 35px;
+  border-bottom: solid 3px #2c3e50;
+}
+
+/* Itemize
+--------------------------------------------------------- */
+li {
+  margin-left:0px;
+  list-style-type: none;
+}
+
+/* Container
+--------------------------------------------------------- */
+.container {
+  height: auto;
+  min-height:100%;
+}
+
+/* Row
+--------------------------------------------------------- */
+.row {
+  margin-bottom: 50px;
+}
+
+.no-margin {
+  margin-bottom: 0px;
+}
+
+/* Icons
+--------------------------------------------------------- */
+/* ----- Github ----- */
+.fa-github,
+.github-icon,
+.github-icon:hover,
+.github-icon:visited {
+  color: #333;
+}
+
+/* ----- Twitter ----- */
+.fa-twitter,
+.twitter-icon,
+.twitter-icon:hover,
+.twitter-icon:visited {
+  color: #55acee;
+}
+
+/* =========================================================
+ Each settings
+========================================================= */
+/* Logo
+--------------------------------------------------------- */
+.logo {
+  max-width: 468px;
+}
+
+.description {
+  position: relative;
+  top: 60px;
+}
+
+/* Navbar
+--------------------------------------------------------- */
+/* ----- Centering ----- */
+@media (min-width: 768px){
+  .navbar-nav{
+      margin: 0 auto;
+      display: table;
+      table-layout: fixed;
+      float:none;
+  }
+}
+
+/* Change log
+--------------------------------------------------------- */
+/* ----- scroll, border ----- */
+.change-log {
+  height: 240px;
+  overflow-y: scroll;
+  margin-right: 0;
+  margin-left: 0;
+  background-color: #fff;
+  border-radius: 4px 4px 0 0;
+  padding: 25px 15px 15px;
+  border-color: #e5e5e5 #eee #eee;
+  border-style: solid;
+  border-width: 1px 0;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+}
+
+/* Newest Entry
+--------------------------------------------------------- */
+.newest-entry-contents {
+  text-align: center;
+}
+
+.newest-entry a {
+  width: 210px;
+  height: 210px;
+}
+
+.newest-entry img {
+  text-align: center;
+}
+
+.newest-entry p {
+  text-align: center;
+  width: 100%;
+}
+
+/* About Contest
+--------------------------------------------------------- */
+/* ----- scroll, border ----- */
+.about-contest h3 {
+  width: 100%;
+}
+
+.about-contest h3 span {
+  font-size: 20px !important;
+  color: #666 !important;
+  margin-left: 20px;
+}
+
+/* Competition Section
+--------------------------------------------------------- */
+.competition-section-content-title {
+  font-size: 25px;
+}
+
+.github-link,
+.twitter-link {
+  font-size: 30px;
+}
+
+/* Footer
+--------------------------------------------------------- */
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+/* ----- Copyright ----- */
+.copyright {
+  text-align: center;
+}
