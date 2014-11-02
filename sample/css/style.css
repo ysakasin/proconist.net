@@ -6,9 +6,9 @@ Proconist.net - style.css
   File name: style.css (http://proconist.net/style.css)
   Summary: additional styles
   Created: 2014-10-30
-  Last update: 2014-10-30 by Ryosuke hagihara
+  Last update: 2014-11-02 by Ryosuke hagihara
   Author: Proconist.net 運営委員会
-  Copyright: &copy; 2014 Proconist.net 運営委員会
+  Copyright: &copy; 2014 Proconist.net operators
 
 ------------------------------------*/
 
@@ -19,18 +19,19 @@ Proconist.net - style.css
 /* Body
 --------------------------------------------------------- */
 html, body {
-  font-size: 20px; ,Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Arial, Meiryo, sans-ser
-  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Arial, sans-serif;
   height: 100%;
   background-color:#f5f5f5;
 }
 
 /* h1-h6
 --------------------------------------------------------- */
-h3 {
-  font-size: 35px;
+h2 {
+  font-size: 32px;
   border-bottom: solid 3px #2c3e50;
 }
+
 
 /* Itemize
 --------------------------------------------------------- */
@@ -74,6 +75,30 @@ li {
   color: #55acee;
 }
 
+/* ----- SlideShare ----- */
+.fa-slideshare,
+.slideshare-icon,
+.slideshare-icon:hover,
+.slideshare-icon:visited {
+  color: #07a;
+}
+
+/* ----- Blog etc... ----- */
+.fa-bitbucket,
+.bitbucket-icon,
+.bitbucket-icon:hover,
+.bitbucket-icon:visited {
+  color: #205081;
+}
+
+/* ----- Blog etc... ----- */
+.fa-globe,
+.other-icon,
+.other-icon:hover,
+.other-icon:visited {
+  color: #00a7a9;
+}
+
 /* =========================================================
  Each settings
 ========================================================= */
@@ -81,6 +106,7 @@ li {
 --------------------------------------------------------- */
 .logo {
   max-width: 468px;
+  margin-top: 20px;
 }
 
 .description {
@@ -150,14 +176,47 @@ li {
   margin-left: 20px;
 }
 
-/* Competition Section
+.contest-heading {
+  border-bottom: solid 3px #2c3e50;
+  margin-top: 21px;
+  margin-bottom: 10.5px;
+}
+
+.contest-heading h1 {
+  display: inline;
+  padding-right: 1em;
+}
+
+/* Sections
 --------------------------------------------------------- */
-.competition-section-content-title {
-  font-size: 25px;
+.competition-section,
+.examination-section,
+.freedom-section {
+  margin-left: 5px;
+}
+
+.section-heading {
+  overflow: hidden;
+}
+.section-content-title {
+  display: inline;
+  font-size: 30px;
+}
+.section-content-sns {
+  float: right;
+  padding-right: 20px;
+}
+
+.section-content-title .twitter-icon {
+  position: absolute;
+  right: 50px;
+  font-size: 20px;
 }
 
 .github-link,
-.twitter-link {
+.slideshare-link,
+.other-link,
+.bitbucket-link {
   font-size: 30px;
 }
 
