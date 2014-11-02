@@ -189,11 +189,15 @@ li {
 }
 
 .section-heading {
-  height: 50px;
+  overflow: hidden;
 }
 .section-content-title {
+  display: inline;
   font-size: 30px;
-  margin-left: -20px;
+}
+.section-content-sns {
+  float: right;
+  padding-right: 20px;
 }
 
 .section-content-title .twitter-icon {
