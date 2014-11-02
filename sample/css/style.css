@@ -126,6 +126,16 @@ li {
   }
 }
 
+/* ----- Menu ----- */
+.navbar-brand {
+  display: none;
+}
+@media (max-width: 767px){
+  .navbar-brand{
+      display: block;
+  }
+}
+
 /* Change log
 --------------------------------------------------------- */
 /* ----- scroll, border ----- */
