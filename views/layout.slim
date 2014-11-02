@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title =@title
+    link rel="stylesheet" href="/css/bootstrap.css"
+    link rel="stylesheet" href="/css/style.css"
+    link rel="stylesheet" href="/css/font-awesome.css"
+
+  body
+    div.container
+      header
+        div.row
+          p.col-md-5
+            a href="/"
+              img.logo src="/img/logo.svg" alt="Proconist.net"
+          p.col-md-7
+            span.description プロコンでアップスパイラルを生み出す
+        div.row.head-nav
+          nav.navber.navbar-default role="navigation"
+            div.container-fluid
+              div.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                  li
+                    a href="#" 出場作品
+                  li
+                    a href="#" 特集
+                  li
+                    a href="#" 情報提供
+                  li
+                    a href="#" 趣旨
+
+      == yield
+
+    footer
+      div.container
+        ul.footer-links
+          li
+        div.copyright &copy; #{Time.now.year} Proconist.net 運営委員会
+
+    script src="/js/bootstrap.js"
