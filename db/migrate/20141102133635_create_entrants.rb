@@ -5,8 +5,8 @@ class CreateEntrants < ActiveRecord::Migration
       t.string  :school, :null => false
       t.string  :production, :null => false
       t.integer :section, :null => false
-      t.string  :media
-      t.string  :media_urls
+      t.string  :media, :default => ''
+      t.string  :media_urls, :default => ''
       t.integer :sns
       t.string  :name_in_sns
       t.string  :sns_url
