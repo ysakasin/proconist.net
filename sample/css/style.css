@@ -260,13 +260,6 @@ li {
   border-radius: 100px;
 }
 
-.action-bg .fa {
-  color: #fff;
-  position: absolute;
-  left: 150px;
-  top: 52px;
-}
-
 .action-read .action-bg {
   background-color: #F3C759;
 }
@@ -283,6 +276,36 @@ li {
   font-size: 100px;
 }
 
+.action-bg .fa {
+  color: #fff;
+  position: absolute;
+  left: 150px;
+  top: 52px;
+}
+
+@media (max-width: 1260px){
+  .action-bg{
+      background-color: transparent !important;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .actions .fa {
+    color: #333;
+    position: absolute;
+    left: 35%;
+  }
+}
+
+@media (max-width: 1080px){
+  .actions .fa {
+    color: #333;
+    position: absolute;
+    left: 43%;
+  }
+}
 
 .action-do,
 .action-description {
