@@ -260,6 +260,13 @@ li {
   border-radius: 100px;
 }
 
+.action-bg .fa {
+  color: #fff;
+  position: absolute;
+  left: 150px;
+  top: 52px;
+}
+
 .action-read .action-bg {
   background-color: #F3C759;
 }
