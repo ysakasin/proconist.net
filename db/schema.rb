@@ -13,13 +13,17 @@
 
 ActiveRecord::Schema.define(version: 20141102133635) do
 
-  create_table "entrantsm", id: false, force: true do |t|
-    t.integer "id"
-    t.string  "school",                   null: false
-    t.string  "production",               null: false
-    t.integer "section",                  null: false
-    t.string  "media",       default: ""
-    t.string  "media_urls",  default: ""
+  create_table "entrants", force: true do |t|
+    t.integer "contest",      null: false
+    t.integer "section",      null: false
+    t.integer "registry_num", null: false
+    t.string  "school",       null: false
+    t.string  "production",   null: false
+    t.integer "code"
+    t.string  "code_url"
+    t.integer "slide"
+    t.string  "slide_url"
+    t.string  "site_url"
     t.integer "sns"
     t.string  "name_in_sns"
     t.string  "sns_url"

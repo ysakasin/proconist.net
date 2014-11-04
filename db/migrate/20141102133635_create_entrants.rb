@@ -1,12 +1,16 @@
 class CreateEntrants < ActiveRecord::Migration
   def change
-    create_table :entrantsm, :id => false do |t|
-      t.integer :id
+    create_table :entrants do |t|
+      t.integer :contest, :null => false
+      t.integer :section, :null => false
+      t.integer :registry_num, :null => false
       t.string  :school, :null => false
       t.string  :production, :null => false
-      t.integer :section, :null => false
-      t.string  :media, :default => ''
-      t.string  :media_urls, :default => ''
+      t.integer :code
+      t.string  :code_url
+      t.integer :slide
+      t.string  :slide_url
+      t.string  :site_url
       t.integer :sns
       t.string  :name_in_sns
       t.string  :sns_url
