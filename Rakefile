@@ -4,12 +4,9 @@ require './model.rb'
 
 task :add do
   entrant = Entrant.new
-  columns = Entrant.column_names
-  columns.each do |name|
+  Entrant.column_names.each do |name|
     next if name == 'id'
-    if Entrant::ENUMS.include?(name)
-      print "#{Entrant.send(name.pluralize)}\n"
-    end
+    print "#{Entrant.send(name.pluralize)}\n"　if Entrant::ENUMS.include?(name)
     print "#{name}:"
     val = STDIN.gets.chomp
     next if val.blank?
