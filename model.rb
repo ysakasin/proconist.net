@@ -9,16 +9,4 @@ class Entrant < ActiveRecord::Base
   enum sns: {twitter: 1, facebook: 2, other_sns: 0}
 
   ENUMS = ['section', 'code', 'slide', 'sns']
-
-  def arr_media
-    media.split(',')
-  end
-
-  def arr_media_urls
-    media_urls.split(',')
-  end
-
-  def media_list
-    arr_media.zip(arr_media_urls)
-  end
 end
