@@ -10,3 +10,6 @@ class Entrant < ActiveRecord::Base
 
   ENUMS = ['section', 'code', 'slide', 'sns']
 end
+
+class Contest < ActiveRecord::Base
+end

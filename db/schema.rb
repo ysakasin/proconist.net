@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102133635) do
+ActiveRecord::Schema.define(version: 20141105023244) do
+
+  create_table "contests", force: true do |t|
+    t.string "name",              null: false
+    t.string "date",              null: false
+    t.string "place",             null: false
+    t.string "competition_title", null: false
+    t.string "themed_title",      null: false
+  end
 
   create_table "entrants", force: true do |t|
     t.integer "contest",      null: false
