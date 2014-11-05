@@ -6,7 +6,7 @@ task :add do
   entrant = Entrant.new
   Entrant.column_names.each do |name|
     next if name == 'id'
-    print "#{Entrant.send(name.pluralize)}\n"　if Entrant::ENUMS.include?(name)
+    print "#{Entrant.send(name.pluralize)}\n" if Entrant::ENUMS.include?(name)
     print "#{name}:"
     val = STDIN.gets.chomp
     next if val.blank?
