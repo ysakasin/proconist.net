@@ -15,6 +15,7 @@
   <meta property="og:image" content="http://proconist.net/img/logo.jpg">
   <meta property="og:site_name" content="Proconist.net">
   <meta property="og:email" content="webmaster@proconist.net">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/font-awesome.css">
@@ -26,10 +27,20 @@
         <p class="col-md-5"><a href="//proconist.net/"><img src="./img/logo.svg" alt="Proconist.net" class="logo"></a></p>
         <p class="col-md-7"><span class="description">プロコンでアップスパイラルを生み出す</span></p>
       </div>
-      <div class="row head-nav">
+      <div class="row">
         <nav class="navbar navbar-default" role="navigation">
           <div class="container-fluid">
-            <div class="collapse navbar-collapse">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <span class="navbar-brand" href="#">Menu</span>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                 <li><a href="#">出場作品</a></li>
                 <li><a href="#">特集</a></li>
@@ -169,6 +180,11 @@
       <div class="copyright">&copy; 2014 Proconist.net 運営委員会</div>
     </div>
   </footer>
-  <script src="js/bootstrap.js"></script>
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <!--
+   実環境ではCDNを利用
+   <script src="//code.jquery.com/jquery-2.1.1.min.js">
+   -->
+  <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

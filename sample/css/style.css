@@ -15,7 +15,6 @@ Proconist.net - style.css
 /* =========================================================
  Common settings
 ========================================================= */
-
 /* Body
 --------------------------------------------------------- */
 html, body {
@@ -126,6 +125,16 @@ li {
   }
 }
 
+/* ----- Menu ----- */
+.navbar-brand {
+  display: none;
+}
+@media (max-width: 767px){
+  .navbar-brand{
+      display: block;
+  }
+}
+
 /* Change log
 --------------------------------------------------------- */
 /* ----- scroll, border ----- */
@@ -217,6 +226,93 @@ li {
 .slideshare-link,
 .other-link,
 .bitbucket-link {
+  font-size: 30px;
+}
+
+/* Member
+--------------------------------------------------------- */
+.member-img {
+  width: 150px;
+}
+
+.member-name {
+  font-size: 30px;
+}
+
+.member-sns {
+ margin-left: 10px;
+}
+
+.member-sns a {
+  margin-left: 10px;
+}
+
+/* Actions
+--------------------------------------------------------- */
+.actions {
+  width: 100%;
+}
+
+.action-bg {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 100px;
+}
+
+.action-read .action-bg {
+  background-color: #F3C759;
+}
+
+.action-entry .action-bg {
+  background-color: #FFEE55;
+}
+
+.action-share .action-bg {
+  background-color: #3261AB;
+}
+
+.actions .fa {
+  font-size: 100px;
+}
+
+.action-bg .fa {
+  color: #fff;
+  position: absolute;
+  left: 150px;
+  top: 52px;
+}
+
+@media (max-width: 1260px){
+  .action-bg{
+      background-color: transparent !important;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .actions .fa {
+    color: #333;
+    position: absolute;
+    left: 35%;
+  }
+}
+
+@media (max-width: 1080px){
+  .actions .fa {
+    color: #333;
+    position: absolute;
+    left: 43%;
+  }
+}
+
+.action-do,
+.action-description {
+  text-align: center;
+}
+
+.action-do {
   font-size: 30px;
 }
 
