@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/*!------------------------------------
+
+Proconist.net - style.css
+
+  Site URL: http://proconist.net/
+  File name: style.css (http://proconist.net/style.css)
+  Summary: additional styles
+  Created: 2014-10-30
+  Last update: 2014-11-02 by Ryosuke hagihara
+  Author: Proconist.net 運営委員会
+  Copyright: &copy; 2014 Proconist.net operators
+
+------------------------------------*/
+
+@import "compass";
+@import "compass/css3";
+
+@import "bootstrap-override";
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+$text-color: #2c3e50;
+
+.logo {
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	text-decoration: none;
+	outline: none;
+	letter-spacing: 1px;
+	background: none;
+	border: none;
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		outline: none;
+		border: none;
+		background: none;
+	}
+}
+
+.title {
+	margin: 1em auto;
+	h1 {
+		display: inline;
+		margin: 0;
+		padding: 0;
+		font-size: 4em;
+		.logo {
+			font-weight: 300;
+			color: lighten($text-color, 20%)
+		}
+	}
+	span.description {
+		display: inline-block;
+		margin-right: 1em;
+		font-size: 1.2em;
+	}
+}
+
+.about {
+	&.jumbotron {
+		h2 {
+			margin-top: 0;
+		}
+	}
+}
+
+footer {
+
+}

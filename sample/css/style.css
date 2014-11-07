@@ -1,4 +1,5 @@
-/*------------------------------------
+@charset "UTF-8";
+/*!------------------------------------
 
 Proconist.net - style.css
 
@@ -11,321 +12,108 @@ Proconist.net - style.css
   Copyright: &copy; 2014 Proconist.net operators
 
 ------------------------------------*/
-
-/* =========================================================
- Common settings
-========================================================= */
-/* Body
---------------------------------------------------------- */
-html, body {
-  font-size: 20px;
-  font-family: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Arial, sans-serif;
-  height: 100%;
-  background-color:#f5f5f5;
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+/* line 3, ../scss/_bootstrap-override.scss */
+body {
+  font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
-/* h1-h6
---------------------------------------------------------- */
-h2 {
-  font-size: 32px;
-  border-bottom: solid 3px #2c3e50;
+/* line 7, ../scss/_bootstrap-override.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
-
-/* Itemize
---------------------------------------------------------- */
-li {
-  margin-left:0px;
-  list-style-type: none;
+/* line 11, ../scss/_bootstrap-override.scss */
+body {
+  background-color: #f5f5f5;
 }
 
-/* Container
---------------------------------------------------------- */
-.container {
-  height: auto;
-  min-height:100%;
+/* line 17, ../scss/_bootstrap-override.scss */
+.navbar-nav.nav-justified > li {
+  float: none;
 }
 
-/* Row
---------------------------------------------------------- */
-.row {
-  margin-bottom: 50px;
+/* line 24, ../scss/_bootstrap-override.scss */
+.panel .carousel {
+  margin: -15px -15px 15px;
 }
 
-.no-margin {
-  margin-bottom: 0px;
+/* line 31, ../scss/_bootstrap-override.scss */
+.carousel .carousel-control.right, .carousel .carousel-control.left {
+  background: none;
+}
+/* line 35, ../scss/_bootstrap-override.scss */
+.carousel .carousel-indicators {
+  bottom: 0;
+}
+/* line 38, ../scss/_bootstrap-override.scss */
+.carousel .carousel-caption {
+  padding-bottom: 0;
 }
 
-/* Icons
---------------------------------------------------------- */
-/* ----- Github ----- */
-.fa-github,
-.github-icon,
-.github-icon:hover,
-.github-icon:visited {
-  color: #333;
-}
-
-/* ----- Twitter ----- */
-.fa-twitter,
-.twitter-icon,
-.twitter-icon:hover,
-.twitter-icon:visited {
-  color: #55acee;
-}
-
-/* ----- SlideShare ----- */
-.fa-slideshare,
-.slideshare-icon,
-.slideshare-icon:hover,
-.slideshare-icon:visited {
-  color: #07a;
-}
-
-/* ----- Blog etc... ----- */
-.fa-bitbucket,
-.bitbucket-icon,
-.bitbucket-icon:hover,
-.bitbucket-icon:visited {
-  color: #205081;
-}
-
-/* ----- Blog etc... ----- */
-.fa-globe,
-.other-icon,
-.other-icon:hover,
-.other-icon:visited {
-  color: #00a7a9;
-}
-
-/* =========================================================
- Each settings
-========================================================= */
-/* Logo
---------------------------------------------------------- */
-.logo {
-  max-width: 468px;
-  margin-top: 20px;
-}
-
-.description {
+/* Sticky footer styles
+ * http://getbootstrap.com/examples/sticky-footer/
+-------------------------------------------------- */
+/* line 47, ../scss/_bootstrap-override.scss */
+html {
   position: relative;
-  top: 60px;
+  min-height: 100%;
 }
 
-/* Navbar
---------------------------------------------------------- */
-/* ----- Centering ----- */
-@media (min-width: 768px){
-  .navbar-nav{
-      margin: 0 auto;
-      display: table;
-      table-layout: fixed;
-      float:none;
-  }
+/* line 51, ../scss/_bootstrap-override.scss */
+body {
+  margin-bottom: 160px;
 }
 
-/* ----- Menu ----- */
-.navbar-brand {
-  display: none;
-}
-@media (max-width: 767px){
-  .navbar-brand{
-      display: block;
-  }
-}
-
-/* Change log
---------------------------------------------------------- */
-/* ----- scroll, border ----- */
-.change-log {
-  height: 240px;
-  overflow-y: scroll;
-  margin-right: 0;
-  margin-left: 0;
-  background-color: #fff;
-  border-radius: 4px 4px 0 0;
-  padding: 25px 15px 15px;
-  border-color: #e5e5e5 #eee #eee;
-  border-style: solid;
-  border-width: 1px 0;
-  box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
-}
-
-/* Newest Entry
---------------------------------------------------------- */
-.newest-entry-contents {
-  text-align: center;
-}
-
-.newest-entry a {
-  width: 210px;
-  height: 210px;
-}
-
-.newest-entry img {
-  text-align: center;
-}
-
-.newest-entry p {
-  text-align: center;
-  width: 100%;
-}
-
-/* About Contest
---------------------------------------------------------- */
-/* ----- scroll, border ----- */
-.about-contest h3 {
-  width: 100%;
-}
-
-.about-contest h3 span {
-  font-size: 20px !important;
-  color: #666 !important;
-  margin-left: 20px;
-}
-
-.contest-heading {
-  border-bottom: solid 3px #2c3e50;
-  margin-top: 21px;
-  margin-bottom: 10.5px;
-}
-
-.contest-heading h1 {
-  display: inline;
-  padding-right: 1em;
-}
-
-/* Sections
---------------------------------------------------------- */
-.competition-section,
-.examination-section,
-.freedom-section {
-  margin-left: 5px;
-}
-
-.section-heading {
-  overflow: hidden;
-}
-.section-content-title {
-  display: inline;
-  font-size: 30px;
-}
-.section-content-sns {
-  float: right;
-  padding-right: 20px;
-}
-
-.section-content-title .twitter-icon {
-  position: absolute;
-  right: 50px;
-  font-size: 20px;
-}
-
-.github-link,
-.slideshare-link,
-.other-link,
-.bitbucket-link {
-  font-size: 30px;
-}
-
-/* Member
---------------------------------------------------------- */
-.member-img {
-  width: 150px;
-}
-
-.member-name {
-  font-size: 30px;
-}
-
-.member-sns {
- margin-left: 10px;
-}
-
-.member-sns a {
-  margin-left: 10px;
-}
-
-/* Actions
---------------------------------------------------------- */
-.actions {
-  width: 100%;
-}
-
-.action-bg {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  border-radius: 100px;
-}
-
-.action-read .action-bg {
-  background-color: #F3C759;
-}
-
-.action-entry .action-bg {
-  background-color: #FFEE55;
-}
-
-.action-share .action-bg {
-  background-color: #3261AB;
-}
-
-.actions .fa {
-  font-size: 100px;
-}
-
-.action-bg .fa {
-  color: #fff;
-  position: absolute;
-  left: 150px;
-  top: 52px;
-}
-
-@media (max-width: 1260px){
-  .action-bg{
-      background-color: transparent !important;
-  }
-
-  .actions {
-    width: 100%;
-  }
-
-  .actions .fa {
-    color: #333;
-    position: absolute;
-    left: 35%;
-  }
-}
-
-@media (max-width: 1080px){
-  .actions .fa {
-    color: #333;
-    position: absolute;
-    left: 43%;
-  }
-}
-
-.action-do,
-.action-description {
-  text-align: center;
-}
-
-.action-do {
-  font-size: 30px;
-}
-
-/* Footer
---------------------------------------------------------- */
+/* line 54, ../scss/_bootstrap-override.scss */
 footer {
-  height: 100px;
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  background-color: #333;
-  color: #f5f5f5;
+  height: 160px;
 }
 
-/* ----- Copyright ----- */
-.copyright {
-  text-align: center;
+/* line 25, ../scss/style.scss */
+.logo {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  text-decoration: none;
+  outline: none;
+  letter-spacing: 1px;
+  background: none;
+  border: none;
+}
+/* line 32, ../scss/style.scss */
+.logo:hover, .logo:active, .logo:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+/* line 40, ../scss/style.scss */
+.title {
+  margin: 1em auto;
+}
+/* line 42, ../scss/style.scss */
+.title h1 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: 4em;
+}
+/* line 47, ../scss/style.scss */
+.title h1 .logo {
+  font-weight: 300;
+  color: #507192;
+}
+/* line 52, ../scss/style.scss */
+.title span.description {
+  display: inline-block;
+  margin-right: 1em;
+  font-size: 1.2em;
+}
+
+/* line 61, ../scss/style.scss */
+.about.jumbotron h2 {
+  margin-top: 0;
 }
