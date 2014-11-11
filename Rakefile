@@ -9,8 +9,7 @@ task :add do
     print "#{Entrant.send(name.pluralize)}\n" if Entrant::ENUMS.include?(name)
     print "#{name}:"
     val = STDIN.gets.chomp
-    next if val.blank?
-    entrant[name] = val
+    entrant.send("#{name}=", val) if val.present?
   end
   entrant.save
 end
