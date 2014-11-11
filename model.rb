@@ -33,3 +33,25 @@ end
 
 class Contest < ActiveRecord::Base
 end
+
+class Opetator < ActiveRecord::Base
+  attr_readonly :password_hash, :password_salt
+
+  enum position: {common: 0, admin: 1}
+
+  def encrypt_password(password)
+    if password.present?
+      self.password_salt = BCrypt::Engine.generate_salt
+      self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
+    end
+  end
+
+  def self.auth(user_id, password)
+    operator = Opetator.find_by_id(user_id)
+    if operator && operator.password_hash == BCrypt::Engine.hash_secret(password, operator.password_salt)
+      operator
+    else
+      nil
+    end
+  end
+end

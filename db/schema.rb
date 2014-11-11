@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141105023244) do
+ActiveRecord::Schema.define(version: 20141111132116) do
 
   create_table "contests", force: true do |t|
     t.string "name",              null: false
@@ -37,6 +37,24 @@ ActiveRecord::Schema.define(version: 20141105023244) do
     t.string  "sns_url"
     t.integer "result"
     t.string  "prize"
+  end
+
+  create_table "operators", id: false, force: true do |t|
+    t.string  "id",            null: false
+    t.integer "position",      null: false
+    t.string  "name",          null: false
+    t.string  "password_hash", null: false
+    t.string  "password_salt", null: false
+    t.string  "icon"
+    t.string  "school"
+    t.string  "github"
+    t.string  "bitbucket"
+    t.string  "slideshare"
+    t.string  "twitter"
+    t.string  "facebook"
+    t.string  "site_name"
+    t.string  "site_url"
+    t.string  "description"
   end
 
 end
