@@ -3,6 +3,7 @@ html
   head
     meta charset="utf-8"
     title =@title
+    link rel="stylesheet" href="/css/bootstrap.min.css"
     link rel="stylesheet" href="/css/bootstrap.css"
     link rel="stylesheet" href="/css/style.css"
     link rel="stylesheet" href="/css/font-awesome.css"
@@ -16,10 +17,17 @@ html
               img.logo src="/img/logo.svg" alt="Proconist.net"
           p.col-md-7
             span.description プロコンでアップスパイラルを生み出す
-        div.row.head-nav
-          nav.navber.navbar-default role="navigation"
+        div.row
+          nav.navbar.navbar-default role="navigation"
             div.container-fluid
-              div.collapse.navbar-collapse
+              div.navbar-header
+                button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                  span.sr-only Toggle navigation
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+                span.navbar-brand Menu
+              div.collapse.navbar-collapse#bs-example-navbar-collapse-1
                 ul.nav.navbar-nav
                   li
                     a href="#" 出場作品
@@ -39,3 +47,4 @@ html
         div.copyright &copy; #{Time.now.year} Proconist.net 運営委員会
 
     script src="/js/bootstrap.js"
+    script src="https://code.jquery.com/jquery-2.1.1.min.js"
