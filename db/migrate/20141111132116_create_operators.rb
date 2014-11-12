@@ -2,7 +2,7 @@ class CreateOperators < ActiveRecord::Migration
   def change
     create_table :operators, :id => false do |t|
       t.string  :id, :null => false
-      t.integer :position, :null => false
+      t.integer :position, :null => false, :default => 0
       t.string  :name, :null => false
       t.string  :password_hash, :null => false
       t.string  :password_salt, :null => false

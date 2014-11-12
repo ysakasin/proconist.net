@@ -40,11 +40,11 @@ ActiveRecord::Schema.define(version: 20141111132116) do
   end
 
   create_table "operators", id: false, force: true do |t|
-    t.string  "id",            null: false
-    t.integer "position",      null: false
-    t.string  "name",          null: false
-    t.string  "password_hash", null: false
-    t.string  "password_salt", null: false
+    t.string  "id",                        null: false
+    t.integer "position",      default: 0, null: false
+    t.string  "name",                      null: false
+    t.string  "password_hash",             null: false
+    t.string  "password_salt",             null: false
     t.string  "icon"
     t.string  "school"
     t.string  "github"
