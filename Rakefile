@@ -25,11 +25,40 @@ task :add_contest do
   contest.save
 end
 
+task :add_op do
+  print 'id:'
+  id = STDIN.gets.chomp
+  fail 'IdDuplication' if Operator.where(id: id).exists?
+  operator = Operator.new
+  operator['id'] = id
+  operator.position = 'admin' if ENV['ADMIN'] == 'true'
+
+  begin
+    print 'password:'
+    pass = STDIN.noecho(&:gets).chomp
+    print "\nconfirm password:"
+    conf = STDIN.noecho(&:gets).chomp
+    print "\n"
+  end while pass.blank? || pass != conf
+  operator.encrypt_password(pass)
+
+  Operator.column_names.each do |name|
+    next if ['id', 'position', 'password_hash', 'password_salt'].include?(name)
+    print "#{name}:"
+    val = STDIN.gets.chomp
+    operator.send("#{name}=", val) if val.present?
+  end
+  operator.save
+end
+
 task :show do
   Entrant.all.each do |e|
     p e
   end
   Contest.all.each do |c|
     p c
+  end
+  Operator.all.each do |o|
+    p o
   end
 end

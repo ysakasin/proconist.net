@@ -1,3 +1,6 @@
+require 'bundler'
+Bundler.require
+
 ActiveRecord::Base.establish_connection(
   "adapter" => "sqlite3",
   "database" => "./proconist.db")
@@ -34,7 +37,7 @@ end
 class Contest < ActiveRecord::Base
 end
 
-class Opetator < ActiveRecord::Base
+class Operator < ActiveRecord::Base
   attr_readonly :password_hash, :password_salt
 
   enum position: {common: 0, admin: 1}
