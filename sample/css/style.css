@@ -13,40 +13,40 @@ Proconist.net - style.css
 
 ------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Lato:300");
-/* line 3, ../scss/_bootstrap-override.scss */
+/* line 5, ../scss/_bootstrap-override.scss */
 body {
   font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
-/* line 7, ../scss/_bootstrap-override.scss */
+/* line 9, ../scss/_bootstrap-override.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
-/* line 11, ../scss/_bootstrap-override.scss */
+/* line 13, ../scss/_bootstrap-override.scss */
 body {
-  background-color: #f5f5f5;
+  background-color: #f8f9fa;
 }
 
-/* line 17, ../scss/_bootstrap-override.scss */
+/* line 19, ../scss/_bootstrap-override.scss */
 .navbar-nav.nav-justified > li {
   float: none;
 }
 
-/* line 24, ../scss/_bootstrap-override.scss */
+/* line 26, ../scss/_bootstrap-override.scss */
 .panel .carousel {
   margin: -15px -15px 15px;
 }
 
-/* line 31, ../scss/_bootstrap-override.scss */
+/* line 33, ../scss/_bootstrap-override.scss */
 .carousel .carousel-control.right, .carousel .carousel-control.left {
   background: none;
 }
-/* line 35, ../scss/_bootstrap-override.scss */
+/* line 37, ../scss/_bootstrap-override.scss */
 .carousel .carousel-indicators {
   bottom: 0;
 }
-/* line 38, ../scss/_bootstrap-override.scss */
+/* line 40, ../scss/_bootstrap-override.scss */
 .carousel .carousel-caption {
   padding-bottom: 0;
 }
@@ -54,18 +54,18 @@ body {
 /* Sticky footer styles
  * http://getbootstrap.com/examples/sticky-footer/
 -------------------------------------------------- */
-/* line 47, ../scss/_bootstrap-override.scss */
+/* line 49, ../scss/_bootstrap-override.scss */
 html {
   position: relative;
   min-height: 100%;
 }
 
-/* line 51, ../scss/_bootstrap-override.scss */
+/* line 53, ../scss/_bootstrap-override.scss */
 body {
   margin-bottom: 160px;
 }
 
-/* line 54, ../scss/_bootstrap-override.scss */
+/* line 56, ../scss/_bootstrap-override.scss */
 footer {
   position: absolute;
   bottom: 0;
@@ -78,7 +78,7 @@ footer {
   margin-top: 0;
 }
 
-/* line 26, ../scss/style.scss */
+/* line 24, ../scss/style.scss */
 .logo {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   text-decoration: none;
@@ -87,7 +87,7 @@ footer {
   background: none;
   border: none;
 }
-/* line 33, ../scss/style.scss */
+/* line 31, ../scss/style.scss */
 .logo:hover, .logo:active, .logo:focus {
   text-decoration: none;
   outline: none;
@@ -95,30 +95,59 @@ footer {
   background: none;
 }
 
-/* line 41, ../scss/style.scss */
+/* line 39, ../scss/style.scss */
 .title {
   margin: 1em auto;
 }
-/* line 43, ../scss/style.scss */
+/* line 41, ../scss/style.scss */
 .title h1 {
   display: inline;
   margin: 0;
   padding: 0;
   font-size: 4em;
 }
-/* line 48, ../scss/style.scss */
+/* line 46, ../scss/style.scss */
 .title h1 .logo {
   font-weight: 300;
   color: #507192;
 }
-/* line 53, ../scss/style.scss */
+/* line 51, ../scss/style.scss */
 .title span.description {
   display: inline-block;
   margin-right: 1em;
   font-size: 1.2em;
 }
 
-/* line 62, ../scss/style.scss */
+/* line 60, ../scss/style.scss */
 .about.jumbotron h2 {
   margin-top: 0;
+}
+
+/* line 66, ../scss/style.scss */
+.heading {
+  position: relative;
+  border-bottom: 2px solid #7b8a8b;
+  margin-bottom: 10.5px;
+}
+/* line 70, ../scss/style.scss */
+.heading h2, .heading h3, .heading h4, .heading h5, .heading h6 {
+  margin-top: 0;
+  float: left;
+}
+/* line 74, ../scss/style.scss */
+.heading .meta-info {
+  float: right;
+  min-height: 35.2px;
+}
+/* line 77, ../scss/style.scss */
+.heading .meta-info li {
+  font-size: 13px;
+  text-align: right;
+}
+
+/* line 84, ../scss/style.scss */
+footer {
+  padding: 20px 0;
+  color: #ecf0f1;
+  background-color: #222222;
 }
