@@ -73,7 +73,12 @@ footer {
   height: 160px;
 }
 
-/* line 25, ../scss/style.scss */
+/* line 1, ../scss/_original-set.scss */
+.margin-none-top {
+  margin-top: 0;
+}
+
+/* line 26, ../scss/style.scss */
 .logo {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   text-decoration: none;
@@ -82,7 +87,7 @@ footer {
   background: none;
   border: none;
 }
-/* line 32, ../scss/style.scss */
+/* line 33, ../scss/style.scss */
 .logo:hover, .logo:active, .logo:focus {
   text-decoration: none;
   outline: none;
@@ -90,30 +95,30 @@ footer {
   background: none;
 }
 
-/* line 40, ../scss/style.scss */
+/* line 41, ../scss/style.scss */
 .title {
   margin: 1em auto;
 }
-/* line 42, ../scss/style.scss */
+/* line 43, ../scss/style.scss */
 .title h1 {
   display: inline;
   margin: 0;
   padding: 0;
   font-size: 4em;
 }
-/* line 47, ../scss/style.scss */
+/* line 48, ../scss/style.scss */
 .title h1 .logo {
   font-weight: 300;
   color: #507192;
 }
-/* line 52, ../scss/style.scss */
+/* line 53, ../scss/style.scss */
 .title span.description {
   display: inline-block;
   margin-right: 1em;
   font-size: 1.2em;
 }
 
-/* line 61, ../scss/style.scss */
+/* line 62, ../scss/style.scss */
 .about.jumbotron h2 {
   margin-top: 0;
 }
