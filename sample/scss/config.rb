@@ -12,3 +12,6 @@ javascripts_dir	= "../js/"
 output_style	= :expanded
 line_comments	= true	
 
+sass_options	= {
+	:unix_newlines => true
+}
