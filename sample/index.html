@@ -29,9 +29,12 @@
     <!-- .title: ヘッダのロゴ関連 -->
     <div class="title">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-9 clearfix">
           <h1><a href="//proconist.net/" class="logo">Proconist.net</a></h1>
           <span class="description">プロコンでアップスパイラルを生み出す</span>
+        </div>
+        <div class="col-md-3 hidden-sm hidden-xs social-button">
+          <!-- 寂しいのでソーシャルボタン予定地 -->
         </div>
       </div>
     </div>
@@ -230,6 +233,7 @@
         <div class="panel-heading">
           <h3 class="panel-title">新着情報</h3>
         </div>
+        <!-- .panel-body -->
         <div class="panel-body">
           <!-- 新着サムネイル -->
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -253,7 +257,6 @@
                 </div>
               </div>
             </div>
-
             <!-- Controls -->
             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
               <span class="glyphicon glyphicon-chevron-left"></span>
@@ -264,12 +267,22 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-          <dl>
-            <dt><span class="label label-warning">特集</span> 2014-01-01</dt>
-              <dd><a href="#">ほげほげほげ</a></dd>
-            <dt><span class="label label-info">作品</span> 2014-01-01</dt>
-             <dd><a href="#">○○高専</a></dd>
-          </dl>
+        </div>
+        <!-- /.panel-body -->
+
+        <div class="list-group">
+          <a href="#" class="list-group-item">
+            <dl>
+              <dt><span class="label label-warning">特集</span> 2014-01-01</dt>
+              <dd>【超入門】GitHubを使ってみよう！</dd>
+            </dl>
+          </a>
+          <a href="#" class="list-group-item">
+            <dl>
+              <dt><span class="label label-info">作品</span> 2014-01-01</dt>
+              <dd>課題部門 津山高専「Grouper」</dd>
+            </dl>
+          </a>
         </div>
       </div>
 
@@ -308,131 +321,6 @@
   <!-- /.content -->
 
 </div> <!-- /.container  -->
-
-
-
-
-<div class="container hidden">
-  <div class="row">
-    <ul class="col-md-9 change-log">
-        <li><span class="label label-warning">特集</span> 2014/10/31 hogehoge</li>
-        <li><span class="label label-info">作品</span> 2014/10/19 ○○高専...</li>
-    </ul>
-    <section class="col-md-3 newest-entry">
-      <div class="newest-entry-contents">
-        <a href="#"><img src="http://placehold.it/200X200" alt="Thumb" class="img-thumbnail"></a>
-        <p class="newest-entry-title"><a href="#">hogehoge</a></p>
-      </div>
-    </section>
-  </div>
-  <section class="row about-contest">
-    <div class="col-md-12">
-      <div class="contest-heading">
-        <h1>第25回 一関大会の作品一覧</h1><span class="contest-date">2014年10月18日（土）～19日（日） 一関文化センター</span>
-      </div>
-      <form class="form-inline" role="form">
-        <select class="form-control" id="select">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> 公開チームのみ
-          </label>
-        </div>
-        <button type="submit" class="btn btn-danger">実行</button>
-      </form>
-    </div>
-  </section>
-  <section class="row sections">
-    <div class="col-md-12">
-      <div class="col-md-4"><a href="#competition-section" class="btn btn-warning btn-lg btn-block">競技部門</a></div>
-      <div class="col-md-4"><a href="#examination-section" class="btn btn-success btn-lg btn-block">課題部門</a></div>
-      <div class="col-md-4"><a href="#freedom-section" class="btn btn-info btn-lg btn-block">自由部門</a></div>
-    </div>
-  </section>
-  <section id="competition-section" class="row sections">
-    <div class="col-md-12">
-      <h2>競技部門 「キオクのかけらⅡ」</h3>
-      <div class="section-content">
-        <div class="panel panel-default">
-          <div class="panel-heading section-heading">
-            <h3 class="panel-title section-content-title">○○高専「hogehoge」</h3><span class="section-content-sns"><a href="//twitter.com/raryosu" class="twitter-icon"><i class="fa fa-twitter"></i> @hogehoge</a></span>
-          </div>
-          <div class="panel-body section-content-links">
-            <p class="section-content-result text-warning">高専プロコン優勝, NAPROCK First Runner-up Prize</p>
-            <div class="row no-margin">
-              <p class="col-md-3 github-link"><a href="//github.com/raryosu" class="github-icon"><i class="fa fa-github"></i> Github</a></p>
-              <p class="col-md-3 slideshare-link"><a href="//slideshare.net/raryosu" class="slideshare-icon"><i class="fa fa-slideshare"></i> Slideshare</a></p>
-              <p class="col-md-3 other-link"><a href="//raryosu.info/" class="internet-icon"><i class="fa fa-globe"></i> 解説サイト</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading section-heading">
-            <h3 class="panel-title section-content-title">△△高専「piyo」</h3><span class="section-content-sns"><a href="//twitter.com/raryosu" class="twitter-icon"><i class="fa fa-twitter"></i> @hogehoge</a></span>
-          </div>
-          <div class="panel-body section-content-links">
-            <p class="section-content-result text-warning">高専プロコン準優勝</p>
-            <div class="row no-margin">
-              <p class="col-md-3 bitbucket-link"><a href="//bitbucket.org/raryosu" class="bitbucket-icon"><i class="fa fa-bitbucket"></i> Bitbucket</a></p>
-              <p class="col-md-3 other-link"><a href="//raryosu.info/" class="internet-icon"><i class="fa fa-globe"></i> 解説サイト</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading section-heading">
-            <h3 class="panel-title section-content-title">□□高専「unyo」</h3>
-          </div>
-          <div class="panel-body section-content-links">
-            <p class="section-content-result text-warning">高専プロコン 敢闘賞</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="examination-section" class="row sections">
-    <div class="col-md-12">
-      <h2>課題部門 「防災・減災対策と復興支援」</h3>
-      <div class="section-content">
-        <div class="panel panel-default">
-          <div class="panel-heading section-heading">
-            <h3 class="panel-title section-content-title">○○高専「hogehoge」</h3><span class="section-content-sns"><a href="//twitter.com/raryosu" class="twitter-icon"><i class="fa fa-twitter"></i> @hogehoge</a>
-          </div>
-          <div class="panel-body section-content-links">
-            <p class="section-content-result text-warning">高専プロコン優勝</p>
-            <div class="row no-margin">
-              <p class="col-md-3 github-link"><a href="//github.com/raryosu" class="github-icon"><i class="fa fa-github"></i> Github</a></p>
-              <p class="col-md-3 slideshare-link"><a href="//slideshare.net/raryosu" class="slideshare-icon"><i class="fa fa-slideshare"></i> Slideshare</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="freedom-section" class="row sections">
-    <div class="col-md-12">
-      <h2>自由部門</h3>
-      <div class="section-content">
-        <div class="panel panel-default">
-          <div class="panel-heading section-heading">
-            <h3 class="panel-title section-content-title">○○高専「hogehoge」</h3><span class="section-content-sns"><a href="//twitter.com/raryosu" class="twitter-icon"><i class="fa fa-twitter"></i> @hogehoge</a>
-          </div>
-          <div class="panel-body section-content-links">
-            <p class="section-content-result text-warning">高専プロコン優勝, NAPROCK First Runner-up Prize</p>
-            <div class="row no-margin">
-              <p class="col-md-3 github-link"><a href="//github.com/raryosu" class="github-icon"><i class="fa fa-github"></i> Github</a></p>
-              <p class="col-md-3 slideshare-link"><a href="//slideshare.net/raryosu" class="slideshare-icon"><i class="fa fa-slideshare"></i> Slideshare</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div><!-- Container -->
 
 <footer>
   <div class="container">

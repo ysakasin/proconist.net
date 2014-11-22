@@ -35,7 +35,7 @@ body {
 
 /* line 26, ../scss/_bootstrap-override.scss */
 .panel .carousel {
-  margin: -15px -15px 15px;
+  margin: -15px;
 }
 
 /* line 33, ../scss/_bootstrap-override.scss */
@@ -106,7 +106,7 @@ footer {
 }
 /* line 41, ../scss/style.scss */
 .title h1 {
-  display: inline;
+  float: left;
   margin: 0;
   padding: 0;
   font-size: 4em;
@@ -118,121 +118,142 @@ footer {
 }
 /* line 51, ../scss/style.scss */
 .title span.description {
-  display: inline-block;
-  margin-right: 1em;
+  float: left;
+  margin-left: 1em;
   font-size: 1.2em;
+  line-height: 4em;
+  vertical-align: text-bottom;
 }
 
-/* line 60, ../scss/style.scss */
+/* line 62, ../scss/style.scss */
 .about.jumbotron h2 {
   margin-top: 0;
 }
 
-/* line 66, ../scss/style.scss */
+/* line 68, ../scss/style.scss */
 .heading {
   position: relative;
   border-bottom: 2px solid #7b8a8b;
   margin-bottom: 10.5px;
 }
-/* line 70, ../scss/style.scss */
+/* line 72, ../scss/style.scss */
 .heading h2, .heading h3, .heading h4, .heading h5, .heading h6 {
   margin-top: 0;
   float: left;
 }
-/* line 74, ../scss/style.scss */
+/* line 76, ../scss/style.scss */
 .heading .meta-info {
   float: right;
   min-height: 35.2px;
 }
-/* line 77, ../scss/style.scss */
+/* line 79, ../scss/style.scss */
 .heading .meta-info li {
   font-size: 13px;
   text-align: right;
 }
 
-/* line 84, ../scss/style.scss */
+/* line 86, ../scss/style.scss */
 .instant-search {
   margin: 10px 0;
   text-align: right;
 }
 
-/* line 91, ../scss/style.scss */
+/* line 93, ../scss/style.scss */
 .panel-procon-product .panel-heading .panel-title {
   float: left;
 }
-/* line 94, ../scss/style.scss */
+/* line 96, ../scss/style.scss */
 .panel-procon-product .panel-heading .label-group {
   float: right;
 }
-/* line 96, ../scss/style.scss */
+/* line 98, ../scss/style.scss */
 .panel-procon-product .panel-heading .label-group .label {
   vertical-align: 2px;
 }
-/* line 101, ../scss/style.scss */
+/* line 103, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link {
   margin-left: 0;
   border-top: 1px solid #ecf0f1;
   padding: 15px 15px 0;
 }
-/* line 105, ../scss/style.scss */
+/* line 107, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li {
   margin-bottom: 10px;
 }
-/* line 107, ../scss/style.scss */
+/* line 109, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li a, .panel-procon-product ul.panel-procon-product-link li a:visited, .panel-procon-product ul.panel-procon-product-link li a:hover, .panel-procon-product ul.panel-procon-product-link li a:active, .panel-procon-product ul.panel-procon-product-link li a:focus {
   text-decoration: none;
   color: #2C3E50;
 }
-/* line 111, ../scss/style.scss */
+/* line 113, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li .fa-github {
   color: #333;
 }
-/* line 114, ../scss/style.scss */
+/* line 116, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li .fa-bitbucket {
   color: #205081;
 }
-/* line 117, ../scss/style.scss */
+/* line 119, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li .fa-slideshare {
   color: #07a;
 }
-/* line 120, ../scss/style.scss */
+/* line 122, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li .fa-globe {
   color: #00a7a9;
 }
-/* line 123, ../scss/style.scss */
+/* line 125, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li .fa-twitter {
   color: #55acee;
 }
-/* line 126, ../scss/style.scss */
+/* line 128, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li .fa-facebook-square {
   color: #3b5998;
 }
 
-/* line 134, ../scss/style.scss */
+/* line 136, ../scss/style.scss */
 .heading-mark small {
   color: inherit;
 }
-/* line 137, ../scss/style.scss */
+/* line 139, ../scss/style.scss */
 .heading-mark:before {
   display: inline-block;
   content: "▶";
   font-size: .8em;
   width: 1.25em;
 }
-/* line 143, ../scss/style.scss */
+/* line 145, ../scss/style.scss */
 .heading-mark.heading-mark-competition:before {
   color: #E74C3C;
 }
-/* line 146, ../scss/style.scss */
+/* line 148, ../scss/style.scss */
 .heading-mark.heading-mark-themed:before {
   color: #F39C12;
 }
-/* line 149, ../scss/style.scss */
+/* line 151, ../scss/style.scss */
 .heading-mark.heading-mark-original:before {
   color: #3498DB;
 }
 
-/* line 154, ../scss/style.scss */
+/* line 159, ../scss/style.scss */
+.newlist .list-group a.list-group-item dl {
+  margin-bottom: 0;
+}
+/* line 161, ../scss/style.scss */
+.newlist .list-group a.list-group-item dl dt {
+  font-size: 13px;
+  font-weight: normal;
+  margin-bottom: 1px;
+}
+/* line 164, ../scss/style.scss */
+.newlist .list-group a.list-group-item dl dt .label {
+  vertical-align: 2px;
+}
+/* line 169, ../scss/style.scss */
+.newlist .list-group a.list-group-item dl dd {
+  color: #18BC9C;
+}
+
+/* line 177, ../scss/style.scss */
 footer {
   padding: 20px 0;
   color: #ecf0f1;

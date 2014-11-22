@@ -39,7 +39,7 @@ Proconist.net - style.css
 .title {
 	margin: 1em auto;
 	h1 {
-		display: inline;
+		@include pull-left;
 		margin: 0;
 		padding: 0;
 		font-size: 4em;
@@ -49,9 +49,11 @@ Proconist.net - style.css
 		}
 	}
 	span.description {
-		display: inline-block;
-		margin-right: 1em;
+		@include pull-left;
+		margin-left: 1em;
 		font-size: 1.2em;
+		line-height: 4em;
+		vertical-align: text-bottom;
 	}
 }
 
@@ -148,6 +150,27 @@ Proconist.net - style.css
 	}
 	&.heading-mark-original:before {
 		color: $brand-info;
+	}
+}
+
+.newlist {
+	.list-group {
+		a.list-group-item {
+			dl {
+				margin-bottom: 0;
+				dt {
+					font-size: $font-size-small;
+					font-weight: normal;
+					.label {
+						vertical-align: 2px;
+					}
+					margin-bottom: $padding-xs-vertical;
+				}
+				dd {
+					color: $link-color;
+				}
+			}
+		}
 	}
 }
 
