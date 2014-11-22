@@ -145,7 +145,82 @@ footer {
   text-align: right;
 }
 
-/* line 84, ../scss/style.scss */
+/* line 86, ../scss/style.scss */
+.panel-procon-product .panel-heading .panel-title {
+  float: left;
+}
+/* line 89, ../scss/style.scss */
+.panel-procon-product .panel-heading .label-group {
+  float: right;
+}
+/* line 91, ../scss/style.scss */
+.panel-procon-product .panel-heading .label-group .label {
+  vertical-align: 2px;
+}
+/* line 96, ../scss/style.scss */
+.panel-procon-product ul.panel-procon-product-link {
+  border-top: 1px solid #ecf0f1;
+  padding: 15px 15px 0;
+}
+/* line 99, ../scss/style.scss */
+.panel-procon-product ul.panel-procon-product-link li {
+  margin-bottom: 10px;
+}
+/* line 101, ../scss/style.scss */
+.panel-procon-product ul.panel-procon-product-link li a, .panel-procon-product ul.panel-procon-product-link li a:visited, .panel-procon-product ul.panel-procon-product-link li a:hover, .panel-procon-product ul.panel-procon-product-link li a:active, .panel-procon-product ul.panel-procon-product-link li a:focus {
+  text-decoration: none;
+  color: #2C3E50;
+}
+/* line 105, ../scss/style.scss */
+.panel-procon-product ul.panel-procon-product-link li .fa-github {
+  color: #333;
+}
+/* line 108, ../scss/style.scss */
+.panel-procon-product ul.panel-procon-product-link li .fa-bitbucket {
+  color: #205081;
+}
+/* line 111, ../scss/style.scss */
+.panel-procon-product ul.panel-procon-product-link li .fa-slideshare {
+  color: #07a;
+}
+/* line 114, ../scss/style.scss */
+.panel-procon-product ul.panel-procon-product-link li .fa-globe {
+  color: #00a7a9;
+}
+/* line 117, ../scss/style.scss */
+.panel-procon-product ul.panel-procon-product-link li .fa-twitter {
+  color: #55acee;
+}
+/* line 120, ../scss/style.scss */
+.panel-procon-product ul.panel-procon-product-link li .fa-facebook-square {
+  color: #3b5998;
+}
+
+/* line 128, ../scss/style.scss */
+.heading-mark small {
+  color: inherit;
+}
+/* line 131, ../scss/style.scss */
+.heading-mark:before {
+  display: inline-block;
+  content: "▶";
+  font-size: .8em;
+  width: 1.25em;
+}
+/* line 137, ../scss/style.scss */
+.heading-mark.heading-mark-competition:before {
+  color: #E74C3C;
+}
+/* line 140, ../scss/style.scss */
+.heading-mark.heading-mark-themed:before {
+  color: #F39C12;
+}
+/* line 143, ../scss/style.scss */
+.heading-mark.heading-mark-original:before {
+  color: #3498DB;
+}
+
+/* line 148, ../scss/style.scss */
 footer {
   padding: 20px 0;
   color: #ecf0f1;
