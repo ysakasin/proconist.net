@@ -10,7 +10,7 @@ images_dir		= "../img/"
 javascripts_dir	= "../js/"
 
 output_style	= :expanded
-line_comments	= true	
+line_comments	= false	
 
 sass_options	= {
 	:unix_newlines => true
