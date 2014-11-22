@@ -13,45 +13,45 @@ Proconist.net - style.css
 
 ------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Lato:300");
-/* line 5, ../scss/_bootstrap-override.scss */
+/* line 4, ../scss/_bootstrap-override.scss */
 body {
   font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
-/* line 9, ../scss/_bootstrap-override.scss */
+/* line 8, ../scss/_bootstrap-override.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
-/* line 13, ../scss/_bootstrap-override.scss */
+/* line 12, ../scss/_bootstrap-override.scss */
 body {
   background-color: #f8f9fa;
 }
 
-/* line 19, ../scss/_bootstrap-override.scss */
+/* line 18, ../scss/_bootstrap-override.scss */
 .navbar-nav.nav-justified > li {
   float: none;
 }
 
-/* line 26, ../scss/_bootstrap-override.scss */
+/* line 25, ../scss/_bootstrap-override.scss */
 .panel .carousel {
   margin: -15px;
 }
 
-/* line 33, ../scss/_bootstrap-override.scss */
+/* line 32, ../scss/_bootstrap-override.scss */
 .carousel .carousel-control.right, .carousel .carousel-control.left {
   background: none;
 }
-/* line 37, ../scss/_bootstrap-override.scss */
+/* line 36, ../scss/_bootstrap-override.scss */
 .carousel .carousel-indicators {
   bottom: 0;
 }
-/* line 40, ../scss/_bootstrap-override.scss */
+/* line 39, ../scss/_bootstrap-override.scss */
 .carousel .carousel-caption {
   padding-bottom: 0;
 }
 
-/* line 46, ../scss/_bootstrap-override.scss */
+/* line 45, ../scss/_bootstrap-override.scss */
 .form-inline .form-group-sm {
   display: inline-block;
 }
@@ -59,18 +59,18 @@ body {
 /* Sticky footer styles
  * http://getbootstrap.com/examples/sticky-footer/
 -------------------------------------------------- */
-/* line 55, ../scss/_bootstrap-override.scss */
+/* line 54, ../scss/_bootstrap-override.scss */
 html {
   position: relative;
   min-height: 100%;
 }
 
-/* line 59, ../scss/_bootstrap-override.scss */
+/* line 58, ../scss/_bootstrap-override.scss */
 body {
   margin-bottom: 160px;
 }
 
-/* line 62, ../scss/_bootstrap-override.scss */
+/* line 61, ../scss/_bootstrap-override.scss */
 footer {
   position: absolute;
   bottom: 0;
@@ -124,136 +124,150 @@ footer {
   line-height: 4em;
   vertical-align: text-bottom;
 }
+/* line 58, ../scss/style.scss */
+.title .social-button {
+  overflow: hidden;
+}
+/* line 60, ../scss/style.scss */
+.title .social-button li {
+  float: left;
+  margin-right: 4px;
+  list-style: none;
+}
+/* line 65, ../scss/style.scss */
+.title .social-button iframe {
+  margin: 0 !important;
+}
 
-/* line 62, ../scss/style.scss */
+/* line 73, ../scss/style.scss */
 .about.jumbotron h2 {
   margin-top: 0;
 }
 
-/* line 68, ../scss/style.scss */
+/* line 79, ../scss/style.scss */
 .heading {
   position: relative;
   border-bottom: 2px solid #7b8a8b;
   margin-bottom: 10.5px;
 }
-/* line 72, ../scss/style.scss */
+/* line 83, ../scss/style.scss */
 .heading h2, .heading h3, .heading h4, .heading h5, .heading h6 {
   margin-top: 0;
   float: left;
 }
-/* line 76, ../scss/style.scss */
+/* line 87, ../scss/style.scss */
 .heading .meta-info {
   float: right;
   min-height: 35.2px;
 }
-/* line 79, ../scss/style.scss */
+/* line 90, ../scss/style.scss */
 .heading .meta-info li {
   font-size: 13px;
   text-align: right;
 }
 
-/* line 86, ../scss/style.scss */
+/* line 97, ../scss/style.scss */
 .instant-search {
   margin: 10px 0;
   text-align: right;
 }
 
-/* line 93, ../scss/style.scss */
+/* line 104, ../scss/style.scss */
 .panel-procon-product .panel-heading .panel-title {
   float: left;
 }
-/* line 96, ../scss/style.scss */
+/* line 107, ../scss/style.scss */
 .panel-procon-product .panel-heading .label-group {
   float: right;
 }
-/* line 98, ../scss/style.scss */
+/* line 109, ../scss/style.scss */
 .panel-procon-product .panel-heading .label-group .label {
   vertical-align: 2px;
 }
-/* line 103, ../scss/style.scss */
+/* line 114, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link {
   margin-left: 0;
   border-top: 1px solid #ecf0f1;
   padding: 15px 15px 0;
 }
-/* line 107, ../scss/style.scss */
+/* line 118, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li {
   margin-bottom: 10px;
 }
-/* line 109, ../scss/style.scss */
+/* line 120, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li a, .panel-procon-product ul.panel-procon-product-link li a:visited, .panel-procon-product ul.panel-procon-product-link li a:hover, .panel-procon-product ul.panel-procon-product-link li a:active, .panel-procon-product ul.panel-procon-product-link li a:focus {
   text-decoration: none;
   color: #2C3E50;
 }
-/* line 113, ../scss/style.scss */
+/* line 124, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li .fa-github {
   color: #333;
 }
-/* line 116, ../scss/style.scss */
+/* line 127, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li .fa-bitbucket {
   color: #205081;
 }
-/* line 119, ../scss/style.scss */
+/* line 130, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li .fa-slideshare {
   color: #07a;
 }
-/* line 122, ../scss/style.scss */
+/* line 133, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li .fa-globe {
   color: #00a7a9;
 }
-/* line 125, ../scss/style.scss */
+/* line 136, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li .fa-twitter {
   color: #55acee;
 }
-/* line 128, ../scss/style.scss */
+/* line 139, ../scss/style.scss */
 .panel-procon-product ul.panel-procon-product-link li .fa-facebook-square {
   color: #3b5998;
 }
 
-/* line 136, ../scss/style.scss */
+/* line 147, ../scss/style.scss */
 .heading-mark small {
   color: inherit;
 }
-/* line 139, ../scss/style.scss */
+/* line 150, ../scss/style.scss */
 .heading-mark:before {
   display: inline-block;
   content: "▶";
   font-size: .8em;
   width: 1.25em;
 }
-/* line 145, ../scss/style.scss */
+/* line 156, ../scss/style.scss */
 .heading-mark.heading-mark-competition:before {
   color: #E74C3C;
 }
-/* line 148, ../scss/style.scss */
+/* line 159, ../scss/style.scss */
 .heading-mark.heading-mark-themed:before {
   color: #F39C12;
 }
-/* line 151, ../scss/style.scss */
+/* line 162, ../scss/style.scss */
 .heading-mark.heading-mark-original:before {
   color: #3498DB;
 }
 
-/* line 159, ../scss/style.scss */
+/* line 170, ../scss/style.scss */
 .newlist .list-group a.list-group-item dl {
   margin-bottom: 0;
 }
-/* line 161, ../scss/style.scss */
+/* line 172, ../scss/style.scss */
 .newlist .list-group a.list-group-item dl dt {
   font-size: 13px;
   font-weight: normal;
   margin-bottom: 1px;
 }
-/* line 164, ../scss/style.scss */
+/* line 175, ../scss/style.scss */
 .newlist .list-group a.list-group-item dl dt .label {
   vertical-align: 2px;
 }
-/* line 169, ../scss/style.scss */
+/* line 180, ../scss/style.scss */
 .newlist .list-group a.list-group-item dl dd {
   color: #18BC9C;
 }
 
-/* line 177, ../scss/style.scss */
+/* line 188, ../scss/style.scss */
 footer {
   padding: 20px 0;
   color: #ecf0f1;
