@@ -40,9 +40,9 @@ Proconist.net - style.css
 	margin: 1em auto;
 	h1 {
 		@include pull-left;
-		margin: 0;
+		margin: 0 0.2em 0 0;
 		padding: 0;
-		font-size: 4em;
+		font-size: 3.2em;
 		.logo {
 			font-weight: 300;
 			color: lighten($text-color, 20%)
@@ -50,10 +50,24 @@ Proconist.net - style.css
 	}
 	span.description {
 		@include pull-left;
-		margin-left: 1em;
 		font-size: 1.2em;
-		line-height: 4em;
+		line-height: 3.2em;
 		vertical-align: text-bottom;
+	}
+	.social-button {
+		ul {
+			@include pull-right;
+			margin: 0;
+			li {
+				@include pull-left;
+			}
+			li:not(:first-child) {
+				margin-left: $padding-xs-horizontal;
+			}
+		}
+		iframe {
+			margin: 0 !important;
+		}
 	}
 }
 
