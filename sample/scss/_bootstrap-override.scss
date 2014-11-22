@@ -42,6 +42,12 @@ body {
 	}
 }
 
+.form-inline {
+	.form-group-sm {
+		display: inline-block;
+	}
+}
+
 /* Sticky footer styles
  * http://getbootstrap.com/examples/sticky-footer/
 -------------------------------------------------- */

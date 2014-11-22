@@ -81,6 +81,11 @@ Proconist.net - style.css
 	}
 }
 
+.instant-search {
+	margin: $padding-base-vertical 0;
+	text-align: right;
+}
+
 .panel-procon-product {
 	.panel-heading {
 		.panel-title {
@@ -94,6 +99,7 @@ Proconist.net - style.css
 		}
 	}
 	ul.panel-procon-product-link {
+		margin-left: 0;
 		border-top: 1px solid $table-border-color;
 		padding: $padding-base-horizontal $padding-base-horizontal 0;
 		li {
