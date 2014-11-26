@@ -145,14 +145,28 @@ footer {
   text-align: right;
 }
 
+.panel-procon-product .panel-heading .panel-procon-product-rank {
+  float: left;
+  margin-right: 9px;
+}
+.panel-procon-product .panel-heading .panel-procon-product-rank .label {
+  vertical-align: 2px;
+}
+.panel-procon-product .panel-heading .panel-procon-product-heading {
+  margin-bottom: -10px;
+}
 .panel-procon-product .panel-heading .panel-title {
   float: left;
+  margin-bottom: 10px;
 }
 .panel-procon-product .panel-heading .label-group {
   float: right;
+  margin-bottom: 10px;
 }
 .panel-procon-product .panel-heading .label-group .label {
   vertical-align: 2px;
+  padding: .2em .6em .3em;
+  line-height: 14px;
 }
 .panel-procon-product ul.panel-procon-product-link {
   margin-left: 0;

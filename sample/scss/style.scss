@@ -104,13 +104,27 @@ Proconist.net - style.css
 
 .panel-procon-product {
 	.panel-heading {
+		.panel-procon-product-rank {
+			@include pull-left;
+			margin-right: $padding-small-horizontal;
+			.label {
+				vertical-align: 2px;
+			}
+		}
+		.panel-procon-product-heading {
+			margin-bottom: -$padding-base-vertical;
+		}
 		.panel-title {
 			@include pull-left;
+			margin-bottom: $padding-base-vertical;
 		}
 		.label-group {
 			@include pull-right;
+			margin-bottom: $padding-base-vertical;
 			.label {
 				vertical-align: 2px;
+				padding: .2em .6em .3em;
+				line-height: 14px;
 			}
 		}
 	}
