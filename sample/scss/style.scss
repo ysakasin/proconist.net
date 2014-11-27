@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/*!------------------------------------
+
+Proconist.net - style.css
+
+  Site URL: http://proconist.net/
+  File name: style.css (http://proconist.net/style.css)
+  Summary: additional styles
+  Created: 2014-10-30
+  Last update: 2014-11-02 by Ryosuke hagihara
+  Author: Proconist.net 運営委員会
+  Copyright: &copy; 2014 Proconist.net operators
+
+------------------------------------*/
+
+@import "compass";
+@import "compass/css3";
+
+@import "bootstrap-override";
+@import "original-set";
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+.logo {
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	text-decoration: none;
+	outline: none;
+	letter-spacing: 1px;
+	background: none;
+	border: none;
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		outline: none;
+		border: none;
+		background: none;
+	}
+}
+
+.title {
+	margin: 1em auto;
+	h1 {
+		@include pull-left;
+		margin: 0 0.2em 0 0;
+		padding: 0;
+		font-size: 3.2em;
+		.logo {
+			font-weight: 300;
+			color: lighten($text-color, 20%)
+		}
+	}
+	span.description {
+		@include pull-left;
+		font-size: 1.2em;
+		line-height: 3.2em;
+		vertical-align: text-bottom;
+	}
+	.social-button {
+		ul {
+			@include pull-right;
+			margin: 0;
+			li {
+				@include pull-left;
+			}
+			li:not(:first-child) {
+				margin-left: $padding-xs-horizontal;
+			}
+		}
+		iframe {
+			margin: 0 !important;
+		}
+	}
+}
+
+.about {
+	&.jumbotron {
+		h2 {
+			margin-top: 0;
+		}
+	}
+}
+
+.heading {
+	position: relative;
+	border-bottom: 2px solid $gray-dark;
+	margin-bottom: $line-height-computed/2;
+	#{headings(2, 6)} {
+		margin-top: 0;
+		@include pull-left;
+	}
+	.meta-info {
+		@include pull-right;
+		min-height: $font-size-h2 * $headings-line-height;
+		li {
+			font-size: $font-size-small;
+			text-align: right;
+		}
+	}
+}
+
+.instant-search {
+	margin: $padding-base-vertical 0;
+	text-align: right;
+}
+
+.panel-procon-product {
+	.panel-heading {
+		.panel-procon-product-rank {
+			@include pull-left;
+			margin-right: $padding-small-horizontal;
+			.label {
+				vertical-align: 2px;
+			}
+		}
+		.panel-procon-product-heading {
+			margin-bottom: -$padding-base-vertical;
+		}
+		.panel-title {
+			@include pull-left;
+			margin-bottom: $padding-base-vertical;
+		}
+		.label-group {
+			@include pull-right;
+			margin-bottom: $padding-base-vertical;
+			.label {
+				vertical-align: 2px;
+				padding: .2em .6em .3em;
+				line-height: 14px;
+			}
+		}
+	}
+	ul.panel-procon-product-link {
+		margin-left: 0;
+		border-top: 1px solid $table-border-color;
+		padding: $padding-base-horizontal $padding-base-horizontal 0;
+		li {
+			margin-bottom: 10px;
+			a, a:visited, a:hover, a:active, a:focus  {
+				text-decoration: none;
+				color: $text-color;
+			}
+			.fa-github {
+				color: #333;
+			}
+			.fa-bitbucket {
+				color: #205081;
+			}
+			.fa-slideshare {
+				color: #07a;
+			}
+			.fa-globe {
+				color: #00a7a9;
+			}
+			.fa-twitter {
+				color: #55acee;
+			}
+			.fa-facebook-square {
+				color: #3b5998;
+			}
+		}
+	}
+}
+
+.heading-mark {
+	small {
+		color: $headings-color;
+	}
+	&:before {
+		display: inline-block;
+		content: "▶";
+		font-size: .8em;
+		width: 1.25em;
+	}
+	&.heading-mark-competition:before {
+		color: $brand-danger;
+	}
+	&.heading-mark-themed:before {
+		color: $brand-warning;
+	}
+	&.heading-mark-original:before {
+		color: $brand-info;
+	}
+}
+
+.newlist {
+	.list-group {
+		a.list-group-item {
+			dl {
+				margin-bottom: 0;
+				dt {
+					font-size: $font-size-small;
+					font-weight: normal;
+					.label {
+						vertical-align: 2px;
+					}
+					margin-bottom: $padding-xs-vertical;
+				}
+				dd {
+					color: $link-color;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	padding: 20px 0;
+	color: $gray-lighter;
+	background-color: $gray-darker;
+}

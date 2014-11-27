@@ -1,0 +1,67 @@
+@import "bootstrap/variables";
+
+// bootstrapの設定に上書きするスタイル指定
+
+body {
+	font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+#{headings(all)} {
+	font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+body {
+	background-color: lighten($gray-lighter, 4%);
+}
+
+.navbar-nav {
+	&.nav-justified {
+		& > li {
+			float: none;
+		}
+	}
+}
+
+.panel {
+	.carousel {
+		margin: -$padding-base-horizontal;
+	}
+}
+
+.carousel {
+	.carousel-control {
+		&.right, &.left {
+			background: none;
+		}
+	}
+	.carousel-indicators {
+		bottom: 0;
+	}
+	.carousel-caption {
+		padding-bottom: 0;
+	}
+}
+
+.form-inline {
+	.form-group-sm {
+		display: inline-block;
+	}
+}
+
+/* Sticky footer styles
+ * http://getbootstrap.com/examples/sticky-footer/
+-------------------------------------------------- */
+$footer-height: 160px;
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	margin-bottom: $footer-height;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: $footer-height;
+}

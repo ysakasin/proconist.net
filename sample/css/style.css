@@ -1,4 +1,5 @@
-/*------------------------------------
+@charset "UTF-8";
+/*!------------------------------------
 
 Proconist.net - style.css
 
@@ -11,321 +12,229 @@ Proconist.net - style.css
   Copyright: &copy; 2014 Proconist.net operators
 
 ------------------------------------*/
-
-/* =========================================================
- Common settings
-========================================================= */
-/* Body
---------------------------------------------------------- */
-html, body {
-  font-size: 20px;
-  font-family: "Helvetica Neue", Helvetica, "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Arial, sans-serif;
-  height: 100%;
-  background-color:#f5f5f5;
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+body {
+  font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
-/* h1-h6
---------------------------------------------------------- */
-h2 {
-  font-size: 32px;
-  border-bottom: solid 3px #2c3e50;
+h1, h2, h3, h4, h5, h6 {
+  font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
-
-/* Itemize
---------------------------------------------------------- */
-li {
-  margin-left:0px;
-  list-style-type: none;
+body {
+  background-color: #f8f9fa;
 }
 
-/* Container
---------------------------------------------------------- */
-.container {
-  height: auto;
-  min-height:100%;
+.navbar-nav.nav-justified > li {
+  float: none;
 }
 
-/* Row
---------------------------------------------------------- */
-.row {
-  margin-bottom: 50px;
+.panel .carousel {
+  margin: -15px;
 }
 
-.no-margin {
-  margin-bottom: 0px;
+.carousel .carousel-control.right, .carousel .carousel-control.left {
+  background: none;
+}
+.carousel .carousel-indicators {
+  bottom: 0;
+}
+.carousel .carousel-caption {
+  padding-bottom: 0;
 }
 
-/* Icons
---------------------------------------------------------- */
-/* ----- Github ----- */
-.fa-github,
-.github-icon,
-.github-icon:hover,
-.github-icon:visited {
-  color: #333;
+.form-inline .form-group-sm {
+  display: inline-block;
 }
 
-/* ----- Twitter ----- */
-.fa-twitter,
-.twitter-icon,
-.twitter-icon:hover,
-.twitter-icon:visited {
-  color: #55acee;
-}
-
-/* ----- SlideShare ----- */
-.fa-slideshare,
-.slideshare-icon,
-.slideshare-icon:hover,
-.slideshare-icon:visited {
-  color: #07a;
-}
-
-/* ----- Blog etc... ----- */
-.fa-bitbucket,
-.bitbucket-icon,
-.bitbucket-icon:hover,
-.bitbucket-icon:visited {
-  color: #205081;
-}
-
-/* ----- Blog etc... ----- */
-.fa-globe,
-.other-icon,
-.other-icon:hover,
-.other-icon:visited {
-  color: #00a7a9;
-}
-
-/* =========================================================
- Each settings
-========================================================= */
-/* Logo
---------------------------------------------------------- */
-.logo {
-  max-width: 468px;
-  margin-top: 20px;
-}
-
-.description {
+/* Sticky footer styles
+ * http://getbootstrap.com/examples/sticky-footer/
+-------------------------------------------------- */
+html {
   position: relative;
-  top: 60px;
+  min-height: 100%;
 }
 
-/* Navbar
---------------------------------------------------------- */
-/* ----- Centering ----- */
-@media (min-width: 768px){
-  .navbar-nav{
-      margin: 0 auto;
-      display: table;
-      table-layout: fixed;
-      float:none;
-  }
+body {
+  margin-bottom: 160px;
 }
 
-/* ----- Menu ----- */
-.navbar-brand {
-  display: none;
-}
-@media (max-width: 767px){
-  .navbar-brand{
-      display: block;
-  }
-}
-
-/* Change log
---------------------------------------------------------- */
-/* ----- scroll, border ----- */
-.change-log {
-  height: 240px;
-  overflow-y: scroll;
-  margin-right: 0;
-  margin-left: 0;
-  background-color: #fff;
-  border-radius: 4px 4px 0 0;
-  padding: 25px 15px 15px;
-  border-color: #e5e5e5 #eee #eee;
-  border-style: solid;
-  border-width: 1px 0;
-  box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
-}
-
-/* Newest Entry
---------------------------------------------------------- */
-.newest-entry-contents {
-  text-align: center;
-}
-
-.newest-entry a {
-  width: 210px;
-  height: 210px;
-}
-
-.newest-entry img {
-  text-align: center;
-}
-
-.newest-entry p {
-  text-align: center;
+footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
+  height: 160px;
 }
 
-/* About Contest
---------------------------------------------------------- */
-/* ----- scroll, border ----- */
-.about-contest h3 {
-  width: 100%;
+.margin-none-top {
+  margin-top: 0;
 }
 
-.about-contest h3 span {
-  font-size: 20px !important;
-  color: #666 !important;
-  margin-left: 20px;
+.logo {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  text-decoration: none;
+  outline: none;
+  letter-spacing: 1px;
+  background: none;
+  border: none;
+}
+.logo:hover, .logo:active, .logo:focus {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background: none;
 }
 
-.contest-heading {
-  border-bottom: solid 3px #2c3e50;
-  margin-top: 21px;
-  margin-bottom: 10.5px;
+.title {
+  margin: 1em auto;
 }
-
-.contest-heading h1 {
-  display: inline;
-  padding-right: 1em;
+.title h1 {
+  float: left;
+  margin: 0 0.2em 0 0;
+  padding: 0;
+  font-size: 3.2em;
 }
-
-/* Sections
---------------------------------------------------------- */
-.competition-section,
-.examination-section,
-.freedom-section {
+.title h1 .logo {
+  font-weight: 300;
+  color: #507192;
+}
+.title span.description {
+  float: left;
+  font-size: 1.2em;
+  line-height: 3.2em;
+  vertical-align: text-bottom;
+}
+.title .social-button ul {
+  float: right;
+  margin: 0;
+}
+.title .social-button ul li {
+  float: left;
+}
+.title .social-button ul li:not(:first-child) {
   margin-left: 5px;
 }
+.title .social-button iframe {
+  margin: 0 !important;
+}
 
-.section-heading {
-  overflow: hidden;
+.about.jumbotron h2 {
+  margin-top: 0;
 }
-.section-content-title {
-  display: inline;
-  font-size: 30px;
+
+.heading {
+  position: relative;
+  border-bottom: 2px solid #7b8a8b;
+  margin-bottom: 10.5px;
 }
-.section-content-sns {
+.heading h2, .heading h3, .heading h4, .heading h5, .heading h6 {
+  margin-top: 0;
+  float: left;
+}
+.heading .meta-info {
   float: right;
-  padding-right: 20px;
+  min-height: 35.2px;
+}
+.heading .meta-info li {
+  font-size: 13px;
+  text-align: right;
 }
 
-.section-content-title .twitter-icon {
-  position: absolute;
-  right: 50px;
-  font-size: 20px;
+.instant-search {
+  margin: 10px 0;
+  text-align: right;
 }
 
-.github-link,
-.slideshare-link,
-.other-link,
-.bitbucket-link {
-  font-size: 30px;
+.panel-procon-product .panel-heading .panel-procon-product-rank {
+  float: left;
+  margin-right: 9px;
+}
+.panel-procon-product .panel-heading .panel-procon-product-rank .label {
+  vertical-align: 2px;
+}
+.panel-procon-product .panel-heading .panel-procon-product-heading {
+  margin-bottom: -10px;
+}
+.panel-procon-product .panel-heading .panel-title {
+  float: left;
+  margin-bottom: 10px;
+}
+.panel-procon-product .panel-heading .label-group {
+  float: right;
+  margin-bottom: 10px;
+}
+.panel-procon-product .panel-heading .label-group .label {
+  vertical-align: 2px;
+  padding: .2em .6em .3em;
+  line-height: 14px;
+}
+.panel-procon-product ul.panel-procon-product-link {
+  margin-left: 0;
+  border-top: 1px solid #ecf0f1;
+  padding: 15px 15px 0;
+}
+.panel-procon-product ul.panel-procon-product-link li {
+  margin-bottom: 10px;
+}
+.panel-procon-product ul.panel-procon-product-link li a, .panel-procon-product ul.panel-procon-product-link li a:visited, .panel-procon-product ul.panel-procon-product-link li a:hover, .panel-procon-product ul.panel-procon-product-link li a:active, .panel-procon-product ul.panel-procon-product-link li a:focus {
+  text-decoration: none;
+  color: #2C3E50;
+}
+.panel-procon-product ul.panel-procon-product-link li .fa-github {
+  color: #333;
+}
+.panel-procon-product ul.panel-procon-product-link li .fa-bitbucket {
+  color: #205081;
+}
+.panel-procon-product ul.panel-procon-product-link li .fa-slideshare {
+  color: #07a;
+}
+.panel-procon-product ul.panel-procon-product-link li .fa-globe {
+  color: #00a7a9;
+}
+.panel-procon-product ul.panel-procon-product-link li .fa-twitter {
+  color: #55acee;
+}
+.panel-procon-product ul.panel-procon-product-link li .fa-facebook-square {
+  color: #3b5998;
 }
 
-/* Member
---------------------------------------------------------- */
-.member-img {
-  width: 150px;
+.heading-mark small {
+  color: inherit;
+}
+.heading-mark:before {
+  display: inline-block;
+  content: "▶";
+  font-size: .8em;
+  width: 1.25em;
+}
+.heading-mark.heading-mark-competition:before {
+  color: #E74C3C;
+}
+.heading-mark.heading-mark-themed:before {
+  color: #F39C12;
+}
+.heading-mark.heading-mark-original:before {
+  color: #3498DB;
 }
 
-.member-name {
-  font-size: 30px;
+.newlist .list-group a.list-group-item dl {
+  margin-bottom: 0;
+}
+.newlist .list-group a.list-group-item dl dt {
+  font-size: 13px;
+  font-weight: normal;
+  margin-bottom: 1px;
+}
+.newlist .list-group a.list-group-item dl dt .label {
+  vertical-align: 2px;
+}
+.newlist .list-group a.list-group-item dl dd {
+  color: #18BC9C;
 }
 
-.member-sns {
- margin-left: 10px;
-}
-
-.member-sns a {
-  margin-left: 10px;
-}
-
-/* Actions
---------------------------------------------------------- */
-.actions {
-  width: 100%;
-}
-
-.action-bg {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  border-radius: 100px;
-}
-
-.action-read .action-bg {
-  background-color: #F3C759;
-}
-
-.action-entry .action-bg {
-  background-color: #FFEE55;
-}
-
-.action-share .action-bg {
-  background-color: #3261AB;
-}
-
-.actions .fa {
-  font-size: 100px;
-}
-
-.action-bg .fa {
-  color: #fff;
-  position: absolute;
-  left: 150px;
-  top: 52px;
-}
-
-@media (max-width: 1260px){
-  .action-bg{
-      background-color: transparent !important;
-  }
-
-  .actions {
-    width: 100%;
-  }
-
-  .actions .fa {
-    color: #333;
-    position: absolute;
-    left: 35%;
-  }
-}
-
-@media (max-width: 1080px){
-  .actions .fa {
-    color: #333;
-    position: absolute;
-    left: 43%;
-  }
-}
-
-.action-do,
-.action-description {
-  text-align: center;
-}
-
-.action-do {
-  font-size: 30px;
-}
-
-/* Footer
---------------------------------------------------------- */
 footer {
-  height: 100px;
-  width: 100%;
-  background-color: #333;
-  color: #f5f5f5;
-}
-
-/* ----- Copyright ----- */
-.copyright {
-  text-align: center;
+  padding: 20px 0;
+  color: #ecf0f1;
+  background-color: #222222;
 }
