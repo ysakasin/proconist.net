@@ -4,13 +4,16 @@ section.about.jumbotron
     | はこういうサイトです
   p このサイトはこうこうこういう理由でつくられました。そしてこのあたりがこうこうこうでこう特色を持っているすごいサイトです。みんなつかうとハッピーになれます。マジです。やったね。
   p 説明はここまでにして、ではつかってみましょう。
-  p.text-rigth
-    a href="#"　もう少し詳細な説明 &raquo;
+  p.text-right
+    a href="#" もう少し詳細な説明 &raquo;
   div.row
     div.col-md-6
-      a.btn.btn-success.btn-lg.btn-block href="#" 作品を探す
+      a.btn.btn-success.btn-lg.btn-block href="#"
+        | 作品を探す
         i.fa.fa-search
-      a.btn.btn-warning.btn-lg.btn-block href="#" 作品を投稿する
+    div.col-md-6
+      a.btn.btn-warning.btn-lg.btn-block href="#"
+        | 作品を投稿する
         i.fa.fa-plus
 
 div.row.content
@@ -41,7 +44,7 @@ div.row.content
       div.form-group-sm
         button.btn.btn-default.btn-sm.form-control 表示
 
-    div.btn-group.btn-gropu-justified
+    div.btn-group.btn-group-justified
       a.btn.btn-danger.btn-block href="#" 競技部門
       a.btn.btn-warning.btn-block href="#" 課題部門
       a.btn.btn-info.btn-block href="#" 自由部門
@@ -64,19 +67,20 @@ div.row.content
                   li.label.label-warning
                     i.fa.fa-trophy
                     = prise
-            ul.list-inline.panel-procon-product-link
-              li
-                a href=product.code_url
-                  i.fa.fa-lg.fa-fw class=product.code_class_i
-                  = product.code
-              li
-                a href=product.slide_url
-                  i.fa.fa-lg.fa-fw class=product.slide_class_i
-                  = product.slide
-              li
-                a href=product.site_url
-                  i.fa.fa-lg.fa-fw.fa-globe 解説サイト
-              li
-                a href=product.sns_url
-                  i.fa.fa-lg.fa-fw class=product.sns_class_i
-                  = product.sns
+        ul.list-inline.panel-procon-product-link
+          li
+            a href=product.code_url
+              i.fa.fa-lg.fa-fw class=product.code_class_i
+              = product.code
+          li
+            a href=product.slide_url
+              i.fa.fa-lg.fa-fw class=product.slide_class_i
+              = product.slide
+          li
+            a href=product.site_url
+              i.fa.fa-lg.fa-fw.fa-globe
+              | 解説サイト
+          li
+            a href=product.sns_url
+              i.fa.fa-lg.fa-fw class=product.sns_class_i
+              = product.sns

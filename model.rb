@@ -25,6 +25,10 @@ class Entrant < ActiveRecord::Base
     "fa-#{sns}"
   end
 
+  def slide_class_i
+    "fa-#{slide}"
+  end
+
   def code_class_link
     "#{code}-link"
   end
