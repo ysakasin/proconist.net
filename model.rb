@@ -13,6 +13,10 @@ class Entrant < ActiveRecord::Base
 
   ENUMS = ['section', 'code', 'slide', 'sns']
 
+  def prizes
+    prize.split(',')
+  end
+
   def sns_class_a
     "#{sns}-icon"
   end
