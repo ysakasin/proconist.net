@@ -56,3 +56,18 @@ div.row.content
     - @competition.each do |product|
       - @product = product
       == slim :_product
+
+    h3.heading-mark.heading-mark-themed
+      | 課題部門
+      small 「#{@contest.themed_title}」
+
+    - @themed.each do |product|
+      - @product = product
+      == slim :_product
+
+    h3.heading-mark.heading-mark-original
+      | 自由部門
+
+    - @original.each do |product|
+      - @product = product
+      == slim :_product
