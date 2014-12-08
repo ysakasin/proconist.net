@@ -17,28 +17,24 @@ class Entrant < ActiveRecord::Base
     prize.split(',')
   end
 
-  def sns_class_a
-    "#{sns}-icon"
-  end
-
   def sns_class_i
-    "fa-#{sns}"
+    if sns == 'facebook'
+      'fa-facebook-square'
+    else
+      "fa-#{sns}"
+    end
   end
 
   def slide_class_i
     "fa-#{slide}"
   end
 
-  def code_class_link
-    "#{code}-link"
-  end
-
-  def code_class_icon
-    "#{code}-icon"
-  end
-
   def code_class_i
-    "fa-#{code}"
+    if code == 'github'
+      'fa-github-alt'
+    else
+      "fa-#{code}"
+    end
   end
 
   def links
