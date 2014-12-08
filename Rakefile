@@ -2,7 +2,13 @@ require 'sinatra/activerecord'
 require 'sinatra/activerecord/rake'
 require './model.rb'
 
-task :add do
+desc '開発モードでSinatraを実行する'
+task :dev_exec do
+  sh 'export DB=dev.db; ruby app.rb'
+end
+
+desc '作品の情報を登録'
+task :add_product do
   entrant = Entrant.new
   Entrant.column_names.each do |name|
     next if name == 'id'
@@ -14,6 +20,7 @@ task :add do
   entrant.save
 end
 
+desc '大会の情報を登録'
 task :add_contest do
   contest = Contest.new
   Contest.column_names.each do |name|
@@ -25,6 +32,7 @@ task :add_contest do
   contest.save
 end
 
+desc '管理者のログイン情報やプロフィールなどを登録'
 task :add_op do
   print 'id:'
   id = STDIN.gets.chomp
