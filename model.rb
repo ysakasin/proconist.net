@@ -3,7 +3,7 @@ Bundler.require
 
 ActiveRecord::Base.establish_connection(
   "adapter" => "sqlite3",
-  "database" => "./proconist.db")
+  "database" => ENV['DB'] || "./proconist.db")
 
 class Entrant < ActiveRecord::Base
   enum section: {competition: 0, themed: 1, original: 2}

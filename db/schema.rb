@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20141111132116) do
     t.string "name",              null: false
     t.string "date",              null: false
     t.string "place",             null: false
+    t.string "title",             null: false
     t.string "competition_title", null: false
     t.string "themed_title",      null: false
   end

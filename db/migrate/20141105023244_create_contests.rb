@@ -4,6 +4,7 @@ class CreateContests < ActiveRecord::Migration
       t.string :name, :null => false
       t.string :date, :null => false
       t.string :place, :null => false
+      t.string :title, :null => false
       t.string :competition_title, :null => false
       t.string :themed_title, :null => false
     end

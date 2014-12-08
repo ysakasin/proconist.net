@@ -4,7 +4,7 @@ require './model.rb'
 
 desc '開発モードでSinatraを実行する'
 task :dev_exec do
-  sh 'ruby app.rb DB=dev.db'
+  sh 'export DB=dev.db; ruby app.rb'
 end
 
 desc '作品の情報を登録'
