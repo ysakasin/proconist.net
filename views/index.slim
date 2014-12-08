@@ -54,33 +54,5 @@ div.row.content
       small 「#{@contest.competition_title}」
 
     - @competition.each do |product|
-      div.panel.panel-primary.panel-procon-product
-        div.panel-heading
-          div.panel-procon-product-heading.clearfix
-            - if product.result
-              div.panel-procon-product-rank
-                span.label.labeldanger = product.result
-            h4.panel-title #{product.school} 「#{product.production}」
-            - if product.prize
-              ul.label-group.list-inline
-                - product.prizes.each do |prise|
-                  li.label.label-warning
-                    i.fa.fa-trophy
-                    = prise
-        ul.list-inline.panel-procon-product-link
-          li
-            a href=product.code_url
-              i.fa.fa-lg.fa-fw class=product.code_class_i
-              = product.code
-          li
-            a href=product.slide_url
-              i.fa.fa-lg.fa-fw class=product.slide_class_i
-              = product.slide
-          li
-            a href=product.site_url
-              i.fa.fa-lg.fa-fw.fa-globe
-              | 解説サイト
-          li
-            a href=product.sns_url
-              i.fa.fa-lg.fa-fw class=product.sns_class_i
-              = product.sns
+      - @product = product
+      == slim :_product
