@@ -1,48 +1,115 @@
-div.row
-  ul.col-md-9.change-log
-  section.col-md-3.newest-entry
-    div.newest-entry-contents
-      a href="#"
-        img src="http://placehold.it/200X200" alt="Thumb" class="img-thumbnail"
-      p.newest-entry-title
-        a href="#" entry title
-section.row.about-contest
-  div.col-md-12
-    div.contest-heading
-      h1 第#{@contest.id}回 #{@contest.name}の作品一覧
-      span.contest-date = @contest.date
-    form.form-inline role="form"
-      select.form-control id="select"
-        option 1
-        option 2
-      div.checkbox
-        label
-          input type="checkbox" 公開チームのみ
-      button.btn.btn-danger type="submit" 実行
-section.row.sections
-  div.col-md-12
-    div.col-md-4
-      a.btn.btn-warning.btn-lg.btn-block href="#competition-section" 競技部門
-    div.col-md-4
-      a.btn.btn-success.btn-lg.btn-block href="#themed-section" 課題部門
-    div.col-md-4
-      a.btn.btn-info.btn-lg.btn-block href="#original-section" 自由部門
-section#competition-section.row.sections
-  div.col-md-12
-    h2 競技部門 「#{@contest.competition_title}」
-    div.section-contest
-      - @competition.each do |team|
-        div.panel.panel-default
-          div.panel-heading.section-heading
-            h3.panel-title.section-content-title #{team.school}「#{team.production}」
-            span.section-content-sns
-              a href=team.sns_url class=team.sns_class_a
-                i.fa class=team.sns_class_i
-                = team.name_in_sns
-          div.panel-body.section-content-links
-            p.section-contest-result.text-warning= team.prize
-            div.row.no-margin
-              p.col-md-3 class="#{team.code_class_link}"
-                a href="#{team.code_url}" class="#{team.code_class_icon}"
-                  i.fa class="#{team.code_class_i}"
-                  = team.code
+section.about.jumbotron
+  h2
+    span.logo Proconist.net
+    | はこういうサイトです
+  p このサイトはこうこうこういう理由でつくられました。そしてこのあたりがこうこうこうでこう特色を持っているすごいサイトです。みんなつかうとハッピーになれます。マジです。やったね。
+  p 説明はここまでにして、ではつかってみましょう。
+  p.text-right
+    a href="#" もう少し詳細な説明 &raquo;
+  div.row
+    div.col-md-6
+      a.btn.btn-success.btn-lg.btn-block href="#"
+        | 作品を探す
+        i.fa.fa-search
+    div.col-md-6
+      a.btn.btn-warning.btn-lg.btn-block href="#"
+        | 作品を投稿する
+        i.fa.fa-plus
+
+div.row.content
+  div.col-md-8.main
+    div.clearfix.heading
+      h2 第#{@contest.id}回 #{@contest.name} 作品一覧
+      ul.meta-info.list-unstyled
+        li
+          i.fa.fa-calendar
+          = @contest.date
+        li
+          i.fa.fa-map-marker
+          = @contest.place
+
+    form.form-inline.instant-search action="#" role="form"
+      div.form-group-sm
+        select.form-group-sm
+          option 番号昇順
+          option 番号降順
+          option 順位
+          option ほげ
+          option ぴよ
+      div.form-group-sm
+        div.checkbox
+          label
+            | 公開チームのみ
+            input.form-control type="checkbox"
+      div.form-group-sm
+        button.btn.btn-default.btn-sm.form-control 表示
+
+    div.btn-group.btn-group-justified
+      a.btn.btn-danger.btn-block href="#" 競技部門
+      a.btn.btn-warning.btn-block href="#" 課題部門
+      a.btn.btn-info.btn-block href="#" 自由部門
+
+    h3.heading-mark.heading-mark-competition
+      | 競技部門
+      small 「#{@contest.competition_title}」
+
+    - @competition.each do |product|
+      - @product = product
+      == slim :_product
+
+    h3.heading-mark.heading-mark-themed
+      | 課題部門
+      small 「#{@contest.themed_title}」
+
+    - @themed.each do |product|
+      - @product = product
+      == slim :_product
+
+    h3.heading-mark.heading-mark-original
+      | 自由部門
+
+    - @original.each do |product|
+      - @product = product
+      == slim :_product
+
+  aside.col-md-4.hidden-sm.hidden-xs.sidebar
+    div.panel.panel-default.newlist
+      div.panel-heading
+        h3.panel-title 新着情報
+      div.panel-body
+        div#carousel-example-generic.carousel.slide data-ride="carousel"
+          div.carousel-inner role="listbox"
+            div.item.active
+              img src="http://placehold.it/480X270" alt="..."
+              div.carousel-caption ほげほげ
+            div.item
+              img src="http://placehold.it/480X270" alt="..."
+              div.carousel-caption ○○高専「〜〜〜〜」
+          a.left.carousel-control href="#carousel-example-generic" role="button" data-slide="prev"
+            span.glyphicon.glyphicon-chevron-left
+            span.sr-only Previous
+          a.right.carousel-control. href="#carousel-example-generic" role="button" data-slide="next"
+            span.glyphicon.glyphicon-chevron-right
+            span.sr-only Next
+      div.list-group
+        a.list-group-item href="#"
+          dl
+            dt
+              span.label.label-warning 特集
+              | 2014-01-01
+            dd 超入門】GitHubを使ってみよう！
+        a.list-group-item href="#"
+          dl
+            dt
+              span.label.label-info 作品
+              | 2014-01-01
+            dd 課題部門 津山高専「Grouper」
+
+    div.panel.pabel-dafault.contest-index
+      div.panel-heading
+        h3.panel-title 過去の大会から探す
+      div.list-group
+        - Contest.all.each do |contest|
+          a.list-group-item href="#"
+            h4.list-group-item-heading 第#{contest.id}回 #{contest.name}
+            p.list-group-item-test = contest.name

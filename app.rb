@@ -13,3 +13,7 @@ get '/' do
   @original = entrants.select {|item| item.original?}
   slim :index
 end
+
+get '/css/style.css' do
+  sass :stylesheet, :style => :expanded
+end

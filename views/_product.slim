@@ -1,0 +1,21 @@
+div.panel.panel-procon-product class=@product.panel_class
+  div.panel-heading
+    div.panel-procon-product-heading.clearfix
+      - if @product.result
+        div.panel-procon-product-rank
+          span.label.label-danger = @product.result
+      h4.panel-title #{@product.school} 「#{@product.production}」
+      - if @product.prize
+        ul.label-group.list-inline
+          - @product.prizes.each do |prise|
+            li.label.label-warning
+              i.fa.fa-trophy
+              = prise
+  - if @product.is_registered?
+    ul.list-inline.panel-procon-product-link
+      - @product.links.each do |elem|
+        - next if elem[:href].blank?
+        li
+          a href=elem[:href]
+            i.fa.fa-lg.fa-fw class=elem[:tag_class]
+            = elem[:title]

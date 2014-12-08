@@ -4,47 +4,61 @@ html
     meta charset="utf-8"
     title =@title
     link rel="stylesheet" href="/css/bootstrap.min.css"
-    link rel="stylesheet" href="/css/bootstrap.css"
+    link rel="stylesheet" href="/css/bootswatch-flatly.min.css"
     link rel="stylesheet" href="/css/style.css"
     link rel="stylesheet" href="/css/font-awesome.css"
 
   body
     div.container
       header
-        div.row
-          p.col-md-5
-            a href="/"
-              img.logo src="/img/logo.svg" alt="Proconist.net"
-          p.col-md-7
-            span.description プロコンでアップスパイラルを生み出す
-        div.row
-          nav.navbar.navbar-default role="navigation"
-            div.container-fluid
-              div.navbar-header
-                button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                  span.sr-only Toggle navigation
-                  span.icon-bar
-                  span.icon-bar
-                  span.icon-bar
-                span.navbar-brand Menu
-              div.collapse.navbar-collapse#bs-example-navbar-collapse-1
-                ul.nav.navbar-nav
-                  li
-                    a href="#" 出場作品
-                  li
-                    a href="#" 特集
-                  li
-                    a href="#" 情報提供
-                  li
-                    a href="#" 趣旨
+        / title
+        div.title
+          div.row
+            div.col-md-8.clearfix
+              h1
+                a.logo href="/" Proconist.net
+              span.description  プロコンでアップスパイラルを生み出す
+            div.col-md-4.hidden-sm.hidden-xs.social-button
+              ul.list-unstyled
+                li
+                  a.twitter-share-button href="https://twitter.com/share" data-lang="ja" data-count="vertical" ツイート
+                li
+                  a.hatena-bookmark-button href="http://b.hatena.ne.jp/entry/" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"
+                    img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"
+                li
+                  div.fb-like data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"
+
+        / navbar
+        nav.navbar.navbar-default role="navigation"
+          div.navbar-header
+            button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+          div.collapse.navbar-collapse#bs-example-navbar-collapse-1
+            ul.nav.navbar-nav.nav-justified
+              li
+                a href="#" トップページ
+              li
+                a href="#" 出場作品
+              li
+                a href="#" 特集
+              li
+                a href="#" 情報提供
+              li
+                a href="#" 趣旨
 
       == yield
 
-    footer
-      div.container
-        ul.footer-links
-          li
-        div.copyright &copy; #{Time.now.year} Proconist.net 運営委員会
+  footer
+    div.container
+      div.copyright.text-center &copy; #{Time.now.year} Proconist.net 運営委員会
 
-    script src="/js/bootstrap.js"
-    script src="https://code.jquery.com/jquery-2.1.1.min.js"
+  script src="/js/bootstrap.min.js"
+  script src="https://code.jquery.com/jquery-2.1.1.min.js"
+  script src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"
+  script
+    | !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+      (function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
+  div#fb-root

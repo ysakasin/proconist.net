@@ -13,24 +13,49 @@ class Entrant < ActiveRecord::Base
 
   ENUMS = ['section', 'code', 'slide', 'sns']
 
-  def sns_class_a
-    "#{sns}-icon"
+  def prizes
+    prize.split(',')
   end
 
   def sns_class_i
-    "fa-#{sns}"
+    if sns == 'facebook'
+      'fa-facebook-square'
+    else
+      "fa-#{sns}"
+    end
   end
 
-  def code_class_link
-    "#{code}-link"
-  end
-
-  def code_class_icon
-    "#{code}-icon"
+  def slide_class_i
+    "fa-#{slide}"
   end
 
   def code_class_i
-    "fa-#{code}"
+    if code == 'github'
+      'fa-github-alt'
+    else
+      "fa-#{code}"
+    end
+  end
+
+  def panel_class
+    if is_registered?
+      'panel-primary'
+    else
+      'panel-default'
+    end
+  end
+
+  def links
+    _links = []
+    _links << {title: code, href: code_url, tag_class: code_class_i}
+    _links << {title: slide, href: slide_url, tag_class: slide_class_i}
+    _links << {title: '解説サイト', href: site_url, tag_class: 'fa-globe'}
+    _links << {title: sns, href: sns_url, tag_class: sns_class_i}
+    return _links
+  end
+
+  def is_registered?
+    code_url.present? || slide_url.present? || site_url.present? || sns_url.present?
   end
 end
 
