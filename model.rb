@@ -37,6 +37,14 @@ class Entrant < ActiveRecord::Base
     end
   end
 
+  def panel_class
+    if is_registered?
+      'panel-primary'
+    else
+      'panel-default'
+    end
+  end
+
   def links
     _links = []
     _links << {title: code, href: code_url, tag_class: code_class_i}
