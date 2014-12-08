@@ -16,4 +16,4 @@ end
 
 get '/css/style.css' do
   sass :stylesheet, :style => :expanded
-ends
+end
