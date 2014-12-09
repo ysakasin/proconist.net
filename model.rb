@@ -86,4 +86,6 @@ end
 
 class History < ActiveRecord::Base
   enum label: {product: 0, entry: 1, notice: 2}
+
+  ENUMS = ['label']
 end
