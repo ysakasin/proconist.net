@@ -79,12 +79,12 @@ div.row.content
       div.panel-body
         div#carousel-example-generic.carousel.slide data-ride="carousel"
           div.carousel-inner role="listbox"
-            div.item.active
-              img src="http://placehold.it/480X270" alt="..."
-              div.carousel-caption ほげほげ
-            div.item
-              img src="http://placehold.it/480X270" alt="..."
-              div.carousel-caption ○○高専「〜〜〜〜」
+            - item_class = 'active'
+            - @thumbnail.each do |elem|
+              div.item class=item_class
+                img src=elem.img alt=elem.title
+                div.carousel-caption = elem.title
+                - item_class.clear
           a.left.carousel-control href="#carousel-example-generic" role="button" data-slide="prev"
             span.glyphicon.glyphicon-chevron-left
             span.sr-only Previous
@@ -92,18 +92,13 @@ div.row.content
             span.glyphicon.glyphicon-chevron-right
             span.sr-only Next
       div.list-group
-        a.list-group-item href="#"
-          dl
-            dt
-              span.label.label-warning 特集
-              | 2014-01-01
-            dd 超入門】GitHubを使ってみよう！
-        a.list-group-item href="#"
-          dl
-            dt
-              span.label.label-info 作品
-              | 2014-01-01
-            dd 課題部門 津山高専「Grouper」
+        - @history.each do |elem|
+          a.list-group-item href=elem.href
+            dl
+              dt
+                span.label class=elem.label_class = elem.label_name
+                = elem.created_at.strftime('%F')
+              dd = elem.title
 
     div.panel.pabel-dafault.contest-index
       div.panel-heading

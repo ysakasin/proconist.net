@@ -32,6 +32,19 @@ task :add_contest do
   contest.save
 end
 
+desc '更新情報を登録'
+task :add_history do
+  history = History.new
+  History.column_names.each do |name|
+    next if ['id', 'created_at', 'updated_at'].include?(name)
+    print "#{History.send(name.pluralize)}\n" if History::ENUMS.include?(name)
+    print "#{name}:"
+    val = STDIN.gets.chomp
+    history.send("#{name}=", val) if val.present?
+  end
+  history.save
+end
+
 desc '管理者のログイン情報やプロフィールなどを登録'
 task :add_op do
   print 'id:'
