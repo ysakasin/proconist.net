@@ -3,107 +3,128 @@
     {
       "id" : 1,
       "title" : "光陰如箭 —A ray of hope—",
-      "school name" : "弓削商船高専"
+      "school name" : "弓削商船高専",
+      "prize" : ["優秀賞", "Second Prize"]
     },
     {
       "id" : 2,
       "title" : "潮エネ！ \"安\" —スゴいぞ潮流発電・３つの安で世界を変える—",
-      "school name" : "大島商船高専"
+      "school name" : "大島商船高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 3,
       "title" : "Change —希望が育つ願いの樹—",
-      "school name" : "松江高専"
+      "school name" : "松江高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 4,
       "title" : "Go!Up —助かる命を守りたい—",
-      "school name" : "沖縄高専"
+      "school name" : "沖縄高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 5,
       "title" : "Man-Hold —町を守る近未来マンホール—",
-      "school name" : "明石高専"
+      "school name" : "明石高専",
+      "prize" : ["特別賞"]
     },
     {
       "id" : 6,
       "title" : "DTN通信を用いた災害時の安否及び避難所情報収集システム",
-      "school name" : "富山高専射水キャンパス"
+      "school name" : "富山高専射水キャンパス",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 7,
       "title" : "BlockSnow —ホワイトアウト回避アプリ—",
-      "school name" : "旭川高専"
+      "school name" : "旭川高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 8,
       "title" : "マブコXD —マップでつなぐ地域コミュニケーション—",
-      "school name" : "一関高専"
+      "school name" : "一関高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 9,
       "title" : "PoP —災害時被災者情報管理システム—",
-      "school name" : "米子高専"
+      "school name" : "米子高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 10,
       "title" : "Grouper —集まりを　つながりに—",
-      "school name" : "津山高専"
+      "school name" : "津山高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 11,
       "title" : "BBB —非常時の非インタネット環境での情報交換システム—",
-      "school name" : "仙台高専広瀬キャンパス"
+      "school name" : "仙台高専広瀬キャンパス",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 12,
       "title" : "Relief Supplies Relay",
-      "school name" : "鈴鹿高専"
+      "school name" : "鈴鹿高専",
+      "prize" : ["特別賞"]
     },
     {
       "id" : 13,
       "title" : "津波避難エキスパート",
-      "school name" : "金沢高専"
+      "school name" : "金沢高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 14,
       "title" : "i-BadfeOVERしまNET —子供見守り防災システム—",
-      "school name" : "弓削商船高専"
+      "school name" : "弓削商船高専",
+      "prize" : ["特別賞"]
     },
     {
       "id" : 15,
       "title" : "Sneaker@mail —心配なあの人に届ける便り—",
-      "school name" : "沖縄高専"
+      "school name" : "沖縄高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 16,
       "title" : "キズナ時計 —万が一のに備えた腕時計—",
-      "school name" : "新居浜高専"
+      "school name" : "新居浜高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 17,
       "title" : "MAP FIXER —災害時に役立つ町内道路地図アプリ—",
-      "school name" : "熊本高専八代キャンパス"
+      "school name" : "熊本高専八代キャンパス",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 18,
       "title" : "つながっタワー —津波避難タワー間を結ぶ安心防災システム—",
-      "school name" : "高知高専"
+      "school name" : "高知高専",
+      "prize" : ["文部科学大臣賞", "最優秀賞", "情報処理学会若手奨励賞", "Grand Prize"]
     },
     {
       "id" : 19,
       "title" : "人（ヒート）マップ —みんなで作る情報マップ—",
-      "school name" : "鳥羽商船高専"
+      "school name" : "鳥羽商船高専",
+      "prize" : ["特別賞"]
     },
     {
       "id" : 20,
       "title" : "WT —つなぐ・つながる　パケットを遠くまで届け隊!!!—",
-      "school name" : "福井高専"
+      "school name" : "福井高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 21,
       "title" : "SKcAP —空から支える復興支援—",
-      "school name" : "宇部高専"
+      "school name" : "宇部高専",
+      "prize" : ["敢闘賞"]
     }
   ],
   "original section" : [
