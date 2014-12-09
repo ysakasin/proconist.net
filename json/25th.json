@@ -131,102 +131,122 @@
     {
       "id" : 1,
       "title" : "すくえあ",
-      "school name" : "香川高専詫間キャンパス"
+      "school name" : "香川高専詫間キャンパス",
+      "prize" : ["文部科学大臣賞", "最優秀賞", "情報処理学会若手奨励賞", "Grand Prize"]
     },
     {
       "id" : 2,
       "title" : "Writening —自分と　世界と　つながる手帳—",
-      "school name" : "津山高専"
+      "school name" : "津山高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 3,
       "title" : "TeleRokuro —マルチプレーヤー3DCGビルダー—",
-      "school name" : "熊本高専熊本キャンパス"
+      "school name" : "熊本高専熊本キャンパス",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 4,
       "title" : "御座敷トラベラー —メガネを欠ければ今ここから広がるセカイ—",
-      "school name" : "徳山高専"
+      "school name" : "徳山高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 5,
       "title" : "CT・MRIによる骨粗鬆症の３次元解析",
-      "school name" : "新居浜高専"
+      "school name" : "新居浜高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 6,
       "title" : "NaVi —Navigate by Vibration—",
-      "school name" : "長野高専"
+      "school name" : "長野高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 7,
       "title" : "postKey —会議室らくらくシェアシステム—",
-      "school name" : "鈴鹿高専"
+      "school name" : "鈴鹿高専",
+      "prize" : ["特別賞"]
     },
     {
       "id" : 8,
       "title" : "STEP APP!!",
-      "school name" : "熊本高専八代キャンパス"
+      "school name" : "熊本高専八代キャンパス",
+      "prize" : ["特別賞"]
     },
     {
       "id" : 9,
       "title" : "あみがみ様 —3D編物デザイン支援システム—",
-      "school name" : "米子高専"
+      "school name" : "米子高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 10,
       "title" : "CosmoSWeeper —スペースデブリ回収体験システム—",
-      "school name" : "八戸高専"
+      "school name" : "八戸高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 11,
       "title" : "cosmo craft",
-      "school name" : "久留米高専"
+      "school name" : "久留米高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 12,
       "title" : "はなまるフォーム —スポーツ上達サポートアプリ—",
-      "school name" : "鳥羽商船高専"
+      "school name" : "鳥羽商船高専",
+      "prize" : ["優秀賞", "Second Prize"]
     },
     {
       "id" : 13,
       "title" : "Code on the Tablet",
-      "school name" : "弓削商船高専"
+      "school name" : "弓削商船高専",
+      "prize" : ["特別賞"]
     },
     {
       "id" : 14,
       "title" : "Rapid House —サーバー自動チューニングシステム—",
-      "school name" : "釧路高専"
+      "school name" : "釧路高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 15,
       "title" : "すごろく観光 —ゲーム型　観光サポートアプリ—",
-      "school name" : "金沢高専"
+      "school name" : "金沢高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 16,
       "title" : "おそらく王手 —AR量子将棋盤—",
-      "school name" : "福島高専"
+      "school name" : "福島高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 17,
       "title" : "ポケットレジスタ",
-      "school name" : "阿南高専"
+      "school name" : "阿南高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 18,
       "title" : "SNS炎上報知器 —個人情報流出・炎上防止見守りシステム—",
-      "school name" : "東京高専"
+      "school name" : "東京高専",
+      "prize" : ["特別賞"]
     },
     {
       "id" : 19,
       "title" : "Remoconia —ひとつの家庭にひとつのリモコン—",
-      "school name" : "沖縄高専"
+      "school name" : "沖縄高専",
+      "prize" : ["敢闘賞"]
     },
     {
       "id" : 20,
       "title" : "ネッチュー —熱中症対策システム—",
-      "school name" : "舞鶴高専"
+      "school name" : "舞鶴高専",
+      "prize" : ["敢闘賞"]
     }
   ]
 }
