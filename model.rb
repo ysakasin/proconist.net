@@ -1,6 +1,7 @@
 require 'bundler'
 Bundler.require
 
+ActiveRecord::Base.default_timezone = :local
 ActiveRecord::Base.establish_connection(
   "adapter" => "sqlite3",
   "database" => ENV['DB'] || "./proconist.db")
@@ -88,4 +89,12 @@ class History < ActiveRecord::Base
   enum label: {product: 0, entry: 1, notice: 2}
 
   ENUMS = ['label']
+
+  def label_name
+    {'product' => '作品', 'entry' => '特集', 'notice' => 'お知らせ'}[label]
+  end
+
+  def label_class
+    {'product' => 'label-info', 'entry' => 'label-warning', 'notice' => 'label-danger'}[label]
+  end
 end
