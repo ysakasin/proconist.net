@@ -3,7 +3,7 @@ div.panel.panel-procon-product class=@product.panel_class
     div.panel-procon-product-heading.clearfix
       - if @product.result
         div.panel-procon-product-rank
-          span.label.label-danger = @product.result
+          span.label.label-danger 決勝#{@product.result}位
       h4.panel-title #{@product.school} 「#{@product.production}」
       - if @product.prize
         ul.label-group.list-inline
