@@ -202,6 +202,19 @@ Proconist.net - style.css
 	}
 }
 
+.about {
+	.actions {
+		.action-bg {
+			text-align: center;
+			line-height: 8em;
+			.fa {
+				font-size: 8em;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
 footer {
 	padding: 20px 0;
 	color: $gray-lighter;

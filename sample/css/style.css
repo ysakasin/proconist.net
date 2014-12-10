@@ -233,6 +233,15 @@ footer {
   color: #18BC9C;
 }
 
+.about .actions .action-bg {
+  text-align: center;
+  line-height: 8em;
+}
+.about .actions .action-bg .fa {
+  font-size: 8em;
+  border-radius: 50%;
+}
+
 footer {
   padding: 20px 0;
   color: #ecf0f1;
