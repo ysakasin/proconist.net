@@ -45,11 +45,11 @@ div.row.content
         button.btn.btn-default.btn-sm.form-control 表示
 
     div.btn-group.btn-group-justified
-      a.btn.btn-danger.btn-block href="#" 競技部門
-      a.btn.btn-warning.btn-block href="#" 課題部門
-      a.btn.btn-info.btn-block href="#" 自由部門
+      a.btn.btn-danger.btn-block href="#competition" 競技部門
+      a.btn.btn-warning.btn-block href="#themed" 課題部門
+      a.btn.btn-info.btn-block href="#original" 自由部門
 
-    h3.heading-mark.heading-mark-competition
+    h3.heading-mark.heading-mark-competition#competition
       | 競技部門
       small 「#{@contest.competition_title}」
 
@@ -57,7 +57,7 @@ div.row.content
       - @product = product
       == slim :_product
 
-    h3.heading-mark.heading-mark-themed
+    h3.heading-mark.heading-mark-themed#themed
       | 課題部門
       small 「#{@contest.themed_title}」
 
@@ -65,7 +65,7 @@ div.row.content
       - @product = product
       == slim :_product
 
-    h3.heading-mark.heading-mark-original
+    h3.heading-mark.heading-mark-original#original
       | 自由部門
 
     - @original.each do |product|
