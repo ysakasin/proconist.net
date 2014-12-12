@@ -3,6 +3,10 @@ div class='container'
     div class='panel-heading'
       strong Sign in
     div class='panel-body'
+      - if params[:status] == 'error'
+        div class='alert alert-danger'
+          strong Error
+          | : IDとパスワードが正しいか確認してください
       form action='./sign_in' method='post'
         div class='form-group'
           label for='id' ID:
