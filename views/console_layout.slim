@@ -6,8 +6,16 @@ html lang='ja'
     title Proconist.net Console
     meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'
     link rel="stylesheet" href='https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'
+    link rel="stylesheet" href='/css/console.css'
 
   body
+    div class='navbar navbar-inverse navbar-static-top' id='top-nav'
+      div class='container'
+        div class='navbar-header'
+          button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collaps' type='button'
+            span class='icon-toggle'
+          a class='navbar-brand' Proconist.net Console
+
     == yield
 
     script src='https://code.jquery.com/jquery.min.js' type='text/javascript'
