@@ -44,6 +44,11 @@ post '/sign_in' do
   end
 end
 
+get '/sign_out' do
+  session[:op_id] = nil
+  redirect '/sign_in'
+end
+
 before '/console/*' do
   unless session[:op_id] && Operator.exists?(id: session[:op_id])
     session[:op_id] = nil
