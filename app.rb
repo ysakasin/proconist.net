@@ -50,11 +50,13 @@ get '/sign_out' do
 end
 
 before '/console/*' do
-  unless session[:op_id] && Operator.exists?(id: session[:op_id])
+  redirect '/sign_in' if session[:op_id].blank?
+
+  @op = Operator.find_by_id(session[:op_id])
+  if @op.blank?
     session[:op_id] = nil
     redirect '/sign_in'
   end
-  @op = Operator.find_by_id(session[:op_id])
 end
 
 get '/console/' do
