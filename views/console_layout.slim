@@ -15,6 +15,17 @@ html lang='ja'
           button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collaps' type='button'
             span class='icon-toggle'
           a class='navbar-brand' Proconist.net Console
+        - if @op
+          div class="navbar-collapse collapse"
+            ul class="nav navbar-nav navbar-right"
+              li
+                a href="#"
+                  i class="glyphicon glyphicon-user"
+                  = @op.name
+              li
+                a href="/sign_out"
+                  i class="glyphicon glyphicon-lock"
+                  | Sign out
 
     == yield
 

@@ -58,5 +58,5 @@ before '/console/*' do
 end
 
 get '/console/' do
-  slim :console
+  slim :console, :layout => :console_layout
 end
