@@ -1,0 +1,17 @@
+div class='container'
+  div class='panel panel-primary' id='sign-in'
+    div class='panel-heading'
+      strong Sign in
+    div class='panel-body'
+      - if params[:status] == 'error'
+        div class='alert alert-danger'
+          strong Error
+          | : IDとパスワードが正しいか確認してください
+      form action='./sign_in' method='post'
+        div class='form-group'
+          label for='id' ID:
+          input class='form-control' name='id' type='text' value=''
+        div class='form-group'
+          label for='password' Password:
+          input class='form-control' name='password' type='password' value=''
+        button class='btn btn-default' type='submit' value='sign in' Sign in

@@ -80,7 +80,7 @@ class Operator < ActiveRecord::Base
   end
 
   def self.auth(user_id, password)
-    operator = Opetator.find_by_id(user_id)
+    operator = Operator.find_by_id(user_id)
     if operator && operator.password_hash == BCrypt::Engine.hash_secret(password, operator.password_salt)
       operator
     else
