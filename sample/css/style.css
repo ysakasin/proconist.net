@@ -233,6 +233,90 @@ footer {
   color: #18BC9C;
 }
 
+.about .polocy-text {
+  margin: 36px auto;
+  text-align: center;
+  font-size: 19px;
+}
+.about .actions {
+  margin: 10px auto;
+  text-align: center;
+}
+.about .actions .action-bg {
+  margin: 0 auto;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+.about .actions .action-bg .fa {
+  line-height: 150px;
+  font-size: 5em;
+  color: #fff;
+}
+.about .actions .action-read {
+  background-color: #18BC9C;
+}
+.about .actions .action-entry {
+  background-color: #F39C12;
+}
+.about .actions .action-share {
+  background-color: #E74C3C;
+}
+.about .actions .action-description {
+  margin-top: 15px;
+}
+.about .actions .action-description span {
+  display: inline-block;
+}
+
+.member {
+  padding: 10px;
+}
+.member .member-image {
+  text-align: center;
+  padding-top: 10px;
+}
+.member .member-image img {
+  width: 200px;
+  margin: 0 auto;
+}
+.member .member-name {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #b4bcc2;
+}
+.member .member-introduction {
+  padding-top: 1px;
+}
+.member .member-introduction ul.member-sns {
+  margin-left: 0;
+  padding: 15px 0;
+}
+.member .member-introduction ul.member-sns li {
+  margin-bottom: 10px;
+}
+.member .member-introduction ul.member-sns li a, .member .member-introduction ul.member-sns li a:visited, .member .member-introduction ul.member-sns li a:hover, .member .member-introduction ul.member-sns li a:active, .member .member-introduction ul.member-sns li a:focus {
+  text-decoration: none;
+  color: #2C3E50;
+}
+.member .member-introduction ul.member-sns li .fa-github {
+  color: #333;
+}
+.member .member-introduction ul.member-sns li .fa-bitbucket {
+  color: #205081;
+}
+.member .member-introduction ul.member-sns li .fa-slideshare {
+  color: #07a;
+}
+.member .member-introduction ul.member-sns li .fa-globe {
+  color: #00a7a9;
+}
+.member .member-introduction ul.member-sns li .fa-twitter {
+  color: #55acee;
+}
+.member .member-introduction ul.member-sns li .fa-facebook-square {
+  color: #3b5998;
+}
+
 footer {
   padding: 20px 0;
   color: #ecf0f1;
