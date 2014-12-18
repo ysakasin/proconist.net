@@ -203,18 +203,24 @@ Proconist.net - style.css
 }
 
 .about {
+	.polocy-text {
+		margin: $padding-large-vertical*2 auto;
+		text-align: center;
+		font-size: $font-size-large;
+	}
 	.actions {
-		padding: $padding-base-vertical;
+		$action-bg-circle-size: 150px;
+		margin: $padding-base-vertical auto;
 		text-align: center;
 		.action-bg {
 			margin: 0 auto;
 			border-radius: 50%;
-			height: 10em;
-			width: 10em;
+			height: $action-bg-circle-size;
+			width: $action-bg-circle-size;
 			.fa {
-				line-height: 2em;
+				line-height: $action-bg-circle-size;
 				font-size: 5em;
-				color: $gray-lighter;
+				color: #fff;
 			}
 		}
 		.action-read {
@@ -228,7 +234,10 @@ Proconist.net - style.css
 		}
 
 		.action-description {
-			padding-top: $padding-small-horizontal;
+			margin-top: $padding-base-horizontal;
+			span {
+				display: inline-block;
+			}
 		}
 	}
 }
@@ -240,17 +249,18 @@ Proconist.net - style.css
 		padding-top: $padding-base-vertical;
 		img {
 			width: 200px;
+			margin: 0 auto;
 		}
 	}
 	.member-name {
-		padding-bottom: $padding-xs-vertical;
-		border-bottom: 1px solid $table-border-color;
+		padding-bottom: $padding-small-vertical;
+		border-bottom: 1px solid $gray-light;
 	}
 	.member-introduction {
 		padding-top: $padding-xs-vertical;
 		ul.member-sns {
 			margin-left: 0;
-			padding: $padding-base-horizontal $padding-base-horizontal 0;
+			padding: $padding-base-horizontal 0;
 			li {
 				margin-bottom: 10px;
 				a, a:visited, a:hover, a:active, a:focus  {

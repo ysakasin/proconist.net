@@ -233,20 +233,25 @@ footer {
   color: #18BC9C;
 }
 
+.about .polocy-text {
+  margin: 36px auto;
+  text-align: center;
+  font-size: 19px;
+}
 .about .actions {
-  padding: 10px;
+  margin: 10px auto;
   text-align: center;
 }
 .about .actions .action-bg {
   margin: 0 auto;
   border-radius: 50%;
-  height: 10em;
-  width: 10em;
+  height: 150px;
+  width: 150px;
 }
 .about .actions .action-bg .fa {
-  line-height: 2em;
+  line-height: 150px;
   font-size: 5em;
-  color: #ecf0f1;
+  color: #fff;
 }
 .about .actions .action-read {
   background-color: #18BC9C;
@@ -258,7 +263,10 @@ footer {
   background-color: #E74C3C;
 }
 .about .actions .action-description {
-  padding-top: 9px;
+  margin-top: 15px;
+}
+.about .actions .action-description span {
+  display: inline-block;
 }
 
 .member {
@@ -270,17 +278,18 @@ footer {
 }
 .member .member-image img {
   width: 200px;
+  margin: 0 auto;
 }
 .member .member-name {
-  padding-bottom: 1px;
-  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #b4bcc2;
 }
 .member .member-introduction {
   padding-top: 1px;
 }
 .member .member-introduction ul.member-sns {
   margin-left: 0;
-  padding: 15px 15px 0;
+  padding: 15px 0;
 }
 .member .member-introduction ul.member-sns li {
   margin-bottom: 10px;
