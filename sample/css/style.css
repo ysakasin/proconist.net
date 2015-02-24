@@ -317,6 +317,10 @@ footer {
   color: #3b5998;
 }
 
+.entry-body .entry-text {
+  padding: 15px 0;
+}
+
 footer {
   padding: 20px 0;
   color: #ecf0f1;
