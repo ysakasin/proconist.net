@@ -277,7 +277,7 @@ footer {
   padding-top: 10px;
 }
 .member .member-image img {
-  width: 200px;
+  width: 150px;
   margin: 0 auto;
 }
 .member .member-name {
@@ -315,6 +315,54 @@ footer {
 }
 .member .member-introduction ul.member-sns li .fa-facebook-square {
   color: #3b5998;
+}
+
+.entry-contents .heading {
+  position: relative;
+  border-bottom: 2px solid #7b8a8b;
+  margin-bottom: 10.5px;
+}
+.entry-contents .heading h1, .entry-contents .heading h2, .entry-contents .heading h3, .entry-contents .heading h4, .entry-contents .heading h5, .entry-contents .heading h6 {
+  margin-top: 0;
+  float: left;
+}
+.entry-contents .heading .meta-info {
+  float: right;
+  min-height: 42.9px;
+}
+.entry-contents .heading .meta-info li {
+  font-size: 13px;
+  text-align: right;
+  margin-bottom: 1px;
+}
+.entry-contents .entry-body .entry-text {
+  padding: 15px 0;
+}
+.entry-contents .entry-body .entry-text h4 {
+  padding-top: 5px;
+  font-size: 23px;
+}
+.entry-contents .entry-body .entry-text h2, .entry-contents .entry-body .entry-text h3, .entry-contents .entry-body .entry-text h4 {
+  border-bottom: 1px solid #7b8a8b;
+  margin-bottom: 10.5px;
+}
+.entry-contents .entry-body .social-button ul {
+  list-style-type: none;
+  margin: 0;
+}
+.entry-contents .entry-body .social-button ul li {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: bottom;
+  *display: inline;
+  zoom: 1;
+}
+.entry-contents .entry-body .social-button .member .member-image img {
+  width: 130px;
+  margin: 0 auto;
+}
+.entry-contents .entry-body .social-button iframe {
+  margin: 0 !important;
 }
 
 footer {
