@@ -86,41 +86,58 @@
 						<h2>現状</h2>
 						<p>とりあえず実装しようということになっていたところまでは実装しました。</p>
 						
-						<h3>特徴</h3>
+						<h2>特徴</h2>
 						<ul>
 							<li>アイキャッチ画像をでかでかと貼れる</li>
 							<li>使いまわせるデザインは使いまわして，エコロジーかつデザインの統一をはかる</li>
 						</ul>
-
-						<h4>要検討事案</h4>
+						<h3>tableタグのサンプル</h3>
 						<div class="table-responsive">
-							<table class="table table-bordered">
+							<table class="table table-striped table-bordered table-hover">
 								<thead>
 									<tr>
-										<th>メニュー</th>
-										<th>説明</th>
-										<th>豆知識</th>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
 									</tr>
 								</thead>
-								<tr>
-									<td>カルボナーラ</td>
-									<td>玉子とベーコンとクリームソースのパスタ</td>
-									<td>カルボナーラとは炭焼き職人という意味</td>
-								</tr>
-								<tr>
-									<td>ペスカトーレ</td>
-									<td>エビとあさりの漁師風パスタ</td>
-									<td>ペスカトーレは漁師風という意味</td>
-								</tr>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr class="info">
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+									</tr>
+								</tbody>
 							</table>
 						</div>
+						<h3>codeタグのサンプル</h3>
+						<p>これは<code>&lt;code&gt;</code>タグのサンプルです。</p>
+						<p>以下のように<code>&lt;pre&gt;</code>タグを使うことで，色々できますが，
+							これは<a href="//alexgorbatchev.com/SyntaxHighlighter/">SyntaxHighlighter</a>(リンクの表示はこれでいいでしょうか)を使うのが無難かと思います。</p>
+						<pre>&lt;pre&gt;preタグのテストです&lt;/pre&gt;</pre>
 					</div>
 
 					<div class="social-button">
 						<ul class="list-unstyled">
-							<li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a></li>
-							<li><a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></li>
-							<li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div></li>
+							<li><a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a></li>
+							<li><a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></li>
+							<li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li>
+							<!-- +1 ボタン を表示したい位置に次のタグを貼り付けてください。 -->
+<div class="g-plusone" data-annotation="inline" data-width="300"></div>
 						</ul>
 					</div>
 					<!-- .panel-entry-editor: 記事を書いた人の紹介 -->
@@ -236,6 +253,13 @@
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 // facebook
 (function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
+// g+
+window.___gcfg = {lang: 'ja'};
+(function() {
+	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	po.src = 'https://apis.google.com/js/platform.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
 </script>
 <div id="fb-root"></div>
 

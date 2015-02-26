@@ -312,22 +312,31 @@ Proconist.net - style.css
 	.entry-body {
 		.entry-text {
 			padding: $padding-base-horizontal 0;
-			h4 {
-				padding-top: $padding-xs-horizontal;
-				font-size: ceil(($font-size-base * 1.5));
-			}
-			h2, h3, h4{
+			h2 {
 				border-bottom: 1px solid $gray-dark;
-				margin-bottom: $line-height-computed/2;
+			}
+			h2, h3 {
+				margin-bottom: $line-height-computed;
+			}
+			.table{
+				* {
+					border: 1px solid $gray-dark;
+				}
+				thead tr {
+					background-color: #ecf0f1;
+					border-bottom: 2px solid $gray-dark;
+				}
 			}
 		}
 		.social-button {
+			margin-top: $padding-large-horizontal;
+			margin-bottom: $padding-large-horizontal;
 			ul {
 				list-style-type:none;
 				margin: 0;
 				li{
 					display:inline-block;
-					margin-right: $padding-xs-horizontal;
+					margin-right: $padding-xs-horizontal/5;
 					vertical-align:bottom;
 					*display: inline;
 					zoom: 1;
