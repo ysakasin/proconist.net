@@ -248,7 +248,7 @@ Proconist.net - style.css
 		text-align: center;
 		padding-top: $padding-base-vertical;
 		img {
-			width: 200px;
+			width: 150px;
 			margin: 0 auto;
 		}
 	}
@@ -285,6 +285,73 @@ Proconist.net - style.css
 				.fa-facebook-square {
 					color: #3b5998;
 				}
+			}
+		}
+	}
+}
+
+.entry-contents {
+	.heading {
+		position: relative;
+		border-bottom: 2px solid $gray-dark;
+		margin-bottom: $line-height-computed/2;
+		#{headings(1, 6)} {
+			margin-top: 0;
+			@include pull-left;
+		}
+		.meta-info {
+			@include pull-right;
+			min-height: $font-size-h1 * $headings-line-height;
+			li {
+				font-size: $font-size-small;
+				text-align: right;
+				margin-bottom: $padding-xs-vertical;
+			}
+		}
+	}
+	.entry-body {
+		.entry-text {
+			padding: $padding-base-horizontal 0;
+			h2 {
+				border-bottom: 1px solid $gray-dark;
+			}
+			h2, h3 {
+				margin-bottom: $line-height-computed;
+			}
+			.table{
+				* {
+					border: 1px solid $gray-dark;
+				}
+				thead tr {
+					background-color: #ecf0f1;
+					border-bottom: 2px solid $gray-dark;
+				}
+			}
+		}
+		.social-button {
+			margin-top: $padding-large-horizontal;
+			margin-bottom: $padding-large-horizontal;
+			ul {
+				list-style-type:none;
+				margin: 0;
+				li{
+					display:inline-block;
+					margin-right: $padding-xs-horizontal/5;
+					vertical-align:bottom;
+					*display: inline;
+					zoom: 1;
+				}
+			}
+			.member {
+				.member-image {
+					img {
+						width: 130px;
+						margin: 0 auto;
+					}
+				}
+			}
+			iframe {
+				margin: 0 !important;
 			}
 		}
 	}
