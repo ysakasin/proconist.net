@@ -357,6 +357,55 @@ Proconist.net - style.css
 	}
 }
 
+.entry-list {
+	.index-link {
+		@include pull-right;
+	}
+	.entry-contents {
+		.eye-chatch {
+			margin-bottom: $line-height-computed*2;
+		}
+		.heading {
+			h2 {
+				font-size: $font-size-h3;
+				padding-top: $line-height-base;
+				a {
+					text-decoration: none;
+					color: $text-color;
+					&:hover {
+						color: $link-color;
+					}
+				}
+			}
+			.meta-info {
+				min-height: $font-size-h3 * $headings-line-height;
+				li {
+					display: inline-block;
+					font-size: $font-size-small;
+					text-align: right;
+					margin-bottom: $padding-xs-vertical;
+				}
+			}
+			margin-bottom: $line-height-computed/4;
+		}
+		.entry-body {
+			.entry-text {
+				padding: 0;
+			}
+		}
+		margin-top: $line-height-computed*2;
+		border-bottom: 1px dotted $gray-dark;
+	}
+}
+
+.pager {
+	li {
+		a {
+			background-color: $brand-primary;
+		}
+	}
+}
+
 footer {
 	padding: 20px 0;
 	color: $gray-lighter;

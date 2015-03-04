@@ -374,6 +374,47 @@ footer {
   margin: 0 !important;
 }
 
+.entry-list .index-link {
+  float: right;
+}
+.entry-list .entry-contents {
+  margin-top: 42px;
+  border-bottom: 1px dotted #7b8a8b;
+}
+.entry-list .entry-contents .eye-chatch {
+  margin-bottom: 42px;
+}
+.entry-list .entry-contents .heading {
+  margin-bottom: 5.25px;
+}
+.entry-list .entry-contents .heading h2 {
+  font-size: 26px;
+  padding-top: 1.42857;
+}
+.entry-list .entry-contents .heading h2 a {
+  text-decoration: none;
+  color: #2C3E50;
+}
+.entry-list .entry-contents .heading h2 a:hover {
+  color: #18BC9C;
+}
+.entry-list .entry-contents .heading .meta-info {
+  min-height: 28.6px;
+}
+.entry-list .entry-contents .heading .meta-info li {
+  display: inline-block;
+  font-size: 13px;
+  text-align: right;
+  margin-bottom: 1px;
+}
+.entry-list .entry-contents .entry-body .entry-text {
+  padding: 0;
+}
+
+.pager li a {
+  background-color: #2C3E50;
+}
+
 footer {
   padding: 20px 0;
   color: #ecf0f1;
