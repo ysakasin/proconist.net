@@ -26,6 +26,11 @@ get '/css/style.css' do
   sass :stylesheet, :style => :expanded
 end
 
+get '/entry/:p' do
+  @entry = Article.find_by_url(params[:p])
+  erb :entry
+end
+
 before '/sign_in' do
   redirect '/console/' if session[:op_id]
 end

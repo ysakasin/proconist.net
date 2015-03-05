@@ -87,6 +87,10 @@ class Operator < ActiveRecord::Base
       nil
     end
   end
+
+  def img()
+    ''
+  end
 end
 
 class History < ActiveRecord::Base
@@ -104,4 +108,12 @@ class History < ActiveRecord::Base
 end
 
 class Article < ActiveRecord::Base
+  def body_html
+    Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(body)
+  end
+
+  def auther_a
+    return @auther if @auther
+    @auther = Operator.find_by_id(auther)
+  end
 end
