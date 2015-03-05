@@ -320,7 +320,7 @@ footer {
 .entry-contents .heading {
   position: relative;
   border-bottom: 2px solid #7b8a8b;
-  margin-bottom: 10.5px;
+  margin-bottom: 10px;
 }
 .entry-contents .heading h1, .entry-contents .heading h2, .entry-contents .heading h3, .entry-contents .heading h4, .entry-contents .heading h5, .entry-contents .heading h6 {
   margin-top: 0;
@@ -374,9 +374,12 @@ footer {
   margin: 0 !important;
 }
 
+.entry-list .index-link {
+  padding-bottom: 10px;
+}
 .entry-list .entry-contents {
-  margin-top: 21px;
-  padding-bottom: 21px;
+  margin-top: 27px;
+  padding-bottom: 27px;
   border-bottom: 1px dotted #7b8a8b;
 }
 .entry-list .entry-contents .heading h2 {
@@ -391,7 +394,7 @@ footer {
   color: #18BC9C;
 }
 .entry-list .entry-contents .heading .meta-info {
-  min-height: 28.6px;
+  min-height: 13px;
 }
 .entry-list .entry-contents .heading .meta-info li {
   display: inline-block;

@@ -294,7 +294,7 @@ Proconist.net - style.css
 	.heading {
 		position: relative;
 		border-bottom: 2px solid $gray-dark;
-		margin-bottom: $line-height-computed/2;
+		margin-bottom: $padding-base-vertical;
 		#{headings(1, 6)} {
 			margin-top: 0;
 			@include pull-left;
@@ -358,6 +358,9 @@ Proconist.net - style.css
 }
 
 .entry-list {
+	.index-link {
+		padding-bottom: $padding-base-vertical;
+	}
 	.entry-contents {
 		.heading {
 			h2 {
@@ -372,7 +375,7 @@ Proconist.net - style.css
 				}
 			}
 			.meta-info {
-				min-height: $font-size-h3 * $headings-line-height;
+				min-height: $font-size-small;
 				li {
 					display: inline-block;
 					font-size: $font-size-small;
@@ -386,8 +389,8 @@ Proconist.net - style.css
 				padding: 0;
 			}
 		}
-		margin-top: $line-height-computed;
-		padding-bottom: $line-height-computed;
+		margin-top: $padding-large-horizontal;
+		padding-bottom: $padding-large-horizontal;
 		border-bottom: 1px dotted $gray-dark;
 	}
 }
