@@ -375,14 +375,9 @@ footer {
 }
 
 .entry-list .entry-contents {
-  margin-top: 42px;
+  margin-top: 21px;
+  padding-bottom: 21px;
   border-bottom: 1px dotted #7b8a8b;
-}
-.entry-list .entry-contents .eye-chatch {
-  margin-bottom: 42px;
-}
-.entry-list .entry-contents .heading {
-  margin-bottom: 5.25px;
 }
 .entry-list .entry-contents .heading h2 {
   font-size: 26px;

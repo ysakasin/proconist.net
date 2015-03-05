@@ -358,13 +358,7 @@ Proconist.net - style.css
 }
 
 .entry-list {
-	.index-link {
-		
-	}
 	.entry-contents {
-		.eye-chatch {
-			margin-bottom: $line-height-computed*2;
-		}
 		.heading {
 			h2 {
 				font-size: $font-size-h3;
@@ -386,14 +380,14 @@ Proconist.net - style.css
 					margin-bottom: $padding-xs-vertical;
 				}
 			}
-			margin-bottom: $line-height-computed/4;
 		}
 		.entry-body {
 			.entry-text {
 				padding: 0;
 			}
 		}
-		margin-top: $line-height-computed*2;
+		margin-top: $line-height-computed;
+		padding-bottom: $line-height-computed;
 		border-bottom: 1px dotted $gray-dark;
 	}
 }
