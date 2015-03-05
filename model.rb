@@ -102,3 +102,6 @@ class History < ActiveRecord::Base
     {'product' => 'label-info', 'entry' => 'label-warning', 'notice' => 'label-danger'}[label]
   end
 end
+
+class Article < ActiveRecord::Base
+end

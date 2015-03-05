@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141209023311) do
+ActiveRecord::Schema.define(version: 20150305080605) do
+
+  create_table "articles", force: true do |t|
+    t.string   "title"
+    t.string   "body"
+    t.string   "category"
+    t.string   "auther"
+    t.string   "thumbnail"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contests", force: true do |t|
     t.string "name",              null: false
