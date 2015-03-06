@@ -7,12 +7,12 @@ ActiveRecord::Base.establish_connection(
   "database" => ENV['DB'] || "./proconist.db")
 
 SNS = [
-  {key: :github, name: 'GitHub', klass: 'fa-github-alt'},
-  {key: :bitbucket, name: 'Bitbucket', klass: 'fa-bitbucket'},
-  {key: :slideshare, name: 'SkideShare', klass: 'fa-slideshare'},
-  {key: :twitter, name: 'Twitter', klass: 'fa-twitter'},
-  {key: :facebook, name: 'Facebook', klass: 'fa-facebook-square'},
-  {key: :site_url, name: 'Webサイト', klass: 'fa-globe'}
+  {key: :github, name: 'GitHub', klass: 'fa-github-alt', base_url: 'https://github.com/'},
+  {key: :bitbucket, name: 'Bitbucket', klass: 'fa-bitbucket', base_url: 'https://bitbucket.org/'},
+  {key: :slideshare, name: 'SkideShare', klass: 'fa-slideshare', base_url: 'https://www.slideshare.net/'},
+  {key: :twitter, name: 'Twitter', klass: 'fa-twitter', base_url: 'https://twitter.com/'},
+  {key: :facebook, name: 'Facebook', klass: 'fa-facebook-square', base_url: 'https://www.facebook.com/'},
+  {key: :site_url, name: 'Webサイト', klass: 'fa-globe', base_url: ''}
 ]
 
 class Entrant < ActiveRecord::Base
@@ -100,7 +100,7 @@ class Operator < ActiveRecord::Base
   def sns
     res = Array.new
     SNS.each do |item|
-      item[:href] = self.send(item[:key].to_s)
+      item[:href] = item[:base_url] + self.send(item[:key].to_s)
       res << item if item[:href].present?
     end
     res
