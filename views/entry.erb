@@ -47,7 +47,7 @@
 								<li><a href="<%= item[:href] %>"><i class="fa fa-lg fa-fw <%= item[:klass] %>"></i> <%= item[:name] %></a></li>
 							<% end %>
 						</ul>
-						<p class="text-right"><i class="icon-article"></i><a href="#">この人が他に書いた記事</a></p>
+						<p class="text-right"><i class="icon-article"></i><a href="/auther/<%= @entry.auther_a.id %>">この人が他に書いた記事</a></p>
 					</div>
 				</div>
 			</div>
