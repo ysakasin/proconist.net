@@ -37,14 +37,14 @@
 				<!-- /.panel-heading -->
 				<div class="panel-body row member">
 					<div class="col-md-3 col-sm-3  hidden-xs member-image">
-						<img src="<%= @entry.auther_a.img %>" class="img-circle img-responsive">
+						<img src="<%= @entry.auther_a.icon %>" class="img-circle img-responsive">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-12 member-introduction">
 						<h4 class="member-name"><%= @entry.auther_a.name %></h4>
 						<p><% @entry.auther_a.description %></p>
 						<ul class="list-inline member-sns">
-							<% @entry.auther_a.sns.each do |key, url| %>
-								<li><a href="<%= url %>"><i class="fa fa-lg fa-fw fa-globe"></i> <%= key %></a></li>
+							<% @entry.auther_a.sns.each do |item| %>
+								<li><a href="<%= item[:href] %>"><i class="fa fa-lg fa-fw <%= item[:klass] %>"></i> <%= item[:name] %></a></li>
 							<% end %>
 						</ul>
 						<p class="text-right"><i class="icon-article"></i><a href="#">この人が他に書いた記事</a></p>

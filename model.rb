@@ -6,6 +6,15 @@ ActiveRecord::Base.establish_connection(
   "adapter" => "sqlite3",
   "database" => ENV['DB'] || "./proconist.db")
 
+SNS = [
+  {key: :github, name: 'GitHub', klass: 'fa-github-alt'},
+  {key: :bitbucket, name: 'Bitbucket', klass: 'fa-bitbucket'},
+  {key: :slideshare, name: 'SkideShare', klass: 'fa-slideshare'},
+  {key: :twitter, name: 'Twitter', klass: 'fa-twitter'},
+  {key: :facebook, name: 'Facebook', klass: 'fa-facebook-square'},
+  {key: :site_url, name: 'Webサイト', klass: 'fa-globe'}
+]
+
 class Entrant < ActiveRecord::Base
   enum section: {competition: 0, themed: 1, original: 2}
   enum code: {github: 1, bitbucket: 2, other_code: 0}
@@ -88,18 +97,12 @@ class Operator < ActiveRecord::Base
     end
   end
 
-  def img()
-    ''
-  end
-
   def sns
-    res = {}
-    res[:github] = github
-    res[:bitbucket] = bitbucket
-    res[:slideshare] = slideshare
-    res[:twitter] = twitter
-    res[:facebook] = facebook
-    res[:site] = site_url
+    res = Array.new
+    SNS.each do |item|
+      item[:href] = self.send(item[:key].to_s)
+      res << item if item[:href].present?
+    end
     res
   end
 end
