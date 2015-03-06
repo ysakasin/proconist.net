@@ -67,6 +67,10 @@ task :add_history do
   history.save
 end
 
+task :test_entry do
+  Article.create(title: 'テスト記事', body: '##見出し', category: '1,2', auther: 'nkmr6194', thumbnail: 'null.png', url: 'test')
+end
+
 desc '管理者のログイン情報やプロフィールなどを登録'
 task :add_op do
   print 'id:'

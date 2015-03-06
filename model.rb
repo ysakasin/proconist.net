@@ -6,6 +6,15 @@ ActiveRecord::Base.establish_connection(
   "adapter" => "sqlite3",
   "database" => ENV['DB'] || "./proconist.db")
 
+SNS = [
+  {key: :github, name: 'GitHub', klass: 'fa-github-alt', base_url: 'https://github.com/'},
+  {key: :bitbucket, name: 'Bitbucket', klass: 'fa-bitbucket', base_url: 'https://bitbucket.org/'},
+  {key: :slideshare, name: 'SkideShare', klass: 'fa-slideshare', base_url: 'https://www.slideshare.net/'},
+  {key: :twitter, name: 'Twitter', klass: 'fa-twitter', base_url: 'https://twitter.com/'},
+  {key: :facebook, name: 'Facebook', klass: 'fa-facebook-square', base_url: 'https://www.facebook.com/'},
+  {key: :site_url, name: 'Webサイト', klass: 'fa-globe', base_url: ''}
+]
+
 class Entrant < ActiveRecord::Base
   enum section: {competition: 0, themed: 1, original: 2}
   enum code: {github: 1, bitbucket: 2, other_code: 0}
@@ -87,6 +96,15 @@ class Operator < ActiveRecord::Base
       nil
     end
   end
+
+  def sns
+    res = Array.new
+    SNS.each do |item|
+      item[:href] = item[:base_url] + self.send(item[:key].to_s)
+      res << item if item[:href].present?
+    end
+    res
+  end
 end
 
 class History < ActiveRecord::Base
@@ -100,5 +118,20 @@ class History < ActiveRecord::Base
 
   def label_class
     {'product' => 'label-info', 'entry' => 'label-warning', 'notice' => 'label-danger'}[label]
+  end
+end
+
+class Article < ActiveRecord::Base
+  def body_html
+    Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(body)
+  end
+
+  def auther_a
+    return @auther if @auther
+    @auther = Operator.find_by_id(auther)
+  end
+
+  def date
+    created_at.strftime("%Y年%m月%d日")
   end
 end
