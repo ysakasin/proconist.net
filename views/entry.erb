@@ -5,7 +5,7 @@
 		<div class="clearfix heading">
 			<h1><%= @entry.title %></h1>
 			<ul class="meta-info list-unstyled">
-				<li><i class="fa fa-calendar"></i> <%= @entry.created_at %></li>
+				<li><i class="fa fa-calendar"></i> <%= @entry.date %></li>
 				<li><i class="fa fa-folder-open"></i> <% @entry.category %></li>
 			</ul>
 		</div>
@@ -43,8 +43,9 @@
 						<h4 class="member-name"><%= @entry.auther_a.name %></h4>
 						<p><% @entry.auther_a.description %></p>
 						<ul class="list-inline member-sns">
-							<li><a href="#"><i class="fa fa-lg fa-fw fa-globe"></i> Webサイト</a></li>
-							<li><a href="#"><i class="fa fa-lg fa-fw fa-twitter"></i> Twitter</a></li>
+							<% @entry.auther_a.sns.each do |key, url| %>
+								<li><a href="<%= url %>"><i class="fa fa-lg fa-fw fa-globe"></i> <%= key %></a></li>
+							<% end %>
 						</ul>
 						<p class="text-right"><i class="icon-article"></i><a href="#">この人が他に書いた記事</a></p>
 					</div>

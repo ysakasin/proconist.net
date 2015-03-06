@@ -91,6 +91,17 @@ class Operator < ActiveRecord::Base
   def img()
     ''
   end
+
+  def sns
+    res = {}
+    res[:github] = github
+    res[:bitbucket] = bitbucket
+    res[:slideshare] = slideshare
+    res[:twitter] = twitter
+    res[:facebook] = facebook
+    res[:site] = site_url
+    res
+  end
 end
 
 class History < ActiveRecord::Base
@@ -115,5 +126,9 @@ class Article < ActiveRecord::Base
   def auther_a
     return @auther if @auther
     @auther = Operator.find_by_id(auther)
+  end
+
+  def date
+    created_at.strftime("%Y年%m月%d日")
   end
 end
