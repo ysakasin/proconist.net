@@ -9,7 +9,7 @@ set :session_secret, Secret::KEY
 
 get '/' do
   @title = 'Proconist.net'
-  contest_id = 25
+  contest_id = 1
   @contest = Contest.find_by_id(contest_id)
 
   entrants = Entrant.where(:contest => @contest.id)
@@ -24,6 +24,11 @@ end
 
 get '/css/style.css' do
   sass :stylesheet, :style => :expanded
+end
+
+get '/about' do
+  @member = Operator.all
+  erb :about
 end
 
 get '/entry/:p' do
