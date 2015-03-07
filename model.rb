@@ -9,11 +9,21 @@ ActiveRecord::Base.establish_connection(
 SNS = [
   {key: :github, name: 'GitHub', klass: 'fa-github-alt', base_url: 'https://github.com/'},
   {key: :bitbucket, name: 'Bitbucket', klass: 'fa-bitbucket', base_url: 'https://bitbucket.org/'},
-  {key: :slideshare, name: 'SkideShare', klass: 'fa-slideshare', base_url: 'https://www.slideshare.net/'},
+  {key: :slideshare, name: 'SlideShare', klass: 'fa-slideshare', base_url: 'https://www.slideshare.net/'},
   {key: :twitter, name: 'Twitter', klass: 'fa-twitter', base_url: 'https://twitter.com/'},
   {key: :facebook, name: 'Facebook', klass: 'fa-facebook-square', base_url: 'https://www.facebook.com/'},
   {key: :site_url, name: 'Webサイト', klass: 'fa-globe', base_url: ''}
 ]
+
+SITE_NAME ={
+  github: 'GitHub',
+  bitbucket: 'Bitbucket',
+  slidesare: 'SlideShare',
+  twitter: 'Twitter',
+  facebook: 'Facebook',
+  other_code: 'リポジトリ',
+  other_sns: 'SNS'
+}
 
 class Entrant < ActiveRecord::Base
   enum section: {competition: 0, themed: 1, original: 2}
@@ -61,10 +71,10 @@ class Entrant < ActiveRecord::Base
 
   def links
     _links = []
-    _links << {title: code, href: code_url, tag_class: code_class_i}
-    _links << {title: slide, href: slide_url, tag_class: slide_class_i}
+    _links << {title: SITE_NAME[code.to_sym], href: code_url, tag_class: code_class_i}
+    _links << {title: SITE_NAME[slide.to_sym], href: slide_url, tag_class: slide_class_i}
     _links << {title: '解説サイト', href: site_url, tag_class: 'fa-globe'}
-    _links << {title: sns, href: sns_url, tag_class: sns_class_i}
+    _links << {title: SITE_NAME[sns.to_sym], href: sns_url, tag_class: sns_class_i}
     return _links
   end
 
