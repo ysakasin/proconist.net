@@ -1,7 +1,7 @@
 class CreateOperators < ActiveRecord::Migration
   def change
-    create_table :operators, :id => false do |t|
-      t.string  :id, :null => false
+    create_table :operators do |t|
+      t.string  :op_id, null: false
       t.integer :position, :null => false, :default => 0
       t.string  :name, :null => false
       t.string  :password_hash, :null => false
@@ -13,9 +13,9 @@ class CreateOperators < ActiveRecord::Migration
       t.string  :slideshare
       t.string  :twitter
       t.string  :facebook
-      t.string  :site_name
-      t.string  :site_url
+      t.string  :site
       t.string  :description
     end
+    add_index :operators, :op_id, unique: true
   end
 end

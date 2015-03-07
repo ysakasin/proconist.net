@@ -6,14 +6,14 @@ class CreateEntrants < ActiveRecord::Migration
       t.integer :registry_num, :null => false
       t.string  :school, :null => false
       t.string  :production, :null => false
-      t.integer :code
-      t.string  :code_url
-      t.integer :slide
-      t.string  :slide_url
-      t.string  :site_url
-      t.integer :sns
-      t.string  :name_in_sns
-      t.string  :sns_url
+      t.string  :github
+      t.string  :bitbucket
+      t.string  :other_repo
+      t.string  :slideshare
+      t.string  :other_slide
+      t.string  :twitter
+      t.string  :facebook
+      t.string  :site
       t.integer :result
       t.string  :prize
     end

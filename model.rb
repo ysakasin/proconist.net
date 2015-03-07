@@ -6,55 +6,22 @@ ActiveRecord::Base.establish_connection(
   "adapter" => "sqlite3",
   "database" => ENV['DB'] || "./proconist.db")
 
-SNS = [
-  {key: :github, name: 'GitHub', klass: 'fa-github-alt', base_url: 'https://github.com/'},
-  {key: :bitbucket, name: 'Bitbucket', klass: 'fa-bitbucket', base_url: 'https://bitbucket.org/'},
-  {key: :slideshare, name: 'SlideShare', klass: 'fa-slideshare', base_url: 'https://www.slideshare.net/'},
-  {key: :twitter, name: 'Twitter', klass: 'fa-twitter', base_url: 'https://twitter.com/'},
-  {key: :facebook, name: 'Facebook', klass: 'fa-facebook-square', base_url: 'https://www.facebook.com/'},
-  {key: :site_url, name: 'Webサイト', klass: 'fa-globe', base_url: ''}
-]
-
-SITE_NAME ={
-  github: 'GitHub',
-  bitbucket: 'Bitbucket',
-  slidesare: 'SlideShare',
-  twitter: 'Twitter',
-  facebook: 'Facebook',
-  other_code: 'リポジトリ',
-  other_sns: 'SNS'
+SNS = {
+  github: {name: 'GitHub', klass: 'fa-github-alt', base_url: 'https://github.com/'},
+  bitbucket: {name: 'Bitbucket', klass: 'fa-bitbucket', base_url: 'https://bitbucket.org/'},
+  other_repo: {name: 'リポジトリ', klass: 'fa-database', base_url: ''},
+  slideshare: {name: 'SlideShare', klass: 'fa-slideshare', base_url: 'https://www.slideshare.net/'},
+  other_slide: {name: '解説スライド', klass: 'fa-desktop', base_url: ''},
+  twitter: {name: 'Twitter', klass: 'fa-twitter', base_url: 'https://twitter.com/'},
+  facebook: {name: 'Facebook', klass: 'fa-facebook-square', base_url: 'https://www.facebook.com/'},
+  site: {name: 'Webサイト', klass: 'fa-globe', base_url: ''}
 }
 
 class Entrant < ActiveRecord::Base
   enum section: {competition: 0, themed: 1, original: 2}
-  enum code: {github: 1, bitbucket: 2, other_code: 0}
-  enum slide: {slideshare: 1, other_slide: 0}
-  enum sns: {twitter: 1, facebook: 2, other_sns: 0}
-
-  ENUMS = ['section', 'code', 'slide', 'sns']
 
   def prizes
     prize.split(',')
-  end
-
-  def sns_class_i
-    if sns == 'facebook'
-      'fa-facebook-square'
-    else
-      "fa-#{sns}"
-    end
-  end
-
-  def slide_class_i
-    "fa-#{slide}"
-  end
-
-  def code_class_i
-    if code == 'github'
-      'fa-github-alt'
-    else
-      "fa-#{code}"
-    end
   end
 
   def panel_class
@@ -70,16 +37,18 @@ class Entrant < ActiveRecord::Base
   end
 
   def links
-    _links = []
-    _links << {title: SITE_NAME[code.to_sym], href: code_url, tag_class: code_class_i}
-    _links << {title: SITE_NAME[slide.to_sym], href: slide_url, tag_class: slide_class_i}
-    _links << {title: '解説サイト', href: site_url, tag_class: 'fa-globe'}
-    _links << {title: SITE_NAME[sns.to_sym], href: sns_url, tag_class: sns_class_i}
-    return _links
+    return @link unless @link.nil?
+    @link = Array.new
+    SNS.each do |key, elem|
+      if self.send(key.to_s).present?
+        @link << {title: elem[:name], href: self.send(key.to_s), tag_class: elem[:klass]}
+      end
+    end
+    @link
   end
 
   def is_registered?
-    code_url.present? || slide_url.present? || site_url.present? || sns_url.present?
+    links.present?
   end
 end
 
@@ -87,6 +56,7 @@ class Contest < ActiveRecord::Base
 end
 
 class Operator < ActiveRecord::Base
+  self.primary_key = :op_id
   attr_readonly :password_hash, :password_salt
 
   enum position: {common: 0, admin: 1}
@@ -99,7 +69,7 @@ class Operator < ActiveRecord::Base
   end
 
   def self.auth(user_id, password)
-    operator = Operator.find_by_id(user_id)
+    operator = Operator.find_by_op_id(user_id)
     if operator && operator.password_hash == BCrypt::Engine.hash_secret(password, operator.password_salt)
       operator
     else
@@ -109,9 +79,10 @@ class Operator < ActiveRecord::Base
 
   def sns
     res = Array.new
-    SNS.each do |item|
-      if self.send(item[:key].to_s).present?
-        item[:href] = item[:base_url] + self.send(item[:key].to_s)
+    SNS.each do |key, item|
+      next if key == :other_repo || key == :other_slide
+      if self.send(key.to_s).present?
+        item[:href] = item[:base_url] + self.send(key.to_s)
         res << item
       end
     end
@@ -140,7 +111,7 @@ class Article < ActiveRecord::Base
 
   def auther_a
     return @auther if @auther
-    @auther = Operator.find_by_id(auther)
+    @auther = Operator.find_by_op_id(auther)
   end
 
   def date

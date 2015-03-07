@@ -25,6 +25,9 @@ GEM
       rack
     rake (10.3.2)
     redcarpet (3.2.0)
+    seed-fu (2.3.4)
+      activerecord (>= 3.1, <= 4.2)
+      activesupport (>= 3.1, <= 4.2)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -51,6 +54,7 @@ DEPENDENCIES
   bcrypt
   rake
   redcarpet
+  seed-fu
   sinatra
   sinatra-activerecord
   slim

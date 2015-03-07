@@ -14,15 +14,17 @@
 ActiveRecord::Schema.define(version: 20150305080605) do
 
   create_table "articles", force: true do |t|
+    t.string   "url",        null: false
     t.string   "title"
     t.string   "body"
     t.string   "category"
     t.string   "auther"
     t.string   "thumbnail"
-    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "articles", ["url"], name: "index_articles_on_url", unique: true
 
   create_table "contests", force: true do |t|
     t.string "name",              null: false
@@ -39,14 +41,14 @@ ActiveRecord::Schema.define(version: 20150305080605) do
     t.integer "registry_num", null: false
     t.string  "school",       null: false
     t.string  "production",   null: false
-    t.integer "code"
-    t.string  "code_url"
-    t.integer "slide"
-    t.string  "slide_url"
-    t.string  "site_url"
-    t.integer "sns"
-    t.string  "name_in_sns"
-    t.string  "sns_url"
+    t.string  "github"
+    t.string  "bitbucket"
+    t.string  "other_repo"
+    t.string  "slideshare"
+    t.string  "other_slide"
+    t.string  "twitter"
+    t.string  "facebook"
+    t.string  "site"
     t.integer "result"
     t.string  "prize"
   end
@@ -60,8 +62,8 @@ ActiveRecord::Schema.define(version: 20150305080605) do
     t.datetime "updated_at"
   end
 
-  create_table "operators", id: false, force: true do |t|
-    t.string  "id",                        null: false
+  create_table "operators", force: true do |t|
+    t.string  "op_id",                     null: false
     t.integer "position",      default: 0, null: false
     t.string  "name",                      null: false
     t.string  "password_hash",             null: false
@@ -73,9 +75,10 @@ ActiveRecord::Schema.define(version: 20150305080605) do
     t.string  "slideshare"
     t.string  "twitter"
     t.string  "facebook"
-    t.string  "site_name"
-    t.string  "site_url"
+    t.string  "site"
     t.string  "description"
   end
+
+  add_index "operators", ["op_id"], name: "index_operators_on_op_id", unique: true
 
 end
