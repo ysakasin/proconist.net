@@ -18,9 +18,15 @@ bundle install
 
 実行と、表示の確認方法
 ----------
-下記コマンドでSinatraを立ち上げます。この際、開発用データベースが適用されます
+テスト用データベースを用意します
 ```
-rake dev_exec
+bundle exec rake db:migrate #データベース生成
+bundle exec rake db:seed #テスト用のデータを挿入
+```
+
+下記コマンドでSinatraを立ち上げます
+```
+ruby app.rb
 ```
 
 ブラウザから自分自身の4567番ポートにアクセスします
