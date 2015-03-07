@@ -294,7 +294,7 @@ Proconist.net - style.css
 	.heading {
 		position: relative;
 		border-bottom: 2px solid $gray-dark;
-		margin-bottom: $line-height-computed/2;
+		margin-bottom: $padding-base-vertical;
 		#{headings(1, 6)} {
 			margin-top: 0;
 			@include pull-left;
@@ -353,6 +353,52 @@ Proconist.net - style.css
 			iframe {
 				margin: 0 !important;
 			}
+		}
+	}
+}
+
+.entry-list {
+	.index-link {
+		padding-bottom: $padding-base-vertical;
+	}
+	.entry-contents {
+		.heading {
+			h2 {
+				font-size: $font-size-h3;
+				padding-top: $line-height-base;
+				a {
+					text-decoration: none;
+					color: $text-color;
+					&:hover {
+						color: $link-color;
+					}
+				}
+			}
+			.meta-info {
+				min-height: $font-size-small;
+				li {
+					display: inline-block;
+					font-size: $font-size-small;
+					text-align: right;
+					margin-bottom: $padding-xs-vertical;
+				}
+			}
+		}
+		.entry-body {
+			.entry-text {
+				padding: 0;
+			}
+		}
+		margin-top: $padding-large-horizontal;
+		padding-bottom: $padding-large-horizontal;
+		border-bottom: 1px dotted $gray-dark;
+	}
+}
+
+.pager {
+	li {
+		a {
+			background-color: $brand-primary;
 		}
 	}
 }

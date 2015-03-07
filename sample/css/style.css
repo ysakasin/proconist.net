@@ -320,7 +320,7 @@ footer {
 .entry-contents .heading {
   position: relative;
   border-bottom: 2px solid #7b8a8b;
-  margin-bottom: 10.5px;
+  margin-bottom: 10px;
 }
 .entry-contents .heading h1, .entry-contents .heading h2, .entry-contents .heading h3, .entry-contents .heading h4, .entry-contents .heading h5, .entry-contents .heading h6 {
   margin-top: 0;
@@ -372,6 +372,42 @@ footer {
 }
 .entry-contents .entry-body .social-button iframe {
   margin: 0 !important;
+}
+
+.entry-list .index-link {
+  padding-bottom: 10px;
+}
+.entry-list .entry-contents {
+  margin-top: 27px;
+  padding-bottom: 27px;
+  border-bottom: 1px dotted #7b8a8b;
+}
+.entry-list .entry-contents .heading h2 {
+  font-size: 26px;
+  padding-top: 1.42857;
+}
+.entry-list .entry-contents .heading h2 a {
+  text-decoration: none;
+  color: #2C3E50;
+}
+.entry-list .entry-contents .heading h2 a:hover {
+  color: #18BC9C;
+}
+.entry-list .entry-contents .heading .meta-info {
+  min-height: 13px;
+}
+.entry-list .entry-contents .heading .meta-info li {
+  display: inline-block;
+  font-size: 13px;
+  text-align: right;
+  margin-bottom: 1px;
+}
+.entry-list .entry-contents .entry-body .entry-text {
+  padding: 0;
+}
+
+.pager li a {
+  background-color: #2C3E50;
 }
 
 footer {
