@@ -100,8 +100,10 @@ class Operator < ActiveRecord::Base
   def sns
     res = Array.new
     SNS.each do |item|
-      item[:href] = item[:base_url] + self.send(item[:key].to_s)
-      res << item if item[:href].present?
+      if self.send(item[:key].to_s).present?
+        item[:href] = item[:base_url] + self.send(item[:key].to_s)
+        res << item
+      end
     end
     res
   end

@@ -26,6 +26,11 @@ get '/css/style.css' do
   sass :stylesheet, :style => :expanded
 end
 
+get '/about' do
+  @member = Operator.all
+  erb :about
+end
+
 get '/entry/:p' do
   @entry = Article.find_by_url(params[:p])
   erb :entry
