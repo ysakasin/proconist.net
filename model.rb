@@ -92,6 +92,10 @@ class Operator < ActiveRecord::Base
     end
     res
   end
+
+  def entry
+    Article.where(auther: op_id)
+  end
 end
 
 class History < ActiveRecord::Base
@@ -142,6 +146,14 @@ class Article < ActiveRecord::Base
     links = []
     categories.each do |c|
       links << "<a href=\"#{c.href}\">#{c.name}</a>"
+    end
+    links.join(', ')
+  end
+
+  def category_name
+    links = []
+    categories.each do |c|
+      links << c.name
     end
     links.join(', ')
   end

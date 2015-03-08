@@ -62,6 +62,11 @@ get '/entry/:title' do
   erb :entry
 end
 
+get '/auther/:op' do
+  @auther = Operator.find_by_op_id(params[:op])
+  erb :auther
+end
+
 before '/sign_in' do
   redirect '/console/' if session[:op_id]
 end
