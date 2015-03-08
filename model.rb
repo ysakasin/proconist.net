@@ -121,6 +121,10 @@ class Article < ActiveRecord::Base
     created_at.strftime("%Y年%m月%d日")
   end
 
+  def date_hyphen
+    created_at.strftime('%F')
+  end
+
   def categories
     res = []
     category.split(',').each do |id|
@@ -135,6 +139,10 @@ class Article < ActiveRecord::Base
       links << "<a href=\"#{c.href}\">#{c.name}</a>"
     end
     links.join(', ')
+  end
+
+  def href
+    "/entry/#{url}"
   end
 end
 

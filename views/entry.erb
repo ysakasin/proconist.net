@@ -62,28 +62,18 @@
 		<!-- .newlist: 新着情報 -->
 		<div class="panel panel-default newlist">
 			<div class="panel-heading">
-				<h3 class="panel-title">特集一覧</h3>
+				<h3 class="panel-title">最新の記事</h3>
 			</div>
 			<div class="list-group">
-				<a href="#" class="list-group-item">
-					<dl>
-						<dt><span class="label label-warning">特集</span> 2014-01-01</dt>
-						<dd>【超入門】GitHubを使ってみよう！</dd>
-					</dl>
-				</a>
-				<a href="#" class="list-group-item">
-					<dl>
-						<dt><span class="label label-warning">特集</span> 2014-01-01</dt>
-						<dd>Ruby on Railsを使ってみよう</dd>
-					</dl>
-				</a>
-				<a href="#" class="list-group-item">
-					<dl>
-						<dt><span class="label label-warning">特集</span> 2014-01-01</dt>
-						<dd>Ruby on Railsを使ってみよう</dd>
-					</dl>
-				</a>
-				<a href="#" class="list-group-item">
+				<% Article.order("id desc").limit(5).each do |article| %>
+					<a href="<%= article.href %>" class="list-group-item">
+						<dl>
+							<dt><span class="label label-warning">特集</span> <%= article.date_hyphen %></dt>
+							<dd><%= article.title %></dd>
+						</dl>
+					</a>
+				<% end %>
+				<a href="/entry/index" class="list-group-item">
 					<span class="text-right">過去の記事一覧へ</span>
 				</a>
 			</div>
