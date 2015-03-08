@@ -31,6 +31,19 @@ get '/about' do
   erb :about
 end
 
+get '/contest/:id' do |id|
+  @contest = Contest.find_by_id(id)
+
+  entrants = Entrant.where(:contest => @contest.id)
+  @competition = entrants.select {|item| item.competition?}
+  @themed = entrants.select {|item| item.themed?}
+  @original = entrants.select {|item| item.original?}
+
+  @history = History.order("id desc").limit(5)
+  @thumbnail = History.where(label: 1).order("id desc").limit(5)
+  erb :contest
+end
+
 get '/entry/:p' do
   @entry = Article.find_by_url(params[:p])
   erb :entry
