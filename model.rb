@@ -1,5 +1,6 @@
 require 'bundler'
 Bundler.require
+require 'redcarpet/render_strip'
 
 ActiveRecord::Base.default_timezone = :local
 ActiveRecord::Base.establish_connection(
@@ -112,6 +113,10 @@ class Article < ActiveRecord::Base
     Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(body)
   end
 
+  def description
+    Redcarpet::Markdown.new(Redcarpet::Render::StripDown).render(body)[0, 90] + '...'
+  end
+
   def auther_a
     return @auther if @auther
     @auther = Operator.find_by_op_id(auther)
@@ -143,6 +148,15 @@ class Article < ActiveRecord::Base
 
   def href
     "/entry/#{url}"
+  end
+
+  def Article.pagers(page)
+    max = Article.all.size / 5 + 1
+    if max > 1
+    	(1..max).to_a.select{|item| item <= 3 || item >= max - 2 || (item <= page + 1 && item >= page - 1)}
+    else
+      []
+    end
   end
 end
 

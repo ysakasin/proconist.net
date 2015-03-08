@@ -44,8 +44,21 @@ get '/contest/:id' do |id|
   erb :contest
 end
 
-get '/entry/:p' do
-  @entry = Article.find_by_url(params[:p])
+get '/entry' do
+  @entries = Article.order("id desc").limit(5)
+  @entry_total = Article.all.size
+  erb :entries
+end
+
+get '/entry/page/:p' do
+  redirect '/entry' if params[:p] == '1'
+  @entries = Article.order("id desc").limit(5).offset((params[:p].to_i - 1) * 5)
+  @entry_total = Article.all.size
+  erb :entries
+end
+
+get '/entry/:title' do
+  @entry = Article.find_by_url(params[:title])
   erb :entry
 end
 
