@@ -5,7 +5,7 @@
 			<h1><%= @entry.title %></h1>
 			<ul class="meta-info list-unstyled">
 				<li><i class="fa fa-calendar"></i> <%= @entry.date %></li>
-				<li><i class="fa fa-folder-open"></i> <% @entry.category %></li>
+				<li><i class="fa fa-folder-open"></i> <%= @entry.category_link %></li>
 			</ul>
 		</div>
 		<div class="entry-body">
@@ -93,21 +93,11 @@
 			<h3 class="panel-title">カテゴリ一覧</h3>
 		</div>
 		<div class="list-group">
-			<a href="#" class="list-group-item">
-				入門編
-			</a>
-			<a href="#" class="list-group-item">
-				中級者編
-			</a>
-			<a href="#" class="list-group-item">
-				上級者編
-			</a>
-			<a href="#" class="list-group-item">
-				Web技術
-			</a>
-			<a href="#" class="list-group-item">
-				C++
-			</a>
+			<% Category.all.each do |c| %>
+				<a href="<%= c.href %>" class="list-group-item">
+					<%= c.name %>
+				</a>
+			<% end %>
 		</div>
 	</div>
 

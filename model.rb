@@ -117,4 +117,26 @@ class Article < ActiveRecord::Base
   def date
     created_at.strftime("%Y年%m月%d日")
   end
+
+  def categories
+    res = []
+    category.split(',').each do |id|
+      res << Category.find_by_id(id)
+    end
+    res
+  end
+
+  def category_link
+    links = []
+    categories.each do |c|
+      links << "<a href=\"#{c.href}\">#{c.name}</a>"
+    end
+    links.join(', ')
+  end
+end
+
+class Category < ActiveRecord::Base
+  def href
+    "/category/#{url}"
+  end
 end

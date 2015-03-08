@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305080605) do
+ActiveRecord::Schema.define(version: 20150308000438) do
 
   create_table "articles", force: true do |t|
     t.string   "url",        null: false
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 20150305080605) do
   end
 
   add_index "articles", ["url"], name: "index_articles_on_url", unique: true
+
+  create_table "categories", force: true do |t|
+    t.string "url",  null: false
+    t.string "name"
+  end
+
+  add_index "categories", ["url"], name: "index_categories_on_url", unique: true
 
   create_table "contests", force: true do |t|
     t.string "name",              null: false
