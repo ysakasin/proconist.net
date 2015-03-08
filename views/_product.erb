@@ -1,0 +1,31 @@
+<!-- .panel-procon-product -->
+<div id="<%= @product.panel_id %>" class="panel panel-procon-product <%= @product.panel_class %>">
+  <!-- .panel-heading -->
+  <div class="panel-heading">
+    <div class="panel-procon-product-heading clearfix">
+      <% if @product.result.present? %>
+        <div class="panel-procon-product-rank">
+          <span class="label label-danger">決勝<%= @product.result %> 位</span>
+        </div>
+      <% end %>
+      <h4 class="panel-title"><%= @product.school %>「<%= @product.production %>」</h4>
+      <% if @product.prize.present? %>
+        <ul class="label-group list-inline">
+          <% @product.prizes.each do |prize| %>
+            <li class="label label-warning"><i class="fa fa-trophy"></i> <%= prize %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+  <!-- /.panel-heading -->
+  <% if @product.is_registered? %>
+    <ul class="list-inline panel-procon-product-link">
+      <% @product.links.each do |link| %>
+        <% next if link[:href].blank? %>
+        <li><a href="<%= link[:href] %>"><i class="fa fa-lg fa-fw <%= link[:tag_class] %>"></i> <%= link[:title] %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+<!-- /.panel-procon-product -->

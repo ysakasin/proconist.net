@@ -19,7 +19,7 @@ get '/' do
 
   @history = History.order("id desc").limit(5)
   @thumbnail = History.where(label: 1).order("id desc").limit(5)
-  slim :index
+  erb :index
 end
 
 get '/css/style.css' do

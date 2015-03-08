@@ -1,0 +1,56 @@
+<div class="clearfix heading">
+  <h2>第<%= @contest.id %>回 <%= @contest.name%> 作品一覧</h2>
+  <ul class="meta-info list-unstyled">
+    <li><i class="fa fa-calendar"></i> <%= @contest.date %></li>
+    <li><i class="fa fa-map-marker"></i> <%= @contest.place %></li>
+  </ul>
+</div>
+
+<form class="form-inline instant-search" action="#" role="form">
+  <div class="form-group-sm">
+    <select class="form-control">
+      <option>番号昇順</option>
+      <option>番号降順</option>
+      <option>順位</option>
+      <option>ほげ</option>
+      <option>ぴよ</option>
+    </select>
+  </div>
+  <div class="form-group-sm">
+    <div class="checkbox">
+      <label>
+        公開チームのみ <input type="checkbox" class="form-control">
+      </label>
+    </div>
+  </div>
+  <div class="form-group-sm">
+    <button class="btn btn-default btn-sm" class="form-control">表示</button>
+  </div>
+</form>
+
+<div class="btn-group btn-group-justified">
+  <a href="#competition" class="btn btn-danger btn-block">競技部門</a>
+  <a href="#themed" class="btn btn-warning btn-block">課題部門</a>
+  <a href="#original" class="btn btn-info btn-block">自由部門</a>
+</div>
+
+<h3 id="conpetition" class="heading-mark heading-mark-competition">競技部門 <small>「<%= @contest.competition_title %>」</small></h3>
+
+<% @competition.each do |product| %>
+  <% @product = product %>
+  <%= erb :_product %>
+<% end %>
+
+<h3 id="themed" class="heading-mark heading-mark-themed">課題部門 <small>「<%= @contest.themed_title %>」</small></h3>
+
+<% @themed.each do |product| %>
+  <% @product = product %>
+  <%= erb :_product %>
+<% end %>
+
+<h3 id="original" class="heading-mark heading-mark-original">自由部門</h3>
+
+<% @original.each do |product| %>
+  <% @product = product %>
+  <%= erb :_product %>
+<% end %>

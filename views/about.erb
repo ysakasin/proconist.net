@@ -1,56 +1,59 @@
-<!-- .main: main column -->
-<div class="col-md-12 main">
-	<div class="clearfix heading">
-		<h2>趣旨</h2>
-	</div>
-	<div class="about">
-		<p class="polocy-text">私達はプロコンで3つの行動を広めることで、プロコニストのスパイラルアップを創造します。</p>
-		<div class="row">
-			<div class="col-md-4">
-				<div class="actions">
-					<div class="action-bg action-read">
-						<i class="fa fa-book"></i>
+<div class="row content">
+	<!-- .main: main column -->
+	<div class="col-md-12 main">
+		<div class="clearfix heading">
+			<h2>趣旨</h2>
+		</div>
+		<div class="about">
+			<p class="polocy-text">私達はプロコンで3つの行動を広めることで、プロコニストのスパイラルアップを創造します。</p>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="actions">
+						<div class="action-bg action-read">
+							<i class="fa fa-book"></i>
+						</div>
+						<p class="action-description"><span>今までの出場者たちのコードやスライドを読んで</span> <span>いいところを学ぼう</span></p>
 					</div>
-					<p class="action-description"><span>今までの出場者たちのコードやスライドを読んで</span> <span>いいところを学ぼう</span></p>
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="actions">
-					<div class="action-bg action-entry">
-						<i class="fa fa-trophy"></i>
+				<div class="col-md-4">
+					<div class="actions">
+						<div class="action-bg action-entry">
+							<i class="fa fa-trophy"></i>
+						</div>
+						<p class="action-description"><span>学んだ自分の力を試すべく</span> <span>高専プロコンに出場しよう</span></p>
 					</div>
-					<p class="action-description"><span>学んだ自分の力を試すべく</span> <span>高専プロコンに出場しよう</span></p>
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="actions">
-					<div class="action-bg action-share">
-						<i class="fa fa-share-alt"></i>
+				<div class="col-md-4">
+					<div class="actions">
+						<div class="action-bg action-share">
+							<i class="fa fa-share-alt"></i>
+						</div>
+						<p class="action-description"><span>大会での成果物を公開して</span> <span>みんなでアップスパイラルを生み出そう</span></p>
 					</div>
-					<p class="action-description"><span>大会での成果物を公開して</span> <span>みんなでアップスパイラルを生み出そう</span></p>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<h3>開発・運営メンバー</h3>
-	<% @member.each do |p| %>
-		<div class="row member">
-			<div class="col-md-3 member-image">
-				<img src="<%= p.icon %>" class="img-circle img-responsive">
-			</div>
-			<div class="col-md-9">
-				<h4 class="member-name"><%= p.name %></h4>
-				<div class="member-introduction">
-					<%= p.description %>
-					<ul class="list-inline member-sns">
-						<% p.sns.each do |item| %>
-							<li><a href="<%= item[:href] %>"><i class="fa fa-lg fa-fw <%= item[:klass] %>"></i> <%= item[:name] %></a></li>
-						<% end %>
-					</ul>
+		<h3>開発・運営メンバー</h3>
+		<% @member.each do |p| %>
+			<div class="row member">
+				<div class="col-md-3 member-image">
+					<img src="<%= p.icon %>" class="img-circle img-responsive">
+				</div>
+				<div class="col-md-9">
+					<h4 class="member-name"><%= p.name %></h4>
+					<div class="member-introduction">
+						<%= p.description %>
+						<ul class="list-inline member-sns">
+							<% p.sns.each do |item| %>
+								<li><a href="<%= item[:href] %>"><i class="fa fa-lg fa-fw <%= item[:klass] %>"></i> <%= item[:name] %></a></li>
+							<% end %>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-	<% end %>
+		<% end %>
+	</div>
+	<!-- /.main -->
 </div>
-<!-- /.main -->
+<!-- /.content -->

@@ -53,6 +53,9 @@ class Entrant < ActiveRecord::Base
 end
 
 class Contest < ActiveRecord::Base
+  def href
+    "/contest/#{id}"
+  end
 end
 
 class Operator < ActiveRecord::Base
