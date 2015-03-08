@@ -62,6 +62,19 @@ get '/entry/:title' do
   erb :entry
 end
 
+get '/category/:c' do
+  @category = Category.find_by_url(params[:c])
+  @entries = Article.where(id: @category.entry_id(1))
+  erb :category
+end
+
+get '/category/:c/:p' do
+  redirect "/category/params[:c]" if params[:p] == '1'
+  @category = Category.find_by_url(params[:c])
+  @entries = Article.where(id: @category.entry_id(params[:p].to_i))
+  erb :category
+end
+
 get '/auther/:op' do
   @auther = Operator.find_by_op_id(params[:op])
   erb :auther

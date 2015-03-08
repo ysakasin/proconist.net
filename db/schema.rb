@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(version: 20150308000438) do
   add_index "articles", ["url"], name: "index_articles_on_url", unique: true
 
   create_table "categories", force: true do |t|
-    t.string "url",  null: false
+    t.string "url",     null: false
     t.string "name"
+    t.string "entries"
   end
 
   add_index "categories", ["url"], name: "index_categories_on_url", unique: true

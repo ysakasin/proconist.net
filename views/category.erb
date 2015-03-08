@@ -1,0 +1,108 @@
+<!-- .content: content(main column + sidebar) -->
+<div class="row content">
+	<!-- .main: main column -->
+	<div class="col-md-8 main entry-list">
+		<h1><%= @category.name %></h1>
+		<% @entries.each do |entry| %>
+			<article class="entry-contents row">
+				<div class="clearfix eye-chatch col-md-4 col-md-4 col-sm-4 col-xs-4">
+					<a href="<%= entry.href %>" title="<%= entry.title %>">
+						<img src="<%= entry.thumbnail %>" class="img-responsive" alt="<%= entry.title %>">
+					</a>
+				</div>
+				<div class="entry-body col-md-8 col-sm-8 col-xs-8">
+					<div class="clearfix heading">
+						<h2><a href="<%= entry.href %>"><%= entry.title %></a></h2>
+						<ul class="meta-info list-unstyled">
+							<li><i class="fa fa-calendar"></i> <%= entry.date %></li>
+							<li><i class="fa fa-folder-open"></i> <%= entry.category_link %></li>
+							<li><i class="fa fa-pencil"></i> <%= entry.auther_a.name %></li>
+						</ul>
+					</div>
+					<div class="clearfix">
+						<div class="entry-text">
+							<p><%= entry.description %> <a href="<%= entry.href %>">【続きを読む】</a></p>
+						</div>
+					</div>
+				</div>
+			</article>
+		<% end %>
+
+		<ul class="pager">
+			<% page = (params[:p] || 1) %>
+			<% pager = Article.pagers(page) %>
+			<% pager.each_index do |index|%>
+				<% if index != 0 && pager[index] - pager[index-1] != 1 %>
+					<li>・・・</li>
+				<% end %>
+				<% if index == page - 1 %>
+					<li><%= pager[index] %></li>
+				<% else %>
+					<li><a href="/entry/page/<%= pager[index] %>"><%= pager[index] %></a></li>
+				<% end %>
+			<% end %>
+		</ul>
+	</div>
+	<!-- /.main -->
+
+	<!-- .sidebar: sidebar column -->
+	<aside class="col-md-4 hidden-sm hidden-xs sidebar">
+
+		<!-- .newlist: 新着情報 -->
+		<div class="panel panel-default newlist">
+			<div class="panel-heading">
+				<h3 class="panel-title">特集一覧</h3>
+			</div>
+			<div class="list-group">
+				<a href="#" class="list-group-item">
+					<dl>
+						<dt><span class="label label-warning">特集</span> 2014-01-01</dt>
+						<dd>【超入門】GitHubを使ってみよう！</dd>
+					</dl>
+				</a>
+				<a href="#" class="list-group-item">
+					<dl>
+						<dt><span class="label label-warning">特集</span> 2014-01-01</dt>
+						<dd>Ruby on Railsを使ってみよう</dd>
+					</dl>
+				</a>
+				<a href="#" class="list-group-item">
+					<dl>
+						<dt><span class="label label-warning">特集</span> 2014-01-01</dt>
+						<dd>Ruby on Railsを使ってみよう</dd>
+					</dl>
+				</a>
+				<a href="#" class="list-group-item">
+					<span class="text-right">過去の記事一覧へ</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="panel panel-default contest-index">
+			<div class="panel-heading">
+				<h3 class="panel-title">カテゴリ一覧</h3>
+			</div>
+			<div class="list-group">
+				<a href="#" class="list-group-item">
+					入門編
+				</a>
+				<a href="#" class="list-group-item">
+					中級者編
+				</a>
+				<a href="#" class="list-group-item">
+					上級者編
+				</a>
+				<a href="#" class="list-group-item">
+					Web技術
+				</a>
+				<a href="#" class="list-group-item">
+					C++
+				</a>
+			</div>
+		</div>
+
+	</aside>
+	<!-- /.sidebar -->
+
+</div>
+<!-- /.content -->

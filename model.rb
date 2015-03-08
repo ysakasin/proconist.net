@@ -176,4 +176,8 @@ class Category < ActiveRecord::Base
   def href
     "/category/#{url}"
   end
+
+  def entry_id(page)
+    entries.split(',')[(page-1)*5, 5].map{|item| item.to_i}
+  end
 end

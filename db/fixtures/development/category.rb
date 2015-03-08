@@ -2,6 +2,7 @@ Category.seed do |s|
   s.id = 1
   s.url = 'git'
   s.name = 'Git'
+  s.entries = '1'
 end
 
 Category.seed do |s|
