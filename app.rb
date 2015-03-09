@@ -85,13 +85,13 @@ before '/sign_in' do
 end
 
 get '/sign_in' do
-  slim :sign_in, :layout => :console_layout
+  erb :sign_in, :layout => :console_layout
 end
 
 post '/sign_in' do
   op = Operator.auth(params[:id], params[:password])
   if op
-    session[:op_id] = op.id
+    session[:op_id] = op.op_id
     redirect '/console/'
   else
     redirect "/sign_in?status=error"
@@ -106,7 +106,7 @@ end
 before '/console/*' do
   redirect '/sign_in' if session[:op_id].blank?
 
-  @op = Operator.find_by_id(session[:op_id])
+  @op = Operator.find_by_op_id(session[:op_id])
   if @op.blank?
     session[:op_id] = nil
     redirect '/sign_in'
@@ -114,5 +114,5 @@ before '/console/*' do
 end
 
 get '/console/' do
-  slim :console, :layout => :console_layout
+  erb :console, :layout => :console_layout
 end

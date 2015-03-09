@@ -1,0 +1,25 @@
+<div class='container'>
+  <div class='panel panel-primary' id='sign-in'>
+    <div class='panel-heading'>
+      <strong>Sign in</strong>
+    </div>
+    <div class='panel-body'>
+      <% if params[:status] == 'error' %>
+        <div class='alert alert-danger'>
+          <strong>Error</strong> : IDとパスワードが正しいか確認してください
+        </div>
+      <% end %>
+      <form action='./sign_in' method='post'>
+        <div class='form-group'>
+          <label for='id'>ID:</label>
+          <input class='form-control' name='id' type='text' value=''>
+        </div>
+        <div class='form-group'>
+          <label for='password'>Password:</label>
+          <input class='form-control' name='password' type='password' value=''>
+        </div>
+        <button class='btn btn-default' type='submit' value='sign in'>Sign in</button>
+      </form>
+    </div>
+  </div>
+</div>
