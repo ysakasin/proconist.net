@@ -81,7 +81,7 @@ get '/auther/:op' do
 end
 
 before '/sign_in' do
-  redirect '/console/' if session[:op_id]
+  redirect '/console' if session[:op_id]
 end
 
 get '/sign_in' do
@@ -92,7 +92,7 @@ post '/sign_in' do
   op = Operator.auth(params[:id], params[:password])
   if op
     session[:op_id] = op.op_id
-    redirect '/console/'
+    redirect '/console'
   else
     redirect "/sign_in?status=error"
   end
@@ -103,7 +103,7 @@ get '/sign_out' do
   redirect '/sign_in'
 end
 
-before '/console/*' do
+before '/console*' do
   redirect '/sign_in' if session[:op_id].blank?
 
   @op = Operator.find_by_op_id(session[:op_id])
@@ -111,8 +111,13 @@ before '/console/*' do
     session[:op_id] = nil
     redirect '/sign_in'
   end
+  set :view, settings.root + '/views/console'
 end
 
-get '/console/' do
-  erb :console, :layout => :console_layout
+get '/console' do
+  erb :index
 end
+
+get '/console/contest' do
+  @contests = Contest.all
+  erb :contest
