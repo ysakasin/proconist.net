@@ -7,6 +7,16 @@ require './secret'
 enable :sessions
 set :session_secret, Secret::KEY
 
+helpers do
+  def option_tag(label, val, selected=false)
+    if selected
+      "<option value=\"#{val}\" selected>#{label}</option>"
+    else
+      "<option value=\"#{val}\">#{label}</option>"
+    end
+  end
+end
+
 get '/' do
   @title = 'Proconist.net'
   contest_id = 1
@@ -148,4 +158,29 @@ post '/console/contest/:id' do
   end
   @contest.save
   redirect "/console/contest/#{params[:id]}?status=success"
+end
+
+get '/console/entrant' do
+  @contests = Contest.all
+  erb :entrant, :views => 'views/console'
+end
+
+get '/console/entrant/contest/:id' do
+  @entrants = Entrant.where(:contest => params[:id])
+  erb :entrant_list, :views => 'views/console'
+end
+
+get '/console/entrant/:id' do
+  @entrant = Entrant.find_by_id(params[:id].to_i)
+  erb :entrant_edit, :views => 'views/console'
+end
+
+post '/console/entrant/:id' do
+  @entrant = Entrant.find_by_id(params[:id].to_i)
+  Entrant.columns.each do |col|
+    p col.name
+    @entrant.send("#{col.name}=", params[col.name])
+  end
+  @entrant.save
+  redirect "/console/entrant/#{params[:id]}?status=success"
 end

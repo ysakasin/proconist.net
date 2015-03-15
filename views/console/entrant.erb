@@ -1,0 +1,6 @@
+<h2><i class="glyphicon glyphicon-briefcase"></i> 作品情報の編集</h2>
+<div class="list-group">
+  <% @contests.each do |c| %>
+    <a href="./entrant/contest/<%= c.id %>" class="list-group-item"><%= c.name %> <small><%= c.date %></small></a>
+  <% end %>
+</div>

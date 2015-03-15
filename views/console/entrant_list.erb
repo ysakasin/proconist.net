@@ -1,0 +1,6 @@
+<h2><i class="glyphicon glyphicon-briefcase"></i> 第<%= params[:id] %>回大会の作品</h2>
+<div class="list-group">
+  <% @entrants.each do |e| %>
+    <a href="/console/entrant/<%= e.id %>" class="list-group-item"><%= e.school %> <%= e.production %></a>
+  <% end %>
+</div>
