@@ -395,6 +395,31 @@ Proconist.net - style.css
 	}
 }
 
+.panel-procon-contest {
+	.panel-heading {
+		.panel-procon-contest-heading {
+			h3{
+				font-size: $font-size-h4;
+			}
+			.meta-info {
+				@include pull-right;
+				font-size: $font-size-h6;
+				line-height: $line-height-large;
+				padding-top: $padding-base-vertical;
+			}
+		}
+	}
+	.panel-body {
+		.row{
+			padding: $padding-small-vertical 0;
+		}
+		.list-themed {
+						border-top: 1px dotted $gray-dark;
+						border-bottom: 1px dotted $gray-dark;
+		}
+	}
+}
+
 .pager {
 	li {
 		a {
