@@ -406,28 +406,30 @@ footer {
   padding: 0;
 }
 
-.auther-entry ul {
-  list-style: none;
-  margin: 20px 0;
-}
-
-.auther-entry li {
-  margin: 10px 0;
-  border-bottom: 1px solid #d0d0d0;
-  padding-bottom: 5px;
-}
-
-.auther-entry li h3 {
-  display: inline;
-  margin-right: 10px;
-}
-
-.auther-entry li span {
-  margin-left: 10px;
-}
-
 .pager li a {
   background-color: #2C3E50;
+}
+
+.entry-table .panel-title:before {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=4.2.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  content: "\f07c  ";
+}
+.entry-table .panel-body ul li {
+  list-style-type: none;
+  font-size: 19px;
+  padding-bottom: 1.42857;
+}
+.entry-table .panel-body ul li:before {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=4.2.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  content: "\f14b  ";
 }
 
 footer {
