@@ -85,7 +85,7 @@ before '/sign_in' do
 end
 
 get '/sign_in' do
-  erb :sign_in, :layout => :console_layout
+  erb :sign_in, :views => 'views/console', :layout => false
 end
 
 post '/sign_in' do
@@ -111,13 +111,41 @@ before '/console*' do
     session[:op_id] = nil
     redirect '/sign_in'
   end
-  set :view, settings.root + '/views/console'
 end
 
 get '/console' do
-  erb :index
+  erb :index, :views => 'views/console'
 end
 
 get '/console/contest' do
   @contests = Contest.all
-  erb :contest
+  erb :contest, :views => 'views/console'
+end
+
+get '/console/contest/new' do
+  @contest = Contest.new
+  erb :contest_edit, :views => 'views/console'
+end
+
+post '/console/contest/new' do
+  @contest = Contest.new(id: params[:id].to_i)
+  Contest.columns.each do |col|
+    @contest.send("#{col.name}=", params[col.name])
+  end
+  @contest.save
+  redirect "/console/contest/#{params[:id]}?status=success"
+end
+
+get '/console/contest/:id' do
+  @contest = Contest.find_by_id(params[:id].to_i)
+  erb :contest_edit, :views => 'views/console'
+end
+
+post '/console/contest/:id' do
+  @contest = Contest.find_by_id(params[:id].to_i)
+  Contest.columns.each do |col|
+    @contest.send("#{col.name}=", params[col.name])
+  end
+  @contest.save
+  redirect "/console/contest/#{params[:id]}?status=success"
+end
