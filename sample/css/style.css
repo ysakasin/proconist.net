@@ -406,21 +406,30 @@ footer {
   padding: 0;
 }
 
-.panel-procon-contest .panel-heading .panel-procon-contest-heading h3 {
-  font-size: 19px;
+.panel-procon-contest .title-link {
+  color: #2C3E50;
 }
-.panel-procon-contest .panel-heading .panel-procon-contest-heading .meta-info {
+.panel-procon-contest h3 {
+  font-size: 19px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.panel-procon-contest .meta-info {
   float: right;
   font-size: 13px;
   line-height: 1.33;
   padding-top: 10px;
 }
-.panel-procon-contest .panel-body .row {
+.panel-procon-contest .section-list > div {
+  border-bottom: 1px dotted #7b8a8b;
   padding: 6px 0;
 }
-.panel-procon-contest .panel-body .list-themed {
-  border-top: 1px dotted #7b8a8b;
-  border-bottom: 1px dotted #7b8a8b;
+.panel-procon-contest .section-list div:first-child {
+  padding-top: 0;
+}
+.panel-procon-contest .section-list div:last-child {
+  border: none;
+  padding-bottom: 0;
 }
 
 .pager li a {
