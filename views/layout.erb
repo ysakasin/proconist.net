@@ -1,7 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>hogehoge - Proconist.net</title>
+	<% if @title.present? %>
+		<title><%= @title %> - Proconist.net</title>
+	<% else %>
+	  <title>Proconist.net</title>
+	<% end %>
 	<meta charset="utf-8">
 	<meta name="description" content="高専プロコンで使用されたソースコードやプレゼンテーションのまとめ">
 	<meta name="keyword" content="高専プロコン, 高専, OSS, プレゼンテーション">
