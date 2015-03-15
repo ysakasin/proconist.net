@@ -6,6 +6,7 @@ require './secret'
 
 enable :sessions
 set :session_secret, Secret::KEY
+set :public_folder, settings.root + '/sample'
 
 get '/' do
   @title = 'Proconist.net'
