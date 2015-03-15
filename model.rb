@@ -61,7 +61,6 @@ end
 
 class Operator < ActiveRecord::Base
   self.primary_key = :op_id
-  attr_readonly :password_hash, :password_salt
 
   enum position: {common: 0, admin: 1}
 

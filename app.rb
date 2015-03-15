@@ -184,3 +184,28 @@ post '/console/entrant/:id' do
   @entrant.save
   redirect "/console/entrant/#{params[:id]}?status=success"
 end
+
+get '/console/user-settings' do
+  erb :user_settings, :views => 'views/console'
+end
+
+post '/console/user-settings' do
+  cols = [:name, :school, :github, :bitbucket, :slideshare, :twitter, :facebook, :site, :description]
+  cols.each do |col|
+    @op.send("#{col}=", params[col])
+  end
+  @op.save
+  redirect "/console/user-settings?status=success"
+end
+
+post '/console/password' do
+  if params[:new] != params[:verify]
+    redirect "/console/user-settings?status=verify_error"
+  elsif Operator.auth(@op.id, params[:current]).nil?
+    redirect "/console/user-settings?status=auth_error"
+  end
+
+  @op.encrypt_password(params[:new])
+  @op.save
+  redirect "/console/user-settings?status=pass_success"
+end
