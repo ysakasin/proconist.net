@@ -19,7 +19,6 @@ helpers do
 end
 
 get '/' do
-  @title = 'Proconist.net'
   contest_id = 1
   @contest = Contest.find_by_id(contest_id)
 
@@ -59,6 +58,11 @@ get '/entry' do
   @entries = Article.order("id desc").limit(5)
   @entry_total = Article.all.size
   erb :entries
+end
+
+get '/entry/archive' do
+  @categories = Category.all
+  erb :archive
 end
 
 get '/entry/page/:p' do

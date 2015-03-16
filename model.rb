@@ -179,4 +179,12 @@ class Category < ActiveRecord::Base
   def entry_id(page)
     entries.split(',')[(page-1)*5, 5].map{|item| item.to_i}
   end
+
+  def get_entries
+    if entries.blank?
+      return []
+    end
+    ary = entries.split(',').map{|item| item.to_i}
+    Article.where(id: ary)
+  end
 end
