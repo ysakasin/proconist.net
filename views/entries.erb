@@ -31,7 +31,7 @@
     <% end %>
 
     <ul class="pager">
-      <% page = (params[:p] || 1) %>
+      <% page = params[:p].present? ? params[:p].to_i : 1 %>
       <% pager = Article.pagers(page) %>
       <% pager.each_index do |index|%>
         <% if index != 0 && pager[index] - pager[index-1] != 1 %>

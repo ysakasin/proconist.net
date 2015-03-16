@@ -166,7 +166,7 @@ class Article < ActiveRecord::Base
   end
 
   def Article.pagers(page)
-    max = Article.all.size / 5 + 1
+    max = (Article.all.size - 1) / 5 + 1
     if max > 1
       (1..max).to_a.select{|item| item <= 3 || item >= max - 2 || (item <= page + 1 && item >= page - 1)}
     else
