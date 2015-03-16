@@ -49,6 +49,10 @@ get '/about' do
   erb :about
 end
 
+get '/contest' do
+  erb :contest_list
+end
+
 get '/contest/:id' do |id|
   @contest = Contest.find_by_id(id)
 

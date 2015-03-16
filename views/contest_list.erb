@@ -1,0 +1,50 @@
+<!-- .content: content(main column + sidebar) -->
+<div class="row content">
+  <!-- .main: main column -->
+  <div class="col-md-12 main">
+    <% Contest.all.reverse_each do |c| %>
+      <div class="panel panel-primary panel-procon-contest">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-5">
+              <a class="title-link" href="<%= c.href %>">
+                <h3>第<%= c.id %>回<%= c.name %></h3>
+                <h3>「<%= c.title %>」</h3>
+              </a>
+              <ul class="meta-info list-unstyled">
+                <li><i class="fa fa-calendar"></i> <%= c.date %></li>
+                <li><i class="fa fa-map-marker"></i> <%= c.place %></li>
+              </ul>
+            </div>
+            <div class="col-md-7 section-list">
+              <div class="row">
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                  <a href="<%= c.href %>#competition" class="btn btn-danger btn-block">競技部門</a>
+                </div>
+                <div class="col-md-9 text-center col-sm-12 col-xs-12">
+                  <h4><%= c.competition_title %></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                  <a href="<%= c.href %>#themed" class="btn btn-warning btn-block">課題部門</a>
+                </div>
+                <div class="col-md-9 text-center col-sm-12 col-xs-12">
+                  <h4><%= c.themed_title %></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                  <a href="<%= c.href %>#original" class="btn btn-info btn-block">自由部門</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.panel-contest -->
+    <% end %>
+  </div>
+  <!-- /.main -->
+</div>
+<!-- /.content -->
