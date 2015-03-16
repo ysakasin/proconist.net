@@ -403,6 +403,48 @@ Proconist.net - style.css
 	}
 }
 
+.auther-entry {
+	ul{
+		list-style: none;
+		margin: 20px 0;
+	}
+	li {
+	  margin: 10px 0;
+	  border-bottom: 1px solid #d0d0d0;
+	  padding-bottom: 5px;
+		h3 {
+			display: inline;
+		  margin-right: 10px;
+		}
+	}
+}
+
+.pager li a {
+  background-color: #2C3E50;
+}
+
+.entry-table {
+	.panel-title{
+		&:before{
+			@include fontawesome;
+			content: "\f07c  ";
+		}
+	}
+	.panel-body {
+		ul{
+			li{
+				list-style-type: none;
+				font-size: $font-size-h4;
+				padding-bottom: $line-height-base;
+				&:before{
+					@include fontawesome;
+					content: "\f14b  ";
+				}
+			}
+		}
+	}
+}
+
 footer {
 	padding: 20px 0;
 	color: $gray-lighter;
