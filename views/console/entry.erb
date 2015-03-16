@@ -1,0 +1,7 @@
+<h2><i class="glyphicon glyphicon-tower"></i> 記事の編集</h2>
+<a href="./entry/new" class="btn btn-success btn-lg" role="button" style="margin:1em 0;">記事を追加</a>
+<div class="list-group">
+  <% @entries.each do |e| %>
+    <a href="./entry/<%= e.id %>" class="list-group-item"><%= e.title %></a>
+  <% end %>
+</div>

@@ -16,6 +16,14 @@ helpers do
       "<option value=\"#{val}\">#{label}</option>"
     end
   end
+
+  def checkbox_tag(label, val, name, checked=false)
+    if checked
+      "<div class=\"checkbox\"><label><input type=\"checkbox\" value=\"#{val}\" id=\"#{name}\" name=\"#{name}\" checked>#{label}</label></div>"
+    else
+      "<div class=\"checkbox\"><label><input type=\"checkbox\" value=\"#{val}\" id=\"#{name}\" name=\"#{name}\">#{label}</label></div>"
+    end
+  end
 end
 
 get '/' do
@@ -188,6 +196,42 @@ post '/console/entrant/:id' do
   end
   @entrant.save
   redirect "/console/entrant/#{params[:id]}?status=success"
+end
+
+get '/console/entry' do
+  @entries = Article.all
+  erb :entry, :views => 'views/console'
+end
+
+get '/console/entry/new' do
+  @entry = Article.new
+  erb :entry_edit, :views => 'views/console'
+end
+
+get '/console/entry/:id' do
+  @entry = Article.find_by_id(params[:id])
+  erb :entry_edit, :views => 'views/console'
+end
+
+post '/console/entry/:id' do
+  @entry = Article.find_by_id(params[:id])
+  cols = [:url, :title, :body, :auther, :thumbnail]
+  cols.each do |col|
+    @entry.send("#{col}=", params[col])
+  end
+  @entry.category = params[:category].join(',')
+  @entry.save
+  params[:category].each do |c|
+    category = Category.find_by_id(c.to_i)
+    if category.entries.blank?
+      category.entries = params[:id]
+      category.save
+    elsif category.entries.split(',').include?(params[:id])
+      category.entries += ",#{params[:id]}"
+      category.save
+    end
+  end
+  redirect "/console/entry/#{params[:id]}?status=success"
 end
 
 get '/console/user-settings' do

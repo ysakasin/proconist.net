@@ -134,11 +134,12 @@ class Article < ActiveRecord::Base
   end
 
   def categories
-    res = []
+    @categories if @categories.present?
+    @categories = []
     category.split(',').each do |id|
-      res << Category.find_by_id(id)
+      @categories << Category.find_by_id(id)
     end
-    res
+    @categories
   end
 
   def category_link
