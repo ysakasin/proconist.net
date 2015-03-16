@@ -226,7 +226,7 @@ post '/console/entry/:id' do
     if category.entries.blank?
       category.entries = params[:id]
       category.save
-    elsif category.entries.split(',').include?(params[:id])
+    elsif not category.entries.split(',').include?(params[:id])
       category.entries += ",#{params[:id]}"
       category.save
     end
