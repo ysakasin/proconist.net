@@ -207,9 +207,60 @@ get '/console/entry' do
   erb :entry, :views => 'views/console'
 end
 
-get '/console/entry/new' do
+get '/console/draft/new' do
+  @draft = Draft.new
+  erb :draft_edit, :views => 'views/console'
+end
+
+post '/console/draft/new' do
+  @draft = Draft.new
+  cols = [:url, :title, :body, :auther, :thumbnail]
+  cols.each do |col|
+    @draft.send("#{col}=", params[col])
+  end
+  @draft.category = params[:category].join(',')
+  @draft.save
+  redirect "/console/draft/#{@draft.id}?status=success"
+end
+
+get '/console/draft/:id/publish' do
+  unless @op.admin?
+    raise Sinatra::NotFound
+  end
+  @draft = Draft.find_by_id(params[:id])
   @entry = Article.new
-  erb :entry_edit, :views => 'views/console'
+  cols = [:url, :title, :body, :auther, :thumbnail, :category]
+  cols.each do |col|
+    @entry.send("#{col}=", @draft.send("#{col}"))
+  end
+  @entry.save
+  @draft.destroy
+  @entry.categories.each do |category|
+    if category.entries.blank?
+      category.entries = @entry.id
+      category.save
+    elsif not category.entries.split(',').include?(@entry.id)
+      category.entries += ",#{@entry.id}"
+      category.save
+    end
+  end
+  redirect "/console/entry/#{@entry.id}?status=success"
+end
+
+get '/console/draft/:id' do
+  @draft = Draft.find_by_id(params[:id])
+  erb :draft_edit, :views => 'views/console'
+end
+
+post '/console/draft/:id' do
+  @draft = Draft.find_by_id(params[:id])
+  cols = [:url, :title, :body, :auther, :thumbnail]
+  cols.each do |col|
+    @draft.send("#{col}=", params[col])
+  end
+  @draft.category = params[:category].join(',')
+  @draft.save
+  redirect "/console/entry/#{params[:id]}?status=success"
 end
 
 get '/console/entry/:id' do

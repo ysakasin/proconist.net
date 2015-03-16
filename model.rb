@@ -136,6 +136,9 @@ class Article < ActiveRecord::Base
   def categories
     @categories if @categories.present?
     @categories = []
+    if category.blank?
+      return @categories
+    end
     category.split(',').each do |id|
       @categories << Category.find_by_id(id)
     end
@@ -169,6 +172,20 @@ class Article < ActiveRecord::Base
     else
       []
     end
+  end
+end
+
+class Draft < ActiveRecord::Base
+  def categories
+    @categories if @categories.present?
+    @categories = []
+    if category.blank?
+      return @categories
+    end
+    category.split(',').each do |id|
+      @categories << Category.find_by_id(id)
+    end
+    @categories
   end
 end
 

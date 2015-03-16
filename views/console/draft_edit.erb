@@ -1,0 +1,58 @@
+<% if params[:status] == 'success' %>
+  <div class="alert alert-success" role="alert">保存に成功しました</div>
+<% end %>
+<% if @draft.id.present? %>
+  <form class="form-horizontal" method="post" action="./<%= @draft.id %>">
+<% else %>
+  <form class="form-horizontal" method="post" action="./new">
+<% end %>
+  <div class="form-group">
+    <label for="title" class="col-sm-2 control-label">タイトル</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="title" name="title" placeholder="テスト記事" value="<%= @draft.title %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="url" class="col-sm-2 control-label">URL</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="url" name="url" placeholder="test-entry" value="<%= @draft.url %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="thumbnail" class="col-sm-2 control-label">サムネイルURL</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="thumbnail" name="thumbnail" placeholder="/img/thumbnail.png" value="<%= @draft.thumbnail %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="production" class="col-sm-2 control-label">カテゴリ</label>
+    <div class="col-sm-10">
+      <% Category.all.each do |c| %>
+        <%= checkbox_tag(c.name, c.id, 'category[]', @draft.categories.include?(c)) %>
+      <% end %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="auther" class="col-sm-2 control-label">書いた人</label>
+    <div class="col-sm-10">
+      <select class="form-control" id="auther" name="auther">
+        <% Operator.all.each do |o| %>
+          <%= option_tag(o.name, o.op_id, o.op_id == @draft.auther) %>
+        <% end %>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="body" class="control-label">本文 <small>Markdow形式　見出しはh2以降から</small></label>
+    <div>
+      <textarea class="form-control" id="body" name="body" rows="10"><%= @draft.body %></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">保存</button><small>※一時保存され、公開されません。公開には管理者の承認が必要です</small>
+    <a href="/console/entry" class="btn btn-success btn-md" role="button" style="margin-left:50px;">戻る</a>
+    <% if @op.admin? && @draft.id.present? %>
+      <a href="/console/draft/<%= params[:id] %>/publish" class="btn btn-danger btn-md" role="button" style="margin-left:50px;">公開する</a>
+    <% end %>
+  </div>
+</form>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308000438) do
+ActiveRecord::Schema.define(version: 20150316135754) do
 
   create_table "articles", force: true do |t|
     t.string   "url",        null: false
@@ -43,6 +43,19 @@ ActiveRecord::Schema.define(version: 20150308000438) do
     t.string "competition_title", null: false
     t.string "themed_title",      null: false
   end
+
+  create_table "drafts", force: true do |t|
+    t.string   "url",        null: false
+    t.string   "title"
+    t.string   "body"
+    t.string   "category"
+    t.string   "auther"
+    t.string   "thumbnail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "drafts", ["url"], name: "index_drafts_on_url", unique: true
 
   create_table "entrants", force: true do |t|
     t.integer "contest",      null: false
