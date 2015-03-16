@@ -1,34 +1,34 @@
 <!-- .content: content(main column + sidebar) -->
 <div class="row content">
-	<!-- .main: main column -->
-	<div class="col-md-8 main entry-table">
+  <!-- .main: main column -->
+  <div class="col-md-8 main entry-table">
     <% @categories.each do |c| %>
-  		<div class="panel panel-primary panel-category" id="<% c.url %>">
-  			<!-- .panel-heading -->
-  			<div class="panel-heading">
-  				<div class="panel-category-heading clearfix">
-  					<h3 class="panel-title"><%= c.name %></h3>
-  				</div>
-  			</div>
-  			<!-- /.panel-heading -->
-  			<div class="panel-body">
-  				<p><%= c.description %></p>
-  				<ul>
+      <div class="panel panel-primary panel-category" id="<% c.url %>">
+        <!-- .panel-heading -->
+        <div class="panel-heading">
+          <div class="panel-category-heading clearfix">
+            <h3 class="panel-title"><%= c.name %></h3>
+          </div>
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+          <p><%= c.description %></p>
+          <ul>
             <% c.get_entries.each do |e| %>
-    					<li><a href="<%= e.href %>"><%= e.title %></a></li>
-  					<% end %>
-  				</ul>
-  			</div>
-  		</div>
+              <li><a href="<%= e.href %>"><%= e.title %></a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
     <% end %>
-	</div>
-	<!-- /.main -->
+  </div>
+  <!-- /.main -->
 
-	<!-- .sidebar: sidebar column -->
-	<aside class="col-md-4 hidden-sm hidden-xs sidebar">
+  <!-- .sidebar: sidebar column -->
+  <aside class="col-md-4 hidden-sm hidden-xs sidebar">
     <%= erb :_entry_sidebar %>
-	</aside>
-	<!-- /.sidebar -->
+  </aside>
+  <!-- /.sidebar -->
 
 </div>
 <!-- /.content -->

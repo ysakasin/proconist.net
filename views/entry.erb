@@ -1,65 +1,65 @@
 <div class="row content">
-	<!-- .main: main column -->
-	<div class="col-md-8 main">
-		<article class="entry-contents">
-			<div class="clearfix heading">
-				<h1><%= @entry.title %></h1>
-				<ul class="meta-info list-unstyled">
-					<li><i class="fa fa-calendar"></i> <%= @entry.date %></li>
-					<li><i class="fa fa-folder-open"></i> <%= @entry.category_link %></li>
-				</ul>
-			</div>
-			<div class="entry-body">
-				<div class="eye-chatch">
-					<img src="<%= @entry.thumbnail %>" alt="<%= @entry.title %>" class="img-responsive">
-				</div>
-				<div class="entry-text">
-					<%= @entry.body_html %>
-				</div>
+  <!-- .main: main column -->
+  <div class="col-md-8 main">
+    <article class="entry-contents">
+      <div class="clearfix heading">
+        <h1><%= @entry.title %></h1>
+        <ul class="meta-info list-unstyled">
+          <li><i class="fa fa-calendar"></i> <%= @entry.date %></li>
+          <li><i class="fa fa-folder-open"></i> <%= @entry.category_link %></li>
+        </ul>
+      </div>
+      <div class="entry-body">
+        <div class="eye-chatch">
+          <img src="<%= @entry.thumbnail %>" alt="<%= @entry.title %>" class="img-responsive">
+        </div>
+        <div class="entry-text">
+          <%= @entry.body_html %>
+        </div>
 
-				<div class="social-button">
-					<ul class="list-unstyled">
-						<li><a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a></li>
-						<li><a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></li>
-						<li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li>
-						<!-- +1 ボタン を表示したい位置に次のタグを貼り付けてください。 -->
-	<div class="g-plusone" data-annotation="inline" data-width="300"></div>
-					</ul>
-				</div>
-				<!-- .panel-entry-editor: 記事を書いた人の紹介 -->
-				<div class="panel panel-primary panel-entry-editor">
-					<!-- .panel-heading -->
-					<div class="panel-heading">
-						<div class="panel-procon-product-heading clearfix">
-							<h4 class="panel-title">この記事を書いた人</h4>
-						</div>
-					</div>
-					<!-- /.panel-heading -->
-					<div class="panel-body row member">
-						<div class="col-md-3 col-sm-3  hidden-xs member-image">
-							<img src="<%= @entry.auther_a.icon %>" class="img-circle img-responsive">
-						</div>
-						<div class="col-md-9 col-sm-9 col-xs-12 member-introduction">
-							<h4 class="member-name"><%= @entry.auther_a.name %></h4>
-							<p><% @entry.auther_a.description %></p>
-							<ul class="list-inline member-sns">
-								<% @entry.auther_a.sns.each do |item| %>
-									<li><a href="<%= item[:href] %>"><i class="fa fa-lg fa-fw <%= item[:klass] %>"></i> <%= item[:name] %></a></li>
-								<% end %>
-							</ul>
-							<p class="text-right"><i class="icon-article"></i><a href="/auther/<%= @entry.auther_a.id %>">この人が他に書いた記事</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</article>
-	</div>
-	<!-- /.main -->
+        <div class="social-button">
+          <ul class="list-unstyled">
+            <li><a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a></li>
+            <li><a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></li>
+            <li><div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li>
+            <!-- +1 ボタン を表示したい位置に次のタグを貼り付けてください。 -->
+  <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+          </ul>
+        </div>
+        <!-- .panel-entry-editor: 記事を書いた人の紹介 -->
+        <div class="panel panel-primary panel-entry-editor">
+          <!-- .panel-heading -->
+          <div class="panel-heading">
+            <div class="panel-procon-product-heading clearfix">
+              <h4 class="panel-title">この記事を書いた人</h4>
+            </div>
+          </div>
+          <!-- /.panel-heading -->
+          <div class="panel-body row member">
+            <div class="col-md-3 col-sm-3  hidden-xs member-image">
+              <img src="<%= @entry.auther_a.icon %>" class="img-circle img-responsive">
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-12 member-introduction">
+              <h4 class="member-name"><%= @entry.auther_a.name %></h4>
+              <p><% @entry.auther_a.description %></p>
+              <ul class="list-inline member-sns">
+                <% @entry.auther_a.sns.each do |item| %>
+                  <li><a href="<%= item[:href] %>"><i class="fa fa-lg fa-fw <%= item[:klass] %>"></i> <%= item[:name] %></a></li>
+                <% end %>
+              </ul>
+              <p class="text-right"><i class="icon-article"></i><a href="/auther/<%= @entry.auther_a.id %>">この人が他に書いた記事</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <!-- /.main -->
 
-	<!-- .sidebar: sidebar column -->
-	<aside class="col-md-4 hidden-sm hidden-xs sidebar">
-		<%= erb :_entry_sidebar %>
-	</aside>
-	<!-- /.sidebar -->
+  <!-- .sidebar: sidebar column -->
+  <aside class="col-md-4 hidden-sm hidden-xs sidebar">
+    <%= erb :_entry_sidebar %>
+  </aside>
+  <!-- /.sidebar -->
 </div>
 <!-- ./content -->

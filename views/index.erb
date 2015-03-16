@@ -1,94 +1,94 @@
 <!-- .about: 趣旨に当たる部分 (note: かっこいい画像背景に入れたりするといいかも)-->
 <section class="about jumbotron">
-	<h2><span class="logo">Proconist.net</span>はプロコニストの成長をサポートします</h2>
-	<p>高専プロコンのプロダクトやプログラムは素晴らしいものばかりです。しかし、その成果が公になることはありませんでした。そこで、成果物であるソースコードや発表スライドを公開することで、高専生プロコニストの学習/成長につなげていきます。</p>
-	<p class="text-right"><a href="/about">もう少し詳細な説明 &raquo;</a></p>
-	<%#
-	<div class="row">
-		<div class="col-md-6">
-			<a href="#" class="btn btn-success btn-lg btn-block">作品を探す <i class="fa fa-search"></i></a>
-		</div>
-		<div class="col-md-6">
-			<a href="#" class="btn btn-warning btn-lg btn-block">作品を投稿する <i class="fa fa-plus"></i></a>
-		</div>
-	</div>
-	%>
+  <h2><span class="logo">Proconist.net</span>はプロコニストの成長をサポートします</h2>
+  <p>高専プロコンのプロダクトやプログラムは素晴らしいものばかりです。しかし、その成果が公になることはありませんでした。そこで、成果物であるソースコードや発表スライドを公開することで、高専生プロコニストの学習/成長につなげていきます。</p>
+  <p class="text-right"><a href="/about">もう少し詳細な説明 &raquo;</a></p>
+  <%#
+  <div class="row">
+    <div class="col-md-6">
+      <a href="#" class="btn btn-success btn-lg btn-block">作品を探す <i class="fa fa-search"></i></a>
+    </div>
+    <div class="col-md-6">
+      <a href="#" class="btn btn-warning btn-lg btn-block">作品を投稿する <i class="fa fa-plus"></i></a>
+    </div>
+  </div>
+  %>
 </section>
 <!-- /.about -->
 
 <!-- .content: content(main column + sidebar) -->
 <div class="row content">
-	<!-- .main: main column -->
-	<div class="col-md-8 main">
-		<%= erb :_product_list %>
-	</div>
-	<!-- /.main -->
+  <!-- .main: main column -->
+  <div class="col-md-8 main">
+    <%= erb :_product_list %>
+  </div>
+  <!-- /.main -->
 
-	<!-- .sidebar: sidebar column -->
-	<aside class="col-md-4 hidden-sm hidden-xs sidebar">
+  <!-- .sidebar: sidebar column -->
+  <aside class="col-md-4 hidden-sm hidden-xs sidebar">
 
-		<!-- .newlist: 新着情報 -->
-		<div class="panel panel-default newlist">
-			<div class="panel-heading">
-				<h3 class="panel-title">新着情報</h3>
-			</div>
-			<!-- .panel-body -->
-			<div class="panel-body">
-				<!-- 新着サムネイル -->
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-					<div class="carousel-inner" role="listbox">
-						<% item_class = 'active' %>
-						<% @thumbnail.each do |elem| %>
-							<div class="item <%= item_class %>">
-								<img src="<%= elem.img %>" alt="<%= elem.title %>">
-								<div class="carousel-caption">
-									<%= elem.title %>
-								</div>
-							</div>
-							<% item_class.clear %>
-						<% end %>
-					</div>
-					<!-- Controls -->
-					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-						<span class="sr-only">Next</span>
-					</a>
-				</div>
-			</div>
-			<!-- /.panel-body -->
+    <!-- .newlist: 新着情報 -->
+    <div class="panel panel-default newlist">
+      <div class="panel-heading">
+        <h3 class="panel-title">新着情報</h3>
+      </div>
+      <!-- .panel-body -->
+      <div class="panel-body">
+        <!-- 新着サムネイル -->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <% item_class = 'active' %>
+            <% @thumbnail.each do |elem| %>
+              <div class="item <%= item_class %>">
+                <img src="<%= elem.img %>" alt="<%= elem.title %>">
+                <div class="carousel-caption">
+                  <%= elem.title %>
+                </div>
+              </div>
+              <% item_class.clear %>
+            <% end %>
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <!-- /.panel-body -->
 
-			<div class="list-group">
-				<% @history.each do |elem| %>
-					<a href="<%= elem.href %>" class="list-group-item">
-						<dl>
-							<dt><span class="label <%= elem.label_class %>"><%= elem.label_name %></span> <%= elem.created_at.strftime('%F') %></dt>
-							<dd><%= elem.title %></dd>
-						</dl>
-					</a>
-				<% end %>
-			</div>
-		</div>
+      <div class="list-group">
+        <% @history.each do |elem| %>
+          <a href="<%= elem.href %>" class="list-group-item">
+            <dl>
+              <dt><span class="label <%= elem.label_class %>"><%= elem.label_name %></span> <%= elem.created_at.strftime('%F') %></dt>
+              <dd><%= elem.title %></dd>
+            </dl>
+          </a>
+        <% end %>
+      </div>
+    </div>
 
-		<div class="panel panel-default contest-index">
-			<div class="panel-heading">
-				<h3 class="panel-title">過去の大会から探す</h3>
-			</div>
-			<div class="list-group">
-				<% Contest.all.each do |c| %>
-					<a href="<%= c.href %>" class="list-group-item">
-						<h4 class="list-group-item-heading">第<%= c.id %>回 <%= c.name %></h4>
-						<p class="list-group-item-text"><%= c.title %></p>
-					</a>
-				<% end %>
-			</div>
-		</div>
+    <div class="panel panel-default contest-index">
+      <div class="panel-heading">
+        <h3 class="panel-title">過去の大会から探す</h3>
+      </div>
+      <div class="list-group">
+        <% Contest.all.each do |c| %>
+          <a href="<%= c.href %>" class="list-group-item">
+            <h4 class="list-group-item-heading">第<%= c.id %>回 <%= c.name %></h4>
+            <p class="list-group-item-text"><%= c.title %></p>
+          </a>
+        <% end %>
+      </div>
+    </div>
 
-	</aside>
-	<!-- /.sidebar -->
+  </aside>
+  <!-- /.sidebar -->
 
 </div>
 <!-- /.content -->
