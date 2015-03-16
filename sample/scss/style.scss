@@ -403,6 +403,26 @@ Proconist.net - style.css
 	}
 }
 
+.auther-entry {
+	ul{
+		list-style: none;
+		margin: 20px 0;
+	}
+	li {
+	  margin: 10px 0;
+	  border-bottom: 1px solid #d0d0d0;
+	  padding-bottom: 5px;
+		h3 {
+			display: inline;
+		  margin-right: 10px;
+		}
+	}
+}
+
+.pager li a {
+  background-color: #2C3E50;
+}
+
 .entry-table {
 	.panel-title{
 		&:before{
