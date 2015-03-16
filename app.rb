@@ -234,6 +234,41 @@ post '/console/entry/:id' do
   redirect "/console/entry/#{params[:id]}?status=success"
 end
 
+get '/console/category' do
+  @categories = Category.all
+  erb :category, :views => 'views/console'
+end
+
+get '/console/category/new' do
+  @category = Category.new
+  erb :category_edit, :views => 'views/console'
+end
+
+get '/console/category/:id' do
+  @category = Category.find_by_id(params[:id])
+  erb :category_edit, :views => 'views/console'
+end
+
+post '/console/category/new' do
+  @category = Category.new
+  cols = [:url, :name, :description, :entries]
+  cols.each do |col|
+    @category.send("#{col}=", params[col])
+  end
+  @category.save
+  redirect "/console/category/#{@category.id}?status=success"
+end
+
+post '/console/category/:id' do
+  @category = Category.find_by_id(params[:id])
+  cols = [:url, :name, :description, :entries]
+  cols.each do |col|
+    @category.send("#{col}=", params[col])
+  end
+  @category.save
+  redirect "/console/category/#{params[:id]}?status=success"
+end
+
 get '/console/user-settings' do
   erb :user_settings, :views => 'views/console'
 end

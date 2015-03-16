@@ -1,0 +1,39 @@
+<% if params[:status] == 'success' %>
+  <div class="alert alert-success" role="alert">保存に成功しました</div>
+<% end %>
+<% if @category.id.present? %>
+  <form class="form-horizontal" method="post" action="./<%= @category.id %>">
+<% else %>
+  <form class="form-horizontal" method="post" action="./new">
+<% end %>
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">カテゴリ名</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="name" name="name" placeholder="Git" value="<%= @category.name %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="url" class="col-sm-2 control-label">URL</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="url" name="url" placeholder="git" value="<%= @category.url %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="description" class="col-sm-2 control-label">説明</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="description" name="description" placeholder="ソースコードのバージョン管理を行うGitの利点と使い方を紹介します" value="<%= @category.description %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="entries" class="col-sm-2 control-label">関連エントリーID</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="entries" name="entries" placeholder="1,2,3" value="<%= @category.entries %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">保存</button>
+      <a href="/console/category" class="btn btn-success btn-md" role="button" style="margin-left:50px;">戻る</a>
+    </div>
+  </div>
+</form>
