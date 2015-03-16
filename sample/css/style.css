@@ -481,3 +481,6 @@ footer {
   color: #ecf0f1;
   background-color: #222222;
 }
+footer .github-star-button {
+  margin-bottom: 1em;
+}
