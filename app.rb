@@ -63,6 +63,10 @@ get '/contest/:id' do |id|
 
   @history = History.order("id desc").limit(5)
   @thumbnail = History.where(label: 1).order("id desc").limit(5)
+
+  @title = "第#{@contest.id}回#{@contest.name}作品一覧"
+  @ogp_url = to()
+  @ogp_description = "高専プロコン第#{@contest.id}回#{@contest.name}の作品一覧"
   erb :contest
 end
 
@@ -86,6 +90,10 @@ end
 
 get '/entry/:title' do
   @entry = Article.find_by_url(params[:title])
+  @title = @entry.title
+  @ogp_url = to()
+  @ogp_img = to(@entry.thumbnail)
+  @ogp_description = @entry.description(100, '')
   erb :entry
 end
 
@@ -104,6 +112,9 @@ end
 
 get '/auther/:op' do
   @auther = Operator.find_by_op_id(params[:op])
+  @title = @auther.name
+  @ogp_url = to()
+  @ogp_description = @auther.description
   erb :auther
 end
 

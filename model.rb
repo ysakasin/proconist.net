@@ -116,8 +116,8 @@ class Article < ActiveRecord::Base
     Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(body)
   end
 
-  def description
-    Redcarpet::Markdown.new(Redcarpet::Render::StripDown).render(body)[0, 90] + '...'
+  def description(limit=90, after='...')
+    Redcarpet::Markdown.new(Redcarpet::Render::StripDown).render(body)[0, limit] + after
   end
 
   def auther_a
