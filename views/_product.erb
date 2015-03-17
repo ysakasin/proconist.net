@@ -23,7 +23,7 @@
     <ul class="list-inline panel-procon-product-link">
       <% @product.links.each do |link| %>
         <% next if link[:href].blank? %>
-        <li><a href="<%= link[:href] %>"><i class="fa fa-lg fa-fw <%= link[:tag_class] %>"></i> <%= link[:title] %></a></li>
+        <li><a href="<%= link[:href] %>" target="_blank"><i class="fa fa-lg fa-fw <%= link[:tag_class] %>"></i> <%= link[:title] %></a></li>
       <% end %>
     </ul>
   <% end %>

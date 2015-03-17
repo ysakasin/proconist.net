@@ -11,7 +11,7 @@
           <%= @auther.description %>
           <ul class="list-inline member-sns">
             <% @auther.sns.each do |item| %>
-              <li><a href="<%= item[:href] %>"><i class="fa fa-lg fa-fw <%= item[:klass] %>"></i> <%= item[:name] %></a></li>
+              <li><a href="<%= item[:href] %>" target="_blank"><i class="fa fa-lg fa-fw <%= item[:klass] %>"></i> <%= item[:name] %></a></li>
             <% end %>
           </ul>
         </div>
