@@ -2,24 +2,6 @@ require 'sinatra/activerecord'
 require 'sinatra/activerecord/rake'
 require './model.rb'
 
-desc '開発モードでSinatraを実行する'
-task :dev_exec do
-  sh 'export DB=dev.db; ruby app.rb'
-end
-
-desc '作品の情報を登録'
-task :add_product do
-  entrant = Entrant.new
-  Entrant.column_names.each do |name|
-    next if name == 'id'
-    print "#{Entrant.send(name.pluralize)}\n" if Entrant::ENUMS.include?(name)
-    print "#{name}:"
-    val = STDIN.gets.chomp
-    entrant.send("#{name}=", val) if val.present?
-  end
-  entrant.save
-end
-
 desc 'JSONファイルから作品情報を読み込む'
 task :load_json do
   section_num = {"competition section" => 0, "themed section" => 1, "original section" => 2}
@@ -46,18 +28,6 @@ task :load_json do
   end
 end
 
-desc '大会の情報を登録'
-task :add_contest do
-  contest = Contest.new
-  Contest.column_names.each do |name|
-    print "#{name}:"
-    val = STDIN.gets.chomp
-    next if val.blank?
-    contest[name] = val
-  end
-  contest.save
-end
-
 desc '更新情報を登録'
 task :add_history do
   history = History.new
@@ -71,11 +41,7 @@ task :add_history do
   history.save
 end
 
-task :test_entry do
-  Article.create(title: 'テスト記事', body: '##見出し', category: '1,2', auther: 'nkmr6194', thumbnail: 'null.png', url: 'test')
-end
-
-desc '管理者のログイン情報やプロフィールなどを登録'
+desc '管理者のログイン情報を登録'
 task :add_op do
   print 'id:'
   id = STDIN.gets.chomp
@@ -92,24 +58,5 @@ task :add_op do
     print "\n"
   end while pass.blank? || pass != conf
   operator.encrypt_password(pass)
-
-  Operator.column_names.each do |name|
-    next if ['id', 'position', 'password_hash', 'password_salt'].include?(name)
-    print "#{name}:"
-    val = STDIN.gets.chomp
-    operator.send("#{name}=", val) if val.present?
-  end
   operator.save
-end
-
-task :show do
-  Entrant.all.each do |e|
-    p e
-  end
-  Contest.all.each do |c|
-    p c
-  end
-  Operator.all.each do |o|
-    p o
-  end
 end
