@@ -27,8 +27,7 @@ helpers do
 end
 
 get '/' do
-  contest_id = 1
-  @contest = Contest.find_by_id(contest_id)
+  @contest = Contest.last
 
   entrants = Entrant.where(:contest => @contest.id)
   @competition = entrants.select {|item| item.competition?}
