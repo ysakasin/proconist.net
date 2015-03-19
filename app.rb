@@ -209,6 +209,13 @@ post '/console/entrant/:id' do
     @entrant.send("#{col.name}=", params[col.name])
   end
   @entrant.save
+  if params[:history] == 'add'
+    History.create(
+      title: "#{@entrant.section_name} #{@entrant.school}「#{@entrant.production}」",
+      label: 0,
+      href: @entrant.href
+    )
+  end
   redirect "/console/entrant/#{params[:id]}?status=success"
 end
 

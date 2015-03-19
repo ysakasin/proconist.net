@@ -48,6 +48,14 @@ class Entrant < ActiveRecord::Base
     @link
   end
 
+  def section_name
+    {'competition'=> '競技部門', 'themed' => '課題部門', 'original' => '自由部門'}[section]
+  end
+
+  def href
+    "/contest/#{contest}##{panel_id}"
+  end
+
   def is_registered?
     links.present?
   end
