@@ -340,6 +340,13 @@ end
 
 post '/console/user-settings' do
   cols = [:name, :school, :github, :bitbucket, :slideshare, :twitter, :facebook, :site, :description]
+  if params[:icon]
+    filepath = '/img/' + @op.op_id + File.extname(params[:icon][:filename])
+    File.open(File.join(settings.public_folder, filepath), "w") do |f|
+      f.write(params[:icon][:tempfile].read)
+    end
+    @op.icon = filepath
+  end
   cols.each do |col|
     @op.send("#{col}=", params[col])
   end
