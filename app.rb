@@ -4,6 +4,8 @@ Bundler.require
 require './model'
 require './secret'
 
+Time.zone = "Tokyo"
+ActiveRecord::Base.default_timezone = :local
 enable :sessions
 set :session_secret, Secret::KEY
 set :public_folder, settings.root + '/sample'
