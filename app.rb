@@ -261,6 +261,8 @@ get '/console/draft/:id/publish' do
       category.save
     end
   end
+  notice = @entry.categories.include?(Category.find_by_url('notice'))
+  History.create(label: notice ? 2 : 1, title: @entry.title, href: @entry.href, img: @entry.thumbnail)
   redirect "/console/entry/#{@entry.id}?status=success"
 end
 
