@@ -1,4 +1,13 @@
 {
+  "contest" : {
+    "id" : 25,
+    "name" : "一関大会",
+    "date" : "2014年10月18日(土)〜19日(日)",
+    "place" : "一関文化センター",
+    "title" : "とどけよう、イーハトーヴの風〜僕らが創る希望郷〜",
+    "competition_title" : "キオクのかけらII",
+    "themed_title" :"防災・減災対策と復興支援"
+  },
   "themed section" : [
     {
       "id" : 1,

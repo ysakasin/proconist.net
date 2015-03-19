@@ -21,16 +21,20 @@ task :add_product do
 end
 
 desc 'JSONファイルから作品情報を読み込む'
-task :read_json do
+task :load_json do
   section_num = {"competition section" => 0, "themed section" => 1, "original section" => 2}
   File.open(ENV['JSON']) do |file|
     text = file.read
     json = JSON.parse(text)
+
+    contest = json.delete('contest')
+    Contest.create(contest)
+
     json.each do |key, section|
       section.each do |product|
         prizes = product['prize'] || []
         Entrant.create(
-        contest: ENV['CONTEST'],
+        contest: contest['id'],
         section: section_num[key],
         school: product['school name'],
         registry_num: product['id'],
