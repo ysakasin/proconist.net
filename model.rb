@@ -111,7 +111,7 @@ class History < ActiveRecord::Base
   ENUMS = ['label']
 
   def label_name
-    {'product' => '作品', 'entry' => '特集', 'notice' => 'お知らせ'}[label]
+    {'product' => '作品', 'entry' => '記事', 'notice' => 'お知らせ'}[label]
   end
 
   def label_class
