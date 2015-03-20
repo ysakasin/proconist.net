@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.4'
 
 gem 'sinatra'
+gem 'passenger'
 gem 'activesupport', :require => 'active_support/all'
 gem 'activerecord'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'

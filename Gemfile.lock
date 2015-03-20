@@ -35,6 +35,9 @@ GEM
     json (1.8.1)
     minitest (5.4.2)
     multi_json (1.11.0)
+    passenger (5.0.4)
+      rack
+      rake (>= 0.8.1)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -68,6 +71,7 @@ DEPENDENCIES
   activesupport
   bcrypt
   compass
+  passenger
   rake
   redcarpet
   sass

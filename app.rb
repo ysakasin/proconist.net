@@ -4,9 +4,11 @@ Bundler.require
 require './model'
 require './secret'
 
-enable :sessions
-set :session_secret, Secret::KEY
-set :public_folder, settings.root + '/sample'
+#enable :sessions
+#set :session_secret, Secret::KEY
+if settings.development?
+  set :public_folder, settings.root + '/sample'
+end
 
 helpers do
   def option_tag(label, val, selected=false)
