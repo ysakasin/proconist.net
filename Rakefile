@@ -47,16 +47,20 @@ task :add_op do
   id = STDIN.gets.chomp
   fail 'IdDuplication' if Operator.where(id: id).exists?
   operator = Operator.new
-  operator['id'] = id
+  operator.op_id = id
+  operator.name = id
   operator.position = 'admin' if ENV['ADMIN'] == 'true'
 
-  begin
-    print 'password:'
-    pass = STDIN.noecho(&:gets).chomp
-    print "\nconfirm password:"
-    conf = STDIN.noecho(&:gets).chomp
-    print "\n"
-  end while pass.blank? || pass != conf
-  operator.encrypt_password(pass)
-  operator.save
+  print 'password:'
+  pass = STDIN.noecho(&:gets).chomp
+  print "\nconfirm password:"
+  conf = STDIN.noecho(&:gets).chomp
+
+  if pass.present? && pass == conf
+    operator.encrypt_password(pass)
+    operator.save
+    print "\nSaved.\n"
+  else
+    print "\nError.\n"
+  end
 end
