@@ -1,1 +1,1 @@
-SeedFu.seed('db/fixtures/development')
+SeedFu.seed(ENV['SEED_PATH'] || 'db/fixtures/development')

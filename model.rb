@@ -48,6 +48,14 @@ class Entrant < ActiveRecord::Base
     @link
   end
 
+  def section_name
+    {'competition'=> '競技部門', 'themed' => '課題部門', 'original' => '自由部門'}[section]
+  end
+
+  def href
+    "/contest/#{contest}##{panel_id}"
+  end
+
   def is_registered?
     links.present?
   end
@@ -103,7 +111,7 @@ class History < ActiveRecord::Base
   ENUMS = ['label']
 
   def label_name
-    {'product' => '作品', 'entry' => '特集', 'notice' => 'お知らせ'}[label]
+    {'product' => '作品', 'entry' => '記事', 'notice' => 'お知らせ'}[label]
   end
 
   def label_class

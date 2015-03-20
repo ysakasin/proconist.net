@@ -4,8 +4,8 @@ Bundler.require
 require './model'
 require './secret'
 
-#enable :sessions
-#set :session_secret, Secret::KEY
+Time.zone = "Tokyo"
+ActiveRecord::Base.default_timezone = :local
 if settings.development?
   set :public_folder, settings.root + '/sample'
 end
@@ -29,8 +29,7 @@ helpers do
 end
 
 get '/' do
-  contest_id = 1
-  @contest = Contest.find_by_id(contest_id)
+  @contest = Contest.last
 
   entrants = Entrant.where(:contest => @contest.id)
   @competition = entrants.select {|item| item.competition?}
@@ -212,6 +211,13 @@ post '/console/entrant/:id' do
     @entrant.send("#{col.name}=", params[col.name])
   end
   @entrant.save
+  if params[:history] == 'add'
+    History.create(
+      title: "#{@entrant.section_name} #{@entrant.school}「#{@entrant.production}」",
+      label: 0,
+      href: @entrant.href
+    )
+  end
   redirect "/console/entrant/#{params[:id]}?status=success"
 end
 
@@ -257,6 +263,8 @@ get '/console/draft/:id/publish' do
       category.save
     end
   end
+  notice = @entry.categories.include?(Category.find_by_url('notice'))
+  History.create(label: notice ? 2 : 1, title: @entry.title, href: @entry.href, img: @entry.thumbnail)
   redirect "/console/entry/#{@entry.id}?status=success"
 end
 
@@ -343,6 +351,13 @@ end
 
 post '/console/user-settings' do
   cols = [:name, :school, :github, :bitbucket, :slideshare, :twitter, :facebook, :site, :description]
+  if params[:icon]
+    filepath = '/img/' + @op.op_id + File.extname(params[:icon][:filename])
+    File.open(File.join(settings.public_folder, filepath), "w") do |f|
+      f.write(params[:icon][:tempfile].read)
+    end
+    @op.icon = filepath
+  end
   cols.each do |col|
     @op.send("#{col}=", params[col])
   end

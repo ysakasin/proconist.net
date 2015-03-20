@@ -13,8 +13,8 @@
   <meta property="og:title" content="<%= @title ? "#{@title} - Proconist.net" : 'Proconist.net' %>">
   <meta property="og:type" content="website">
   <meta property="og:description" content="<%= @ogp_description || '高専プロコン作品のソースコードやプレゼンテーションまとめ。高専生プロコニストのアップスパイラルを生み出します' %>">
-  <meta property="og:url" content="<%= @ogp_url || 'http://proconist.net' %>">
-  <meta property="og:image" content="<%= @ogp_img || 'http://proconist.net/img/ogp.png' %>">
+  <meta property="og:url" content="<%= @ogp_url || 'https://proconist.net' %>">
+  <meta property="og:image" content="<%= @ogp_img || 'https://proconist.net/img/ogp.png' %>">
   <meta property="og:site_name" content="Proconist.net">
   <meta property="og:email" content="info@proconist.net">
   <meta name="twitter:card" content="summary_large_image">
@@ -39,10 +39,10 @@
         </div>
         <div class="col-md-4 hidden-sm hidden-xs social-button">
           <ul class="list-unstyled">
-            <li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical" data-url="http://proconist.net">ツイート</a></li>
-            <li><a href="http://b.hatena.ne.jp/entry/proconist.net" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></li>
+            <li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical" data-url="https://proconist.net">ツイート</a></li>
+            <li><a href="https://b.hatena.ne.jp/entry/proconist.net" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></li>
             <li><div class="fb-like" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false" data-href="proconist.net"></div></li>
-            <li><div class="g-plusone" data-size="tall" data-href="http://proconist.net"></div></li>
+            <li><div class="g-plusone" data-size="tall" data-href="https://proconist.net"></div></li>
           </ul>
         </div>
       </div>
@@ -84,16 +84,12 @@
 </footer>
 
 <script src="/js/jquery-2.1.1.min.js"></script>
-<!--
- 実環境ではCDNを利用
- <script src="//code.jquery.com/jquery-2.1.1.min.js">
- -->
 <script src="/js/bootstrap.min.js"></script>
 
 <script src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 <script>
 // Twitter
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 // facebook
 (function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
 // g+
