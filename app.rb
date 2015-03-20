@@ -6,6 +6,7 @@ require './secret'
 
 Time.zone = "Tokyo"
 ActiveRecord::Base.default_timezone = :local
+enable :sessions
 if settings.development?
   set :public_folder, settings.root + '/sample'
 end
