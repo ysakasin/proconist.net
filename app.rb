@@ -289,7 +289,7 @@ post '/console/draft/:id' do
   end
   @draft.category = params[:category].join(',')
   @draft.save
-  redirect "/console/entry/#{params[:id]}?status=success"
+  redirect "/console/draft/#{params[:id]}?status=success"
 end
 
 get '/console/entry/:id' do
