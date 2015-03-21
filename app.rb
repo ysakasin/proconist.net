@@ -224,6 +224,7 @@ end
 
 get '/console/entry' do
   @entries = Article.all
+  @drafts = Draft.all
   erb :entry, :views => 'views/console'
 end
 
@@ -241,6 +242,12 @@ post '/console/draft/new' do
   @draft.category = params[:category].join(',')
   @draft.save
   redirect "/console/draft/#{@draft.id}?status=success"
+end
+
+get '/console/draft/:id/preview' do
+  @entry = Article.new
+  @entry.from_draft(Draft.find_by_id(params[:id]))
+  erb :entry
 end
 
 get '/console/draft/:id/publish' do

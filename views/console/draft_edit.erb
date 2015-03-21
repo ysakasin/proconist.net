@@ -49,8 +49,12 @@
     </div>
   </div>
   <div class="form-group">
-    <button type="submit" class="btn btn-primary">保存</button><small>※一時保存され、公開されません。公開には管理者の承認が必要です</small>
+    <p><small>※一時保存され、公開されません。公開には管理者の承認が必要です</small></p>
+    <button type="submit" class="btn btn-primary">保存</button>
     <a href="/console/entry" class="btn btn-success btn-md" role="button" style="margin-left:50px;">戻る</a>
+    <% if @draft.id.present? %>
+      <a href="/console/draft/<%= params[:id] %>/preview" class="btn btn-danger btn-md" role="button" style="margin-left:50px;" target="_blank">保存情報でプレビュー</a>
+    <% end %>
     <% if @op.admin? && @draft.id.present? %>
       <a href="/console/draft/<%= params[:id] %>/publish" class="btn btn-danger btn-md" role="button" style="margin-left:50px;">公開する</a>
     <% end %>

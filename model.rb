@@ -173,6 +173,13 @@ class Article < ActiveRecord::Base
     "/entry/#{url}"
   end
 
+  def from_draft(draft)
+    Article.columns.each do |col|
+      next if col.name == 'id'
+      self[col.name] = draft[col.name]
+    end
+  end
+
   def Article.pagers(page)
     max = (Article.all.size - 1) / 5 + 1
     if max > 1
