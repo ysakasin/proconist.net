@@ -342,6 +342,11 @@ Proconist.net - style.css
 					vertical-align:bottom;
 					*display: inline;
 					zoom: 1;
+					.fb_iframe_widget {
+						span {
+							height: 25px !important;
+						}
+					}
 				}
 			}
 			.member {

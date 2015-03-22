@@ -368,6 +368,9 @@ footer {
   *display: inline;
   zoom: 1;
 }
+.entry-contents .entry-body .social-button ul li .fb_iframe_widget span {
+  height: 25px !important;
+}
 .entry-contents .entry-body .social-button .member .member-image img {
   width: 130px;
   margin: 0 auto;
