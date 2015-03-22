@@ -40,7 +40,7 @@
             </div>
             <div class="col-md-9 col-sm-9 col-xs-12 member-introduction">
               <h4 class="member-name"><%= @entry.auther_a.name %></h4>
-              <p><% @entry.auther_a.description %></p>
+              <p><%= @entry.auther_a.description %></p>
               <ul class="list-inline member-sns">
                 <% @entry.auther_a.sns.each do |item| %>
                   <li><a href="<%= item[:href] %>"><i class="fa fa-lg fa-fw <%= item[:klass] %>"></i> <%= item[:name] %></a></li>

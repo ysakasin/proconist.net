@@ -3,13 +3,11 @@
 
 Proconist.net - style.css
 
-  Site URL: http://proconist.net/
-  File name: style.css (http://proconist.net/style.css)
+  Site URL: https://proconist.net
+  File name: style.css (https://proconist.net/css/style.css)
   Summary: additional styles
-  Created: 2014-10-30
-  Last update: 2014-11-02 by Ryosuke hagihara
   Author: Proconist.net 運営委員会
-  Copyright: &copy; 2014 Proconist.net operators
+  Copyright: &copy; 2014 - 2015 Proconist.net operators
 
 ------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Lato:300");
@@ -337,6 +335,10 @@ footer {
 }
 .entry-contents .entry-body .entry-text {
   padding: 15px 0;
+  font-size: 16px;
+}
+.entry-contents .entry-body .entry-text p {
+  margin-bottom: 1em;
 }
 .entry-contents .entry-body .entry-text h2 {
   border-bottom: 1px solid #7b8a8b;
