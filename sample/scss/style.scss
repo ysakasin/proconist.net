@@ -56,6 +56,7 @@ Proconist.net - style.css
 		ul {
 			@include pull-right;
 			margin: 0;
+			line-height: 0;
 			li {
 				@include pull-left;
 			}
@@ -336,17 +337,13 @@ Proconist.net - style.css
 			ul {
 				list-style-type:none;
 				margin: 0;
+				line-height: 0;
 				li{
 					display:inline-block;
 					margin-right: $padding-xs-horizontal/5;
 					vertical-align:bottom;
 					*display: inline;
 					zoom: 1;
-					.fb_iframe_widget {
-						span {
-							height: 25px !important;
-						}
-					}
 				}
 			}
 			.member {
