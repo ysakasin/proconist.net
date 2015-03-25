@@ -105,6 +105,7 @@ footer {
 .title .social-button ul {
   float: right;
   margin: 0;
+  line-height: 0;
 }
 .title .social-button ul li {
   float: left;
@@ -360,6 +361,7 @@ footer {
 .entry-contents .entry-body .social-button ul {
   list-style-type: none;
   margin: 0;
+  line-height: 0;
 }
 .entry-contents .entry-body .social-button ul li {
   display: inline-block;
