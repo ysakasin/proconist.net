@@ -18,6 +18,12 @@ SNS = {
   site: {name: 'Webサイト', klass: 'fa-globe', base_url: ''}
 }
 
+class TargetBlankRenderer < Redcarpet::Render::HTML
+  def initialize(extensions = {})
+    super extensions.merge(link_attributes: { target: "_blank" })
+  end
+end
+
 class Entrant < ActiveRecord::Base
   enum section: {competition: 0, themed: 1, original: 2}
 
@@ -121,7 +127,7 @@ end
 
 class Article < ActiveRecord::Base
   def body_html
-    Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(body)
+    Redcarpet::Markdown.new(TargetBlankRenderer).render(body)
   end
 
   def description(limit=90, after='...')
