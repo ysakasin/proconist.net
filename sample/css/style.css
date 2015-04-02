@@ -68,6 +68,21 @@ footer {
   margin-top: 0;
 }
 
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px !important;
+  }
+}
 .logo {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   text-decoration: none;
