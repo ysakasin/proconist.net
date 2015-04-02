@@ -59,6 +59,7 @@ Proconist.net - style.css
 			line-height: 0;
 			li {
 				@include pull-left;
+				height: 62px;
 			}
 			li:not(:first-child) {
 				margin-left: $padding-xs-horizontal;

@@ -109,6 +109,7 @@ footer {
 }
 .title .social-button ul li {
   float: left;
+  height: 62px;
 }
 .title .social-button ul li:not(:first-child) {
   margin-left: 5px;
