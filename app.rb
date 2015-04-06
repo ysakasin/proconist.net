@@ -4,11 +4,13 @@ Bundler.require
 require './model'
 require './secret'
 
-Time.zone = "Tokyo"
-ActiveRecord::Base.default_timezone = :local
-enable :sessions
-if settings.development?
-  set :public_folder, settings.root + '/sample'
+configure do
+  Time.zone = 'Tokyo'
+  ActiveRecord::Base.default_timezone = :local
+  enable :sessions
+  if settings.development?
+    set :public_folder, settings.root + '/sample'
+  end
 end
 
 helpers do
@@ -304,6 +306,8 @@ post '/console/entry/:id' do
     @entry.send("#{col}=", params[col])
   end
   @entry.category = params[:category].join(',')
+  Time.zone = 'Tokyo'
+  @entry.created_at = Time.zone.parse(params[:created_at])
   @entry.save
   params[:category].each do |c|
     category = Category.find_by_id(c.to_i)
