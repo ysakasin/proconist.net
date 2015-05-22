@@ -74,6 +74,29 @@ get '/contest/:id' do |id|
   erb :contest
 end
 
+get '/report' do
+  @contests = Contest.all.order("id desc")
+  erb :report
+end
+
+post '/report' do
+  valid_address = /\A[a-zA-Z0-9_\#!$%&`'*+\-{|}~^\/=?\.]+@[a-zA-Z0-9][a-zA-Z0-9\.-]+\z/
+  if params[:product].blank? || params[:email].blank? then
+    @error_notice = "必須事項が入力されていません。"
+    erb :report_error
+  elsif not valid_address =~ params[:email] then
+    @contests = Contest.all.order("id desc")
+    @error_notice = "不正なメールアドレスだと思われます。"
+    erb :report_error
+  elsif
+    redirect '/report/thankyou'
+  end
+end
+
+get '/report/thankyou' do
+  erb :thankyou
+end
+
 get '/entry' do
   @entries = Article.order("id desc").limit(5)
   @entry_total = Article.all.size
