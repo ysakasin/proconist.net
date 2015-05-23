@@ -227,3 +227,7 @@ class Category < ActiveRecord::Base
     Article.where(id: ary)
   end
 end
+
+class Report < ActiveRecord::Base
+  enum section: {competition: 0, themed: 1, original: 2}
+end

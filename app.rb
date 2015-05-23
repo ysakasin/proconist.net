@@ -83,12 +83,28 @@ post '/report' do
   valid_address = /\A[a-zA-Z0-9_\#!$%&`'*+\-{|}~^\/=?\.]+@[a-zA-Z0-9][a-zA-Z0-9\.-]+\z/
   if params[:product].blank? || params[:email].blank? then
     @error_notice = "必須事項が入力されていません。"
+    status 400
     erb :report_error
   elsif not valid_address =~ params[:email] then
     @contests = Contest.all.order("id desc")
     @error_notice = "不正なメールアドレスだと思われます。"
+    status 400
     erb :report_error
-  elsif
+  elsif (not Contest.exists?(:id => params[:contest])) || (not Report.sections.include?(params[:section])) then
+    halt 400
+  else
+    Report.create({
+      :contest => params[:contest],
+      :section => params[:section],
+      :product => params[:product],
+      :email => params[:email],
+      :repository => params[:repository],
+      :slide => params[:slide],
+      :site => params[:site],
+      :twitter => params[:twitter],
+      :facebook => params[:facebook],
+      :comment => params[:comment]
+      })
     redirect '/report/thankyou'
   end
 end
