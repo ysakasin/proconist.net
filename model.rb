@@ -230,4 +230,9 @@ end
 
 class Report < ActiveRecord::Base
   enum section: {competition: 0, themed: 1, original: 2}
+
+  def contest_title
+    c = Contest.find_by_id(contest)
+    "第#{c.id}回 #{c.title}"
+  end
 end

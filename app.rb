@@ -29,6 +29,10 @@ helpers do
       "<div class=\"checkbox\"><label><input type=\"checkbox\" value=\"#{val}\" id=\"#{name}\" name=\"#{name}\">#{label}</label></div>"
     end
   end
+
+  def escaped_tr(label, text)
+    "<tr><td>#{label}</td><td>#{Rack::Utils.escape_html(text)}</td></tr>"
+  end
 end
 
 get '/' do
@@ -261,6 +265,24 @@ post '/console/entrant/:id' do
     )
   end
   redirect "/console/entrant/#{params[:id]}?status=success"
+end
+
+get '/console/report' do
+  @reports = Report.all
+  erb :repost, :views => 'views/console'
+end
+
+get '/console/report/:id' do
+  @report = Report.find_by_id(params[:id])
+  erb :repost_details, :views => 'views/console'
+end
+
+get '/console/report/:id/delete' do
+  unless @op.admin?
+    raise Sinatra::NotFound
+  end
+  Report.destroy(params[:id])
+  redirect '/console/report'
 end
 
 get '/console/entry' do
