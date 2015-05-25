@@ -267,6 +267,50 @@ post '/console/entrant/:id' do
   redirect "/console/entrant/#{params[:id]}?status=success"
 end
 
+get '/console/history' do
+  @histories = History.all
+  erb :history, :views => 'views/console'
+end
+
+get '/console/history/new' do
+  @history = History.new
+  erb :history_edit, :views => 'views/console'
+end
+
+post '/console/history/new' do
+  @history = History.create(
+    title: params[:title],
+    label: params[:label],
+    href: params[:href],
+    img: params[:img]
+  )
+  redirect "/console/history/#{@history.id}?status=success"
+end
+
+get '/console/history/:id' do
+  @history = History.find_by_id(params[:id])
+  erb :history_edit, :views => 'views/console'
+end
+
+post '/console/history/:id' do
+  @history = History.find_by_id(params[:id])
+  @history.title = params[:title]
+  @history.label = params[:label]
+  @history.href = params[:href]
+  @history.img = params[:img]
+  @history.created_at = params[:created_at]
+  @history.save
+  redirect "/console/history/#{@history.id}?status=success"
+end
+
+get '/console/history/:id/delete' do
+  if params[:id] == 'new'
+    raise Sinatra::NotFound
+  end
+  History.destroy(params[:id])
+  redirect '/console/history'
+end
+
 get '/console/report' do
   @reports = Report.all
   erb :repost, :views => 'views/console'
@@ -278,9 +322,6 @@ get '/console/report/:id' do
 end
 
 get '/console/report/:id/delete' do
-  unless @op.admin?
-    raise Sinatra::NotFound
-  end
   Report.destroy(params[:id])
   redirect '/console/report'
 end
