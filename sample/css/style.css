@@ -101,13 +101,14 @@ footer {
 .title {
   margin: 1em auto;
 }
-.title h1 {
+.title h1, .title .logo-wrap {
   float: left;
+  line-height: 1.1;
   margin: 0 0.2em 0 0;
   padding: 0;
   font-size: 3.2em;
 }
-.title h1 .logo {
+.title h1 .logo, .title .logo-wrap .logo {
   font-weight: 300;
   color: #507192;
 }

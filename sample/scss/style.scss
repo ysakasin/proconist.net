@@ -54,8 +54,9 @@ $red: #e74c3c;
 
 .title {
 	margin: 1em auto;
-	h1 {
+	h1, .logo-wrap {
 		@include pull-left;
+    line-height: 1.1;
 		margin: 0 0.2em 0 0;
 		padding: 0;
 		font-size: 3.2em;

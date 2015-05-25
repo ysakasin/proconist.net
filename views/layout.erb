@@ -34,7 +34,11 @@
     <div class="title">
       <div class="row">
         <div class="col-md-8 clearfix">
-          <h1><a href="//proconist.net/" class="logo">Proconist.net</a></h1>
+          <% if request.path == '/' %>
+            <h1><a href="//proconist.net/" class="logo">Proconist.net</a></h1>
+          <% else %>
+            <div class="logo-wrap"><a href="//proconist.net/" class="logo">Proconist.net</a></div>
+          <% end %>
           <span class="description">プロコンでアップスパイラルを生み出す</span>
         </div>
         <div class="col-md-4 social-button">
