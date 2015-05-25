@@ -29,6 +29,10 @@ helpers do
       "<div class=\"checkbox\"><label><input type=\"checkbox\" value=\"#{val}\" id=\"#{name}\" name=\"#{name}\">#{label}</label></div>"
     end
   end
+
+  def escaped_tr(label, text)
+    "<tr><td>#{label}</td><td>#{Rack::Utils.escape_html(text)}</td></tr>"
+  end
 end
 
 get '/' do
@@ -72,6 +76,45 @@ get '/contest/:id' do |id|
   @ogp_url = to()
   @ogp_description = "高専プロコン第#{@contest.id}回#{@contest.name}の作品一覧"
   erb :contest
+end
+
+get '/report' do
+  @contests = Contest.all.order("id desc")
+  erb :report
+end
+
+post '/report' do
+  valid_address = /\A[a-zA-Z0-9_\#!$%&`'*+\-{|}~^\/=?\.]+@[a-zA-Z0-9][a-zA-Z0-9\.-]+\z/
+  if params[:product].blank? || params[:email].blank? then
+    @error_notice = "必須事項が入力されていません。"
+    status 400
+    erb :report_error
+  elsif not valid_address =~ params[:email] then
+    @contests = Contest.all.order("id desc")
+    @error_notice = "不正なメールアドレスだと思われます。"
+    status 400
+    erb :report_error
+  elsif (not Contest.exists?(:id => params[:contest])) || (not Report.sections.include?(params[:section])) then
+    halt 400
+  else
+    Report.create({
+      :contest => params[:contest],
+      :section => params[:section],
+      :product => params[:product],
+      :email => params[:email],
+      :repository => params[:repository],
+      :slide => params[:slide],
+      :site => params[:site],
+      :twitter => params[:twitter],
+      :facebook => params[:facebook],
+      :comment => params[:comment]
+      })
+    redirect '/report/thankyou'
+  end
+end
+
+get '/report/thankyou' do
+  erb :thankyou
 end
 
 get '/entry' do
@@ -222,6 +265,24 @@ post '/console/entrant/:id' do
     )
   end
   redirect "/console/entrant/#{params[:id]}?status=success"
+end
+
+get '/console/report' do
+  @reports = Report.all
+  erb :repost, :views => 'views/console'
+end
+
+get '/console/report/:id' do
+  @report = Report.find_by_id(params[:id])
+  erb :repost_details, :views => 'views/console'
+end
+
+get '/console/report/:id/delete' do
+  unless @op.admin?
+    raise Sinatra::NotFound
+  end
+  Report.destroy(params[:id])
+  redirect '/console/report'
 end
 
 get '/console/entry' do

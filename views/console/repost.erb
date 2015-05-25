@@ -1,0 +1,6 @@
+<h2><i class="glyphicon glyphicon-briefcase"></i> 情報提供一覧</h2>
+<div class="list-group">
+  <% @reports.each do |r| %>
+    <a href="./report/<%= r.id %>" class="list-group-item"><%= r.contest_title %> <%= r.product.slice(0, 20) %></a>
+  <% end %>
+</div>

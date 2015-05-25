@@ -19,6 +19,8 @@ Proconist.net - style.css
 
 @import url("https://fonts.googleapis.com/css?family=Lato:300");
 
+$red: #e74c3c;
+
 @media (min-width: 768px) {
   .container {
     width: 100%;
@@ -503,4 +505,8 @@ footer {
 	.github-star-button {
 		margin-bottom: 1em;
 	}
+}
+
+.red, .required {
+  color: $red;
 }
