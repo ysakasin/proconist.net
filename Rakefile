@@ -2,6 +2,7 @@ require 'sinatra/activerecord'
 require 'sinatra/activerecord/rake'
 require './model.rb'
 
+# rake load_json JSON=/path/to/json
 desc 'JSONファイルから作品情報を読み込む'
 task :load_json do
   section_num = {"competition section" => 0, "themed section" => 1, "original section" => 2}
@@ -28,6 +29,7 @@ task :load_json do
   end
 end
 
+# rake add_history
 desc '更新情報を登録'
 task :add_history do
   history = History.new
@@ -41,6 +43,7 @@ task :add_history do
   history.save
 end
 
+# rake add_op [ADMIN=true]
 desc '管理者のログイン情報を登録'
 task :add_op do
   print 'id:'
