@@ -1,6 +1,8 @@
 # coding: utf-8
 require 'bundler'
 Bundler.require
+require 'sinatra/reloader' if development?
+
 require './model'
 require './secret'
 

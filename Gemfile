@@ -14,3 +14,7 @@ gem 'redcarpet'
 gem 'seed-fu'
 gem 'sass'
 gem 'compass'
+
+group :development do
+	gem 'sinatra-contrib'
+end
