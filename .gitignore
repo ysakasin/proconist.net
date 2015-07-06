@@ -35,3 +35,6 @@ build/
 
 #user setting
 *.db
+*.sock
+*.pid
+*.config

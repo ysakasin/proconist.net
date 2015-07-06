@@ -34,6 +34,7 @@ GEM
     ffi (1.9.8)
     i18n (0.6.11)
     json (1.8.1)
+    kgio (2.9.3)
     minitest (5.4.2)
     multi_json (1.11.0)
     passenger (5.0.4)
@@ -44,6 +45,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    raindrops (0.14.0)
     rake (10.3.2)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
@@ -72,6 +74,10 @@ GEM
     tilt (1.4.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    unicorn (4.9.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -90,3 +96,4 @@ DEPENDENCIES
   sinatra-activerecord
   sinatra-contrib
   sqlite3
+  unicorn
