@@ -4,7 +4,7 @@ Bundler.require
 require 'sinatra/reloader' if development?
 
 require './model'
-require './secret'
+#require './secret'
 
 configure do
   Time.zone = 'Tokyo'
