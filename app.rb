@@ -55,10 +55,6 @@ get '/' do
   erb :index
 end
 
-get '/css/style.css' do
-  sass :stylesheet, :style => :expanded
-end
-
 get '/about' do
   @member = Operator.all
   erb :about

@@ -11,18 +11,6 @@ Proconist.net - style.css
 
 ------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Lato:300");
-body {
-  font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-}
-
-body {
-  background-color: #f8f9fa;
-}
-
 .navbar-nav.nav-justified > li {
   float: none;
 }

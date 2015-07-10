@@ -2,18 +2,6 @@
 
 // bootstrapの設定に上書きするスタイル指定
 
-body {
-	font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-}
-
-#{headings(all)} {
-	font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-}
-
-body {
-	background-color: lighten($gray-lighter, 4%);
-}
-
 .navbar-nav {
 	&.nav-justified {
 		& > li {
