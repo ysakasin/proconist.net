@@ -4,12 +4,12 @@ Bundler.require
 require 'sinatra/reloader' if development?
 
 require './model'
-#require './secret'
 
 configure do
   Time.zone = 'Tokyo'
   ActiveRecord::Base.default_timezone = :local
   enable :sessions
+  set :session_secret, 'proconist.net'
 end
 
 configure :development do
