@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cat ./unicorn.pid | xargs kill -QUIT
+cat ./tmp/pids/unicorn.pid | xargs kill -QUIT
