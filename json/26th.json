@@ -1,0 +1,557 @@
+{
+  "contest" : {
+    "id" : 26,
+    "name" : "長野大会",
+    "date" : "2015年10月11日(土)〜12日(日)",
+    "place" : "ホクト文化ホール",
+    "title" : "発想だせ！　技術だせ！　ずくだせ！",
+    "competition_title" : "石畳職人Ｚ",
+    "themed_title" :"防災・減災対策と復興支援"
+  },
+  "themed section" : [
+    {
+      "id" : 1,
+      "title" : "StreaMap —流れで見える避難経路—",
+      "school name" : "松江高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 2,
+      "title" : "Our Maps —災害図上訓練支援システム—",
+      "school name" : "新居浜高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 3,
+      "title" : "ムスリムのための災害を考慮した日本旅行支援システム ",
+      "school name" : "金沢高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 4,
+      "title" : "連絡取ろ〜ん —ドローンが救う孤立地域—",
+      "school name" : "松江高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 5,
+      "title" : "避難所足スト —ひとりひとりのサポーター—",
+      "school name" : "香川高専高松キャンパス",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 6,
+      "title" : "Smokemarker Of Sympathy",
+      "school name" : "仙台高専広瀬キャンパス",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 7,
+      "title" : "汝の隣人を安否確認せよ —リアルタイム点呼表作成システム—",
+      "school name" : "鈴鹿高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 8,
+      "title" : "むすぶっし —困ったときはお互いさま—",
+      "school name" : "熊本高専熊本キャンパス",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 9,
+      "title" : "災害時無線通信供給システム安導君",
+      "school name" : "岐阜高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 10,
+      "title" : "Androne —遠隔操作型　避難誘導ドローン—",
+      "school name" : "豊田高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 11,
+      "title" : "あしまっ！ —自治会で作る防災マップ—",
+      "school name" : "香川高専詫間キャンパス",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 12,
+      "title" : "Bridge Builder —緊急ネットワークシステム—",
+      "school name" : "釧路高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 13,
+      "title" : "HOTTOK —避難所生活支援システム—",
+      "school name" : "米子高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 14,
+      "title" : "ホップ！ステップ！マップ！ —小学校での安全活動システム—",
+      "school name" : "東京高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 15,
+      "title" : "CO-OP —伝えたいまだ助かる命—",
+      "school name" : "鹿児島高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 16,
+      "title" : "ダレカタスケテー",
+      "school name" : "鈴鹿高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 17,
+      "title" : "FREE LOCATION —「第２の災害」を防ぐために—",
+      "school name" : "一関高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 18,
+      "title" : "Local Hazard Alarm —防災局地情報通知—",
+      "school name" : "高知高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 19,
+      "title" : "NANASE —緊急時所在・安否確認システム—",
+      "school name" : "米子高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 20,
+      "title" : "やまび〜こん —あなたの登山をiBeaconがお助け—",
+      "school name" : "熊本高専八代キャンパス",
+      "prize" : ["敢闘賞"]
+    }
+  ],
+  "original section" : [
+    {
+      "id" : 1,
+      "title" : "エモナイザー —感情を音にするシンセサイザー—",
+      "school name" : "熊本高専熊本キャンパス",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 2,
+      "title" : "色わかーる",
+      "school name" : "仙台高専広瀬キャンパス",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 3,
+      "title" : "びーこん館 —Beaconを活用した次世代図書館システム—",
+      "school name" : "高知高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 4,
+      "title" : "SwipeTalk —いちばん手軽なメッセンジャー—",
+      "school name" : "沖縄高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 5,
+      "title" : "Canvas",
+      "school name" : "香川高専詫間キャンパス",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 6,
+      "title" : "Vitra Recipe —スマートグラス料理支援システム—",
+      "school name" : "八戸高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 7,
+      "title" : "脊椎でみる骨粗鬆症診断 ",
+      "school name" : "新居浜高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 8,
+      "title" : "あやどる",
+      "school name" : "熊本高専熊本キャンパス",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 9,
+      "title" : "SmartAIS —海内の旗幟—",
+      "school name" : "弓削商船高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 10,
+      "title" : "VirtuaLive —リアルとバーチャルの超結合で超没入—",
+      "school name" : "沖縄高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 11,
+      "title" : "LouiseのAutomeEngine —キミと育む響想曲—",
+      "school name" : "釧路高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 12,
+      "title" : "Familiar Map —地域情報マップ—",
+      "school name" : "舞鶴高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 13,
+      "title" : "Pianist —鍵盤楽器運指練習システム—",
+      "school name" : "徳山高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 14,
+      "title" : "音theBounce!",
+      "school name" : "久留米高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 15,
+      "title" : "素敵な劇しまSHOW —PowerPointで劇の演出支援—",
+      "school name" : "鳥羽商船高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 16,
+      "title" : "NY BATH GUIDE —入力見守りシステム-バスガイド—",
+      "school name" : "阿南高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 17,
+      "title" : "mood maker —音と証明による新しい作業環境の提案—",
+      "school name" : "サレジオ高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 18,
+      "title" : "プラネオ —Planetarium x OculusRift—",
+      "school name" : "長野高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 19,
+      "title" : "PULL DOG —資格障がい者導きシステム—",
+      "school name" : "東京高専",
+      "prize" : ["敢闘賞"]
+    },
+    {
+      "id" : 20,
+      "title" : "HAL2015 —HeatupActiveLearning—",
+      "school name" : "弓削商船高専",
+      "prize" : ["敢闘賞"]
+    }
+  ],
+  "competition section" : [
+    {
+      "id" : 1,
+      "title" : "君に会いたいこの衝動 —心を埋める奇跡の石畳—",
+      "school name" : "鈴鹿高専"
+    },
+    {
+      "id" : 2,
+      "title" : "【初投稿】石置いてみた！！",
+      "school name" : "大島商船高専"
+    },
+    {
+      "id" : 3,
+      "title" : "まきとまと",
+      "school name" : "木更津高専"
+    },
+    {
+      "id" : 4,
+      "title" : "トロリス",
+      "school name" : "津山高専"
+    },
+    {
+      "id" : 5,
+      "title" : "小さき石は巌となりて",
+      "school name" : "舞鶴高専"
+    },
+    {
+      "id" : 6,
+      "title" : "レイオーバー・ネットワーク！",
+      "school name" : "新居浜高専"
+    },
+    {
+      "id" : 7,
+      "title" : "漆黒モアイ族",
+      "school name" : "鳥羽商船高専"
+    },
+    {
+      "id" : 8,
+      "title" : "プログラムが一晩でやってくれました",
+      "school name" : "八戸高専"
+    },
+    {
+      "id" : 9,
+      "title" : "ダンベルで人を殴るのは間違っているだろうか",
+      "school name" : "松江高専"
+    },
+    {
+      "id" : 10,
+      "title" : "ワンボード石畳Z80",
+      "school name" : "苫小牧高専"
+    },
+    {
+      "id" : 11,
+      "title" : "可能性のある俺たち",
+      "school name" : "秋田高専"
+    },
+    {
+      "id" : 12,
+      "title" : "nioghalvfems",
+      "school name" : "米子高専"
+    },
+    {
+      "id" : 13,
+      "title" : "敷地に合う石を求めるのは間違っているだろうか",
+      "school name" : "都城高専"
+    },
+    {
+      "id" : 14,
+      "title" : "Z・職人を超えて",
+      "school name" : "熊本高専八代キャンパス"
+    },
+    {
+      "id" :  15,
+      "title" : "Tスピン",
+      "school name" : "香川高専高松キャンパス"
+    },
+    {
+      "id" : 16,
+      "title" : "NP簡単",
+      "school name" : "小山高専"
+    },
+    {
+      "id" : 17,
+      "title" : "さんだぶ造園　敷き詰め事業所",
+      "school name" : "茨城高専"
+    },
+    {
+      "id" : 18,
+      "title" : "銀の弾などない",
+      "school name" : "東京高専"
+    },
+    {
+      "id" : 20,
+      "title" : "とーふ石＋＋",
+      "school name" : "徳山高専"
+    },
+    {
+      "id" : 21,
+      "title" : "アイエエ！ WA！？ WAナンデ！？",
+      "school name" : "旭川高専"
+    },
+    {
+      "id" : 22,
+      "title" : "パズル三銃士",
+      "school name" : "大分高専"
+    },
+    {
+      "id" : 23,
+      "title" : "石畳職人はておくれてしまった！",
+      "school name" : "神戸市立高専"
+    },
+    {
+      "id" : 24,
+      "title" : "チームソフ研",
+      "school name" : "福島高専"
+    },
+    {
+      "id" : 25,
+      "title" : "NISHI",
+      "school name" : "熊本高専熊本キャンパス"
+    },
+    {
+      "id" : 26,
+      "title" : "ろじかるすぃんきんぐ！",
+      "school name" : "群馬高専"
+    },
+    {
+      "id" : 27,
+      "title" : "ZKってワクワク！石ゴロリ！",
+      "school name" : "北九州高専"
+    },
+    {
+      "id" : 28,
+      "title" : "響け！アルゴリズム！",
+      "school name" : "明石高専"
+    },
+    {
+      "id" : 29,
+      "title" : "いかぽっぽ",
+      "school name" : "函館高専"
+    },
+    {
+      "id" : 30,
+      "title" : "石舞台古墳の石を敷き詰めたい",
+      "school name" : "奈良高専"
+    },
+    {
+      "id" : 31,
+      "title" : "石の意思は固かった —動かねぇぞこいつ—",
+      "school name" : "香川高専詫間キャンパス"
+    },
+    {
+      "id" : 32,
+      "title" : "復活の「zk」",
+      "school name" : "広島商船高専"
+    },
+    {
+      "id" : 33,
+      "title" : "茹で卵",
+      "school name" : "沼津高専"
+    },
+    {
+      "id" : 34,
+      "title" : "ネコミミはりけーん",
+      "school name" : "福井高専"
+    },
+    {
+      "id" : 35,
+      "title" : "やはり俺たちのプログラムは間違っている",
+      "school name" : "呉高専"
+    },
+    {
+      "id" : 36,
+      "title" : "石畳職人の野望",
+      "school name" : "鹿児島高専"
+    },
+    {
+      "id" : 37,
+      "title" : "酸滴石穿",
+      "school name" : "弓削商船高専"
+    },
+    {
+      "id" : 38,
+      "title" : "Zuku-Spin Polyo",
+      "school name" : "一関高専"
+    },
+    {
+      "id" : 39,
+      "title" : "Level0",
+      "school name" : "和歌山高専"
+    },
+    {
+      "id" : 40,
+      "title" : "たんぽぽ",
+      "school name" : "都立産技高専品川キャンパス"
+    },
+    {
+      "id" : 41,
+      "title" : "パズルZUKUめ",
+      "school name" : "佐世保高専"
+    },
+    {
+      "id" : 42,
+      "title" : "Avalanche",
+      "school name" : "鶴岡高専"
+    },
+    {
+      "id" : 43,
+      "title" : "ずくクラフト —お宅の敷地リフォームします—",
+      "school name" : "仙台高専広瀬キャンパス"
+    },
+    {
+      "id" : 44,
+      "title" : "進捗優先探索",
+      "school name" : "沖縄高専"
+    },
+    {
+      "id" :  45,
+      "title" : "高専omino",
+      "school name" : "長岡高専"
+    },
+    {
+      "id" : 46,
+      "title" : "甃マイスター",
+      "school name" : "近畿大学高専"
+    },
+    {
+      "id" : 47,
+      "title" : "石あるところに道あり",
+      "school name" : "都立産技高専荒川キャンパス"
+    },
+    {
+      "id" : 48,
+      "title" : "高専の敷き詰め理論1B",
+      "school name" : "長野高専"
+    },
+    {
+      "id" : 49,
+      "title" : "日本欲張り建設 —太平洋埋め立て計画—",
+      "school name" : "サレジオ高専"
+    },
+    {
+      "id" : 50,
+      "title" : "テトずく　だぁくねす",
+      "school name" : "岐阜高専"
+    },
+    {
+      "id" : 51,
+      "title" : "Fill the space",
+      "school name" : "高知高専"
+    },
+    {
+      "id" : 52,
+      "title" : "石の上にも二年",
+      "school name" : "石川高専"
+    },
+    {
+      "id" : 53,
+      "title" : "たたみかけリピート",
+      "school name" : "阿南高専"
+    },
+    {
+      "id" : 54,
+      "title" : "タタミミズク",
+      "school name" : "大阪府大高専"
+    },
+    {
+      "id" : 55,
+      "title" : "石まみれで —あ〜もう発想が出るう〜〜—",
+      "school name" : "釧路高専"
+    },
+    {
+      "id" : 56,
+      "title" : "爆裂メメント・モリ",
+      "school name" : "有明高専"
+    },
+    {
+      "id" : 57,
+      "title" : "チーム伊佐地",
+      "school name" : "豊田高専"
+    },
+    {
+      "id" : 58,
+      "title" : "敷地うまるちゃん",
+      "school name" : "久留米高専"
+    },
+    {
+      "id" : 59,
+      "title" : "式だせ！解だせ！[zk]だせ！",
+      "school name" : "富山高専射水キャンパス"
+    },
+    {
+      "id" : 60,
+      "title" : "ワンダープロコン",
+      "school name" : "宇部高専"
+    },
+    {
+      "id" : 61,
+      "title" : "Stone Garden Kit ？庭職人ですが。？",
+      "school name" : "仙台高専名取キャンパス"
+    }
+  ]
+}
