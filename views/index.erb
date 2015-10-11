@@ -78,7 +78,7 @@
         <h3 class="panel-title">過去の大会から探す</h3>
       </div>
       <div class="list-group">
-        <% Contest.all.each do |c| %>
+        <% Contest.order("id desc").all.each do |c| %>
           <a href="<%= c.href %>" class="list-group-item">
             <h4 class="list-group-item-heading">第<%= c.id %>回 <%= c.name %></h4>
             <p class="list-group-item-text"><%= c.title %></p>
