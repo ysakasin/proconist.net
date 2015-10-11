@@ -552,6 +552,41 @@
       "id" : 61,
       "title" : "Stone Garden Kit —庭職人ですが。—",
       "school name" : "仙台高専名取キャンパス"
+    },
+    {
+      "id" : 62,
+      "title" : "VNU-UET",
+      "school name" : "ハノイ国家大学"
+    },
+    {
+      "id" : 63,
+      "title" : "NUM-SEAS",
+      "school name" : "モンゴル国家大学"
+    },
+    {
+      "id" : 64,
+      "title" : "PETROMINO",
+      "school name" : "ペトロナス工科大学"
+    },
+    {
+      "id" : 65,
+      "title" : "IVE Computer Engineering",
+      "school name" : "香港IVE"
+    },
+    {
+      "id" : 66,
+      "title" : "石も敷き詰めれば壁となる",
+      "school name" : "中京大学"
+    },
+    {
+      "id" : 67,
+      "title" : "サイコロしきつめう",
+      "school name" : "豊橋技術科学大学"
+    },
+    {
+      "id" : 68,
+      "title" : "紅のうさぎ",
+      "school name" : "神戸大学"
     }
   ]
 }
