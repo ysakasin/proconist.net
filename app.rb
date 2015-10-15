@@ -8,7 +8,7 @@ require './model'
 configure do
   Time.zone = 'Tokyo'
   ActiveRecord::Base.default_timezone = :local
-  enable :sessions
+  use Rack::Session::Cookie, :domain => 'proconist.net'
   set :session_secret, 'proconist.net'
 end
 
