@@ -7,12 +7,12 @@
     </div>
     <% @entries.each do |entry| %>
       <article class="entry-contents row">
-        <div class="clearfix eye-chatch col-md-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="clearfix eye-chatch col-md-4 col-md-4 col-sm-4 col-xs-12">
           <a href="<%= entry.href %>" title="<%= entry.title %>">
             <img src="<%= entry.thumbnail %>" class="img-responsive" alt="<%= entry.title %>">
           </a>
         </div>
-        <div class="entry-body col-md-8 col-sm-8 col-xs-8">
+        <div class="entry-body col-md-8 col-sm-8 col-xs-12">
           <div class="clearfix heading">
             <h2><a href="<%= entry.href %>"><%= entry.title %></a></h2>
             <ul class="meta-info list-unstyled">

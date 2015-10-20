@@ -122,6 +122,10 @@ footer {
   margin: 0 !important;
 }
 
+.navbar-nav {
+  margin: auto;
+}
+
 .about.jumbotron h2 {
   margin-top: 0;
 }
