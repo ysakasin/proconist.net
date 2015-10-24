@@ -110,10 +110,11 @@ footer {
   float: right;
   margin: 0;
   line-height: 0;
+  margin-top: 1.6em;
 }
 .title .social-button ul li {
   float: left;
-  height: 62px;
+  height: 31px;
 }
 .title .social-button ul li:not(:first-child) {
   margin-left: 5px;
@@ -364,8 +365,8 @@ footer {
   border-bottom: 2px solid #7b8a8b;
 }
 .entry-contents .entry-body .social-button {
-  margin-top: 27px;
-  margin-bottom: 27px;
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 .entry-contents .entry-body .social-button ul {
   list-style-type: none;

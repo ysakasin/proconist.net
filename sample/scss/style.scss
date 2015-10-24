@@ -76,9 +76,10 @@ $red: #e74c3c;
 			@include pull-right;
 			margin: 0;
 			line-height: 0;
+			margin-top: 1.6em;
 			li {
 				@include pull-left;
-				height: 62px;
+				height: 31px;
 			}
 			li:not(:first-child) {
 				margin-left: $padding-xs-horizontal;
@@ -356,8 +357,8 @@ $red: #e74c3c;
 			}
 		}
 		.social-button {
-			margin-top: $padding-large-horizontal;
-			margin-bottom: $padding-large-horizontal;
+			padding-top: $padding-large-horizontal;
+			padding-bottom: $padding-large-horizontal;
 			ul {
 				list-style-type:none;
 				margin: 0;
