@@ -22,19 +22,19 @@ Proconist.net - style.css
 $red: #e74c3c;
 
 @media (min-width: 768px) {
-  .container {
-    width: 100%;
-  }
+	.container {
+		width: 100%;
+	}
 }
 @media (min-width: 992px) {
-  .container {
-    width: 970px !important;
-  }
+	.container {
+		width: 970px !important;
+	}
 }
 @media (min-width: 1200px) {
-  .container {
-    width: 1170px !important;
-  }
+	.container {
+		width: 1170px !important;
+	}
 }
 
 .logo {
@@ -56,7 +56,7 @@ $red: #e74c3c;
 	margin: 1em auto;
 	h1, .logo-wrap {
 		@include pull-left;
-    line-height: 1.1;
+		line-height: 1.1;
 		margin: 0 0.2em 0 0;
 		padding: 0;
 		font-size: 3.2em;
@@ -467,18 +467,18 @@ $red: #e74c3c;
 		margin: 20px 0;
 	}
 	li {
-	  margin: 10px 0;
-	  border-bottom: 1px solid #d0d0d0;
-	  padding-bottom: 5px;
+		margin: 10px 0;
+		border-bottom: 1px solid #d0d0d0;
+		padding-bottom: 5px;
 		h3 {
 			display: inline;
-		  margin-right: 10px;
+			margin-right: 10px;
 		}
 	}
 }
 
 .pager li a {
-  background-color: #2C3E50;
+	background-color: #2C3E50;
 }
 
 .entry-table {
@@ -513,5 +513,5 @@ footer {
 }
 
 .red, .required {
-  color: $red;
+	color: $red;
 }
