@@ -5,7 +5,7 @@
     <div class="panel-procon-product-heading clearfix">
       <% if @product.result.present? %>
         <div class="panel-procon-product-rank">
-          <span class="label label-danger">決勝<%= @product.result %> 位</span>
+          <span class="label label-danger">決勝<%= @product.result.to_s.tr!('0-9', '０-９') %>位</span>
         </div>
       <% end %>
       <h4 class="panel-title"><%= @product.school %>「<%= @product.production %>」</h4>
