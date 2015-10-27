@@ -8,16 +8,17 @@ require './model'
 configure do
   Time.zone = 'Tokyo'
   ActiveRecord::Base.default_timezone = :local
-  use Rack::Session::Cookie, :domain => 'proconist.net'
-  set :session_secret, 'proconist.net'
 end
 
 configure :development do
   set :public_folder, settings.root + '/sample'
+  enable :sessions
 end
 
 configure :production do
   set :static, false
+  use Rack::Session::Cookie, :domain => 'proconist.net'
+  set :session_secret, 'proconist.net'
 end
 
 helpers do
