@@ -35,6 +35,9 @@ GEM
     i18n (0.6.11)
     json (1.8.1)
     kgio (2.9.3)
+    mail (2.6.3)
+      mime-types (>= 1.16, < 3)
+    mime-types (2.6.2)
     minitest (5.4.2)
     multi_json (1.11.0)
     passenger (5.0.4)
@@ -87,6 +90,7 @@ DEPENDENCIES
   activesupport
   bcrypt
   compass
+  mail
   passenger
   rake
   redcarpet
@@ -97,3 +101,6 @@ DEPENDENCIES
   sinatra-contrib
   sqlite3
   unicorn
+
+BUNDLED WITH
+   1.10.6

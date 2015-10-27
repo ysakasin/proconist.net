@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523021520) do
+ActiveRecord::Schema.define(version: 20151027041345) do
 
   create_table "articles", force: true do |t|
     t.string   "url",        null: false
@@ -99,6 +99,7 @@ ActiveRecord::Schema.define(version: 20150523021520) do
     t.string  "facebook"
     t.string  "site"
     t.string  "description"
+    t.string  "email"
   end
 
   add_index "operators", ["op_id"], name: "index_operators_on_op_id", unique: true

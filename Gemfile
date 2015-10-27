@@ -15,6 +15,7 @@ gem 'seed-fu'
 gem 'sass'
 gem 'compass'
 gem 'unicorn'
+gem 'mail'
 
 group :development do
 	gem 'sinatra-contrib'

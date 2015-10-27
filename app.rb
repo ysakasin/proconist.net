@@ -19,6 +19,10 @@ configure :production do
   set :static, false
   use Rack::Session::Cookie, :domain => 'proconist.net'
   set :session_secret, 'proconist.net'
+
+  Mail.defaults do
+    delivery_method :smtp, address: "localhost", port: 25
+  end
 end
 
 helpers do
@@ -113,6 +117,25 @@ post '/report' do
       :facebook => params[:facebook],
       :comment => params[:comment]
       })
+
+    if settings.production?
+      Operator.admin.each do |op|
+        mail = Mail.new do
+          from 'noreply@proconist.net'
+          to op.email
+          subject '情報提供がありました'
+          body "投稿フォームから情報提供がありました。内容を確認してください。\nhttps://proconist.net/console/report"
+        end
+
+        mail.deliver
+      end
+    else
+      Operator.admin.each do |op|
+        puts op.email
+      end
+      puts 'メールが送信されました'
+    end
+
     redirect '/report/thankyou'
   end
 end
@@ -468,7 +491,7 @@ get '/console/user-settings' do
 end
 
 post '/console/user-settings' do
-  cols = [:name, :school, :github, :bitbucket, :slideshare, :twitter, :facebook, :site, :description]
+  cols = [:name, :school, :github, :bitbucket, :slideshare, :twitter, :facebook, :site, :description, :email]
   if params[:icon]
     filepath = '/img/' + @op.op_id + File.extname(params[:icon][:filename])
     File.open(File.join(settings.public_folder, filepath), "w") do |f|
