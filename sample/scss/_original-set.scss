@@ -25,13 +25,6 @@ $social-colors: (
 	google: #dd4b39
 );
 
-$social-contents: (
-	twitter: "Tweet",
-	facebook: "Share",
-	hatena: "Bookmark",
-	google: "+1"
-);
-
 .fa-hatena {
     &:before {
         content: "B!";
