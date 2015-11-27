@@ -71,25 +71,49 @@ $red: #e74c3c;
 		line-height: 3.2em;
 		vertical-align: text-bottom;
 	}
+
 	.social-button {
-		ul {
-			@include pull-right;
-			margin: 0;
-			line-height: 0;
-			margin-top: 1.6em;
-			li {
-				@include pull-left;
-				height: 31px;
+		$square-height: 50px;
+		@include pull-right;
+		margin: 0;
+		line-height: 0;
+		margin-top: 1.3em;
+		.social-button-item {
+			display: block;
+			float: left;
+			margin: $padding-xs-horizontal;
+			transition-timing-function: linear;
+			transition-duration: 0.1s;
+			transition-property: background-color;
+			a {
+				position: relative;
+				display: block;
+				color: #fff;
+				text-decoration: none;
+			}
+			@each $brand, $brand-color in $social-colors {
+				&.social-button-item-#{$brand} {
+					background-color: $brand-color;
+					a {
+						color: #fff;
+						&::before {
+							background-color: $brand-color;
+						}
+					}
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: darken($brand-color, 10%);
+					}
+				}
 			}
 			li:not(:first-child) {
 				margin-left: $padding-xs-horizontal;
 			}
 		}
-		iframe {
-			margin: 0 !important;
-		}
 	}
 }
+
 
 .navbar-nav {
 	margin: auto;
