@@ -56,6 +56,13 @@ footer {
   margin-top: 0;
 }
 
+.fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+  font-style: normal;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 100%;
@@ -106,20 +113,76 @@ footer {
   line-height: 3.2em;
   vertical-align: text-bottom;
 }
-.title .social-button ul {
+.title .social-button {
   float: right;
   margin: 0;
   line-height: 0;
+  margin-top: 1.3em;
 }
-.title .social-button ul li {
+.title .social-button .social-button-item {
+  display: block;
   float: left;
-  height: 62px;
+  margin: 5px;
+  transition-timing-function: linear;
+  transition-duration: 0.1s;
+  transition-property: background-color;
 }
-.title .social-button ul li:not(:first-child) {
+.title .social-button .social-button-item a {
+  position: relative;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+.title .social-button .social-button-item.social-button-item-twitter {
+  background-color: #55acee;
+}
+.title .social-button .social-button-item.social-button-item-twitter a {
+  color: #fff;
+}
+.title .social-button .social-button-item.social-button-item-twitter a::before {
+  background-color: #55acee;
+}
+.title .social-button .social-button-item.social-button-item-twitter:hover, .title .social-button .social-button-item.social-button-item-twitter:focus, .title .social-button .social-button-item.social-button-item-twitter:active {
+  background-color: #2795e9;
+}
+.title .social-button .social-button-item.social-button-item-facebook {
+  background-color: #315096;
+}
+.title .social-button .social-button-item.social-button-item-facebook a {
+  color: #fff;
+}
+.title .social-button .social-button-item.social-button-item-facebook a::before {
+  background-color: #315096;
+}
+.title .social-button .social-button-item.social-button-item-facebook:hover, .title .social-button .social-button-item.social-button-item-facebook:focus, .title .social-button .social-button-item.social-button-item-facebook:active {
+  background-color: #243b70;
+}
+.title .social-button .social-button-item.social-button-item-hatena {
+  background-color: #008fde;
+}
+.title .social-button .social-button-item.social-button-item-hatena a {
+  color: #fff;
+}
+.title .social-button .social-button-item.social-button-item-hatena a::before {
+  background-color: #008fde;
+}
+.title .social-button .social-button-item.social-button-item-hatena:hover, .title .social-button .social-button-item.social-button-item-hatena:focus, .title .social-button .social-button-item.social-button-item-hatena:active {
+  background-color: #006eab;
+}
+.title .social-button .social-button-item.social-button-item-google {
+  background-color: #dd4b39;
+}
+.title .social-button .social-button-item.social-button-item-google a {
+  color: #fff;
+}
+.title .social-button .social-button-item.social-button-item-google a::before {
+  background-color: #dd4b39;
+}
+.title .social-button .social-button-item.social-button-item-google:hover, .title .social-button .social-button-item.social-button-item-google:focus, .title .social-button .social-button-item.social-button-item-google:active {
+  background-color: #c23321;
+}
+.title .social-button .social-button-item li:not(:first-child) {
   margin-left: 5px;
-}
-.title .social-button iframe {
-  margin: 0 !important;
 }
 
 .navbar-nav {
@@ -364,26 +427,83 @@ footer {
   border-bottom: 2px solid #7b8a8b;
 }
 .entry-contents .entry-body .social-button {
-  margin-top: 27px;
-  margin-bottom: 27px;
-}
-.entry-contents .entry-body .social-button ul {
-  list-style-type: none;
-  margin: 0;
+  float: right;
   line-height: 0;
+  padding-bottom: 27px;
 }
-.entry-contents .entry-body .social-button ul li {
-  display: inline-block;
-  margin-right: 1px;
-  vertical-align: bottom;
-  *display: inline;
-  zoom: 1;
+.entry-contents .entry-body .social-button .social-button-item {
+  display: block;
+  float: left;
+  margin: 5px;
+  transition-timing-function: linear;
+  transition-duration: 0.1s;
+  transition-property: background-color;
 }
-.entry-contents .entry-body .social-button .member .member-image img {
+.entry-contents .entry-body .social-button .social-button-item a {
+  position: relative;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-twitter {
+  background-color: #55acee;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-twitter a {
+  color: #fff;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-twitter a::before {
+  background-color: #55acee;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-twitter:hover, .entry-contents .entry-body .social-button .social-button-item.social-button-item-twitter:focus, .entry-contents .entry-body .social-button .social-button-item.social-button-item-twitter:active {
+  background-color: #2795e9;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-facebook {
+  background-color: #315096;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-facebook a {
+  color: #fff;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-facebook a::before {
+  background-color: #315096;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-facebook:hover, .entry-contents .entry-body .social-button .social-button-item.social-button-item-facebook:focus, .entry-contents .entry-body .social-button .social-button-item.social-button-item-facebook:active {
+  background-color: #243b70;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-hatena {
+  background-color: #008fde;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-hatena a {
+  color: #fff;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-hatena a::before {
+  background-color: #008fde;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-hatena:hover, .entry-contents .entry-body .social-button .social-button-item.social-button-item-hatena:focus, .entry-contents .entry-body .social-button .social-button-item.social-button-item-hatena:active {
+  background-color: #006eab;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-google {
+  background-color: #dd4b39;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-google a {
+  color: #fff;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-google a::before {
+  background-color: #dd4b39;
+}
+.entry-contents .entry-body .social-button .social-button-item.social-button-item-google:hover, .entry-contents .entry-body .social-button .social-button-item.social-button-item-google:focus, .entry-contents .entry-body .social-button .social-button-item.social-button-item-google:active {
+  background-color: #c23321;
+}
+.entry-contents .entry-body .social-button .social-button-item li:not(:first-child) {
+  margin-left: 5px;
+}
+.entry-contents .entry-body .member {
+  padding-top: 18px;
+}
+.entry-contents .entry-body .member .member-image img {
   width: 130px;
   margin: 0 auto;
 }
-.entry-contents .entry-body .social-button iframe {
+.entry-contents .entry-body iframe {
   margin: 0 !important;
 }
 

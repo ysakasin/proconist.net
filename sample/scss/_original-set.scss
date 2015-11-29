@@ -17,3 +17,19 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+$social-colors: (
+	twitter: #55acee,
+	facebook: #315096,
+	hatena: #008fde,
+	google: #dd4b39
+);
+
+.fa-hatena {
+    &:before {
+        content: "B!";
+        font-family: Verdana;
+        font-weight: bold;
+				font-style: normal;
+    }
+}
