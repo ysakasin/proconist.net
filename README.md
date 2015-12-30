@@ -41,5 +41,5 @@ localhost:4567
 
 必要なgemをインストール:  
 ```
-bundle install　--without development
+bundle install --without development
 ```
