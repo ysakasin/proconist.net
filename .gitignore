@@ -40,3 +40,4 @@ build/
 *.pid
 *.config
 *.keep
+db/*.sqlite3
