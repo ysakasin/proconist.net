@@ -23,6 +23,7 @@ end
 group :development, :test do
   gem 'awesome_print'
   gem 'byebug', platform: :mri
+  gem 'fabrication'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
