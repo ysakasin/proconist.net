@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160608152650) do
+ActiveRecord::Schema.define(version: 20160610084159) do
 
   create_table "contests", force: :cascade do |t|
     t.string   "name",              null: false
@@ -22,6 +22,22 @@ ActiveRecord::Schema.define(version: 20160608152650) do
     t.string   "themed_title",      null: false
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.integer  "contest_id", null: false
+    t.integer  "section",    null: false
+    t.integer  "school_id",  null: false
+    t.string   "name",       null: false
+    t.integer  "rank"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schools", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
