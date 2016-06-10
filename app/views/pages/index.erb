@@ -18,7 +18,7 @@
 <div class="row content">
   <!-- .main: main column -->
   <div class="col-md-8 main">
-    <%= erb :_product_list %>
+    <#%= erb :_product_list %>
   </div>
   <!-- /.main -->
 
@@ -30,22 +30,22 @@
       <div class="panel-heading">
         <h3 class="panel-title">新着情報</h3>
       </div>
-      <% if @thumbnail.present? %>
+      <#% if @thumbnail.present? %>
         <!-- .panel-body -->
         <div class="panel-body">
           <!-- 新着サムネイル -->
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
-              <% item_class = 'active' %>
-              <% @thumbnail.each do |elem| %>
-                <div class="item <%= item_class %>">
-                  <img src="<%= elem.img %>" alt="<%= elem.title %>">
+              <#% item_class = 'active' %>
+              <#% @thumbnail.each do |elem| %>
+                <div class="item <#%= item_class %>">
+                  <img src="<#%= elem.img %>" alt="<#%= elem.title %>">
                   <div class="carousel-caption">
-                    <%= elem.title %>
+                    <#%= elem.title %>
                   </div>
                 </div>
-                <% item_class.clear %>
-              <% end %>
+                <#% item_class.clear %>
+              <#% end %>
             </div>
             <!-- Controls -->
             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -59,17 +59,17 @@
           </div>
         </div>
         <!-- /.panel-body -->
-      <% end %>
+      <#% end %>
 
       <div class="list-group">
-        <% @history.each do |elem| %>
-          <a href="<%= elem.href %>" class="list-group-item">
+        <#% @history.each do |elem| %>
+          <a href="<#%= elem.href %>" class="list-group-item">
             <dl>
-              <dt><span class="label <%= elem.label_class %>"><%= elem.label_name %></span> <%= elem.created_at.strftime('%F') %></dt>
-              <dd><%= elem.title %></dd>
+              <dt><span class="label <#%= elem.label_class %>"><#%= elem.label_name %></span> <#%= elem.created_at.strftime('%F') %></dt>
+              <dd><#%= elem.title %></dd>
             </dl>
           </a>
-        <% end %>
+        <#% end %>
       </div>
     </div>
 
@@ -78,12 +78,12 @@
         <h3 class="panel-title">過去の大会から探す</h3>
       </div>
       <div class="list-group">
-        <% Contest.order("id desc").all.each do |c| %>
-          <a href="<%= c.href %>" class="list-group-item">
-            <h4 class="list-group-item-heading">第<%= c.id %>回 <%= c.name %></h4>
-            <p class="list-group-item-text"><%= c.title %></p>
+        <#% Contest.order("id desc").all.each do |c| %>
+          <a href="<#%= c.href %>" class="list-group-item">
+            <h4 class="list-group-item-heading">第<#%= c.id %>回 <#%= c.name %></h4>
+            <p class="list-group-item-text"><#%= c.title %></p>
           </a>
-        <% end %>
+        <#% end %>
       </div>
     </div>
 
