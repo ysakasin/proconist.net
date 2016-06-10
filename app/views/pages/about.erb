@@ -35,24 +35,24 @@
     </div>
 
     <h3>開発・運営メンバー</h3>
-    <% @member.each do |p| %>
+    <%# @member.each do |p| %>
       <div class="row member">
         <div class="col-md-3 member-image">
-          <img src="<%= p.icon %>" class="img-circle img-responsive">
+          <img src="<%#= p.icon %>" class="img-circle img-responsive">
         </div>
         <div class="col-md-9">
-          <h4 class="member-name"><%= p.name %></h4>
+          <h4 class="member-name"><%#= p.name %></h4>
           <div class="member-introduction">
-            <%= p.description %>
+            <%#= p.description %>
             <ul class="list-inline member-sns">
-              <% p.sns.each do |item| %>
-                <li><a href="<%= item[:href] %>" target="_blank"><i class="fa fa-lg fa-fw <%= item[:klass] %>"></i> <%= item[:name] %></a></li>
-              <% end %>
+              <%# p.sns.each do |item| %>
+                <li><a href="<%#= item[:href] %>" target="_blank"><i class="fa fa-lg fa-fw <%#= item[:klass] %>"></i> <%#= item[:name] %></a></li>
+              <%# end %>
             </ul>
           </div>
         </div>
       </div>
-    <% end %>
+    <%# end %>
   </div>
   <!-- /.main -->
 </div>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root    'pages#index'
 
+  get     '/about', to: 'pages#about'
+
   get     '/contest',       to: 'contests#index'
   get     '/contest/:nth',  to: 'contests#show'
 
