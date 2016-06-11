@@ -6,6 +6,10 @@ class Product < ApplicationRecord
 
   validates :section, inclusion: { in: [0, 1, 2] }
 
+  scope :competitions,  -> { where(section: 0) }
+  scope :themes,        -> { where(section: 1) }
+  scope :originals,     -> { where(section: 2) }
+
   SECTIONS = %w(
     competition
     themed
