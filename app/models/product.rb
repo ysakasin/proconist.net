@@ -14,7 +14,7 @@ class Product < ApplicationRecord
     competition
     themed
     original
-  )
+  ).freeze
 
   def section_name
     SECTIONS[section]
