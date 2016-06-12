@@ -1,0 +1,105 @@
+doctype html
+html
+  head
+    - if @title.present?
+      title
+        = @title
+        |  - Proconist.net
+    - else
+      title
+        | Proconist.net
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width, initial-scale=1"]
+    meta[name="description" content="高専プロコン作品のソースコードやプレゼンテーションまとめ。高専生プロコニストのアップスパイラルを生み出します"]
+    meta[name="keyword" content="高専プロコン, 高専, OSS, プレゼンテーション"]
+    |  <meta property="og:title" content="
+    = @title ? "#{@title} - Proconist.net" : 'Proconist.net'
+    | "> 
+    meta[property="og:type" content="website"]
+    |  <meta property="og:description" content="
+    = @ogp_description || '高専プロコン作品のソースコードやプレゼンテーションまとめ。高専生プロコニストのアップスパイラルを生み出します'
+    | "> <meta property="og:url" content="
+    = @ogp_url || 'https://proconist.net'
+    | "> <meta property="og:image" content="
+    = @ogp_img || 'http://proconist.net/img/ogp.png'
+    | "> 
+    meta[property="og:site_name" content="Proconist.net"]
+    meta[property="og:email" content="info@proconist.net"]
+    meta[name="twitter:card" content="summary_large_image"]
+    link[rel="stylesheet" href="/css/bootstrap-umi.min.css"]
+    link[rel="stylesheet" href="/css/style.css"]
+    link[rel="stylesheet" href="/css/font-awesome.min.css"]
+    link[rel="shortcut icon" href="/img/favicon/favicon.ico"]
+    link[rel="stylesheet" href="https://cdn.honokak.osaka/umi/3.3.5/css/bootstrap.min.css"]
+  body
+    .container
+      header
+        .title
+          .row
+            .col-md-8.clearfix
+              - if request.path == '/'
+                h1
+                  a.logo[href="//proconist.net/"]
+                    | Proconist.net
+              - else
+                .logo-wrap
+                  a.logo[href="//proconist.net/"]
+                    | Proconist.net
+              span.description
+                | プロコンでアップスパイラルを生み出す
+            .col-md-4.social-button
+              ul.list-unstyled.social-button
+                li.social-button-item.social-button-item-twitter.btn.btn-sm
+                  a[href="https://twitter.com/intent/tweet?url=https%3A%2F%2FProconist.net&text=Proconist.net" target="_blank"]
+                    i.fa.fa-twitter
+                    |  Tweet
+                li.social-button-item.social-button-item-facebook.btn.btn-sm
+                  a[href="http://www.facebook.com/sharer.php?u=https%3A%2F%2FProconist.net" target="_blank"]
+                    i.fa.fa-facebook-official
+                    |  Share
+                li.social-button-item.social-button-item-google.btn.btn-sm
+                  a[href="https://plus.google.com/share?url=https%3A%2F%2FProconist.net" target="_blank"]
+                    i.fa.fa-google-plus
+                    |  +1
+                li.social-button-item.social-button-item-hatena.btn.btn-sm
+                  a[href="http://b.hatena.ne.jp/add?url=https%3A%2F%2FProconist.net" target="_blank"]
+                    i.fa.fa-hatena
+                    |  Bookmark
+        nav.navbar.navbar-default[role="navigation"]
+          .navbar-header
+            button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"]
+              span.sr-only
+                | Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav.nav-justified
+              li
+                a[href="/"]
+                  | トップページ
+              li
+                a[href="/contest"]
+                  | 大会から作品を探す
+              li
+                a[href="/entry"]
+                  | 学ぶ
+              li
+                a[href="/report"]
+                  | 作品情報を投稿する
+              li
+                a[href="/about"]
+                  | このサイトについて
+      = yield
+    footer
+      .container
+        .github-star-button.text-center
+          iframe[src="https://ghbtns.com/github-btn.html?user=NKMR6194&repo=proconist.net&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="20px"]
+        .copyright.text-center
+          | © 2015 Proconist.net 運営委員会
+    script[src="/js/jquery-2.1.1.min.js"]
+    script[src="/js/bootstrap.min.js"]
+    script[src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"]
+    script
+      |  // Twitter !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p='https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs'); 
+    = render partial: 'layouts/analytic_scripts' if Rails.env == 'production'

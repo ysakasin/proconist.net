@@ -1,0 +1,47 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Exclude:
+    - 'sinatra/**/*'
+    - 'vendor/**/*'
+    - 'db/**/*'
+
+Rails:
+  Enabled:  true
+
+Metrics/LineLength:
+  Max: 130
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Style/ExtraSpacing:
+  Exclude:
+    - 'config/routes.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: true
+  EnforcedStyle: ruby19
+
+Style/Next:
+  Exclude:
+    - 'lib/scripts/*'
+
+Style/StringLiterals:
+ EnforcedStyle: single_quotes
+
+Style/TrailingCommaInLiteral:
+  Enabled: false
