@@ -36,6 +36,10 @@ Style/HashSyntax:
   Enabled: true
   EnforcedStyle: ruby19
 
+Style/Next:
+  Exclude:
+    - 'lib/scripts/*'
+
 Style/StringLiterals:
  EnforcedStyle: single_quotes
 
