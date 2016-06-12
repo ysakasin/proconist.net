@@ -26,6 +26,11 @@ build:
         packages: nodejs
 
     - bundle-install
+
     - script:
       name: rspec
       code: bundle exec rspec
+
+    - script:
+        name: rubocop
+        code: bundle exec rubocop
