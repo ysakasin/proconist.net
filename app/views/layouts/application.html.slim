@@ -14,7 +14,7 @@ html
     meta[name="keyword" content="高専プロコン, 高専, OSS, プレゼンテーション"]
     |  <meta property="og:title" content="
     = @title ? "#{@title} - Proconist.net" : 'Proconist.net'
-    | "> 
+    | ">
     meta[property="og:type" content="website"]
     |  <meta property="og:description" content="
     = @ogp_description || '高専プロコン作品のソースコードやプレゼンテーションまとめ。高専生プロコニストのアップスパイラルを生み出します'
@@ -22,15 +22,13 @@ html
     = @ogp_url || 'https://proconist.net'
     | "> <meta property="og:image" content="
     = @ogp_img || 'http://proconist.net/img/ogp.png'
-    | "> 
+    | ">
     meta[property="og:site_name" content="Proconist.net"]
     meta[property="og:email" content="info@proconist.net"]
     meta[name="twitter:card" content="summary_large_image"]
-    link[rel="stylesheet" href="/css/bootstrap-umi.min.css"]
-    link[rel="stylesheet" href="/css/style.css"]
-    link[rel="stylesheet" href="/css/font-awesome.min.css"]
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     link[rel="shortcut icon" href="/img/favicon/favicon.ico"]
-    link[rel="stylesheet" href="https://cdn.honokak.osaka/umi/3.3.5/css/bootstrap.min.css"]
   body
     .container
       header
@@ -97,9 +95,7 @@ html
           iframe[src="https://ghbtns.com/github-btn.html?user=NKMR6194&repo=proconist.net&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="20px"]
         .copyright.text-center
           | © 2015 Proconist.net 運営委員会
-    script[src="/js/jquery-2.1.1.min.js"]
-    script[src="/js/bootstrap.min.js"]
     script[src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"]
     script
-      |  // Twitter !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p='https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs'); 
+      |  // Twitter !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p='https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
     = render partial: 'layouts/analytic_scripts' if Rails.env == 'production'
