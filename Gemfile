@@ -14,6 +14,7 @@ gem 'slim'
 gem 'turbolinks', '~> 5.x'
 gem 'uglifier', '>= 1.3.0'
 gem 'umi-rails', github: 'NKMR6194/umi-rails'
+gem 'font-awesome-rails'
 
 group :development do
   gem 'listen', '~> 3.0.5'
