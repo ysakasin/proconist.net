@@ -22,7 +22,7 @@ module DocumentDecorator
   }.freeze
 
   def fa_class
-    FA_CLASS_DICTIONARY[document_type]
+    FA_CLASS_DICTIONARY[document_type.to_sym]
   end
 
   def document_type_ja

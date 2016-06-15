@@ -7,17 +7,12 @@
             | 決勝#{product.rank}位
       h4.panel-title
         | #{product.school.name} 「#{product.name}」
-      /- if product.prize.present?
+      - if product.prizes.present?
         ul.label-group.list-inline
         - product.prizes.each do |prize|
           li.label.label-warning
             i.fa.fa-trophy
-            = prize
-  /- if product.is_registered?
+            = prize.name
+  - if product.documents.present?
     ul.list-inline.panel-procon-product-link
-      - product.links.each do |link|
-        - next if link[:href].blank?
-        li
-          a(href="#{link[:href]}" target='_blank')
-            i.fa.fa-lg.fa-fw(class="#{link[:tag_class]}")
-            = link[:title]
+      = render partial: 'products/document', collection: product.documents
