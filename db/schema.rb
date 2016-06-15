@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160612152109) do
+ActiveRecord::Schema.define(version: 20160615150700) do
 
   create_table "contests", force: :cascade do |t|
     t.string   "name",              null: false
@@ -31,6 +31,14 @@ ActiveRecord::Schema.define(version: 20160612152109) do
     t.string   "url",           null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "prizes", force: :cascade do |t|
+    t.integer  "product_id", null: false
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id", "name"], name: "index_prizes_product_name_unique", unique: true
   end
 
   create_table "products", force: :cascade do |t|

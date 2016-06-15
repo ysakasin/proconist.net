@@ -3,6 +3,7 @@ class Product < ApplicationRecord
   belongs_to :school
 
   has_many :documents
+  has_many :prizes
 
   validates :section, inclusion: { in: [0, 1, 2] }
 
