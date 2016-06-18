@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get     '/about', to: 'pages#about'
 
   get     '/contest',       to: 'contests#index'
-  get     '/contest/:nth',  to: 'contests#show'
+  get     '/contest/:nth',  to: 'contests#show',  as: :show_contest
 
   get     '/report',          to: 'reports#index'
   post    '/report',          to: 'reports#create'
