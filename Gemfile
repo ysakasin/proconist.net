@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '>= 5.0.0.rc1', '< 5.1'
+gem 'rails', '>= 5.0.0', '< 5.1'
 
 gem 'active_decorator'
 gem 'coffee-rails', '~> 4.1.0'
