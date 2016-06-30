@@ -28,15 +28,13 @@ html[lang="ja"]
                 | Error
               |  : IDとパスワードが正しいか確認してください 
           form[action="./sign_in" method="post"]
+          = form_for :session, url: sign_in_path do |f|
             .form-group
-              label[for="id"]
-                | ID:
-              input.form-control[name="id" type="text" value=""]
+              = f.label :id, 'ID:'
+              = f.text_field :id
             .form-group
-              label[for="password"]
-                | Password:
-              input.form-control[name="password" type="password" value=""]
-            button.btn.btn-default[type="submit" value="sign in"]
-              | Sign in
+              = f.label :password, 'Password:'
+              = f.password_field :password
+            = f.submit 'sign in'
     script[src="/js/jquery-2.1.1.min.js" type="text/javascript"]
     script[src="/js/bootstrap.min.js" type="text/javascript"]
