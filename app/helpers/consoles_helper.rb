@@ -1,0 +1,2 @@
+module ConsolesHelper
+end

@@ -1,0 +1,2 @@
+class ConsolesController < ApplicationController
+end
