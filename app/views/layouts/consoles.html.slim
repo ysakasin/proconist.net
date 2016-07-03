@@ -16,13 +16,13 @@ html[lang="ja"]
             span.icon-toggle
           a.navbar-brand
             | Proconist.net Console
-        - if @op
+        - if @operator
           .navbar-collapse.collapse
             ul.nav.navbar-nav.navbar-right
               li
                 a[href="/console/user-settings"]
                   i.glyphicon.glyphicon-user
-                  = @op.name
+                  = @operator.name
               li
                 a[href="/sign_out"]
                   i.glyphicon.glyphicon-lock

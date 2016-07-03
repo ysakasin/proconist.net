@@ -1,4 +1,5 @@
 Fabricator(:operator) do
+  identifier      'MyString'
   position        1
   name            'MyString'
   password_digest 'MyString'

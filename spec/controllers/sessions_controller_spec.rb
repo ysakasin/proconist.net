@@ -9,4 +9,27 @@ RSpec.describe SessionsController, type: :controller do
     end
   end
 
+  describe '#create' do
+    context 'exists operator' do
+      let!(:operator) do
+        Fabricate(:operator,
+                  identifier: 'unasuke',
+                  name: 'うなすけ',
+                  password_digest: BCrypt::Password.create('password'))
+      end
+
+      it 'should redierct to console' do
+        post :create, params: { session: { identifier: 'unasuke', password: 'password' } }
+        expect(response).to redirect_to(console_path)
+      end
+    end
+
+    context 'unexsits operator' do
+      it 'should redierct to sign_in' do
+        post :create, params: { session: { identifier: 'unasuke', password: 'password' } }
+        expect(response).to redirect_to(sign_in_path)
+      end
+    end
+  end
+
 end

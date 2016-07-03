@@ -30,8 +30,8 @@ html[lang="ja"]
           form[action="./sign_in" method="post"]
           = form_for :session, url: sign_in_path do |f|
             .form-group
-              = f.label :id, 'ID:'
-              = f.text_field :id
+              = f.label :identifier, 'ID:'
+              = f.text_field :identifier
             .form-group
               = f.label :password, 'Password:'
               = f.password_field :password
