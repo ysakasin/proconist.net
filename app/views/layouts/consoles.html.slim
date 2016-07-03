@@ -1,0 +1,71 @@
+doctype html
+html[lang="ja"]
+  head
+    meta[charset="utf-8"]
+    meta[content="text/html" http-equiv="content-type"]
+    title
+      | Proconist.net Console
+    meta[content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"]
+    link[rel="stylesheet" href="/css/bootstrap-umi.min.css"]
+    link[rel="stylesheet" href="/css/console.css"]
+  body
+    #top-nav.navbar.navbar-inverse.navbar-static-top
+      .container
+        .navbar-header
+          button.navbar-toggle[data-target=".navbar-collapse" data-toggle="collaps" type="button"]
+            span.icon-toggle
+          a.navbar-brand
+            | Proconist.net Console
+        - if @op
+          .navbar-collapse.collapse
+            ul.nav.navbar-nav.navbar-right
+              li
+                a[href="/console/user-settings"]
+                  i.glyphicon.glyphicon-user
+                  = @op.name
+              li
+                a[href="/sign_out"]
+                  i.glyphicon.glyphicon-lock
+                  |  Sign out
+              li
+
+    .container
+      .row
+        #menu.col-md-3
+          strong
+            i.glyphicon.glyphicon-list
+            |  Menu
+          hr
+          ul.list-unstyled
+            li
+              a[href="/console"]
+                i.glyphicon.glyphicon-home
+                |  Home
+            li
+              a[href="/console/contest"]
+                i.glyphicon.glyphicon-tower
+                |  大会情報
+            li
+              a[href="/console/entrant"]
+                i.glyphicon.glyphicon-briefcase
+                |  作品情報
+            li
+              a[href="/console/history"]
+                i.glyphicon.glyphicon-list-alt
+                |  履歴
+            li
+              a[href="/console/report"]
+                i.glyphicon.glyphicon-bullhorn
+                |  提供情報
+            li
+              a[href="/console/entry"]
+                i.glyphicon.glyphicon-pencil
+                |  記事
+            li
+              a[href="/console/category"]
+                i.glyphicon.glyphicon-tags
+                |  カテゴリー
+        .col-md-9
+          = yield
+    script[src="/js/jquery-2.1.1.min.js" type="text/javascript"]
+    script[src="/js/bootstrap.min.js" type="text/javascript"]
