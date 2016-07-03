@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '>= 5.0.0', '< 5.1'
 
 gem 'active_decorator'
+gem 'bcrypt'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
