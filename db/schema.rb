@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160615150700) do
+ActiveRecord::Schema.define(version: 20160703052312) do
 
   create_table "contests", force: :cascade do |t|
     t.string   "name",              null: false
@@ -31,6 +30,26 @@ ActiveRecord::Schema.define(version: 20160615150700) do
     t.string   "url",           null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "operators", force: :cascade do |t|
+    t.string   "identifier",                  null: false
+    t.integer  "position",        default: 0, null: false
+    t.string   "name",                        null: false
+    t.string   "password_digest"
+    t.string   "icon"
+    t.integer  "school_id"
+    t.string   "github"
+    t.string   "bitbucket"
+    t.string   "slideshare"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "site"
+    t.string   "description"
+    t.string   "email"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["identifier"], name: "index_operators_on_identifier", unique: true
   end
 
   create_table "prizes", force: :cascade do |t|
