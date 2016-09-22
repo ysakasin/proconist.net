@@ -34,3 +34,6 @@ build:
     - script:
         name: rubocop
         code: bundle exec rubocop
+  after-steps:
+    - jgs/idobata-notify@0.0.2:
+        token: $IDOBATA_TOKEN
