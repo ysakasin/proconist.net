@@ -10,4 +10,9 @@ module SessionsHelper
   def logged_in?
     !current_operator.nil?
   end
+
+  def log_out
+    session.delete(:operator_id)
+    @current_operator = nil
+  end
 end
