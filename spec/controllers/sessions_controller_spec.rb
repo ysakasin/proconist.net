@@ -12,10 +12,12 @@ RSpec.describe SessionsController, type: :controller do
   describe '#create' do
     context 'exists operator' do
       let!(:operator) do
-        Fabricate(:operator,
-                  identifier: 'unasuke',
-                  name: 'うなすけ',
-                  password_digest: BCrypt::Password.create('password'))
+        Fabricate(
+          :operator,
+          identifier: 'unasuke',
+          name: 'うなすけ',
+          password_digest: BCrypt::Password.create('password')
+        )
       end
 
       it 'should redierct to console' do
@@ -35,10 +37,12 @@ RSpec.describe SessionsController, type: :controller do
   describe '#destroy' do
     context 'logged_in' do
       let!(:operator) do
-        Fabricate(:operator,
-                  identifier: 'unasuke',
-                  name: 'うなすけ',
-                  password_digest: BCrypt::Password.create('password'))
+        Fabricate(
+          :operator,
+          identifier: 'unasuke',
+          name: 'うなすけ',
+          password_digest: BCrypt::Password.create('password')
+        )
       end
 
       it 'should delete operator from session' do
