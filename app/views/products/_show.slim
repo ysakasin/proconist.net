@@ -1,4 +1,7 @@
-.panel.panel-procon-product(id='product.panel_id' class='product.panel_class')
+.panel.panel-procon-product(
+  id="#{product.section_name}-#{product.id}"
+  class="panel-#{product.documents.present? ? 'primary' : 'default'}"
+  )
   .panel-heading
     .panel-procon-product-heading.clearfix
       - if product.rank.present?
@@ -9,10 +12,10 @@
         | #{product.school.name} 「#{product.name}」
       - if product.prizes.present?
         ul.label-group.list-inline
-        - product.prizes.each do |prize|
-          li.label.label-warning
-            i.fa.fa-trophy
-            = prize.name
+          - product.prizes.each do |prize|
+            li.label.label-warning.prize
+              i.fa.fa-trophy
+              = prize.name
   - if product.documents.present?
     ul.list-inline.panel-procon-product-link
       = render partial: 'products/document', collection: product.documents
