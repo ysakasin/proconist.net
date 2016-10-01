@@ -1,0 +1,47 @@
+.row.content
+  .col-md-8.main.article-list
+    .index-link
+      a.btn.btn-block.btn-lg.btn-warning[href="#{entry_archive_path}"]
+        i.fa.fa-search
+        |  記事を探す
+    - @articles.each do |article|
+      article.article-contents.row
+        .clearfix.eye-chatch.col-md-4.col-md-4.col-sm-4.col-xs-12
+          a(href="#{article.url}" title="#{article.title}")
+            = image_tag article.thumbnail_url, class: 'img-responsive', alt: article.title
+        .article-body.col-md-8.col-sm-8.col-xs-12
+          .clearfix.heading
+            h2
+              a(href="#{article.url}")
+                = article.title
+            ul.meta-info.list-unstyled
+              li
+                i.fa.fa-calendar
+                = article.date
+              li
+                i.fa.fa-folder-open
+                /= article.category_link
+              li
+                i.fa.fa-pencil
+                = article.operator.name
+          .clearfix
+            .article-text
+              p
+                = article.description
+                = link_to '【続きを読む】', article_path(article.url)
+    /ul.pager
+      - page = params[:p].present? ? params[:p].to_i : 1
+      - pager = Article.pagers(page)
+      - pager.each_index do |index|
+        - if index != 0 && pager[index] - pager[index-1] != 1
+          li
+            | ・・・
+        - if index == page - 1
+          li
+            = pager[index]
+        - else
+          li
+            a href="/article/page/#{pager[index]}"
+            = pager[index]
+  aside.col-md-4.hidden-sm.hidden-xs.sidebar
+    /= erb :_article_sidebar

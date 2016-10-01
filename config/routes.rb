@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get     '/entry',         to: 'articles#index'
   get     '/entry/archive', to: 'article_categories#index'
-  get     '/entry/:title',  to: 'articles#show'
+  get     '/entry/:url',  to: 'articles#show',  as: 'article'
 
   get     '/category/:name',  to: 'article_categories#show'
 
