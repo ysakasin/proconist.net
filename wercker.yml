@@ -29,7 +29,7 @@ build:
 
     - script:
       name: rspec
-      code: bundle exec rspec
+      code: bundle exec rspec --format progress
 
     - script:
         name: rubocop
