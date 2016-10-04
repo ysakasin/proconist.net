@@ -44,4 +44,4 @@
             a href="/article/page/#{pager[index]}"
             = pager[index]
   aside.col-md-4.hidden-sm.hidden-xs.sidebar
-    /= erb :_article_sidebar
+    = render partial: 'articles/sidebar'

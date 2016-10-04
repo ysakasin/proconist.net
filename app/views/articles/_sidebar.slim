@@ -1,0 +1,25 @@
+.panel.panel-default.newlist
+  .panel-heading
+    h3.panel-title
+      | 最新の記事
+  .list-group
+    - Article.order("id desc").limit(5).each do |article|
+      a.list-group-item(href="#{article.href}")
+      dl
+        dt
+          span.label.label-warning
+            | 特集
+          = article.date_hyphen
+        dd
+          = article.title
+    a.list-group-item[href="/entry/archive"]
+      span.text-right
+        | 過去の記事一覧へ
+.panel.panel-default.contest-index
+  .panel-heading
+    h3.panel-title
+      | カテゴリ一覧
+  .list-group
+    - ArticleCategory.all.each do |c|
+      a.list-group-item(href="#{c.href}"
+        = c.name
