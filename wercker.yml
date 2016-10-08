@@ -35,5 +35,7 @@ build:
         name: rubocop
         code: bundle exec rubocop
   after-steps:
+    - 1syo/gitter-notify@0.0.1:
+        token: $GITTER_TOKEN
     - jgs/idobata-notify@0.0.2:
         token: $IDOBATA_TOKEN
