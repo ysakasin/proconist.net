@@ -4,91 +4,80 @@
     h1 作品情報を投稿する
     p 当サイトにまだない作品情報を投稿することができます。情報共有のご協力をお願いします。
     p 投稿を行うと、運営による精査の後に当サイトに反映されます。
-    form[action="/report" method="post"]
+    = form_for @report, url: {action: 'create'} do |f|
       h3 作品の情報
       .form-group
-        label.control-label[for="contest"]
-          | 大会 
+        = f.label :contest_id, class: 'control-label' do
+            | 大会&nbsp;
+            small.required
+              | 必須
+        = f.select :contest_id, options_for_select(@contests.map{|c| ["第#{c.nth}回 #{c.name}", c.id]}), {}, { class: 'form-control' }
+      .form-group
+        = f.label :section, class: 'control-label' do
+          | 部門&nbsp;
           small.required
             | 必須
-        select#contest.form-control[name="contest"]
-          - @contests.each do |contest|
-            |  <option value="
-            = contest.id
-            | ">
-            = "第#{contest.id}回 #{contest.name}"
+        = f.select :section, options_for_select(@sections_enum), {}, { class: 'form-control' }
       .form-group
-        label.control-label[for="repository"]
-          | 部門 
-          small.required
-            | 必須
-        select#section.form-control[name="section"]
-          option[value="competition"]
-            | 競技部門
-          option[value="themed"]
-            | 課題部門
-          option[value="original"]
-            | 自由部門
-      .form-group
-        label.control-label[for="product"]
-          | 作品名 
+        = f.label :product_name, class: 'control-label' do
+          | 作品名&nbsp;
           small
             | または
-          |  高専名 
+          |  高専名&nbsp;
           small.required
             | 必須
-        input#product.form-control[name="product" type="text"]
+        = f.text_field :product_name, class: 'form-control'
       hr
       h3 リンク先URL
       .form-group
-        label.control-label[for="repository"]
-          | リポジトリ 
+        = f.label :repository_url, class: 'control-label' do
+          | リポジトリ&nbsp;
           small
             | URL
-        input#repository.form-control[name="repository" type="url"]
+        = f.text_field :repository_url, class: 'form-control'
       .form-group
-        label.control-label[for="slide"]
-          | スライド 
+        = f.label :slide_url, class: 'control-label' do
+          | スライド&nbsp;
           small
             | URL
-        input#slide.form-control[name="slide" type="url"]
+        = f.text_field :slide_url, class: 'form-control'
       .form-group
-        label.control-label[for="site"]
-          | 解説サイト 
+        = f.label :site_url, class: 'control-label' do
+          | 解説サイト&nbsp;
           small
             | URL
-        input#site.form-control[name="site" type="url"]
+        = f.text_field :site_url, class: 'form-control'
       hr
       h3 参加者のSNSアカウント
       p.red 他人のアカウントを入力する場合には、アカウント所有者の許可が必要です。
       .form-group
-        label.control-label[for="twitter"]
-          | Twitter 
+        = f.label :twitter, class: 'control-label' do
+          | Twitter&nbsp;
           small
             | URL
-        input#twitter.form-control[name="twitter" type="url"]
+        = f.text_field :twitter, class: 'form-control'
       .form-group
-        label.control-label[for="facebook"]
-          | facebook 
+        = f.label :facebook, class: 'control-label'
+          | facebook&nbsp;
           small
             | URL
-        input#facebook.form-control[name="facebook" type="url"]
+        = f.text_field :facebook, class: 'form-control'
       hr
       .form-group
-        label.control-label[for="comment"]
+        = f.label :comment, class: 'control-label' do
           | コメント その他の指摘事項
-        textarea#comment.form-control[rows="4" name="comment"]
+        = f.text_area :comment, class: 'form-control'
       hr
       .form-group
-        label.control-label[for="email"]
-          | あなたのメールアドレス 
+        = f.label :email, class: 'control-label' do
+          | あなたのメールアドレス&nbsp;
           small.required
             | 必須
-        input#email.form-control[name="email" type="email"]
+        = f.email_field :email, class: 'form-control'
       hr
       .form-group
-        button.btn.btn-default[type="reset"]
+        = button_tag type: 'reset', class: 'btn btn-default' do
           | Reset
-        button.btn.btn-primary[type="submit"]
-          | Submit
+        | &nbsp;
+        = f.submit 'Submit', class: 'btn btn-primary'
   .col-md-2
