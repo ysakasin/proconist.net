@@ -1,0 +1,94 @@
+.row.content
+  .col-md-2
+  .col-md-8
+    h1 作品情報を投稿する
+    p 当サイトにまだない作品情報を投稿することができます。情報共有のご協力をお願いします。
+    p 投稿を行うと、運営による精査の後に当サイトに反映されます。
+    form[action="/report" method="post"]
+      h3 作品の情報
+      .form-group
+        label.control-label[for="contest"]
+          | 大会 
+          small.required
+            | 必須
+        select#contest.form-control[name="contest"]
+          - @contests.each do |contest|
+            |  <option value="
+            = contest.id
+            | ">
+            = "第#{contest.id}回 #{contest.name}"
+      .form-group
+        label.control-label[for="repository"]
+          | 部門 
+          small.required
+            | 必須
+        select#section.form-control[name="section"]
+          option[value="competition"]
+            | 競技部門
+          option[value="themed"]
+            | 課題部門
+          option[value="original"]
+            | 自由部門
+      .form-group
+        label.control-label[for="product"]
+          | 作品名 
+          small
+            | または
+          |  高専名 
+          small.required
+            | 必須
+        input#product.form-control[name="product" type="text"]
+      hr
+      h3 リンク先URL
+      .form-group
+        label.control-label[for="repository"]
+          | リポジトリ 
+          small
+            | URL
+        input#repository.form-control[name="repository" type="url"]
+      .form-group
+        label.control-label[for="slide"]
+          | スライド 
+          small
+            | URL
+        input#slide.form-control[name="slide" type="url"]
+      .form-group
+        label.control-label[for="site"]
+          | 解説サイト 
+          small
+            | URL
+        input#site.form-control[name="site" type="url"]
+      hr
+      h3 参加者のSNSアカウント
+      p.red 他人のアカウントを入力する場合には、アカウント所有者の許可が必要です。
+      .form-group
+        label.control-label[for="twitter"]
+          | Twitter 
+          small
+            | URL
+        input#twitter.form-control[name="twitter" type="url"]
+      .form-group
+        label.control-label[for="facebook"]
+          | facebook 
+          small
+            | URL
+        input#facebook.form-control[name="facebook" type="url"]
+      hr
+      .form-group
+        label.control-label[for="comment"]
+          | コメント その他の指摘事項
+        textarea#comment.form-control[rows="4" name="comment"]
+      hr
+      .form-group
+        label.control-label[for="email"]
+          | あなたのメールアドレス 
+          small.required
+            | 必須
+        input#email.form-control[name="email" type="email"]
+      hr
+      .form-group
+        button.btn.btn-default[type="reset"]
+          | Reset
+        button.btn.btn-primary[type="submit"]
+          | Submit
+  .col-md-2
