@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161001085703) do
+ActiveRecord::Schema.define(version: 20161007152011) do
 
   create_table "article_categories", force: :cascade do |t|
     t.string   "url",         null: false
@@ -87,6 +87,21 @@ ActiveRecord::Schema.define(version: 20161001085703) do
     t.integer  "rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.integer  "contest_id",     null: false
+    t.integer  "section",        null: false
+    t.string   "product_name",   null: false
+    t.string   "email",          null: false
+    t.string   "repository_url"
+    t.string   "slide_url"
+    t.string   "site_url"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "comment"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "schools", force: :cascade do |t|
