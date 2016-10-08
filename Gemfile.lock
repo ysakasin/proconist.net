@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/NKMR6194/umi-rails.git
+  remote: https://github.com/NKMR6194/umi-rails.git
   revision: 8830560be01342d57387bed59a55429bf98bfe36
   specs:
     umi-rails (0.0.1)
@@ -268,4 +268,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.12.5
+   1.13.2
