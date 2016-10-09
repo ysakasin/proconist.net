@@ -5,6 +5,15 @@
 
 @import url("http://fonts.googleapis.com/css?family=Lato:300");
 
+@font-face {
+  font-family: "Glyphicons Halflings";
+  src: url("glyphicons-halflings-regular.eot");
+  src: url("glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),
+  url("glyphicons-halflings-regular.woff") format("woff"),
+  url("glyphicons-halflings-regular.ttf") format("truetype"),
+  url("glyphicons-halflings-regular.svg") format("svg");
+}
+
 $red: #e74c3c;
 
 $social-colors: (
@@ -32,9 +41,12 @@ $social-colors: (
 }
 
 @mixin fontawesome {
-  font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  font-family: "FontAwesome";
+  src: url("fontawesome-webfont.eot?v=4.2.0");
+  src: url("fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"),
+  url("fontawesome-webfont.woff?v=4.2.0") format("woff"),
+  url("fontawesome-webfont.ttf?v=4.2.0") format("truetype"),
+  url("fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
