@@ -3,7 +3,7 @@ Fabricator(:report) do
   contest_id     1
   section        1
   product_name   'MyString'
-  email          'MyString'
+  email          'example@example.com'
   repository_url 'MyString'
   slide_url      'MyString'
   site_url       'MyString'
