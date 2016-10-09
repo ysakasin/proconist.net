@@ -18,6 +18,7 @@ gem 'umi-rails', git: 'https://github.com/NKMR6194/umi-rails.git'
 gem 'font-awesome-rails'
 
 group :development do
+  gem 'letter_opener'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-commands-rspec'
