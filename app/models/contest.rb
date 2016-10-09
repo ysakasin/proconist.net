@@ -1,3 +1,4 @@
 class Contest < ApplicationRecord
   has_many :products
+  has_many :reports
 end
