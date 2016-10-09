@@ -6,5 +6,5 @@ class Report < ApplicationRecord
     message: '不正なメールアドレスだと思われます。'
   }
   validates :product_name, presence: true
-  validates :section, inclusion: { in: %w(0 1 2) }
+  validates :section, inclusion: { in: [0, 1, 2] }
 end
