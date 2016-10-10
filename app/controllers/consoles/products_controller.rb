@@ -15,6 +15,9 @@ class Consoles::ProductsController < Consoles::BaseController
   end
 
   def new
+    @product = Product.find_by(id: params[:id])
+    @contests = Contest.all.order(nth: :desc)
+    @schools = School.all
   end
 
   def create
