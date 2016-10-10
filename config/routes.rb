@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   patch   '/console/contest/:nth',      to: 'consoles/contests#update'
 
   get     '/console/entrant/',              to: 'consoles/products#index'
-  get     '/console/entrant/contest/:nth',  to: 'consoles/products#list'
+  get     '/console/entrant/contest/:nth',  to: 'consoles/products#list', as: 'list_product_in_contest_console'
   get     '/console/entrant/new',           to: 'consoles/products#new',  as: 'new_product_console'
   get     '/console/entrant/:id',           to: 'consoles/products#show', as: 'show_product_console'
   post    '/console/entrant/',              to: 'consoles/products#create'

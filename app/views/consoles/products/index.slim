@@ -1,9 +1,11 @@
 h2
   i.glyphicon.glyphicon-briefcase
   |  作品情報の編集
+a.btn.btn-success.btn-lg[href="#{new_product_console_path}" role="button" style="margin:1em 0;"]
+  | 作品を追加
 .list-group
   - @contests.each do |contest|
-    a.list-group-item(href="./entrant/contest/#{contest.nth}")
+    a.list-group-item(href="#{list_product_in_contest_console_path(contest.nth)}")
       = contest.name
       | &nbsp;
       small
