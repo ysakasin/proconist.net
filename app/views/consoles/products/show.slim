@@ -1,16 +1,7 @@
 - if flash[:status] == 'success'
   .alert.alert-success[role="alert"]
     | 保存に成功しました
-/- if @product.try :id.present?
-/  |  <form class="form-horizontal" method="post" action="./
-/  = @product.try :id
-/  | "> 
-/- else
-/  h2
-/    | 新規作品
-/  form.form-horizontal[method="post" action="./new"]
 
-/{ controller: 'consoles/products', action: 'update', html: { class: 'form-horizontal' }
 = form_tag({ action: 'update' }, { method: :post, class: 'form-horizontal' }) do
   .form-group
     .col-sm-2

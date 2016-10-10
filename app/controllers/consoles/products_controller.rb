@@ -21,9 +21,9 @@ class Consoles::ProductsController < Consoles::BaseController
   end
 
   def create
-  end
-
-  def edit
+    product = build_from_params(Product.new)
+    flash[:status] = 'success'
+    redirect_to show_product_console_path(product)
   end
 
   def show
@@ -42,32 +42,7 @@ class Consoles::ProductsController < Consoles::BaseController
   end
 
   def update
-    product = Product.find params[:id]
-    ActiveRecord::Base.transaction do
-      product.update!(product_params[:product])
-      %w(github bitbucket other_repo slideshare other_slide site twitter facebook).each do |doc_type|
-        document = product.documents.find_by(document_type: doc_type)
-        if document.present? && product_params[doc_type][:url].present?
-          document.update!(product_params[doc_type])
-        elsif document.blank? && product_params[doc_type][:url].present?
-          Document.create(
-            product_id:     product.id,
-            url:            product_params[doc_type][:url],
-            document_type:  doc_type
-          )
-        end
-      end
-      product_params[:prize][:name].split(',').each do |prize|
-        product.prizes.find_or_create_by(name: prize)
-      end
-      if product_params[:history][:update] == '1'
-        History.create(
-          label:  0,
-          title:  "#{product.section_name_ja} #{product.school.name} 「#{product.name}」",
-          url:    show_contest_path(product.contest.nth) + "##{product.section_name}-#{product.id}"
-        )
-      end
-    end
+    product = build_from_params Product.find(params[:id])
     flash[:status] = 'success'
     redirect_to show_product_console_path(product)
   end
@@ -94,5 +69,34 @@ class Consoles::ProductsController < Consoles::BaseController
       prize: :name,
       history: :update
     )
+  end
+
+  def build_from_params(product)
+    ActiveRecord::Base.transaction do
+      product.update!(product_params[:product])
+      %w(github bitbucket other_repo slideshare other_slide site twitter facebook).each do |doc_type|
+        document = product.documents.find_by(document_type: doc_type)
+        if document.present? && product_params[doc_type][:url].present?
+          document.update!(product_params[doc_type])
+        elsif document.blank? && product_params[doc_type][:url].present?
+          Document.create(
+            product_id:     product.id,
+            url:            product_params[doc_type][:url],
+            document_type:  doc_type
+          )
+        end
+      end
+      product_params[:prize][:name].split(',').each do |prize|
+        product.prizes.find_or_create_by(name: prize)
+      end
+      if product_params[:history][:update] == '1'
+        History.create(
+          label:  0,
+          title:  "#{product.section_name_ja} #{product.school.name} 「#{product.name}」",
+          url:    show_contest_path(product.contest.nth) + "##{product.section_name}-#{product.id}"
+        )
+      end
+    end
+    product
   end
 end
