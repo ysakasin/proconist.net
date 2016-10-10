@@ -30,4 +30,9 @@ Rails.application.routes.draw do
   get     '/console/contest/:nth',      to: 'consoles/contests#show'
   get     '/console/contest/:nth/edit', to: 'consoles/contests#edit', as: 'edit_contest_console'
   patch   '/console/contest/:nth',      to: 'consoles/contests#update'
+
+  get     '/console/entrant/',              to: 'consoles/products#index'
+  get     '/console/entrant/contest/:nth',  to: 'consoles/products#list'
+  get     '/console/entrant/:id',           to: 'consoles/products#show'
+  post    '/console/entrant/:id',           to: 'consoles/products#update'
 end

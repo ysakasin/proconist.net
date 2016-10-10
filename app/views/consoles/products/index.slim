@@ -1,0 +1,10 @@
+h2
+  i.glyphicon.glyphicon-briefcase
+  |  作品情報の編集
+.list-group
+  - @contests.each do |contest|
+    a.list-group-item(href="./entrant/contest/#{contest.nth}")
+      = contest.name
+      | &nbsp;
+      small
+        = contest.date
