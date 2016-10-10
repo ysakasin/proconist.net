@@ -1,7 +1,0 @@
-<h2><i class="glyphicon glyphicon-tower"></i> 大会情報の編集</h2>
-<a href="./contest/new" class="btn btn-success btn-lg" role="button" style="margin:1em 0;">大会を追加</a>
-<div class="list-group">
-  <% @contests.each do |c| %>
-    <a href="./contest/<%= c.id %>" class="list-group-item"><%= c.name %> <small><%= c.date %></small></a>
-  <% end %>
-</div>

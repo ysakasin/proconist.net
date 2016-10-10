@@ -1,0 +1,12 @@
+h2
+  i.glyphicon.glyphicon-tower
+  |  大会情報の編集
+a.btn.btn-success.btn-lg[href="#{new_contest_console_path}" role="button" style="margin:1em 0;"]
+  | 大会を追加
+.list-group
+  - @contests.each do |contest|
+    a.list-group-item(href="#{edit_contest_console_path(contest.nth)}")
+      = contest.name
+      | &nbsp;
+      small
+        = contest.date
