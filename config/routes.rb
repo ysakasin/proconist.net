@@ -23,4 +23,11 @@ Rails.application.routes.draw do
   delete  '/sign_out',  to: 'sessions#destroy'
 
   get     '/console', to: 'consoles#index'
+
+  get     '/console/contest',           to: 'consoles/contests#index'
+  get     '/console/contest/new',       to: 'consoles/contests#new', as: 'new_contest_console'
+  post    '/console/contest',           to: 'consoles/contests#create'
+  get     '/console/contest/:nth',      to: 'consoles/contests#show'
+  get     '/console/contest/:nth/edit', to: 'consoles/contests#edit', as: 'edit_contest_console'
+  patch   '/console/contest/:nth',      to: 'consoles/contests#update'
 end
