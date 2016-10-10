@@ -33,6 +33,6 @@ Rails.application.routes.draw do
 
   get     '/console/entrant/',              to: 'consoles/products#index'
   get     '/console/entrant/contest/:nth',  to: 'consoles/products#list'
-  get     '/console/entrant/:id',           to: 'consoles/products#show'
+  get     '/console/entrant/:id',           to: 'consoles/products#show', as: 'show_product_console'
   post    '/console/entrant/:id',           to: 'consoles/products#update'
 end

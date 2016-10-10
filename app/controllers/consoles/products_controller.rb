@@ -65,6 +65,8 @@ class Consoles::ProductsController < Consoles::BaseController
         )
       end
     end
+    flash[:status] = 'success'
+    redirect_to show_product_console_path(product)
   end
 
   private

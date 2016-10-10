@@ -1,6 +1,6 @@
-/- if params[:status] == 'success'
-/  .alert.alert-success[role="alert"]
-/    | 保存に成功しました
+- if flash[:status] == 'success'
+  .alert.alert-success[role="alert"]
+    | 保存に成功しました
 /- if @product.try :id.present?
 /  |  <form class="form-horizontal" method="post" action="./
 /  = @product.try :id
