@@ -17,6 +17,12 @@ class Product < ApplicationRecord
     original
   ).freeze
 
+  SECTIONS_ENUM = {
+    '競技部門': 0,
+    '課題部門': 1,
+    '自由部門': 2
+  }.freeze
+
   def section_name
     SECTIONS[section]
   end
