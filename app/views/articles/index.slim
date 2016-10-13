@@ -1,11 +1,11 @@
 .row.content
-  .col-md-8.main.article-list
+  .col-md-8.main.entry-list
     .index-link
       a.btn.btn-block.btn-lg.btn-warning[href="#{entry_archive_path}"]
         i.fa.fa-search
         |  記事を探す
     - @articles.each do |article|
-      article.article-contents.row
+      article.entry-contents.row
         .clearfix.eye-chatch.col-md-4.col-md-4.col-sm-4.col-xs-12
           a(href="#{article.url}" title="#{article.title}")
             = image_tag article.thumbnail_url, class: 'img-responsive', alt: article.title
