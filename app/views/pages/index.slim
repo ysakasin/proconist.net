@@ -19,65 +19,6 @@ section.about.jumbotron
         i.fa.fa-send
 .row.content
   .col-md-8.main
-    /- #= erb :_product_list
     = render partial: 'contests/show'
-  aside.col-md-4.hidden-sm.hidden-xs.sidebar
-    .panel.panel-default.newlist
-      .panel-heading
-        h3.panel-title
-          | 新着情報
-      /- if @thumbnail.present?
-        .panel-body
-          #carousel-example-generic.carousel.slide[data-ride="carousel"]
-            .carousel-inner[role="listbox"]
-              - # item_class = 'active'
-              - # @thumbnail.each do |elem|
-                |  <div class="item 
-                - #= item_class
-                | "> <img src="
-                - #= elem.img
-                | " alt="
-                - #= elem.title
-                | "> 
-                .carousel-caption
-                  - #= elem.title
-            - # item_class.clear
-            - # end
-          a.left.carousel-control[href="#carousel-example-generic" role="button" data-slide="prev"]
-            span.glyphicon.glyphicon-chevron-left
-            span.sr-only
-              | Previous
-          a.right.carousel-control[href="#carousel-example-generic" role="button" data-slide="next"]
-            span.glyphicon.glyphicon-chevron-right
-            span.sr-only
-              | Next
-    .list-group
-      /- @history.each do |elem|
-        |  <a href="
-        - #= elem.href
-        | " class="list-group-item"> 
-        dl
-          dt
-            | <span class="label 
-            - #= elem.label_class
-            | ">
-            - #= elem.label_name
-            - #= elem.created_at.strftime('%F')
-          dd
-            - #= elem.title
-.panel.panel-default.contest-index
-  .panel-heading
-    h3.panel-title
-      | 過去の大会から探す
-  .list-group
-    /- # Contest.order("id desc").all.each do |c|
-        |  <a href="
-        - #= c.href
-        | " class="list-group-item"> 
-        h4.list-group-item-heading
-          | 第
-          - #= c.id
-          | 回 
-          - #= c.name
-        p.list-group-item-text
-          /- #= c.title
+  = render partial: 'pages/sidebar',
+    locals: { histories_with_image: @histories_with_image, histories: @histories, contests: @contests }
