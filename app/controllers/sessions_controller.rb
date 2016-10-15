@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
       log_in operator
       redirect_to console_path
     else
+      flash[:status] = 'error'
       redirect_to sign_in_path
     end
   end

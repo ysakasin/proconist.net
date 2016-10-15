@@ -22,7 +22,7 @@ html[lang="ja"]
           strong
             | Sign in
         .panel-body
-          - if params[:status] == 'error'
+          - if flash[:status] == 'error'
             .alert.alert-danger
               strong
                 | Error
