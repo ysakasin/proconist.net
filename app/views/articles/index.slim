@@ -35,19 +35,5 @@
               p
                 = article.description
                 = link_to '【続きを読む】', article_path(article.url)
-    /ul.pager
-      - page = params[:p].present? ? params[:p].to_i : 1
-      - pager = Article.pagers(page)
-      - pager.each_index do |index|
-        - if index != 0 && pager[index] - pager[index-1] != 1
-          li
-            | ・・・
-        - if index == page - 1
-          li
-            = pager[index]
-        - else
-          li
-            a href="/article/page/#{pager[index]}"
-            = pager[index]
   aside.col-md-4.hidden-sm.hidden-xs.sidebar
     = render partial: 'articles/sidebar'
