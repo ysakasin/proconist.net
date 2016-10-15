@@ -9,7 +9,7 @@ module ArticleDecorator
 
   def categories_link
     article_categories.map do |category|
-      "<a href='#{category.url}'>#{category.name}</a>"
+      "<a href='#{category_path(category.url)}'>#{category.name}</a>"
     end.join(',&nbsp;')
   end
 end

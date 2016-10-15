@@ -3,7 +3,7 @@
     h3.panel-title
       | 最新の記事
   .list-group
-    - @articles[0..4].each do |article|
+    - articles[0..4].each do |article|
       a.list-group-item(href="#{article.url}")
         dl
           dt
@@ -21,6 +21,6 @@
     h3.panel-title
       | カテゴリ一覧
   .list-group
-    - @categories.each do |category|
-      a.list-group-item(href="#{category.url}")
+    - categories.each do |category|
+      a.list-group-item(href="#{category_path(category.url)}")
         = category.name

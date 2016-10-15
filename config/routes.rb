@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get     '/entry/archive', to: 'article_categories#index'
   get     '/entry/:url',  to: 'articles#show',  as: 'article'
 
-  get     '/category/:name',  to: 'article_categories#show'
+  get     '/category/:url',  to: 'article_categories#show', as: 'category'
 
   get     '/auther/:name',  to: 'operators#show'
 
