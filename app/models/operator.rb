@@ -3,6 +3,8 @@
 class Operator < ApplicationRecord
   has_secure_password
 
+  has_many :articles
+
   SNS_SERVICES_DICTIONARY = {
     'github':       { name: 'GitHub',     fa_class: 'fa-github-alt' },
     'bitbucket':    { name: 'Bitbucket',  fa_class: 'fa-bitbucket' },
