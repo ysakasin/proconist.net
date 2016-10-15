@@ -5,7 +5,7 @@ article.entry-contents.row
   .entry-body.col-md-8.col-sm-8.col-xs-12
     .clearfix.heading
       h2
-        a(href="#{article.url}")
+        a(href="#{article_path(article.url)}")
           = article.title
       ul.meta-info.list-unstyled
         li
