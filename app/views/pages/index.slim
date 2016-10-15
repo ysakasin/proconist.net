@@ -8,15 +8,15 @@ section.about.jumbotron
     | しかし、その成果が公になることはありませんでした。
     | そこで、成果物であるソースコードや発表スライドを公開することで、高専生プロコニストの学習/成長につなげていきます。
   p.text-right
-    a[href="/about"]
+    a(href="#{about_path}")
       | もう少し詳細な説明 »
   .row
     .col-md-6
-      a.btn.btn-success.btn-lg.btn-block[href="/contest"]
+      a.btn.btn-success.btn-lg.btn-block(href="#{contest_path}")
         | 大会一覧から作品を探す 
         i.fa.fa-search
     .col-md-6
-      a.btn.btn-warning.btn-lg.btn-block[href="/report"]
+      a.btn.btn-warning.btn-lg.btn-block(href="#{report_path}")
         | 作品情報を投稿する 
         i.fa.fa-send
 .row.content
