@@ -20,4 +20,8 @@ module HistoryDecorator
       'label-danger'
     end
   end
+
+  def options_array
+    [['作品', 0], ['記事', 1], ['お知らせ', 2]].freeze
+  end
 end

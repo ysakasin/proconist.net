@@ -37,4 +37,12 @@ Rails.application.routes.draw do
   get     '/console/entrant/:id',           to: 'consoles/products#show', as: 'show_product_console'
   post    '/console/entrant/',              to: 'consoles/products#create'
   post    '/console/entrant/:id',           to: 'consoles/products#update'
+
+  get     '/console/history',       to: 'consoles/histories#index'
+  get     '/console/history/new',   to: 'consoles/histories#new'
+  get     '/console/history/:id',   to: 'consoles/histories#show', as: 'show_history_console'
+  post    '/console/history',       to: 'consoles/histories#create'
+  delete  '/console/history/:id',   to: 'consoles/histories#destroy'
+  patch   '/console/history/:id',   to: 'consoles/histories#update'
+
 end
