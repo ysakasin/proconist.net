@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @operators = Operator.all
   end
 
 end
