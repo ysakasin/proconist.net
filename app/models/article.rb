@@ -1,3 +1,5 @@
+# rubocop:disable Rails/HasAndBelongsToMany
+
 require 'redcarpet/render_strip'
 
 class TargetBlankRenderer < Redcarpet::Render::HTML
@@ -7,7 +9,7 @@ class TargetBlankRenderer < Redcarpet::Render::HTML
 end
 
 class Article < ApplicationRecord
-  belongs_to :category, class_name: :ArticleCategory
+  has_and_belongs_to_many :article_categories
   belongs_to :operator
 
   def body_html
