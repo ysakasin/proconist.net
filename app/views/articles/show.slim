@@ -9,7 +9,7 @@
             = @article.date
           li
             i.fa.fa-folder-open
-            /= @article.category_link
+            == @article.categories_link
       .entry-body
         .eye-chatch
           = image_tag @article.thumbnail_url, class: 'img-responsive', alt: @article.title
@@ -18,29 +18,21 @@
         .clearfix
           ul.list-unstyled.social-button
             li.social-button-item.social-button-item-twitter.btn.btn-sm
-              |  <a href="
-              = "https://twitter.com/intent/tweet?url=#{request.url}&text=#{@article.title}"
-              | " target="_blank">
-              i.fa.fa-twitter
-              |  Tweet
+              a(href="https://twitter.com/intent/tweet?url=#{request.url}&text=#{@article.title}", target='_blank')
+                i.fa.fa-twitter
+                |  Tweet
             li.social-button-item.social-button-item-facebook.btn.btn-sm
-              |  <a href="
-              = "http://www.facebook.com/sharer.php?u=#{request.url}"
-              | " target="_blank">
-              i.fa.fa-facebook-official
-              |  Share
+              a(href="http://www.facebook.com/sharer.php?u=#{request.url}", target='_blank')
+                i.fa.fa-facebook-official
+                |  Share
             li.social-button-item.social-button-item-google.btn.btn-sm
-              |  <a href="
-              = "https://plus.google.com/share?url=#{request.url}"
-              | " target="_blank">
-              i.fa.fa-google-plus
-              |  +1
+              a(href="https://plus.google.com/share?url=#{request.url}", target='_blank')
+                i.fa.fa-google-plus
+                |  +1
             li.social-button-item.social-button-item-hatena.btn.btn-sm
-              |  <a href="
-              = "http://b.hatena.ne.jp/add?url=#{request.url}"
-              | " target="_blank">
-              i.fa.fa-hatena
-              |  Bookmark
+              a(href="http://b.hatena.ne.jp/add?url=#{request.url}", target='_blank')
+                i.fa.fa-hatena
+                |  Bookmark
         .panel.panel-primary.panel-entry-editor
           .panel-heading
             .panel-procon-product-heading.clearfix
@@ -48,27 +40,22 @@
                 | この記事を書いた人
           .panel-body.row.member
             .col-md-3.col-sm-3.hidden-xs.member-image
-              |  <img src="
-              /= @article.auther_a.icon
-              | " class="img-circle img-responsive"> 
+              = image_tag @article.operator.icon, class: 'img-circle img-responsive'
             .col-md-9.col-sm-9.col-xs-12.member-introduction
               h4.member-name
-                /= @article.auther_a.name
+                = @article.operator.name
               p
-                /= @article.auther_a.description
+                = @article.operator.description
               ul.list-inline.member-sns
-                /- @article.auther_a.sns.each do |item|
+                - @article.operator.sns.each do |item|
                   li
-                    | <a href="
-                    = item[:href]
-                    | "><i class="fa fa-lg fa-fw 
-                    = item[:klass]
-                    | ">
-                    = item[:name]
+                    a(href="#{item[:url]}")
+                      i.fa.fa-lg.fa-fw(class="#{item[:fa_class]}")
+                      = item[:service]
               p.text-right
                 i.icon-article
                 | <a href="/auther/
                 /= @article.auther_a.id
                 | ">この人が他に書いた記事
   aside.col-md-4.hidden-sm.hidden-xs.sidebar
-    = render partial: 'articles/sidebar'
+    = render partial: 'articles/sidebar', locals: { articles: @articles, categories: @categories }
