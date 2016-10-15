@@ -17,13 +17,19 @@
             ul.meta-info.list-unstyled
               li
                 i.fa.fa-calendar
+                | &nbsp;
                 = article.date
+                | &nbsp;
               li
                 i.fa.fa-folder-open
-                /= article.category_link
+                | &nbsp;
+                == article.categories_link
+                | &nbsp;
               li
                 i.fa.fa-pencil
+                | &nbsp;
                 = article.operator.name
+                | &nbsp;
           .clearfix
             .article-text
               p

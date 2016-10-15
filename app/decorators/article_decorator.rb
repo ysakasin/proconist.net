@@ -6,4 +6,10 @@ module ArticleDecorator
   def date_hyphen
     created_at.strftime('%F')
   end
+
+  def categories_link
+    article_categories.map do |category|
+      "<a href='#{category.url}'>#{category.name}</a>"
+    end.join(',&nbsp;')
+  end
 end
