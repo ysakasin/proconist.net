@@ -45,4 +45,8 @@ Rails.application.routes.draw do
   delete  '/console/history/:id',   to: 'consoles/histories#destroy'
   patch   '/console/history/:id',   to: 'consoles/histories#update'
 
+  get     '/console/report',      to: 'consoles/reports#index'
+  get     '/console/report/:id',  to: 'consoles/reports#show', as: 'show_report_console'
+  delete  '/console/report/:id',  to: 'consoles/reports#destroy'
+
 end
