@@ -49,4 +49,8 @@ Rails.application.routes.draw do
   get     '/console/report/:id',  to: 'consoles/reports#show', as: 'show_report_console'
   delete  '/console/report/:id',  to: 'consoles/reports#destroy'
 
+  get     '/console/entry',       to: 'consoles/articles#index'
+  get     '/console/entry/:id',   to: 'consoles/articles#show', as: 'show_article_console'
+  patch   '/console/entry/:id',   to: 'consoles/articles#update'
+
 end

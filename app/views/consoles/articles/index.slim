@@ -1,0 +1,19 @@
+h2
+  i.glyphicon.glyphicon-tower
+  |  記事の編集
+a.btn.btn-success.btn-lg[href="./draft/new" role="button" style="margin:1em 0;"]
+  | 下書きを追加
+h3
+  | 下書き
+/.list-group
+/  - @drafts.each do |d|
+/    |  <a href="./draft/
+/    = d.id
+/    | " class="list-group-item">
+/    = d.title
+h3
+  | 公開中の記事
+.list-group
+  - @articles.each do |article|
+    a.list-group-item(href="#{show_article_console_path(article)}")
+      = article.title
