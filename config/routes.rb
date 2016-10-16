@@ -61,4 +61,7 @@ Rails.application.routes.draw do
   get     '/console/category/:id',  to: 'consoles/article_categories#show', as: 'show_category_console'
   patch   '/console/category/:id',  to: 'consoles/article_categories#update'
 
+  get     '/console/user-settings', to: 'consoles/operators#show'
+  patch   '/console/user-settings', to: 'consoles/operators#update'
+
 end
