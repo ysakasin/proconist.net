@@ -1,12 +1,12 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all.order(created_at: :desc)
+    @articles = Article.published.all.order(created_at: :desc)
     @categories = ArticleCategory.all
   end
 
   def show
-    @article = Article.find_by(url: params[:url])
-    @articles = Article.all.order(created_at: :desc)
+    @article = Article.published.find_by(url: params[:url])
+    @articles = Article.published.all.order(created_at: :desc)
     @categories = ArticleCategory.all
   end
 end
