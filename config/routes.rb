@@ -55,4 +55,10 @@ Rails.application.routes.draw do
   patch   '/console/entry/:id',   to: 'consoles/articles#update'
   get     '/console/draft/new',   to: 'consoles/articles#new'
 
+  get     '/console/category',      to: 'consoles/article_categories#index'
+  post    '/console/category',      to: 'consoles/article_categories#create'
+  get     '/console/category/new',  to: 'consoles/article_categories#new'
+  get     '/console/category/:id',  to: 'consoles/article_categories#show', as: 'show_category_console'
+  patch   '/console/category/:id',  to: 'consoles/article_categories#update'
+
 end
