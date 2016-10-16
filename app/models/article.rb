@@ -12,6 +12,9 @@ class Article < ApplicationRecord
   has_and_belongs_to_many :article_categories
   belongs_to :operator
 
+  scope :published, -> { where('published_at <  ?', Time.zone.now) }
+  scope :in_draft,  -> { where('published_at >  ?', Time.zone.now) }
+
   def body_html
     Redcarpet::Markdown.new(TargetBlankRenderer).render(body)
   end
