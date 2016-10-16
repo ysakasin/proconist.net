@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161015055630) do
+ActiveRecord::Schema.define(version: 20161016062854) do
 
   create_table "article_categories", force: :cascade do |t|
     t.string   "url",         null: false
@@ -28,13 +28,14 @@ ActiveRecord::Schema.define(version: 20161015055630) do
   end
 
   create_table "articles", force: :cascade do |t|
-    t.string   "url",           null: false
-    t.string   "title",         null: false
-    t.text     "body",          null: false
-    t.integer  "operator_id",   null: false
-    t.string   "thumbnail_url", null: false
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "url",                                           null: false
+    t.string   "title",                                         null: false
+    t.text     "body",                                          null: false
+    t.integer  "operator_id",                                   null: false
+    t.string   "thumbnail_url",                                 null: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
+    t.datetime "published_at",  default: '2200-12-30 15:00:00', null: false
   end
 
   create_table "contests", force: :cascade do |t|
