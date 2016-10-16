@@ -4,7 +4,7 @@ proconist.net
 開発環境構築
 ----------
 bundlerを用いて開発環境の導入・管理をします  
-動作環境は`Ruby 2.1.4`です
+動作環境は`Ruby 2.3.1`です
 
 bundlerをインストール:  
 ```
@@ -20,21 +20,18 @@ bundle install
 ----------
 テスト用データベースを用意します
 ```
-bundle exec rake db:migrate #データベース生成
-bundle exec rake db:seed #テスト用のデータを挿入
+bundle exec rails db:migrate #データベース生成
 ```
 
-下記コマンドでSinatraを立ち上げます
+下記コマンドでrailsを立ち上げます
 ```
-ruby app.rb
-```
-
-ブラウザから自分自身の4567番ポートにアクセスします
-```
-localhost:4567
+bundle exec rails server
 ```
 
-開発環境では`sinatra-reloader`が読み込まれているので、コード変更時にもサーバーの再起動は不要です。
+ブラウザから自分自身の3000番ポートにアクセスします
+```
+localhost:3000
+```
 
 本番環境での注意
 ----------
