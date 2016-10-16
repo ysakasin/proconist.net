@@ -1,7 +1,7 @@
 - if flash[:status] == 'success'
   .alert.alert-success[role="alert"]
     | 保存に成功しました
-= form_for @article, url: { action: 'update' }, html: { class: 'form-horizontal' } do |f|
+= form_for @article, url: { action: 'create' }, html: { class: 'form-horizontal' } do |f|
   .form-group
     .col-sm-2
       = f.label :title, class: 'control-label' do

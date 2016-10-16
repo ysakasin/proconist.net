@@ -26,4 +26,12 @@ class Article < ApplicationRecord
   def date
     created_at.strftime('%Y年%m月%d日')
   end
+
+  def published?
+    published_at < Time.zone.now
+  end
+
+  def draft?
+    !published?
+  end
 end
