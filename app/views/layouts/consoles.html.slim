@@ -22,7 +22,7 @@ html[lang="ja"]
           .navbar-collapse.collapse
             ul.nav.navbar-nav.navbar-right
               li
-                a[href="/console/user-settings"]
+                a[href="#{console_user_settings_path}"]
                   i.glyphicon.glyphicon-user
                   = current_operator.name
               li
@@ -38,31 +38,31 @@ html[lang="ja"]
           hr
           ul.list-unstyled
             li
-              a[href="/console"]
+              a(href="#{console_path}")
                 i.glyphicon.glyphicon-home
                 |  Home
             li
-              a[href="/console/contest"]
+              a(href="#{console_contest_path}")
                 i.glyphicon.glyphicon-tower
                 |  大会情報
             li
-              a[href="/console/entrant"]
+              a(href="#{console_entrant_path}")
                 i.glyphicon.glyphicon-briefcase
                 |  作品情報
             li
-              a[href="/console/history"]
+              a(href="#{console_history_path}")
                 i.glyphicon.glyphicon-list-alt
                 |  履歴
             li
-              a[href="/console/report"]
+              a(href="#{console_report_path}")
                 i.glyphicon.glyphicon-bullhorn
                 |  提供情報
             li
-              a[href="/console/entry"]
+              a(href="#{console_entry_path}")
                 i.glyphicon.glyphicon-pencil
                 |  記事
             li
-              a[href="/console/category"]
+              a(href="#{console_category_path}")
                 i.glyphicon.glyphicon-tags
                 |  カテゴリー
         .col-md-9
