@@ -12,6 +12,7 @@ gem 'puma', '~> 3.0'
 gem 'redcarpet'
 gem 'sass-rails', '~> 5.0'
 gem 'slim'
+gem 'sqlite3', require: false
 gem 'turbolinks', '~> 5.x'
 gem 'uglifier', '>= 1.3.0'
 gem 'umi-rails', git: 'https://github.com/NKMR6194/umi-rails.git'
