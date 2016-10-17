@@ -13,6 +13,9 @@ Rails:
 Metrics/LineLength:
   Max: 130
 
+Metrics/BlockLength:
+  Enabled: false
+
 Style/AsciiComments:
   Enabled: false
 
