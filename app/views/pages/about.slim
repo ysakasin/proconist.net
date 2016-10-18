@@ -44,7 +44,7 @@
           h4.member-name
             = operator.name
           .member-introduction
-            = operator.description
+            == operator.description
             ul.list-inline.member-sns
               - operator.sns.each do |item|
                 li
