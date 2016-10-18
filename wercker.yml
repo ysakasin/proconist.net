@@ -5,14 +5,11 @@
 # ruby:2.2.2
 ruby: 2.3.1
 box: ruby
-# You can also use services such as databases. Read more on our dev center:
-# http://devcenter.wercker.com/docs/services/index.html
-# services:
-    # - postgres
-    # http://devcenter.wercker.com/docs/services/postgresql.html
-
-    # - mongodb
-    # http://devcenter.wercker.com/docs/services/mongodb.html
+services:
+  - id: mysql
+    env:
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      MYSQL_DATABASE: proconist_net
 
 # This is the build pipeline. Pipelines are the core of wercker
 # Read more about pipelines on our dev center
@@ -26,6 +23,11 @@ build:
         packages: nodejs
 
     - bundle-install
+    - rails-database-yml
+
+    - script:
+      name: database
+      code: RAILS_ENV=test bundle exec rails db:schema:load
 
     - script:
       name: rspec

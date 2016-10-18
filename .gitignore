@@ -41,3 +41,6 @@ build/
 *.config
 *.keep
 db/*.sqlite3
+
+# wercker
+.wercker/
