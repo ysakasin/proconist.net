@@ -19,6 +19,9 @@ gem 'umi-rails', git: 'https://github.com/NKMR6194/umi-rails.git'
 gem 'font-awesome-rails'
 
 group :development do
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-puma'
   gem 'letter_opener'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
