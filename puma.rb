@@ -1,3 +1,5 @@
+# rubocop:disable Lint/UselessAssignment
+
 app_path = '/var/www/proconist.net/current'
 shared_path = '/var/www/proconist.net/shared'
 
