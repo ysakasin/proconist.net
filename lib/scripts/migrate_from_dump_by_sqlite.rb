@@ -68,7 +68,7 @@ SQLite3::Database.new ARGV[0] do |dump|
         position:         row[2],
         name:             row[3],
         password_digest:  row[4],
-        icon:         row[6].gsub('img', 'operators'),
+        icon:         row[6].gsub('/img', 'operators'),
         school_id:    School.find_or_create_by(name: row[7]).id,
         github:       (row[8].present? ? "https://github.com/#{row[8]}" : nil),
         bitbucket:    (row[9].present? ? "https://bitbucket.org/#{row[9]}/" : nil),
@@ -113,7 +113,7 @@ SQLite3::Database.new ARGV[0] do |dump|
     dump.execute('select * from histories') do |row|
       if row[1] == 0
         product = Product.find_by(name: /.+「(.+)」/.match(row[2])[1])
-        url = "/contest/#{product.contest.nth}##{product.section_name}#{product.id}"
+        url = "/contest/#{product.contest.nth}##{product.section_name}-#{product.id}"
         History.create!(
           label:      row[1],
           title:      row[2],
