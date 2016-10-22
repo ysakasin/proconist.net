@@ -4,7 +4,7 @@
       | 最新の記事
   .list-group
     - articles[0..4].each do |article|
-      a.list-group-item(href="#{article.url}")
+      a.list-group-item(href="#{article_path(article.url)}")
         dl
           dt
             span.label.label-warning
