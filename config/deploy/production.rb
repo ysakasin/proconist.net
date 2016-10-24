@@ -1,3 +1,4 @@
+# rubocop:disable Style/AlignParameters
 server 'proconist.net',
   user: ENV['PROCONISTNET_DEPLOY_USER'],
   roles: %w(web app db),
@@ -7,7 +8,7 @@ server 'proconist.net',
     port: ENV['PROCONISTNET_DEPLOY_PORT'],
     auth_methods: %w(publickey)
   }
-# 
+
 set :stage, :production
 set :rails_env, :production
 
