@@ -33,10 +33,17 @@ bundle exec rails server
 localhost:3000
 ```
 
-本番環境での注意
+本番環境へのDeploy
 ----------
 
-必要なgemをインストール:  
+localで各種環境変数を設定:  
 ```
-bundle install --without development
+export PROCONISTNET_DEPLOY_USER=hogehoge
+export PROCONISTNET_DEPLOY_KEY=path/to/key
+export PROCONISTNET_DEPLOY_PORT=number
+```
+
+下記コマンドで本番環境へのdeployを行います:
+```
+bundle exec cap production deploy
 ```
