@@ -11,7 +11,7 @@ module ApplicationHelper
     @ogp_url || 'https://proconist.net'
   end
 
-  def ogp_img
-    @ogp_img || 'https://proconist.net/img/ogp.png'
+  def ogp_img_path
+    @ogp_img_path || 'ogp.png'
   end
 end

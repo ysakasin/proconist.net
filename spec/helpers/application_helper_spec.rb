@@ -45,17 +45,17 @@ RSpec.describe ApplicationHelper, type: :helper do
     end
   end
 
-  describe '#ogp_img' do
-    context '@ogp_img is not blank' do
+  describe '#ogp_img_path' do
+    context '@ogp_img_path is not blank' do
       before do
-        @ogp_img = 'https://proconist.net/dummy.png'
+        @ogp_img_path = 'dummy.png'
       end
 
-      it { expect(helper.ogp_img).to eq 'https://proconist.net/dummy.png' }
+      it { expect(helper.ogp_img_path).to eq 'dummy.png' }
     end
 
     context '@ogp_img is blank' do
-      it { expect(helper.ogp_img).to eq 'https://proconist.net/img/ogp.png' }
+      it { expect(helper.ogp_img_path).to eq 'ogp.png' }
     end
   end
 end
