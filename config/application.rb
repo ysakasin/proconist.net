@@ -13,5 +13,6 @@ module ProconistNet
     # -- all .rb files in that directory are automatically loaded.
 
     config.time_zone = 'Tokyo'
+    config.action_mailer.default_url_options = { host: 'proconist.net' }
   end
 end

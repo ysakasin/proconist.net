@@ -43,7 +43,7 @@ class ReportsController < ApplicationController
 
   def send_all_operator
     Operator.all.each do |operator|
-      ReportMailer.receive_report_email(operator).deliver_later
+      ReportMailer.receive_report_email(operator, @report).deliver_later
     end
   end
 end
