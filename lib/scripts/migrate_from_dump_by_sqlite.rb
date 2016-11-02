@@ -1,4 +1,5 @@
 # rubocop:disable Style/NumericPredicate
+# rubocop:disable Style/MultilineIfModifier
 
 require 'sqlite3'
 
