@@ -1,6 +1,8 @@
 # rubocop:disable Metrics/MethodLength
 
 class ReportsController < ApplicationController
+  protect_from_forgery with: :null_session
+
   def index
     @contests = Contest.all
     @report = Report.new
