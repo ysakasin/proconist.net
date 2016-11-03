@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'mysql2'
 gem 'puma', '~> 3.0'
 gem 'redcarpet'
+gem 'rollbar'
 gem 'sass-rails', '~> 5.0'
 gem 'slim'
 gem 'sqlite3', require: false
