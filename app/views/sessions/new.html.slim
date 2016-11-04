@@ -7,6 +7,7 @@ html[lang="ja"]
       | Proconist.net Console
     meta[content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"]
     = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
     = stylesheet_link_tag 'ancient/console'
     = csrf_meta_tag
   body
@@ -36,4 +37,3 @@ html[lang="ja"]
               = f.label :password, 'Password:', class: 'control-label'
               = f.password_field :password, class: 'form-control'
             = f.submit 'sign in', class: 'btn btn-default'
-    = javascript_include_tag 'application'
