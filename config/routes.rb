@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get     '/category/:url',  to: 'article_categories#show', as: 'category'
 
-  get     '/auther/:identifier',  to: 'operators#show'
+  get     '/auther/:identifier',  to: 'operators#show', as: 'show_author'
 
   get     '/sign_in',   to: 'sessions#new'
   post    '/sign_in',   to: 'sessions#create'

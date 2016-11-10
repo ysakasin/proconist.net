@@ -54,8 +54,6 @@
                       = item[:service]
               p.text-right
                 i.icon-article
-                | <a href="/auther/
-                /= @article.auther_a.id
-                | ">この人が他に書いた記事
+                = link_to 'この人が他に書いた記事', show_author_path(@article.operator.identifier)
   aside.col-md-4.hidden-sm.hidden-xs.sidebar
     = render partial: 'articles/sidebar', locals: { articles: @articles, categories: @categories }
