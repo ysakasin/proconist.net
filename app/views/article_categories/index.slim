@@ -1,0 +1,15 @@
+.row.content
+  .col-md-8.main.entry-table
+    - @categories.each do |category|
+      .panel.panel-primary.panel-category(id="#{category.url}")
+        .panel-heading
+          .panel-category-heading.clearfix
+            h3.panel-title
+              = category.name
+        .panel-body
+          p= category.description
+          ul
+            - category.articles.published.each do |article|
+              li= link_to article.title, article_path(article.url)
+  aside.col-md-4.hidden-sm.hidden-xs.sidebar
+    = render partial: 'articles/sidebar', locals: { articles: @articles, categories: @categories }
