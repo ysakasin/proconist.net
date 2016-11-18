@@ -5,7 +5,7 @@ set :application, 'proconist.net'
 set :repo_url, 'git@github.com:unasuke/proconist.net.git'
 
 set :rbenv_type, :user
-set :rbenv_ruby, '2.3.1'
+set :rbenv_ruby, '2.3.2'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
