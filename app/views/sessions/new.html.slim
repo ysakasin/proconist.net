@@ -1,0 +1,39 @@
+doctype html
+html[lang="ja"]
+  head
+    meta[charset="utf-8"]
+    meta[content="text/html" http-equiv="content-type"]
+    title
+      | Proconist.net Console
+    meta[content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"]
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = stylesheet_link_tag 'ancient/console'
+    = csrf_meta_tag
+  body
+    #top-nav.navbar.navbar-inverse.navbar-static-top
+      .container
+        .navbar-header
+          button.navbar-toggle[data-target=".navbar-collapse" data-toggle="collaps" type="button"]
+            span.icon-toggle
+          a.navbar-brand
+            | Proconist.net Console
+    .container
+      #sign-in.panel.panel-primary
+        .panel-heading
+          strong
+            | Sign in
+        .panel-body
+          - if flash[:status] == 'error'
+            .alert.alert-danger
+              strong
+                | Error
+              |  : IDとパスワードが正しいか確認してください 
+          = form_for :session, url: sign_in_path do |f|
+            .form-group
+              = f.label :identifier, 'ID:', class: 'control-label'
+              = f.text_field :identifier, class: 'form-control'
+            .form-group
+              = f.label :password, 'Password:', class: 'control-label'
+              = f.password_field :password, class: 'form-control'
+            = f.submit 'sign in', class: 'btn btn-default'

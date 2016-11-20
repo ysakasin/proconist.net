@@ -1,0 +1,100 @@
+- if flash[:status] == 'success'
+  .alert.alert-success[role="alert"]
+    | 保存に成功しました
+
+= form_tag({ action: 'update' }, { method: :post, class: 'form-horizontal' }) do
+  .form-group
+    .col-sm-2
+      = label :product, :contest_id,  class: 'control-label' do
+        | 大会
+    .col-sm-10
+      = select :product, :contest_id, options_for_select(@contests.map{|c| ["第#{c.nth}回 #{c.name}", c.id]}, selected: @product.contest_id), {}, { class: 'form-control' }
+  .form-group
+    .col-sm-2
+      = label :product, :section, class: 'control-label' do
+        | 部門
+    .col-sm-10
+      = select :product, :section, options_for_select(Product::SECTIONS_ENUM.map{|k,v| [k, v]}, selected: @product.section), {}, { class: 'form-control' }
+  .form-group
+    .col-sm-2
+      = label :product, :school_id, class: 'control-label' do
+        | 学校
+    .col-sm-10
+      = select :product, :school_id, options_for_select(@schools.map{|s| [s.name, s.id]}, selected: @product.school_id), {},  { class: 'form-control' }
+  .form-group
+    .col-sm-2
+      = label :product, :name, class: 'control-label' do
+        | 場所
+    .col-sm-10
+      = text_field :product, :name, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = label :github, :url, class: 'control-label' do
+        | GitHub
+    .col-sm-10
+      = url_field :github, :url, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = label :bitbucket, :url, class: 'control-label' do
+        | Bitbucket
+    .col-sm-10
+      = url_field :bitbucket, :url, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = label :other_repo, :url, class: 'control-label' do
+        | その他リポジトリ
+    .col-sm-10
+      = url_field :other_repo, :url, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = label :slideshare, :url, class: 'control-label' do
+        | SlideShare
+    .col-sm-10
+      = url_field :slideshare, :url, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = label :other_slide, :url, class: 'control-label' do
+        | その他のスライド
+    .col-sm-10
+      = url_field :other_slide, :url, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = label :twitter, :url, class: 'control-label' do
+        | Twiter
+    .col-sm-10
+      = url_field :twitter, :url, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = label :facebook, :url, class: 'control-label' do
+        | Facebook
+    .col-sm-10
+      = url_field :facebook, :url, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = label :site, :url, class: 'control-label' do
+        | 解説サイト
+    .col-sm-10
+      = url_field :site, :url, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = label :product, :rank, class: 'control-label' do
+        | 決勝の順位
+    .col-sm-10
+      = number_field :product, :rank, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = label :prize, :name, class: 'control-label' do
+        | 賞
+    .col-sm-10
+      = text_field :prize, :name, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = label :history, :update, class: 'control-label' do
+        | 更新履歴への追加
+    .col-sm-10
+      = check_box :history, :update, class: 'form-control'
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = submit_tag '保存', class: 'btn btn-primary'
+      a.btn.btn-success.btn-md[href="/console/contest" role="button" style="margin-left:50px;"]
+        | 戻る

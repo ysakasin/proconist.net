@@ -1,7 +1,0 @@
-<h2>お知らせ一覧</h2>
-<a href="/console/history/new" class="btn btn-success btn-lg">新しいお知らせ</a>
-<div class="list-group">
-  <% @histories.each do |h| %>
-    <a href="/console/history/<%= h.id %>" class="list-group-item"><%= h.title %> <%= h.created_at %></a>
-  <% end %>
-</div>

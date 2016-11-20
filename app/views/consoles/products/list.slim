@@ -1,0 +1,7 @@
+h2
+  i.glyphicon.glyphicon-briefcase
+  | 第#{@contest.nth}回大会の作品
+.list-group
+  - @products.each do |product|
+    a.list-group-item(href="/console/entrant/#{product.id}")
+      | #{product.school.name} #{product.name}

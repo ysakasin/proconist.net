@@ -1,0 +1,59 @@
+.row.content
+  .col-md-8.main
+    article.entry-contents
+      .clearfix.heading
+        h1= @article.title
+        ul.meta-info.list-unstyled
+          li
+            i.fa.fa-calendar
+            = @article.date
+          li
+            i.fa.fa-folder-open
+            == @article.categories_link
+      .entry-body
+        .eye-chatch
+          = image_tag @article.thumbnail_url, class: 'img-responsive', alt: @article.title
+        .entry-text
+          == @article.body_html
+        .clearfix
+          ul.list-unstyled.social-button
+            li.social-button-item.social-button-item-twitter.btn.btn-sm
+              a(href="https://twitter.com/intent/tweet?url=#{request.url}&text=#{@article.title}", target='_blank')
+                i.fa.fa-twitter
+                |  Tweet
+            li.social-button-item.social-button-item-facebook.btn.btn-sm
+              a(href="http://www.facebook.com/sharer.php?u=#{request.url}", target='_blank')
+                i.fa.fa-facebook-official
+                |  Share
+            li.social-button-item.social-button-item-google.btn.btn-sm
+              a(href="https://plus.google.com/share?url=#{request.url}", target='_blank')
+                i.fa.fa-google-plus
+                |  +1
+            li.social-button-item.social-button-item-hatena.btn.btn-sm
+              a(href="http://b.hatena.ne.jp/add?url=#{request.url}", target='_blank')
+                i.fa.fa-hatena
+                |  Bookmark
+        .panel.panel-primary.panel-entry-editor
+          .panel-heading
+            .panel-procon-product-heading.clearfix
+              h4.panel-title
+                | この記事を書いた人
+          .panel-body.row.member
+            .col-md-3.col-sm-3.hidden-xs.member-image
+              = image_tag @article.operator.icon, class: 'img-circle img-responsive'
+            .col-md-9.col-sm-9.col-xs-12.member-introduction
+              h4.member-name
+                = @article.operator.name
+              p
+                = @article.operator.description
+              ul.list-inline.member-sns
+                - @article.operator.sns.each do |item|
+                  li
+                    a(href="#{item[:url]}")
+                      i.fa.fa-lg.fa-fw(class="#{item[:fa_class]}")
+                      = item[:service]
+              p.text-right
+                i.icon-article
+                = link_to 'この人が他に書いた記事', show_author_path(@article.operator.identifier)
+  aside.col-md-4.hidden-sm.hidden-xs.sidebar
+    = render partial: 'articles/sidebar', locals: { articles: @articles, categories: @categories }

@@ -1,0 +1,116 @@
+- if flash[:status] == 'success'
+  .alert.alert-success[role="alert"]
+    | 保存に成功しました
+- elsif flash[:status] == 'pass_success'
+  .alert.alert-success[role="alert"]
+    | パスワードの変更が完了しました
+- elsif flash[:status] == 'auth_error'
+  .alert.alert-danger[role="alert"]
+    | 現在のパスワードが間違っています
+- elsif flash[:status] == 'verify_error'
+  .alert.alert-danger[role="alert"]
+    | 新しいパスワードと再入力が一致しませんでした
+h2
+  | ユーザー設定
+= form_for @operator, url: { action: 'update' }, html: { class: 'form-horizontal' } do |f|
+  .form-group
+    .col-sm-2
+      = f.label :identifier, class: 'control-label' do
+        | ID
+    .col-sm-10
+      = f.text_field :identifier, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :name, class: 'control-label' do
+        | 名前
+    .col-sm-10
+      = f.text_field :name, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :icon, class: 'control-label' do
+        | アイコンのpath
+    .col-sm-10
+      = f.text_field :icon, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :school_id, class: 'control-label' do
+        | 学校
+    .col-sm-10
+      = f.select :school_id, options_for_select(@schools.map{|s| [s.name, s.id]}, selected: @operator.school_id),
+        { include_blank: true },  { class: 'form-control' }
+  .form-group
+    .col-sm-2
+      = f.label :github, class: 'control-label' do
+        | GitHub
+    .col-sm-10
+      = f.url_field :github, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :bitbucket, class: 'control-label' do
+        | Bitbucket
+    .col-sm-10
+      = f.url_field :bitbucket, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :slideshare, class: 'control-label' do
+        | SlideShare
+    .col-sm-10
+      = f.url_field :slideshare, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :twitter, class: 'control-label' do
+        | Twitter
+    .col-sm-10
+      = f.url_field :twitter, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :facebook, class: 'control-label' do
+        | Facebook
+    .col-sm-10
+      = f.url_field :facebook, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :site, class: 'control-label' do
+        | サイト
+    .col-sm-10
+      = f.url_field :site, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :email, class: 'control-label' do
+        | メールアドレス
+        small 公開されません
+    .col-sm-10
+      = f.email_field :email, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :description, class: 'control-label' do
+        | 自己紹介
+    .col-sm-10
+      = f.text_area :description, class: 'form-control'
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit '変更', class: 'btn btn-primary'
+h2[style="margin-top:40px;"]
+  | パスワード変更
+= form_for @operator, url: { action: 'update' }, html: { class: 'form-horizontal' } do |f|
+  .form-group
+    .col-sm-2
+      = f.label :current_password, class: 'control-label' do
+        | 現在のパスワード
+    .col-sm-10
+      = f.password_field :current_password, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :new_password, class: 'control-label' do
+        | 新しいパスワード
+    .col-sm-10
+      = f.password_field :new_password, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :new_password_confirmation, class: 'control-label' do
+        | 再入力
+    .col-sm-10
+      = f.password_field :new_password_confirmation, class: 'form-control'
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit '変更', class: 'btn btn-primary'

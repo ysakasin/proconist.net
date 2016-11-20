@@ -1,0 +1,83 @@
+.row.content
+  .col-md-2
+  .col-md-8
+    h1 作品情報を投稿する
+    p 当サイトにまだない作品情報を投稿することができます。情報共有のご協力をお願いします。
+    p 投稿を行うと、運営による精査の後に当サイトに反映されます。
+    = form_for @report, url: {action: 'create'} do |f|
+      h3 作品の情報
+      .form-group
+        = f.label :contest_id, class: 'control-label' do
+            | 大会&nbsp;
+            small.required
+              | 必須
+        = f.select :contest_id, options_for_select(@contests.map{|c| ["第#{c.nth}回 #{c.name}", c.id]}), {}, { class: 'form-control' }
+      .form-group
+        = f.label :section, class: 'control-label' do
+          | 部門&nbsp;
+          small.required
+            | 必須
+        = f.select :section, options_for_select(@sections_enum), {}, { class: 'form-control' }
+      .form-group
+        = f.label :product_name, class: 'control-label' do
+          | 作品名&nbsp;
+          small
+            | または
+          |  高専名&nbsp;
+          small.required
+            | 必須
+        = f.text_field :product_name, class: 'form-control'
+      hr
+      h3 リンク先URL
+      .form-group
+        = f.label :repository_url, class: 'control-label' do
+          | リポジトリ&nbsp;
+          small
+            | URL
+        = f.text_field :repository_url, class: 'form-control'
+      .form-group
+        = f.label :slide_url, class: 'control-label' do
+          | スライド&nbsp;
+          small
+            | URL
+        = f.text_field :slide_url, class: 'form-control'
+      .form-group
+        = f.label :site_url, class: 'control-label' do
+          | 解説サイト&nbsp;
+          small
+            | URL
+        = f.text_field :site_url, class: 'form-control'
+      hr
+      h3 参加者のSNSアカウント
+      p.red 他人のアカウントを入力する場合には、アカウント所有者の許可が必要です。
+      .form-group
+        = f.label :twitter, class: 'control-label' do
+          | Twitter&nbsp;
+          small
+            | URL
+        = f.text_field :twitter, class: 'form-control'
+      .form-group
+        = f.label :facebook, class: 'control-label'
+          | facebook&nbsp;
+          small
+            | URL
+        = f.text_field :facebook, class: 'form-control'
+      hr
+      .form-group
+        = f.label :comment, class: 'control-label' do
+          | コメント その他の指摘事項
+        = f.text_area :comment, class: 'form-control'
+      hr
+      .form-group
+        = f.label :email, class: 'control-label' do
+          | あなたのメールアドレス&nbsp;
+          small.required
+            | 必須
+        = f.email_field :email, class: 'form-control'
+      hr
+      .form-group
+        = button_tag type: 'reset', class: 'btn btn-default' do
+          | Reset
+        | &nbsp;
+        = f.submit 'Submit', class: 'btn btn-primary'
+  .col-md-2

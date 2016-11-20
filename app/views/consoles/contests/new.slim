@@ -1,0 +1,50 @@
+h2
+  | 新規大会
+= form_for @contest, url: { action: 'create' }, html: { class: 'form-horizontal' } do |f|
+  .form-group
+    .col-sm-2
+      = f.label :nth, class: 'control-label' do
+        | 大会ナンバー
+    .col-sm-10
+      = f.number_field :nth, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :name, class: 'control-label' do
+        | 大会名
+    .col-sm-10
+      = f.text_field :name, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :date, class: 'control-label' do
+        | 日付
+    .col-sm-10
+      = f.text_field :date, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :place, class: 'control-label' do
+        | 場所
+    .col-sm-10
+      = f.text_field :place, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :title, class: 'control-label' do
+        | 大会名
+    .col-sm-10
+      = f.text_field :title, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :competition_title, class: 'control-label' do
+        | 競技タイトル
+    .col-sm-10
+      = f.text_field :competition_title, class: 'form-control'
+  .form-group
+    .col-sm-2
+     = f.label :themed_title, class: 'control-label' do
+       | 課題タイトル
+    .col-sm-10
+      = f.text_field :themed_title, class: 'form-control'
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit '保存', class: 'btn btn-primary'
+      a.btn.btn-success.btn-md[href="#{console_contest_path}" role="button" style="margin-left:50px;"]
+        | 戻る

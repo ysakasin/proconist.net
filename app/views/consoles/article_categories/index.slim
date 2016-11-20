@@ -1,0 +1,9 @@
+h2
+  i.glyphicon.glyphicon-tower
+  |  カテゴリーの編集
+a.btn.btn-success.btn-lg(href="#{console_category_new_path}" role="button" style="margin:1em 0;")
+  | カテゴリーを追加
+.list-group
+  - @categories.each do |category|
+    a.list-group-item(href="#{show_category_console_path(category)}")
+      = category.name

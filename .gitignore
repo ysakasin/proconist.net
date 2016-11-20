@@ -8,6 +8,7 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+/log/*.log
 
 ## Specific to RubyMotion:
 .dat*
@@ -38,3 +39,8 @@ build/
 *.sock
 *.pid
 *.config
+*.keep
+db/*.sqlite3
+
+# wercker
+.wercker/

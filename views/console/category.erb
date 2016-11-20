@@ -1,7 +1,0 @@
-<h2><i class="glyphicon glyphicon-tower"></i> カテゴリーの編集</h2>
-<a href="./category/new" class="btn btn-success btn-lg" role="button" style="margin:1em 0;">カテゴリーを追加</a>
-<div class="list-group">
-  <% @categories.each do |c| %>
-    <a href="./category/<%= c.id %>" class="list-group-item"><%= c.name %></a>
-  <% end %>
-</div>

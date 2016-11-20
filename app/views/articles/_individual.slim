@@ -1,0 +1,30 @@
+article.entry-contents.row
+  .clearfix.eye-chatch.col-md-4.col-md-4.col-sm-4.col-xs-12
+    a(href="#{article.url}" title="#{article.title}")
+      = image_tag article.thumbnail_url, class: 'img-responsive', alt: article.title
+  .entry-body.col-md-8.col-sm-8.col-xs-12
+    .clearfix.heading
+      h2
+        a(href="#{article_path(article.url)}")
+          = article.title
+      ul.meta-info.list-unstyled
+        li
+          i.fa.fa-calendar
+          | &nbsp;
+          = article.date
+          | &nbsp;
+        li
+          i.fa.fa-folder-open
+          | &nbsp;
+          == article.categories_link
+          | &nbsp;
+        li
+          i.fa.fa-pencil
+          | &nbsp;
+          = article.operator.name
+          | &nbsp;
+    .clearfix
+      .article-text
+        p
+          = article.description
+          = link_to '【続きを読む】', article_path(article.url)

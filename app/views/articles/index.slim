@@ -1,0 +1,10 @@
+.row.content
+  .col-md-8.main.entry-list
+    .index-link
+      a.btn.btn-block.btn-lg.btn-warning[href="#{entry_archive_path}"]
+        i.fa.fa-search
+        |  記事を探す
+    - @articles.each do |article|
+      = render partial: 'articles/individual', locals: { article: article }
+  aside.col-md-4.hidden-sm.hidden-xs.sidebar
+    = render partial: 'articles/sidebar', locals: { articles: @articles, categories: @categories }

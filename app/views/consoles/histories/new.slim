@@ -1,0 +1,30 @@
+= form_for @history, url: { action: 'create' }, html: { class: 'form-horizontal' } do |f|
+  .form-group
+    .col-sm-2
+      = f.label :label, class: 'control-label' do
+        | ラベル
+    .col-sm-10
+      = f.select :label, options_for_select(@history.options_array), {}, { class: 'form-control'}
+  .form-group
+    .col-sm-2
+      = f.label :title, class: 'control-label' do
+        | タイトル
+    .col-sm-10
+      = f.text_field :title, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :url, class: 'control-label' do
+        | リンク
+    .col-sm-10
+      = f.text_field :url, class: 'form-control'
+  .form-group
+    .col-sm-2
+      = f.label :image_path, class: 'control-label' do
+        | 画像
+    .col-sm-10
+      = f.text_field :image_path, class: 'form-control'
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit '保存', class: 'btn btn-primary'
+      a.btn.btn-success.btn-md[href="#{console_history_path}" role="button" style="margin-left:50px;"]
+        | 戻る

@@ -1,0 +1,35 @@
+.row.content
+  .col-md-12.main
+    .row.member
+    .row.member
+      .col-md-3.member-image
+        = image_tag @operator.icon, alt: @operator.name, class: 'img-circle img-responsive'
+      .col-md-9
+        h1.member-name
+          = @operator.name
+        .member-introduction
+          == @operator.description
+          ul.list-inline.member-sns
+            - @operator.sns.each do |item|
+              li
+                a(href="#{item[:url]}")
+                  i.fa.fa-lg.fa-fw(class="#{item[:fa_class]}")
+                  = item[:service]
+    .col-md-12.auther-entry
+      h2
+        | この人が書いた記事
+      ul
+        - @operator.articles.each do |article|
+          li
+            h3
+              a(href="#{article_path(article.url)}")
+                = article.title
+            span
+              i.fa.fa-folder-open
+              | &nbsp;
+              = article.article_categories.map{ |c| c.name }.join(',&nbsp;')
+            | &nbsp;
+            span
+              i.fa.fa-calendar
+              | &nbsp;
+              = article.created_at.strftime('%F')

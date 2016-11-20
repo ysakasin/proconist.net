@@ -1,0 +1,6 @@
+.row.content
+  .col-md-8.main
+    - @contest.products.each do |product|
+      = render partial: 'products/show', locals: { product: product }
+  = render partial: 'pages/sidebar',
+    locals: { histories_with_image: @histories_with_image, histories: @histories, contests: @contests }
