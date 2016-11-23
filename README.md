@@ -1,5 +1,9 @@
 proconist.net
 =============
+[![wercker status](https://app.wercker.com/status/f3646f6a1d815a2b62d879ac950d93b7/s)](https://app.wercker.com/project/bykey/f3646f6a1d815a2b62d879ac950d93b7)
+[![Coverage Status](https://coveralls.io/repos/github/unasuke/proconist.net/badge.svg?branch=master)](https://coveralls.io/github/unasuke/proconist.net?branch=master)
+[![Code Climate](https://codeclimate.com/github/unasuke/proconist.net/badges/gpa.svg)](https://codeclimate.com/github/unasuke/proconist.net)
+[![chat on gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg)](https://gitter.im/proconist-net/Lobby)
 
 開発環境構築
 ----------
