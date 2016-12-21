@@ -1,4 +1,5 @@
 # rubocop:disable Metrics/MethodLength
+# rubocop:disable Style/EmptyMethod
 
 class ReportsController < ApplicationController
   def index

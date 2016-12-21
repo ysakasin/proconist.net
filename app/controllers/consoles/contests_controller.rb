@@ -1,4 +1,5 @@
 # rubocop:disable Style/ClassAndModuleChildren
+# rubocop:disable Style/EmptyMethod
 
 class Consoles::ContestsController < Consoles::BaseController
   def index

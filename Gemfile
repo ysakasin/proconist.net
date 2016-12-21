@@ -5,6 +5,7 @@ gem 'rails', '>= 5.0.0', '< 5.1'
 gem 'active_decorator'
 gem 'bcrypt'
 gem 'coffee-rails', '~> 4.1.0'
+gem 'font-awesome-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'mysql2'
@@ -17,7 +18,6 @@ gem 'sqlite3', require: false
 gem 'turbolinks', '~> 5.x'
 gem 'uglifier', '>= 1.3.0'
 gem 'umi-rails', git: 'https://github.com/NKMR6194/umi-rails.git'
-gem 'font-awesome-rails'
 
 group :development do
   gem 'capistrano-rails'
