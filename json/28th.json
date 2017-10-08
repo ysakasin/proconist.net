@@ -1,0 +1,547 @@
+{
+  "contest" : {
+    "id" : 28,
+    "name" : "大島大会",
+    "date" : "2017年10月8日(日)〜9日(月)",
+    "place" : "周南市文化会館",
+    "title" : "ＩＴ志士たち，よーけ集まるであります．",
+    "competition_title" : "おいでませ，ホントの魅力へ",
+    "themed_title" : "スポーツで切り拓く明るい社会"
+  },
+  "themed section" : [
+    {
+      "id" : 1,
+      "title" : "TOSS —手軽にかしこいスポーツ運営—",
+      "school name" : "津山高専"
+    },
+    {
+      "id" : 2,
+      "title" : "ブラシでこすれ「ヤー！」カーリング",
+      "school name" : "阿南高専"
+    },
+    {
+      "id" : 3,
+      "title" : "STEP —スコアブックと連動する動画閲覧システム—",
+      "school name" : "鳥羽商船高専"
+    },
+    {
+      "id" : 4,
+      "title" : "Balloon Connector —熱気球競技観戦支援システム—",
+      "school name" : "一関高専"
+    },
+    {
+      "id" : 5,
+      "title" : "Virtual Recreation Boccia",
+      "school name" : "八戸高専"
+    },
+    {
+      "id" : 6,
+      "title" : "Smart Judge —スマホで簡単球技審判システム—",
+      "school name" : "都立産技高専品川キャンパス"
+    },
+    {
+      "id" : 7,
+      "title" : "GHOST RUNNER",
+      "school name" : "長野高専"
+    },
+    {
+      "id" : 8,
+      "title" : "野球BAN! —体感型野球盤風ゲーム—",
+      "school name" : "熊本高専八代キャンパス"
+    },
+    {
+      "id" : 9,
+      "title" : "Ri-Form",
+      "school name" : "香川高専詫間キャンパス"
+    },
+    {
+      "id" : 10,
+      "title" : "BLOOD ピッと！",
+      "school name" : "弓削商船高専"
+    },
+    {
+      "id" : 11,
+      "title" : "パントマイムAR —気軽に楽しくLet'sパントマイム—",
+      "school name" : "木更津高専"
+    },
+    {
+      "id" : 12,
+      "title" : "Colors —十人十色の色鬼—",
+      "school name" : "松江高専"
+    },
+    {
+      "id" : 13,
+      "title" : "tosuru —仮想世界へLet's throw—",
+      "school name" : "香川高専詫間キャンパス"
+    },
+    {
+      "id" : 14,
+      "title" : "Emotionic —エフェクトで魅せる観客参加型スポーツ—",
+      "school name" : "仙台高専広瀬キャンパス"
+    },
+    {
+      "id" : 15,
+      "title" : "テレスコア",
+      "school name" : "鳥羽商船高専"
+    },
+    {
+      "id" : 16,
+      "title" : "Ostrich☆i —ロードバイク用危険検出システム—",
+      "school name" : "広島商船高専"
+    },
+    {
+      "id" : 17,
+      "title" : "AirRider —没入型パラグライディング体感システム—",
+      "school name" : "大島商船高専"
+    },
+    {
+      "id" : 18,
+      "title" : "Aqua Screen —透過スクリーンが魅せるAR観戦—",
+      "school name" : "岐阜高専"
+    },
+    {
+      "id" : 19,
+      "title" : "楽らいむ —VRスポーツクライミング体験—",
+      "school name" : "香川高専高松キャンパス"
+    },
+    {
+      "id" : 20,
+      "title" : "TTAP —卓球ゲーム分析アドバイスシステム—",
+      "school name" : "米子高専"
+    }
+  ],
+  "original section" : [
+    {
+      "id" : 1,
+      "title" : "メロディー☆アート",
+      "school name" : "広島商船高専"
+    },
+    {
+      "id" : 2,
+      "title" : "Bird Finder —バードウォッチング支援システム—",
+      "school name" : "富山高専射水キャンパス"
+    },
+    {
+      "id" : 3,
+      "title" : "出発振行！",
+      "school name" : "石川高専"
+    },
+    {
+      "id" : 4,
+      "title" : "新しい電子黒板の形の提案 —現存プロジェクタをより活用するために—",
+      "school name" : "呉高専"
+    },
+    {
+      "id" : 5,
+      "title" : "TRY 聴音羽 —聴覚障がい者会話支援システム—",
+      "school name" : "舞鶴高専"
+    },
+    {
+      "id" : 6,
+      "title" : "カガクカモン —次世代科学館サポートシステム—",
+      "school name" : "高知高専"
+    },
+    {
+      "id" : 7,
+      "title" : "タスクPON! —学生用課題管理システム—",
+      "school name" : "米子高専"
+    },
+    {
+      "id" : 8,
+      "title" : "Angel Fishing —HMDを用いた新感覚VRゲーム到来—",
+      "school name" : "大島商船高専"
+    },
+    {
+      "id" : 9,
+      "title" : "Tanboo —水田監視システム—",
+      "school name" : "長岡高専"
+    },
+    {
+      "id" : 10,
+      "title" : "SpeaCAR —会話型事故防止システム—",
+      "school name" : "豊田高専"
+    },
+    {
+      "id" : 11,
+      "title" : "HighSight —２機のドローンを活用した立体視システム—",
+      "school name" : "沖縄高専"
+    },
+    {
+      "id" : 12,
+      "title" : "うみどり —ドローンを用いた水産業支援システム—",
+      "school name" : "鳥羽商船高専"
+    },
+    {
+      "id" : 13,
+      "title" : "顔方向・音声認識を用いた運転補助システム",
+      "school name" : "北九州高専"
+    },
+    {
+      "id" : 14,
+      "title" : "EachTouch",
+      "school name" : "香川高専詫間キャンパス"
+    },
+    {
+      "id" : 15,
+      "title" : "救&援:Q&A —救命支援システム—",
+      "school name" : "アナン高専"
+    },
+    {
+      "id" : 16,
+      "title" : "It's a big workd —昆虫の世界を体験しよう—",
+      "school name" : "鈴鹿高専"
+    },
+    {
+      "id" : 17,
+      "title" : "つみきっず —つみきを用いた幼児向けプログラミング学習システム—",
+      "school name" : "沖縄高専"
+    },
+    {
+      "id" : 18,
+      "title" : "ここきのこ —植生地デジタルアーカイブシステム—",
+      "school name" : "一関高専"
+    },
+    {
+      "id" : 19,
+      "title" : "Safety Intercom —安心来客対応支援システム—",
+      "school name" : "阿南高専"
+    },
+    {
+      "id" : 20,
+      "title" : "Gathers",
+      "school name" : "熊本高専八代キャンパス"
+    },
+    {
+      "id" : 21,
+      "title" : "FashionFinder",
+      "school name" : "キングモンクット工科大学ラカバン校"
+    },
+    {
+      "id" : 22,
+      "title" : "SPMakers",
+      "school name" : "シンガポール ポリテクニック"
+    }
+  ],
+  "competition section" : [
+    {
+      "id" : 1,
+      "title" : "Unityで切り開く明るいプロコン競技部門",
+      "school name" : "宇部高専"
+    },
+    {
+      "id" : 2,
+      "title" : "パズルDaisuke",
+      "school name" : "明石高専"
+    },
+    {
+      "id" : 3,
+      "title" : "快速カケライナー競プロ方面・わく行き",
+      "school name" : "呉高専"
+    },
+    {
+      "id" : 4,
+      "title" : "解になりたいPUZZLIUM",
+      "school name" : "新居浜高専"
+    },
+    {
+      "id" : 5,
+      "title" : "パズルフレンズ",
+      "school name" : "熊本高専熊本キャンパス"
+    },
+    {
+      "id" : 6,
+      "title" : "再試：高専の情報処理パズル基礎I",
+      "school name" : "長野高専"
+    },
+    {
+      "id" : 7,
+      "title" : "枠の中に、ピーズが、ある。解きにいくぉ！アッこの探索、深いッ",
+      "school name" : "熊本高専八代キャンパス"
+    },
+    {
+      "id" : 8,
+      "title" : "さあ！次は101×65グリッドよ！もうやめてお姉さーん（泣）",
+      "school name" : "米子高専"
+    },
+    {
+      "id" : 9,
+      "title" : "grow grass",
+      "school name" : "秋田高専"
+    },
+    {
+      "id" : 10,
+      "title" : "大きな島の愉快な仲間たち",
+      "school name" : "大島商船高専"
+    },
+    {
+      "id" : 11,
+      "title" : "パズルソルバー",
+      "school name" : "鳥羽商船高専"
+    },
+    {
+      "id" : 12,
+      "title" : "ダークホース（大穴とは言ってない）",
+      "school name" : "鶴岡高専"
+    },
+    {
+      "id" : 13,
+      "title" : "パズル＆コレクション 〜パ・ズ・コ・レ〜",
+      "school name" : "徳山高専"
+    },
+    {
+      "id" : 14,
+      "title" : "ぱずふぃっと",
+      "school name" : "津山高専"
+    },
+    {
+      "id" : 15,
+      "title" : "おいてました、魅力のない県から",
+      "school name" : "茨城高専"
+    },
+    {
+      "id" : 16,
+      "title" : "探索が深いことを事前に察したボーちゃん",
+      "school name" : "阿南高専"
+    },
+    {
+      "id" : 17,
+      "title" : "Sixth sense is solution.",
+      "school name" : "福井高専"
+    },
+    {
+      "id" : 18,
+      "title" : "ひらめきパズル 〜OTAの不思議なノート〜",
+      "school name" : "一関高専"
+    },
+    {
+      "id" : 19,
+      "title" : "しゅらのくにちほー",
+      "school name" : "北九州高専"
+    },
+    {
+      "id" : 20,
+      "title" : "冴えないコードの育てかた＃",
+      "school name" : "群馬高専"
+    },
+    {
+      "id" : 21,
+      "title" : "じょーほーふれんず",
+      "school name" : "函館高専"
+    },
+    {
+      "id" : 22,
+      "title" : "ピースチャンプルー",
+      "school name" : "沖縄高専"
+    },
+    {
+      "id" : 23,
+      "title" : "グリッドタルカル",
+      "school name" : "広島商船高専"
+    },
+    {
+      "id" : 24,
+      "title" : "SAME",
+      "school name" : "仙台高専広瀬キャンパス"
+    },
+    {
+      "id" : 25,
+      "title" : "神戸高専電算部",
+      "school name" : "神戸市立高専"
+    },
+    {
+      "id" : 26,
+      "title" : "TMCITアラカワ",
+      "school name" : "都立産技高専荒川キャンパス"
+    },
+    {
+      "id" : 27,
+      "title" : "ソフ研",
+      "school name" : "福島高専"
+    },
+    {
+      "id" : 28,
+      "title" : "人機共闘",
+      "school name" : "弓削商船高専"
+    },
+    {
+      "id" : 29,
+      "title" : "HOOC-COOH",
+      "school name" : "長岡高専"
+    },
+    {
+      "id" : 30,
+      "title" : "さてはお前、パソコンを使うんだな？",
+      "school name" : "香川高専詫間キャンパス"
+    },
+    {
+      "id" : 31,
+      "title" : "パズルをPCで解くプログラム",
+      "school name" : "旭川高専"
+    },
+    {
+      "id" : 32,
+      "title" : "人力は恥だが役に立つ",
+      "school name" : "都城高専"
+    },
+    {
+      "id" : 33,
+      "title" : "３人寄れば修羅の腕",
+      "school name" : "大阪府大高専"
+    },
+    {
+      "id" : 34,
+      "title" : "タコイカ",
+      "school name" : "佐世保"
+    },
+    {
+      "id" : 35,
+      "title" : "枠外から失恋するぞ^〜（人力）（QRで差をつけろ）",
+      "school name" : "有明高専"
+    },
+    {
+      "id" : 36,
+      "title" : "ノギス計測のパイオニア",
+      "school name" : "八戸高専"
+    },
+    {
+      "id" : 37,
+      "title" : "いわゆるじょうほうかのこうせんせいたち",
+      "school name" : "沼津高専"
+    },
+    {
+      "id" : 38,
+      "title" : "自分優勝イイっすか？W",
+      "school name" : "大分高専"
+    },
+    {
+      "id" : 39,
+      "title" : "てんぱ組",
+      "school name" : "都立産技高専品川キャンパス"
+    },
+    {
+      "id" : 40,
+      "title" : "カピさん",
+      "school name" : "豊田高専"
+    },
+    {
+      "id" : 41,
+      "title" : "中国山地のパズドラゴン",
+      "school name" : "松江高専"
+    },
+    {
+      "id" : 42,
+      "title" : "MLP-My Little Puzzle",
+      "school name" : "高知高専"
+    },
+    {
+      "id" : 43,
+      "title" : "B's",
+      "school name" : "和歌山高専"
+    },
+    {
+      "id" : 44,
+      "title" : "高専に鬼はいま…せん",
+      "school name" : "石川高専"
+    },
+    {
+      "id" : 45,
+      "title" : "俺たちはプロコンに行ったらまず真っ先にバグを確認する",
+      "school name" : "奈良高専"
+    },
+    {
+      "id" : 46,
+      "title" : "ミラノ風パズル",
+      "school name" : "小山高専"
+    },
+    {
+      "id" : 47,
+      "title" : "京都高専に改名しようの会",
+      "school name" : "舞鶴高専"
+    },
+    {
+      "id" : 48,
+      "title" : "30文字以上という字数制限に挑戦し続ける鹿児島工業高等専門学",
+      "school name" : "鹿児島高専"
+    },
+    {
+      "id" : 49,
+      "title" : "Cult of the Party Parrot",
+      "school name" : "東京高専"
+    },
+    {
+      "id" : 50,
+      "title" : "独立解答法人 Team WAH",
+      "school name" : "香川高専高松キャンパス"
+    },
+    {
+      "id" : 51,
+      "title" : "WAKUDEKA PING",
+      "school name" : "岐阜高専"
+    },
+    {
+      "id" : 52,
+      "title" : "Let's高専STYLE",
+      "school name" : "苫小牧高専"
+    },
+    {
+      "id" : 53,
+      "title" : "でぃーぷフレンズ",
+      "school name" : "鈴鹿高専"
+    },
+    {
+      "id" : 54,
+      "title" : "新パズル島（大嘘）",
+      "school name" : "釧路高専"
+    },
+    {
+      "id" : 55,
+      "title" : "ファーストプラーイ's",
+      "school name" : "久留米高専"
+    },
+    {
+      "id" : 56,
+      "title" : "筋肉優先探索",
+      "school name" : "仙台高専名取キャンパス"
+    },
+    {
+      "id" : 57,
+      "title" : "ガーディアンズオブ単位ー",
+      "school name" : "富山高専射水キャンパス"
+    },
+    {
+      "id" : 58,
+      "title" : "KCB",
+      "school name" : "木更津高専"
+    },
+    {
+      "id" : 59,
+      "title" : "あまづばめ",
+      "school name" : "サレジオ高専"
+    },
+    {
+      "id" : 60,
+      "title" : "Lucky Clover",
+      "school name" : "ハノイ国家大学"
+    },
+    {
+      "id" : 61,
+      "title" : "mustSolve",
+      "school name" : "モンゴル科学技術大学"
+    },
+    {
+      "id" : 62,
+      "title" : "UTP",
+      "school name" : "ペトロナス工科大学"
+    },
+    {
+      "id" : 63,
+      "title" : "VTC Engineering",
+      "school name" : "香港VCT"
+    },
+    {
+      "id" : 64,
+      "title" : "徳川＆今川",
+      "school name" : "豊橋技術科学大学"
+    }
+  ]
+}
