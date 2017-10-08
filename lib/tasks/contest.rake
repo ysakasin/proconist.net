@@ -1,5 +1,3 @@
-# require './app/models/product'
-
 namespace :contest do
 
   SECTIONS = {
