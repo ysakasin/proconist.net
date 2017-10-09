@@ -23,6 +23,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano3-puma'
+  gem 'highline'
   gem 'letter_opener'
   gem 'listen', '~> 3.0.5'
   gem 'spring'

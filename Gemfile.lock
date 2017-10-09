@@ -101,6 +101,7 @@ GEM
       railties (>= 3.2, < 5.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    highline (1.7.8)
     i18n (0.7.0)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -283,6 +284,7 @@ DEPENDENCIES
   database_rewinder
   fabrication
   font-awesome-rails
+  highline
   jbuilder (~> 2.0)
   jquery-rails
   letter_opener
@@ -310,4 +312,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.13.6
+   1.15.4
