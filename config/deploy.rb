@@ -2,7 +2,7 @@
 lock '3.6.1'
 
 set :application, 'proconist.net'
-set :repo_url, 'git@github.com:unasuke/proconist.net.git'
+set :repo_url, 'git@github.com:NKMR6194/proconist.net.git'
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.3.2'
