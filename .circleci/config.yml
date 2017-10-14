@@ -14,7 +14,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: proconist-rails-{{ checksum "Gemfile.lock" }}
+          keys:
+            - proconist-rails-{{ checksum "Gemfile.lock" }}
+            - proconist-rails-
       - run: bundle install --path vendor/bundle
       - save_cache:
           key: proconist-rails-{{ checksum "Gemfile.lock" }}
