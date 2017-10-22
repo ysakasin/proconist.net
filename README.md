@@ -1,7 +1,7 @@
 proconist.net
 =============
 [![CircleCI](https://circleci.com/gh/NKMR6194/proconist.net.svg?style=svg)](https://circleci.com/gh/NKMR6194/proconist.net)
-[![Maintainability](https://api.codeclimate.com/v1/badges/e90eb8b45cc3064fb798/maintainability)](https://codeclimate.com/github/NKMR6194/proconist.net/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e90eb8b45cc3064fb798/maintainability)](https://codeclimate.com/github/NKMR6194/proconist.net/)
 [![chat on gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg)](https://gitter.im/proconist-net/Lobby)
 
 開発環境構築
