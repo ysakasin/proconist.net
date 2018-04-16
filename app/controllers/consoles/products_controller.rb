@@ -74,7 +74,7 @@ class Consoles::ProductsController < Consoles::BaseController
   def build_from_params(product)
     ActiveRecord::Base.transaction do
       product.update!(product_params[:product])
-      %w(github bitbucket other_repo slideshare other_slide site twitter facebook).each do |doc_type|
+      %w[github bitbucket other_repo slideshare other_slide site twitter facebook].each do |doc_type|
         document = product.documents.find_by(document_type: doc_type)
         if document.present? && product_params[doc_type][:url].present?
           document.update!(product_params[doc_type])

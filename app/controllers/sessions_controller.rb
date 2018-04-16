@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     operator = Operator.find_by(identifier: params[:session][:identifier])
-    if operator && operator.authenticate(params[:session][:password])
+    if operator&.authenticate(params[:session][:password])
       log_in operator
       redirect_to console_path
     else

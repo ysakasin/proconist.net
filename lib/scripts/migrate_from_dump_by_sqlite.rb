@@ -76,7 +76,7 @@ SQLite3::Database.new ARGV[0] do |dump|
         slideshare:   (row[10].present? ? "https://www.slideshare.net/#{row[10]}" : nil),
         twitter:      (row[11].present? ? "https://twitter.com/#{row[11]}" : nil),
         facebook:     (row[12].present? ? "https://www.facebook.com/#{row[12]}" : nil),
-        site:         (row[13].present? ? row[13] : nil),
+        site:         row[13].presence,
         description:  row[14],
         email:        row[15]
       )

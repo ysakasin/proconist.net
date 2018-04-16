@@ -34,7 +34,7 @@ entrants.each do |entrant|
     rank:       entrant[:result]
   )
 
-  %i(github bitbucket other_repo slideshare other_slide twitter facebook site).each do |doc|
+  %i[github bitbucket other_repo slideshare other_slide twitter facebook site].each do |doc|
     if entrant[doc].present?
       Document.create!(
         product_id:     p.id,

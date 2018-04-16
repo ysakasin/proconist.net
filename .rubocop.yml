@@ -1,5 +1,5 @@
 AllCops:
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.5
   DisplayCopNames: true
   DisplayStyleGuide: true
   Exclude:
@@ -9,6 +9,9 @@ AllCops:
 
 Rails:
   Enabled:  true
+
+Lint/MissingCopEnableDirective:
+  Enabled: false
 
 Metrics/LineLength:
   Max: 130
@@ -39,6 +42,9 @@ Style/HashSyntax:
   Enabled: true
   EnforcedStyle: ruby19
 
+Style/IfUnlessModifier:
+  Enabled: false
+
 Style/Next:
   Exclude:
     - 'lib/scripts/*'
@@ -46,5 +52,11 @@ Style/Next:
 Style/StringLiterals:
  EnforcedStyle: single_quotes
 
-Style/TrailingCommaInLiteral:
+Style/SymbolArray:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
   Enabled: false

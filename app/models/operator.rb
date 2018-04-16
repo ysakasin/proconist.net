@@ -3,7 +3,7 @@
 class Operator < ApplicationRecord
   has_secure_password
 
-  has_many :articles
+  has_many :articles, dependent: :nullify
 
   SNS_SERVICES_DICTIONARY = {
     'github':       { name: 'GitHub',     fa_class: 'fa-github-alt' },
@@ -15,7 +15,7 @@ class Operator < ApplicationRecord
   }.freeze
 
   def sns
-    %w(github bitbucket slideshare twitter facebook site).map do |name|
+    %w[github bitbucket slideshare twitter facebook site].map do |name|
       if send(name)
         {
           service: SNS_SERVICES_DICTIONARY[name.to_sym][:name],
