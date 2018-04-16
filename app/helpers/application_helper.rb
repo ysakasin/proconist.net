@@ -1,6 +1,6 @@
 module ApplicationHelper
   def page_title
-    !@title.blank? ? @title + ' - Proconist.net' : 'Proconist.net'
+    @title.present? ? @title + ' - Proconist.net' : 'Proconist.net'
   end
 
   def ogp_description

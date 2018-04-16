@@ -2,8 +2,8 @@ class Product < ApplicationRecord
   belongs_to :contest
   belongs_to :school
 
-  has_many :documents
-  has_many :prizes
+  has_many :documents, dependent: :destroy
+  has_many :prizes, dependent: :destroy
 
   validates :section, inclusion: { in: [0, 1, 2] }
 
@@ -11,11 +11,11 @@ class Product < ApplicationRecord
   scope :themes,        -> { where(section: 1) }
   scope :originals,     -> { where(section: 2) }
 
-  SECTIONS = %w(
+  SECTIONS = %w[
     competition
     themed
     original
-  ).freeze
+  ].freeze
 
   SECTIONS_ENUM = {
     '競技部門': 0,

@@ -10,6 +10,9 @@ AllCops:
 Rails:
   Enabled:  true
 
+Lint/MissingCopEnableDirective:
+  Enabled: false
+
 Metrics/LineLength:
   Max: 130
 
@@ -39,12 +42,18 @@ Style/HashSyntax:
   Enabled: true
   EnforcedStyle: ruby19
 
+Style/IfUnlessModifier:
+  Enabled: false
+
 Style/Next:
   Exclude:
     - 'lib/scripts/*'
 
 Style/StringLiterals:
  EnforcedStyle: single_quotes
+
+Style/SymbolArray:
+  Enabled: false
 
 Style/TrailingCommaInArrayLiteral:
   Enabled: false
