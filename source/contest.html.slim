@@ -1,6 +1,8 @@
 .row.content
   .col-md-12.main
-    - @contests.each do |contest|
+    - data.contests.sort.reverse.each do |_, item|
+      - contest = item.contest
+      - contest.nth = contest.id
       .panel.panel-primary.panel-procon-contest
         .panel-body
           .row
