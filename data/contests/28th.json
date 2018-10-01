@@ -321,7 +321,11 @@
     {
       "id": 20,
       "title": "冴えないコードの育てかた＃",
-      "school name": "群馬高専"
+      "school name": "群馬高専",
+      "documents": {
+        "github": "https://github.com/SKKbySSK/ProCon28",
+        "twitter": "https://twitter.com/skkbyssk_tc"
+      }
     },
     {
       "id": 21,
@@ -331,7 +335,10 @@
     {
       "id": 22,
       "title": "ピースチャンプルー",
-      "school name": "沖縄高専"
+      "school name": "沖縄高専",
+      "documents": {
+        "github": "https://github.com/kurokoji/procon28-kurosolver"
+      }
     },
     {
       "id": 23,
@@ -451,7 +458,10 @@
     {
       "id": 46,
       "title": "ミラノ風パズル",
-      "school name": "小山高専"
+      "school name": "小山高専",
+      "documents": {
+        "github": "https://github.com/paralleltree/Procon27Comp"
+      }
     },
     {
       "id": 47,
@@ -466,7 +476,10 @@
     {
       "id": 49,
       "title": "Cult of the Party Parrot",
-      "school name": "東京高専"
+      "school name": "東京高専",
+      "documents": {
+        "github": "https://github.com/tnct-spc/procon2017-comp"
+      }
     },
     {
       "id": 50,

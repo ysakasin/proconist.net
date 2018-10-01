@@ -57,7 +57,13 @@
       "school name": "富山高専射水キャンパス",
       "prize": [
         "敢闘賞"
-      ]
+      ],
+      "documents": {
+        "github": "https://github.com/Collonville/Procon2014DTNConnectionApp",
+        "slideshare": "http://www.slideshare.net/Collonville/25-40533922",
+        "twitter": "https://twitter.com/Collonville",
+        "facebook": "https://www.facebook.com/hokuto.tateyama"
+      }
     },
     {
       "id": 7,
@@ -90,7 +96,11 @@
       "school name": "津山高専",
       "prize": [
         "敢闘賞"
-      ]
+      ],
+      "documents": {
+        "github": "https://github.com/TNCT-SYSKEN/Grouper",
+        "slideshare": "http://www.slideshare.net/Raryosu/grouper-procon25"
+      }
     },
     {
       "id": 11,
@@ -204,7 +214,10 @@
       "school name": "津山高専",
       "prize": [
         "敢闘賞"
-      ]
+      ],
+      "documents": {
+        "slideshare": "http://www.slideshare.net/takumisueda/25-writening"
+      }
     },
     {
       "id": 3,
@@ -358,7 +371,10 @@
     {
       "id": 1,
       "title": "NISHI —Automatic Puzzle Solver—",
-      "school name": "熊本高専熊本キャンパス"
+      "school name": "熊本高専熊本キャンパス",
+      "documents": {
+        "github": "https://github.com/knct-densan/procon25"
+      }
     },
     {
       "id": 2,
@@ -383,7 +399,11 @@
     {
       "id": 6,
       "title": "賽巡TRIDE改 —ハスケルパズルサウンド—",
-      "school name": "茨城高専"
+      "school name": "茨城高専",
+      "documents": {
+        "github": "https://github.com/inct-www-club/Procon2014",
+        "twitter": "https://twitter.com/NKMR6194"
+      }
     },
     {
       "id": 7,
@@ -398,7 +418,10 @@
     {
       "id": 9,
       "title": "Reform the picture",
-      "school name": "呉高専"
+      "school name": "呉高専",
+      "documents": {
+        "github": "https://github.com/rozeo/procon25"
+      }
     },
     {
       "id": 10,
@@ -481,12 +504,18 @@
       "school name": "サレジオ高専",
       "prize": [
         "特別賞"
-      ]
+      ],
+      "documents": {
+        "github": "https://github.com/SP2LC/procon25-main"
+      }
     },
     {
       "id": 26,
       "title": "人力の神話",
-      "school name": "明石高専"
+      "school name": "明石高専",
+      "documents": {
+        "bitbucket": "https://bitbucket.org/anctproconteam/procon25"
+      }
     },
     {
       "id": 27,
@@ -509,7 +538,10 @@
     {
       "id": 30,
       "title": "LOVE & PIECE —そんなことよりラーメン食べたい—",
-      "school name": "木更津高専"
+      "school name": "木更津高専",
+      "documents": {
+        "github": "https://github.com/takunoko/prokon2014"
+      }
     },
     {
       "id": 31,
@@ -524,7 +556,10 @@
     {
       "id": 33,
       "title": "このパズルを解きたい —パズルだよ！絶対、パズルだよ！—",
-      "school name": "苫小牧高専"
+      "school name": "苫小牧高専",
+      "documents": {
+        "github": "https://github.com/jprekz/Procon2014"
+      }
     },
     {
       "id": 34,
@@ -539,7 +574,10 @@
     {
       "id": 36,
       "title": "ご注文はクラムボンですか？",
-      "school name": "東京高専"
+      "school name": "東京高専",
+      "documents": {
+        "github": "https://github.com/tnct-spc/procon2014"
+      }
     },
     {
       "id": 37,
@@ -563,7 +601,11 @@
         "優勝",
         "情報処理学会若手奨励賞",
         "First Runner-up Prize"
-      ]
+      ],
+      "documents": {
+        "bitbucket": "https://bitbucket.org/opuctplab/procon25",
+        "slideshare": "http://www.slideshare.net/opuctplab/h25-40607479"
+      }
     },
     {
       "id": 40,
@@ -573,7 +615,10 @@
     {
       "id": 41,
       "title": "PAM −Mr.TangTangと愉快なアルゴリズム達—",
-      "school name": "神戸市立高専"
+      "school name": "神戸市立高専",
+      "documents": {
+        "github": "https://github.com/knct-densan/procon25"
+      }
     },
     {
       "id": 42,
@@ -679,7 +724,10 @@
     {
       "id": 61,
       "title": "ご注文はダイスですか？",
-      "school name": "豊橋技術科学大学"
+      "school name": "豊橋技術科学大学",
+      "documents": {
+        "github": "https://github.com/TUTProCon2014/tut_procon25"
+      }
     },
     {
       "id": 62,
@@ -687,7 +735,11 @@
       "school name": "東京大学",
       "prize": [
         "Champion"
-      ]
+      ],
+      "documents": {
+        "github": "https://github.com/natrium11321/procon2014_ut",
+        "site": "http://natrium11321.hatenablog.com/entry/2014/10/23/180116"
+      }
     },
     {
       "id": 63,

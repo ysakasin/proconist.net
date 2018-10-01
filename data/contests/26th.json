@@ -226,7 +226,11 @@
     {
       "id": 3,
       "title": "まきとまと",
-      "school name": "木更津高専"
+      "school name": "木更津高専",
+      "documents": {
+        "github": "https://github.com/shamal-ref/procon26_competition",
+        "twitter": "https://twitter.com/shamal_ref"
+      }
     },
     {
       "id": 4,
@@ -261,7 +265,10 @@
     {
       "id": 10,
       "title": "ワンボード石畳Z80",
-      "school name": "苫小牧高専"
+      "school name": "苫小牧高専",
+      "documents": {
+        "github": "https://github.com/pakutoma/ProCon26"
+      }
     },
     {
       "id": 11,
@@ -301,7 +308,10 @@
     {
       "id": 18,
       "title": "銀の弾などない",
-      "school name": "東京高専"
+      "school name": "東京高専",
+      "documents": {
+        "github": "https://github.com/tnct-spc/procon2015"
+      }
     },
     {
       "id": 20,
@@ -311,7 +321,11 @@
     {
       "id": 21,
       "title": "アイエエ！ WA！？ WAナンデ！？",
-      "school name": "旭川高専"
+      "school name": "旭川高専",
+      "documents": {
+        "github": "https://github.com/hal1437/Procon26",
+        "twitter": "https://twitter.com/hal1437/status/653595440655433728"
+      }
     },
     {
       "id": 22,
@@ -331,7 +345,10 @@
     {
       "id": 25,
       "title": "NISHI",
-      "school name": "熊本高専熊本キャンパス"
+      "school name": "熊本高専熊本キャンパス",
+      "documents": {
+        "github": "https://github.com/knct-densan/procon26"
+      }
     },
     {
       "id": 26,
@@ -361,7 +378,10 @@
     {
       "id": 31,
       "title": "石の意思は固かった —動かねぇぞこいつ—",
-      "school name": "香川高専詫間キャンパス"
+      "school name": "香川高専詫間キャンパス",
+      "documents": {
+        "other_repo": "https://twitter.com/taka_katsu0411/status/654592951008432128"
+      }
     },
     {
       "id": 32,
@@ -376,7 +396,10 @@
     {
       "id": 34,
       "title": "ネコミミはりけーん",
-      "school name": "福井高専"
+      "school name": "福井高専",
+      "documents": {
+        "github": "https://github.com/hr-ken/Nekomimi_Hurricane"
+      }
     },
     {
       "id": 35,
@@ -386,7 +409,11 @@
     {
       "id": 36,
       "title": "石畳職人の野望",
-      "school name": "鹿児島高専"
+      "school name": "鹿児島高専",
+      "documents": {
+        "github": "https://github.com/nitkagoshima-sysken/Procon26",
+        "twitter": "https://twitter.com/dongurixp"
+      }
     },
     {
       "id": 37,
@@ -406,7 +433,10 @@
     {
       "id": 40,
       "title": "たんぽぽ",
-      "school name": "都立産技高専品川キャンパス"
+      "school name": "都立産技高専品川キャンパス",
+      "documents": {
+        "site": "http://hokekyo1210.hatenablog.jp/entry/2015/10/15/181751"
+      }
     },
     {
       "id": 41,
@@ -446,7 +476,11 @@
     {
       "id": 48,
       "title": "高専の敷き詰め理論1B",
-      "school name": "長野高専"
+      "school name": "長野高専",
+      "documents": {
+        "github": "https://github.com/MurakamiShun/-",
+        "twitter": "https://twitter.com/shunEnshuu"
+      }
     },
     {
       "id": 49,
@@ -481,7 +515,10 @@
     {
       "id": 55,
       "title": "石まみれで —あ〜もう発想が出るう〜〜—",
-      "school name": "釧路高専"
+      "school name": "釧路高専",
+      "documents": {
+        "github": "https://github.com/KNCT-KPC/Bungo"
+      }
     },
     {
       "id": 56,
@@ -541,47 +578,80 @@
     {
       "id": 67,
       "title": "サイコロしきつめう",
-      "school name": "豊橋技術科学大学"
+      "school name": "豊橋技術科学大学",
+      "documents": {
+        "github": "https://github.com/tut-cc/DiceTilingMeu"
+      }
     },
     {
       "id": 68,
       "title": "紅のうさぎ",
-      "school name": "神戸大学"
+      "school name": "神戸大学",
+      "documents": {
+        "github": "https://github.com/kmyk/procon26"
+      }
     },
     {
       "id": 101,
       "title": "イシダタミ敷き詰めるべし！",
-      "school name": "OB"
+      "school name": "OB",
+      "documents": {
+        "github": "https://github.com/betachelsea/procon26ob_ishidatami",
+        "twitter": "https://twitter.com/beta_chelsea/"
+      }
     },
     {
       "id": 102,
       "title": "ZK finder",
-      "school name": "OB"
+      "school name": "OB",
+      "documents": {
+        "github": "https://github.com/tkhrotn/ZKfinder",
+        "slideshare": "http://www.slideshare.net/takahirootani10/zk-finder"
+      }
     },
     {
       "id": 103,
       "title": "コルン",
-      "school name": "OB"
+      "school name": "OB",
+      "documents": {
+        "other_repo": "https://t.co/BSjjLW1xXP",
+        "site": "https://twitter.com/colun/status/653596934783897600"
+      }
     },
     {
       "id": 104,
       "title": "ずくなし",
-      "school name": "OB"
+      "school name": "OB",
+      "documents": {
+        "github": "https://github.com/earth2001y/procon26ob_no-zuku",
+        "twitter": "http://twitter.com/earth2001y",
+        "facebook": "http://facebook.com/earth2001y"
+      }
     },
     {
       "id": 105,
       "title": "未来ガジェット82号機 石畳マスター Ver3.12",
-      "school name": "OB"
+      "school name": "OB",
+      "documents": {
+        "github": "https://github.com/umisama/procon26",
+        "twitter": "https://twitter.com/umisama"
+      }
     },
     {
       "id": 106,
       "title": "ThreeStones",
-      "school name": "OB"
+      "school name": "OB",
+      "documents": {
+        "github": "https://github.com/yuusuwalann/procon2015"
+      }
     },
     {
       "id": 107,
       "title": "石んの会 〜解こうそう！〜",
-      "school name": "OB"
+      "school name": "OB",
+      "documents": {
+        "github": "https://github.com/inada-s/procon26"
+      }
     }
   ]
 }

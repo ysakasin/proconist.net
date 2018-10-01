@@ -97,7 +97,11 @@
     {
       "id": 18,
       "title": "SportsCast! —SportsBroadcastSystem—",
-      "school name": "一関高専"
+      "school name": "一関高専",
+      "documents": {
+        "github": "https://github.com/inct-densan-org/sportscast",
+        "site": "https://sportscast.azurewebsites.net"
+      }
     },
     {
       "id": 19,
@@ -261,7 +265,10 @@
     {
       "id": 8,
       "title": "高専の情報処理パズル基礎1",
-      "school name": "長野高専"
+      "school name": "長野高専",
+      "documents": {
+        "github": "https://github.com/MurakamiShun/procon27"
+      }
     },
     {
       "id": 9,
@@ -281,7 +288,10 @@
     {
       "id": 12,
       "title": "ぱずとく！",
-      "school name": "津山高専"
+      "school name": "津山高専",
+      "documents": {
+        "github": "https://github.com/TNCT-SYSKEN/procon27_kyogi"
+      }
     },
     {
       "id": 13,
@@ -301,7 +311,11 @@
     {
       "id": 16,
       "title": "罪深さ優先探索",
-      "school name": "沖縄高専"
+      "school name": "沖縄高専",
+      "documents": {
+        "github": "https://github.com/kurokoji/procon27-GUI",
+        "site": "http://kurokoji.hatenablog.com/entry/2016/10/09/235235"
+      }
     },
     {
       "id": 17,
@@ -326,7 +340,10 @@
     {
       "id": 21,
       "title": "高度の柔軟性を維持しつつ臨機応変に敷き詰め隊",
-      "school name": "香川高専高松キャンパス"
+      "school name": "香川高専高松キャンパス",
+      "documents": {
+        "github": "https://github.com/KATSU0411/procon27"
+      }
     },
     {
       "id": 22,
@@ -481,7 +498,11 @@
     {
       "id": 52,
       "title": "そんなパズルは壊してしまえ",
-      "school name": "松江高専"
+      "school name": "松江高専",
+      "documents": {
+        "github": "https://github.com/mct-procon/procon2016",
+        "site": "https://github.com/mct-procon/procon2016/wiki"
+      }
     },
     {
       "id": 53,
@@ -501,7 +522,10 @@
     {
       "id": 56,
       "title": "ミエるミエる、速いぜ。穴が塞がってないか？",
-      "school name": "久留米高専"
+      "school name": "久留米高専",
+      "documents": {
+        "site": "http://chigichan24.hatenablog.com/entry/2016/10/09/232621"
+      }
     },
     {
       "id": 57,
