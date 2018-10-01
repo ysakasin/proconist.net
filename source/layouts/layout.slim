@@ -1,37 +1,38 @@
 doctype html
 html
   head
-    /! Proconist.net on Rails!
-    title= page_title
+    title= current_page.data.title
     meta[charset="utf-8"]
     meta[name="viewport" content="width=device-width, initial-scale=1"]
     meta[name="description" content="高専プロコン作品のソースコードやプレゼンテーションまとめ。高専生プロコニストのアップスパイラルを生み出します"]
     meta[name="keyword" content="高専プロコン, 高専, OSS, プレゼンテーション"]
-    meta[property="og:title" content="#{page_title}"]
+    meta[property="og:title" content="#{current_page.data.title}"]
     meta[property="og:type" content="website"]
-    meta[property="og:description" content="#{ogp_description}"]
-    meta[property="og:url" content="#{ogp_url}"]
-    meta[property="og:image" content="#{image_url ogp_img_path}"]
+    meta[property="og:description" content="#{current_page.data.ogp_description}"]
+    meta[property="og:url" content="#{current_page.data.ogp_url}"]
+    meta[property="og:image" content="#{image_url current_page.data.ogp_img_path}"]
     meta[property="og:site_name" content="Proconist.net"]
     meta[property="og:email" content="info@proconist.net"]
     meta[name="twitter:card" content="summary_large_image"]
+    = stylesheet_link_tag 'bootstrap.min', media: 'all'
     = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'bootstrap.min'
     = javascript_include_tag 'application'
-    = favicon_link_tag 'favicon/favicon.ico'
-    = csrf_meta_tag
+    / = favicon_link_tag 'favicon/favicon.ico'
+    / = csrf_meta_tag
   body
     .container
       header
         .title
           .row
             .col-md-8.clearfix
-              - if request.path == '/'
+              - if current_page.url == '/'
                 h1
-                  a.logo[href="#{root_path}"]
+                  a.logo[href="/"]
                     | Proconist.net
               - else
                 .logo-wrap
-                  a.logo[href="#{root_path}"]
+                  a.logo[href="/"]
                     | Proconist.net
               span.description
                 | プロコンでアップスパイラルを生み出す
@@ -64,19 +65,16 @@ html
           #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav.nav-justified
               li
-                a[href="#{root_path}"]
+                a[href="/"]
                   | トップページ
               li
-                a[href="#{contest_path}"]
+                a[href="/contest"]
                   | 大会から作品を探す
               li
-                a[href="#{entry_path}"]
-                  | 学ぶ
-              li
-                a[href="#{report_path}"]
+                a[href="/report"]
                   | 作品情報を投稿する
               li
-                a[href="#{about_path}"]
+                a[href="/about"]
                   | このサイトについて
       = yield
     footer
@@ -88,4 +86,4 @@ html
     script[src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"]
     script
       |  // Twitter !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p='https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-    = render partial: 'layouts/analytic_tags' if Rails.env == 'production'
+    / = render partial: 'layouts/analytic_tags' if Rails.env == 'production'
