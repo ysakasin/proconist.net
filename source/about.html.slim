@@ -36,18 +36,18 @@
                 | みんなでアップスパイラルを生み出そう
     h3
       | 開発・運営メンバー
-    - @operators.each do |operator|
+    - data.operators.each do |id, operator|
       .row.member
         .col-md-3.member-image
-          = image_tag operator.icon, alt: operator.name, class: 'img-circle img-responsive'
+          = image_tag "operators/#{id}.png", alt: operator.name, class: 'img-circle img-responsive'
         .col-md-9
           h4.member-name
             = operator.name
           .member-introduction
             == operator.description
             ul.list-inline.member-sns
-              - operator.sns.each do |item|
+              - operator.sns.each do |sns, url|
                 li
-                  a(href="#{item[:url]}")
-                    i.fa.fa-lg.fa-fw(class="#{item[:fa_class]}")
-                    = item[:service]
+                  a(href="#{url}")
+                    i.fa.fa-lg.fa-fw(class="#{sns_fa_class(sns)}")
+                    = sns_name(sns)

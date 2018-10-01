@@ -1,0 +1,40 @@
+{
+  "ysakasin": {
+    "name": "酒田　シンジ",
+    "description": "茨城高専OBで、平成27年度現在は筑波大学3年。このサイトの言い出しっぺであるが、思いついた時にはすでに５年生であり、今後の高専プロコンには出場できない模様。しかし、「まだNAPROC枠がある！」といって参戦を虎視眈々と狙っている。当サイトでは発案・企画・運営・システム開発・サーバー管理・その他雑用を担当。",
+    "sns": {
+      "github": "https://github.com/ysakasin",
+      "slideshare": "https://www.slideshare.net/NKMR6194",
+      "twitter": "https://twitter.com/ysakasin",
+      "site": "https://sakasin.net"
+    }
+  },
+  "raryosu": {
+    "name": "らりょす",
+    "description": "<p>津山高専 本科5年です。</p><p>procon24 競技・procon25 課題「Grouper」PM・procon26 同人部門(<a href=\"http://ost.procon-online.net/\">PROCON O.S.T. Project</a>)広報担当，procon27 同人部門(高田さんプレゼント用CD作成)しました。</p>",
+    "sns": {
+      "github": "https://github.com/raryosu",
+      "bitbucket": "https://bitbucket.org/raryosu/",
+      "slideshare": "https://www.slideshare.net/raryosu",
+      "twitter": "https://twitter.com/raryosu",
+      "facebook": "https://www.facebook.com/raryosu107",
+      "site": "http://raryosu.info/"
+    }
+  },
+  "windyakin": {
+    "name": "Takuto Kanzaki",
+    "description": "津山高専 専攻科2年生 🐘 「デザイン方針の決定」という謎の役割を担当 ✋ I <i class=\"fa fa-heart\"></i> <i class=\"fa fa-tumblr\"></i>",
+    "sns": {
+      "github": "https://github.com/windyakin",
+      "facebook": "https://www.facebook.com/windyakin",
+      "site": "http://windyakin.net/"
+    }
+  },
+  "unasuke": {
+    "name": "unasuke",
+    "description": "うなすけ",
+    "sns": {
+      "github": "https://github.com/unasuke"
+    }
+  }
+}
