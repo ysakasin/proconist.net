@@ -1,0 +1,39 @@
+{
+  "news": [
+    {
+      "date": "2016-10-23",
+      "label": "作品",
+      "label_class": "label-info",
+      "title": "競技部門 香川高専高松キャンパス「高度の柔軟性を維持しつつ臨機応変に敷き詰め隊」",
+      "url": "/contest/27#competition-21"
+    },
+    {
+      "date": "2016-10-23",
+      "label": "作品",
+      "label_class": "label-info",
+      "title": "競技部門 久留米高専「ミエるミエる、速いぜ。穴が塞がってないか？」",
+      "url": "/contest/27#competition-56"
+    },
+    {
+      "date": "2016-10-23",
+      "label": "作品",
+      "label_class": "label-info",
+      "title": "競技部門 沖縄高専「罪深さ優先探索」",
+      "url": "/contest/27#competition-16"
+    },
+    {
+      "date": "2016-10-23",
+      "label": "作品",
+      "label_class": "label-info",
+      "title": "競技部門 津山高専「ぱずとく！」",
+      "url": "/contest/27#competition-12"
+    },
+    {
+      "label": "作品",
+      "date": "2016-10-23",
+      "label_class": "label-info",
+      "title": "競技部門 松江高専「そんなパズルは壊してしまえ」",
+      "url": "/contest/27#competition-52"
+    }
+  ]
+}

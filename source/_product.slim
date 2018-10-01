@@ -9,13 +9,13 @@
           span.label.label-danger
             | 決勝#{product.rank}位
       h4.panel-title
-        | #{product.school.name} 「#{product.name}」
-      - if product.prizes.present?
+        | #{product[:"school name"]} 「#{product.title}」
+      - if product.prize.present?
         ul.label-group.list-inline
-          - product.prizes.each do |prize|
+          - product.prize.each do |prize|
             li.label.label-warning.prize
               i.fa.fa-trophy
-              = prize.name
+              = prize
   - if product.documents.present?
     ul.list-inline.panel-procon-product-link
-      = render partial: 'products/document', collection: product.documents
+      = partial 'document', collection: product.documents

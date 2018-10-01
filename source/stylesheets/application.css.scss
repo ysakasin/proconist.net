@@ -646,6 +646,10 @@ footer {
 .prize {
   margin-right: 5px;
 
+  i.fa {
+    margin-right: 5px;
+  }
+
   &:last-child {
     margin-right: 0;
   }

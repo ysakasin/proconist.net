@@ -13,14 +13,13 @@ section.about.jumbotron
   .row
     .col-md-6
       a.btn.btn-success.btn-lg.btn-block(href="#{contest_path}")
-        | 大会一覧から作品を探す 
+        | 大会一覧から作品を探す
         i.fa.fa-search
     .col-md-6
       a.btn.btn-warning.btn-lg.btn-block(href="#{report_path}")
-        | 作品情報を投稿する 
+        | 作品情報を投稿する
         i.fa.fa-send
 .row.content
   .col-md-8.main
-    = render partial: 'contests/show'
-  = render partial: 'pages/sidebar',
-    locals: { histories_with_image: @histories_with_image, histories: @histories, contests: @contests }
+    = partial 'product_list', locals: {contest_data: data.contests[:"28th"]}
+  = partial 'sidebar'

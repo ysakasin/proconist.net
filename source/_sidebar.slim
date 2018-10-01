@@ -1,42 +1,26 @@
 aside.col-md-4.hidden-sm.hidden-xs.sidebar
-  - if histories_with_image.present?
-    .panel-body
-      #carousel-histories-with-image.carousel.slide[data-ride="carousel"]
-        .carousel-inner[role="listbox"]
-          - histories_with_image.each.with_index do |history, i|
-            .item(class="#{i == 0 ? 'active' : ''}")
-              img(src="#{history.image_path}" alt="#{history.title}")
-              .carousel-caption= history.title
-        a.left.carousel-control[href="#carousel-example-generic" role="button" data-slide="prev"]
-          span.glyphicon.glyphicon-chevron-left
-          span.sr-only
-            | Previous
-        a.right.carousel-control[href="#carousel-example-generic" role="button" data-slide="next"]
-          span.glyphicon.glyphicon-chevron-right
-          span.sr-only
-            | Next
-  - else
-    .panel.panel-default.newlist
-      .panel-heading
-        h3.panel-title
-          | 新着情報
-      .list-group
-        - histories.each do |history|
-          a.list-group-item(href="#{history.url}")
-            dl
-              dt
-                span.label(class="#{history.label_class}")= history.label_name
-                | &nbsp;
-                = history.created_at.strftime('%F')
-              dd= history.title
+  .panel.panel-default.newlist
+    .panel-heading
+      h3.panel-title
+        | 新着情報
+    .list-group
+      - data.history.news.each do |history|
+        a.list-group-item(href="#{history.url}")
+          dl
+            dt
+              span.label(class="#{history.label_class}")= history.label
+              | &nbsp;
+              = history.date
+            dd= history.title
   .panel.panel-default.contest-index
     .panel-heading
       h3.panel-title
         | 過去の大会から探す
     .list-group
-      - contests.each do |contest|
-        = link_to show_contest_path(contest.nth), class: 'list-group-item' do
+      - data.contests.sort.reverse.each do |nth, contest|
+        - contest = contest.contest
+        = link_to show_contest_path(contest.id), class: 'list-group-item' do
           h4.list-group-item-heading
-            | 第#{contest.nth}回#{contest.name}
+            | 第#{contest.id}回#{contest.name}
           p.list-group-item-text
             = contest.title
