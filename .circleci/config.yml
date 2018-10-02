@@ -31,6 +31,8 @@ jobs:
           key: proconist-middleman-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+      - run: git config --global user.name "circleci"
+      - run: git config --global user.email "sayhi@circleci.com"
       - run: bundle exec middleman deploy
 workflows:
   version: 2
