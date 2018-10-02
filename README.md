@@ -20,3 +20,11 @@ Build site
 ```
 bundle exec middleman build
 ```
+
+Deploy to GitHub pages
+----------
+masterブランチのデータは、CircleCIによって自動デプロイされます。
+
+```
+bundle exec middleman deploy
+```
