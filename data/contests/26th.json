@@ -47,7 +47,10 @@
     {
       "id": 8,
       "title": "むすぶっし —困ったときはお互いさま—",
-      "school name": "熊本高専熊本キャンパス"
+      "school name": "熊本高専熊本キャンパス",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 9,
@@ -57,7 +60,10 @@
     {
       "id": 10,
       "title": "Androne —遠隔操作型　避難誘導ドローン—",
-      "school name": "豊田高専"
+      "school name": "豊田高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 11,
@@ -77,7 +83,13 @@
     {
       "id": 14,
       "title": "ホップ！ステップ！マップ！ —小学校での安全活動システム—",
-      "school name": "東京高専"
+      "school name": "東京高専",
+      "prize": [
+        "Grand Prize",
+        "情報処理学会若手奨励賞",
+        "文部科学大臣賞",
+        "最優秀賞"
+      ]
     },
     {
       "id": 15,
@@ -87,7 +99,11 @@
     {
       "id": 16,
       "title": "ダレカタスケテー",
-      "school name": "鈴鹿高専"
+      "school name": "鈴鹿高専",
+      "prize": [
+        "Second Prize",
+        "優秀賞"
+      ]
     },
     {
       "id": 17,
@@ -102,12 +118,18 @@
     {
       "id": 19,
       "title": "NANASE —緊急時所在・安否確認システム—",
-      "school name": "米子高専"
+      "school name": "米子高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 20,
       "title": "やまび〜こん —あなたの登山をiBeaconがお助け—",
-      "school name": "熊本高専八代キャンパス"
+      "school name": "熊本高専八代キャンパス",
+      "prize": [
+        "特別賞"
+      ]
     }
   ],
   "original section": [
@@ -134,7 +156,10 @@
     {
       "id": 5,
       "title": "Canvas",
-      "school name": "香川高専詫間キャンパス"
+      "school name": "香川高専詫間キャンパス",
+      "prize": [
+        "優秀賞"
+      ]
     },
     {
       "id": 6,
@@ -154,7 +179,13 @@
     {
       "id": 9,
       "title": "SmartAIS —海内の旗幟—",
-      "school name": "弓削商船高専"
+      "school name": "弓削商船高専",
+      "prize": [
+        "Grand Prize",
+        "情報処理学会若手奨励賞",
+        "文部科学大臣賞",
+        "最優秀賞"
+      ]
     },
     {
       "id": 10,
@@ -184,7 +215,10 @@
     {
       "id": 15,
       "title": "素敵な劇しまSHOW —PowerPointで劇の演出支援—",
-      "school name": "鳥羽商船高専"
+      "school name": "鳥羽商船高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 16,
@@ -204,7 +238,11 @@
     {
       "id": 19,
       "title": "PULL DOG —資格障がい者導きシステム—",
-      "school name": "東京高専"
+      "school name": "東京高専",
+      "prize": [
+        "Second Prize",
+        "優秀賞"
+      ]
     },
     {
       "id": 20,
@@ -255,7 +293,13 @@
     {
       "id": 8,
       "title": "プログラムが一晩でやってくれました",
-      "school name": "八戸高専"
+      "school name": "八戸高専",
+      "prize": [
+        "Champion",
+        "優勝",
+        "情報処理学会若手奨励賞",
+        "文部科学大臣賞"
+      ]
     },
     {
       "id": 9,
@@ -293,7 +337,10 @@
     {
       "id": 15,
       "title": "大饂飩帝国高松支部石畳工作部隊",
-      "school name": "香川高専高松キャンパス"
+      "school name": "香川高専高松キャンパス",
+      "prize": [
+        "第三位"
+      ]
     },
     {
       "id": 16,
@@ -325,7 +372,10 @@
       "documents": {
         "github": "https://github.com/hal1437/Procon26",
         "twitter": "https://twitter.com/hal1437/status/653595440655433728"
-      }
+      },
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 22,
@@ -436,7 +486,11 @@
       "school name": "都立産技高専品川キャンパス",
       "documents": {
         "site": "http://hokekyo1210.hatenablog.jp/entry/2015/10/15/181751"
-      }
+      },
+      "prize": [
+        "First Runner-up Prize",
+        "準優勝"
+      ]
     },
     {
       "id": 41,
@@ -456,7 +510,10 @@
     {
       "id": 44,
       "title": "進捗優先探索",
-      "school name": "沖縄高専"
+      "school name": "沖縄高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 45,
@@ -510,7 +567,10 @@
     {
       "id": 54,
       "title": "タタミミズク",
-      "school name": "大阪府大高専"
+      "school name": "大阪府大高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 55,
@@ -553,7 +613,10 @@
     {
       "id": 62,
       "title": "VNU-UET",
-      "school name": "ハノイ国家大学"
+      "school name": "ハノイ国家大学",
+      "prize": [
+        "Special Prize"
+      ]
     },
     {
       "id": 63,
