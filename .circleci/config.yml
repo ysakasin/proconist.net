@@ -21,6 +21,9 @@ jobs:
     docker:
       - image: circleci/ruby:2.5.1-stretch-node-browsers
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "c9:8a:53:1a:c2:d7:ce:70:9c:88:8c:19:32:1b:57:7d"
       - checkout
       - restore_cache:
           keys:
