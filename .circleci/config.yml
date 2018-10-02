@@ -39,10 +39,12 @@ workflows:
       - build:
           filters:
             branchs:
-              ignore: gh-pages
+              ignore:
+                - gh-pages
       - deploy:
           requires:
             - build
           filters:
             branches:
-              only: master
+              only:
+                - master
