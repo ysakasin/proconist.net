@@ -1,6 +1,9 @@
 version: 2
 jobs:
   build:
+    branches:
+      ignore:
+        - gh-pages
     working_directory: ~/proconist.net
     docker:
       - image: circleci/ruby:2.5.1-stretch-node-browsers
@@ -17,6 +20,9 @@ jobs:
             - vendor/bundle
       - run: bundle exec middleman build
   deploy:
+    branches:
+      ignore:
+        - gh-pages
     working_directory: ~/proconist.net
     docker:
       - image: circleci/ruby:2.5.1-stretch-node-browsers
