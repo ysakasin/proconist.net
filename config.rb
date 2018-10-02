@@ -56,3 +56,9 @@ end
 configure :development do
   config[:host] = 'http://localhost'
 end
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.build_before = true
+  deploy.commit_message = "Auto deploy at #{Time.now} [ci skip]"
+end
