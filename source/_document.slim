@@ -1,0 +1,5 @@
+- type, url = document
+li
+  a(href="#{url}" target='_blank')
+    i.fa.fa-lg.fa-fw(class="#{document_fa_class(type)}")
+    = document_name(type)

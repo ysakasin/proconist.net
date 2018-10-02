@@ -1,0 +1,57 @@
+---
+title: "このサイトについて"
+---
+
+.row.content
+  .col-md-12.main
+    .clearfix.heading
+      h2
+        | このサイトについて
+    .about
+      p.polocy-text
+        | 私達はプロコンで3つの行動を広めることで、プロコニストのスパイラルアップを創造します。
+      .row
+        .col-md-4
+          .actions
+            .action-bg.action-read
+              i.fa.fa-book
+            p.action-description
+              span
+                | 今までの出場者たちのコードやスライドを読んで
+              span
+                | いいところを学ぼう
+        .col-md-4
+          .actions
+            .action-bg.action-entry
+              i.fa.fa-trophy
+            p.action-description
+              span
+                | 学んだ自分の力を試すべく
+              span
+                | 高専プロコンに出場しよう
+        .col-md-4
+          .actions
+            .action-bg.action-share
+              i.fa.fa-share-alt
+            p.action-description
+              span
+                | 大会での成果物を公開して
+              span
+                | みんなでアップスパイラルを生み出そう
+    h3
+      | 開発・運営メンバー
+    - data.operators.each do |id, operator|
+      .row.member
+        .col-md-3.member-image
+          = image_tag "operators/#{id}.png", alt: operator.name, class: 'img-circle img-responsive'
+        .col-md-9
+          h4.member-name
+            = operator.name
+          .member-introduction
+            == operator.description
+            ul.list-inline.member-sns
+              - operator.sns.each do |sns, url|
+                li
+                  a(href="#{url}")
+                    i.fa.fa-lg.fa-fw(class="#{sns_fa_class(sns)}")
+                    = sns_name(sns)

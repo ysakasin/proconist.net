@@ -1,0 +1,44 @@
+---
+title: "大会から作品を探す"
+---
+
+.row.content
+  .col-md-12.main
+    - data.contests.sort.reverse.each do |_, item|
+      - contest = item.contest
+      - contest.nth = contest.id
+      .panel.panel-primary.panel-procon-contest
+        .panel-body
+          .row
+            .col-md-5
+              = link_to show_contest_path(contest.nth), class: 'title-link' do
+                h3
+                  | 第#{contest.nth}回#{contest.name}
+                h3
+                  | 「#{contest.title}」
+              ul.meta-info.list-unstyled
+                li
+                  i.fa.fa-calendar
+                  | &nbsp;
+                  = contest.date
+                li
+                  i.fa.fa-map-marker
+                  | &nbsp;
+                  = contest.place
+            .col-md-7.section-list
+              .row
+                .col-md-3.col-sm-12.col-xs-12
+                  = link_to '競技部門', show_contest_path(contest.nth, anchor: 'competition'),
+                    class: 'btn btn-danger btn-block'
+                .col-md-9.text-center.col-sm-12.col-xs-12
+                  h4= contest.competition_title
+              .row
+                .col-md-3.col-sm-12.col-xs-12
+                  = link_to '課題部門', show_contest_path(contest.nth, anchor: 'themed'),
+                    class: 'btn btn-warning btn-block'
+                .col-md-9.text-center.col-sm-12.col-xs-12
+                  h4= contest.themed_title
+              .row
+                .col-md-3.col-sm-12.col-xs-12
+                  = link_to '自由部門', show_contest_path(contest.nth, anchor: 'original'),
+                    class: 'btn btn-info btn-block'

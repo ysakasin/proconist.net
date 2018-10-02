@@ -4,38 +4,47 @@ jobs:
     working_directory: ~/proconist.net
     docker:
       - image: circleci/ruby:2.5.1-stretch-node-browsers
-        environment:
-          RAILS_ENV: test
-          DB_HOST: 127.0.0.1
-      - image: circleci/mysql:5.7
-        environment:
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
-          MYSQL_USER: root
     steps:
       - checkout
       - restore_cache:
           keys:
-            - proconist-rails-{{ checksum "Gemfile.lock" }}
-            - proconist-rails-
+            - proconist-middleman-{{ checksum "Gemfile.lock" }}
+            - proconist-middleman
       - run: bundle install --path vendor/bundle
       - save_cache:
-          key: proconist-rails-{{ checksum "Gemfile.lock" }}
+          key: proconist-middleman-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-      - run: bundle exec rails db:create db:schema:load
-      - run:
-          name: run rspec
-          command: |
-            mkdir /tmp/test-results
-            TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
-            bundle exec rspec --profile 10 \
-              --format RspecJunitFormatter \
-              --out test_results/rspec.xml \
-              --format progress \
-              $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
-      - store_test_results:
-          path: /tmp/test-results
-      - store_artifacts:
-          path: /tmp/test-results
-          destination: test-results
-      - run: bundle exec rubocop
+      - run: bundle exec middleman build
+  deploy:
+    working_directory: ~/proconist.net
+    docker:
+      - image: circleci/ruby:2.5.1-stretch-node-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - proconist-middleman-{{ checksum "Gemfile.lock" }}
+            - proconist-middleman-
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: proconist-middleman-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run: bundle exec middleman deploy
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master

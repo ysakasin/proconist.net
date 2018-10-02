@@ -1,0 +1,85 @@
+doctype html
+html
+  head
+    title= page_title
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width, initial-scale=1"]
+    meta[name="description" content="高専プロコン作品のソースコードやプレゼンテーションまとめ。高専生プロコニストのアップスパイラルを生み出します"]
+    meta[name="keyword" content="高専プロコン, 高専, OSS, プレゼンテーション"]
+    meta[property="og:title" content="#{page_title}"]
+    meta[property="og:type" content="website"]
+    meta[property="og:description" content="#{ogp_description}"]
+    meta[property="og:url" content="#{ogp_url}"]
+    meta[property="og:image" content="#{image_url ogp_img_path}"]
+    meta[property="og:site_name" content="Proconist.net"]
+    meta[property="og:email" content="info@proconist.net"]
+    meta[name="twitter:card" content="summary_large_image"]
+    link[href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"]
+    = stylesheet_link_tag 'bootstrap.min', media: 'all'
+    = stylesheet_link_tag 'application', media: 'all'
+    link[rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon.ico"]
+  body
+    .container
+      header
+        .title
+          .row
+            .col-md-8.clearfix
+              - if current_page.url == root_path
+                h1
+                  a.logo[href=root_path]
+                    | Proconist.net
+              - else
+                .logo-wrap
+                  a.logo[href=root_path]
+                    | Proconist.net
+              span.description
+                | プロコンでアップスパイラルを生み出す
+            .col-md-4.social-button
+              ul.list-unstyled.social-button
+                li.social-button-item.social-button-item-twitter.btn.btn-sm
+                  a[href="https://twitter.com/intent/tweet?url=https%3A%2F%2FProconist.net&text=Proconist.net" target="_blank"]
+                    i.fa.fa-twitter
+                    |  Tweet
+                li.social-button-item.social-button-item-facebook.btn.btn-sm
+                  a[href="http://www.facebook.com/sharer.php?u=https%3A%2F%2FProconist.net" target="_blank"]
+                    i.fa.fa-facebook-official
+                    |  Share
+                li.social-button-item.social-button-item-google.btn.btn-sm
+                  a[href="https://plus.google.com/share?url=https%3A%2F%2FProconist.net" target="_blank"]
+                    i.fa.fa-google-plus
+                    |  +1
+                li.social-button-item.social-button-item-hatena.btn.btn-sm
+                  a[href="http://b.hatena.ne.jp/add?url=https%3A%2F%2FProconist.net" target="_blank"]
+                    i.fa.fa-hatena
+                    |  Bookmark
+        nav.navbar.navbar-default[role="navigation"]
+          .navbar-header
+            button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"]
+              span.sr-only
+                | Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav.nav-justified
+              li
+                a[href=root_path]
+                  | トップページ
+              li
+                a[href=contest_path]
+                  | 大会から作品を探す
+              li
+                a[href=report_path target="_blank"]
+                  | 作品情報を投稿する
+              li
+                a[href=about_path]
+                  | このサイトについて
+      = yield
+    footer
+      .container
+        .copyright.text-center
+          | © 2015 Proconist.net 運営委員会
+    script[src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"]
+    script
+      |  // Twitter !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p='https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    = partial 'analytic_tags' if build?
