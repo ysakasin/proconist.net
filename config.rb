@@ -17,6 +17,10 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+ignore '/images/favicon/*.png'
+ignore '/images/favicon/logo.svg'
+ignore '*/.keep'
+
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
