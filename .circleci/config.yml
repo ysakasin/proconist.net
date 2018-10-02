@@ -8,11 +8,38 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - proconist-rails-{{ checksum "Gemfile.lock" }}
-            - proconist-rails-
+            - proconist-middleman-{{ checksum "Gemfile.lock" }}
+            - proconist-middleman
       - run: bundle install --path vendor/bundle
       - save_cache:
-          key: proconist-rails-{{ checksum "Gemfile.lock" }}
+          key: proconist-middleman-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
       - run: bundle exec middleman build
+  deploy:
+    working_directory: ~/proconist.net
+    docker:
+      - image: circleci/ruby:2.5.1-stretch-node-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - proconist-middleman-{{ checksum "Gemfile.lock" }}
+            - proconist-middleman-
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: proconist-middleman-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run: bundle exec middleman deploy
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
