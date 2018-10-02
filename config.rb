@@ -35,14 +35,20 @@ require 'uri'
 
 helpers do
   def image_url(image)
-    URI.join("https://proconist.net/", "images", image.to_s)
+    URI.join(config[:host], "images", image.to_s)
   end
 end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+
+  config[:host] = 'https://proconist.net'
+end
+
+configure :development do
+  config[:host] = 'http://localhost'
+end

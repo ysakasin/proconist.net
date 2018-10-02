@@ -1,16 +1,16 @@
 doctype html
 html
   head
-    title= current_page.data.title
+    title= page_title
     meta[charset="utf-8"]
     meta[name="viewport" content="width=device-width, initial-scale=1"]
     meta[name="description" content="高専プロコン作品のソースコードやプレゼンテーションまとめ。高専生プロコニストのアップスパイラルを生み出します"]
     meta[name="keyword" content="高専プロコン, 高専, OSS, プレゼンテーション"]
-    meta[property="og:title" content="#{current_page.data.title}"]
+    meta[property="og:title" content="#{page_title}"]
     meta[property="og:type" content="website"]
-    meta[property="og:description" content="#{current_page.data.ogp_description}"]
-    meta[property="og:url" content="#{current_page.data.ogp_url}"]
-    meta[property="og:image" content="#{image_url current_page.data.ogp_img_path}"]
+    meta[property="og:description" content="#{ogp_description}"]
+    meta[property="og:url" content="#{ogp_url}"]
+    meta[property="og:image" content="#{image_url ogp_img_path}"]
     meta[property="og:site_name" content="Proconist.net"]
     meta[property="og:email" content="info@proconist.net"]
     meta[name="twitter:card" content="summary_large_image"]
