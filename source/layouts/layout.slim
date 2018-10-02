@@ -24,13 +24,13 @@ html
         .title
           .row
             .col-md-8.clearfix
-              - if current_page.url == '/'
+              - if current_page.url == root_path
                 h1
-                  a.logo[href="/"]
+                  a.logo[href=root_path]
                     | Proconist.net
               - else
                 .logo-wrap
-                  a.logo[href="/"]
+                  a.logo[href=root_path]
                     | Proconist.net
               span.description
                 | プロコンでアップスパイラルを生み出す
@@ -63,16 +63,16 @@ html
           #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav.nav-justified
               li
-                a[href="/"]
+                a[href=root_path]
                   | トップページ
               li
-                a[href="/contest"]
+                a[href=contest_path]
                   | 大会から作品を探す
               li
-                a[href="/report"]
+                a[href=report_path]
                   | 作品情報を投稿する
               li
-                a[href="/about"]
+                a[href=about_path]
                   | このサイトについて
       = yield
     footer
