@@ -1,0 +1,13 @@
+.panel.panel-default.newlist
+  .panel-heading
+    h3.panel-title
+      | 新着情報
+  .list-group
+    - data.history.news.each do |history|
+      a.list-group-item(href="#{history.url}")
+        dl
+          dt
+            span.label(class="#{history.label_class}")= history.label
+            | &nbsp;
+            = history.date
+          dd= history.title

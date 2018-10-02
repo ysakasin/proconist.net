@@ -1,0 +1,12 @@
+.panel.panel-default.contest-index
+  .panel-heading
+    h3.panel-title
+      | 過去の大会から探す
+  .list-group
+    - data.contests.sort.reverse.each do |nth, contest|
+      - contest = contest.contest
+      = link_to show_contest_path(contest.id), class: 'list-group-item' do
+        h4.list-group-item-heading
+          | 第#{contest.id}回#{contest.name}
+        p.list-group-item-text
+          = contest.title
