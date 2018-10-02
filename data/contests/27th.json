@@ -12,7 +12,11 @@
     {
       "id": 1,
       "title": "Knee's Needs —英姿颯走—",
-      "school name": "弓削商船高専"
+      "school name": "弓削商船高専",
+      "prize": [
+        "優秀賞",
+        "Second Prize"
+      ]
     },
     {
       "id": 2,
@@ -37,7 +41,10 @@
     {
       "id": 6,
       "title": "ピンポン・レボリューション —卓球サーブ3次元計測表示システム—",
-      "school name": "米子高専"
+      "school name": "米子高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 7,
@@ -47,7 +54,10 @@
     {
       "id": 8,
       "title": "HOME ARROWN —世代をつなぐスポーツ吹矢システム—",
-      "school name": "松江高専"
+      "school name": "松江高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 9,
@@ -62,7 +72,13 @@
     {
       "id": 11,
       "title": "リアルタイムに選手とシンクロするスポーツ観戦システム",
-      "school name": "東京高専"
+      "school name": "東京高専",
+      "prize": [
+        "文部科学大臣賞",
+        "最優秀賞",
+        "情報処理学会若手奨励賞",
+        "Grand Prize"
+      ]
     },
     {
       "id": 12,
@@ -106,7 +122,10 @@
     {
       "id": 19,
       "title": "舞鏡 —世界初ダンス用ARスマートミラー—",
-      "school name": "明石高専"
+      "school name": "明石高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 20,
@@ -116,7 +135,10 @@
     {
       "id": 21,
       "title": "SP(Sports Pulses)",
-      "school name": "シンガポール・ポリテクニック"
+      "school name": "シンガポール・ポリテクニック",
+      "prize": [
+        "Special Prize"
+      ]
     }
   ],
   "original section": [
@@ -138,12 +160,18 @@
     {
       "id": 4,
       "title": "ミ・マモーレ —迷惑電話防止システム—",
-      "school name": "弓削商船高専"
+      "school name": "弓削商船高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 5,
       "title": "はたけまもる",
-      "school name": "豊田高専"
+      "school name": "豊田高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 6,
@@ -153,7 +181,11 @@
     {
       "id": 7,
       "title": "うぇーぶ！ —Water Music Entertain—",
-      "school name": "久留米高専"
+      "school name": "久留米高専",
+      "prize": [
+        "優秀賞",
+        "Second Prize"
+      ]
     },
     {
       "id": 8,
@@ -178,7 +210,10 @@
     {
       "id": 12,
       "title": "えこのみん！ —遊びながらエコノミークラス症候群を予防しよう—",
-      "school name": "熊本高専八代キャンパス"
+      "school name": "熊本高専八代キャンパス",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 13,
@@ -208,12 +243,21 @@
     {
       "id": 18,
       "title": "みつばちず —ドローンを用いたさ防災減災地図作成システム—",
-      "school name": "鳥羽商船高専"
+      "school name": "鳥羽商船高専",
+      "prize": [
+        "文部科学大臣賞",
+        "最優秀賞",
+        "情報処理学会若手奨励賞",
+        "Grand Prize"
+      ]
     },
     {
       "id": 19,
       "title": "DisucussionNavi —見える化によるセルフ・ファシリテーション—",
-      "school name": "沖縄高専"
+      "school name": "沖縄高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 20,
@@ -223,7 +267,10 @@
     {
       "id": 21,
       "title": "I am Here",
-      "school name": "キングモンクット工科大学ラカバン校"
+      "school name": "キングモンクット工科大学ラカバン校",
+      "prize": [
+        "Special Prize"
+      ]
     }
   ],
   "competition section": [
@@ -358,7 +405,10 @@
     {
       "id": 24,
       "title": "たんぽぽ",
-      "school name": "都立産技高専品川キャンパス"
+      "school name": "都立産技高専品川キャンパス",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 25,
@@ -393,7 +443,10 @@
     {
       "id": 31,
       "title": "すてきなゆりかもめ",
-      "school name": "東京高専"
+      "school name": "東京高専",
+      "prize": [
+        "準優勝"
+      ]
     },
     {
       "id": 32,
@@ -428,7 +481,13 @@
     {
       "id": 38,
       "title": "一致百慮",
-      "school name": "弓削商船高専"
+      "school name": "弓削商船高専",
+      "prize": [
+        "文部科学大臣賞",
+        "優勝",
+        "情報処理学会若手奨励賞",
+        "First Runner-up Prize"
+      ]
     },
     {
       "id": 39,
@@ -438,12 +497,18 @@
     {
       "id": 40,
       "title": "パズル（物理）",
-      "school name": "和歌山高専"
+      "school name": "和歌山高専",
+      "prize": [
+        "第三位"
+      ]
     },
     {
       "id": 41,
       "title": "榎本ですが？",
-      "school name": "豊田高専"
+      "school name": "豊田高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 42,
@@ -540,7 +605,10 @@
     {
       "id": 59,
       "title": "進捗：ゼロから始める徹夜生活 —輝く単位は僕らの幻想—",
-      "school name": "富山高専射水キャンパス"
+      "school name": "富山高専射水キャンパス",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 60,
@@ -555,22 +623,34 @@
     {
       "id": 62,
       "title": "UET-VNU",
-      "school name": "ハノイ国家大学"
+      "school name": "ハノイ国家大学",
+      "prize": [
+        "Special Prize"
+      ]
     },
     {
       "id": 63,
       "title": "Cornerstone",
-      "school name": "モンゴル科学技術大学"
+      "school name": "モンゴル科学技術大学",
+      "prize": [
+        "Champion"
+      ]
     },
     {
       "id": 64,
       "title": "VTC Engineering",
-      "school name": "香港VCT"
+      "school name": "香港VCT",
+      "prize": [
+        "Special Prize"
+      ]
     },
     {
       "id": 65,
       "title": "PETRONAS",
-      "school name": "ペトロナス工科大学"
+      "school name": "ペトロナス工科大学",
+      "prize": [
+        "Special Prize"
+      ]
     },
     {
       "id": 66,
