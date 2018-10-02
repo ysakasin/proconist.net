@@ -1,9 +1,0 @@
-h2
-  i.glyphicon.glyphicon-briefcase
-  |  情報提供一覧
-.list-group
-  - @reports.each do |report|
-    a.list-group-item(href="#{show_report_console_path(report)}")
-      = "第#{report.contest.nth}回 #{report.contest.name}"
-      | &nbsp;
-      = report.product_name.slice(0, 20)
