@@ -433,7 +433,11 @@
     {
       "id": 41,
       "title": "中国山地のパズドラゴン",
-      "school name": "松江高専"
+      "school name": "松江高専",
+      "documents": {
+        "github": "https://github.com/mct-procon/procon2017-protocol/wiki/Procon2017-Home",
+        "twitter": "https://twitter.com/GnicoGplus"
+      }
     },
     {
       "id": 42,
