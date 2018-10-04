@@ -1,6 +1,13 @@
 {
   "news": [
     {
+      "date": "2018-10-04",
+      "label": "ランキング",
+      "label_class": "label-warning",
+      "title": "第28回 大島大会 競技部門決勝戦順位",
+      "url": "/contest/28"
+    },
+    {
       "date": "2016-10-23",
       "label": "作品",
       "label_class": "label-info",
@@ -27,13 +34,6 @@
       "label_class": "label-info",
       "title": "競技部門 津山高専「ぱずとく！」",
       "url": "/contest/27#competition-12"
-    },
-    {
-      "label": "作品",
-      "date": "2016-10-23",
-      "label_class": "label-info",
-      "title": "競技部門 松江高専「そんなパズルは壊してしまえ」",
-      "url": "/contest/27#competition-52"
     }
   ]
 }

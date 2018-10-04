@@ -294,6 +294,7 @@
       "id": 8,
       "title": "プログラムが一晩でやってくれました",
       "school name": "八戸高専",
+      "rank": 1,
       "prize": [
         "Champion",
         "優勝",
@@ -317,7 +318,8 @@
     {
       "id": 11,
       "title": "可能性のある俺たち",
-      "school name": "秋田高専"
+      "school name": "秋田高専",
+      "rank": 18
     },
     {
       "id": 12,
@@ -338,6 +340,7 @@
       "id": 15,
       "title": "大饂飩帝国高松支部石畳工作部隊",
       "school name": "香川高専高松キャンパス",
+      "rank": 3,
       "prize": [
         "第三位"
       ]
@@ -356,6 +359,7 @@
       "id": 18,
       "title": "銀の弾などない",
       "school name": "東京高専",
+      "rank": 13,
       "documents": {
         "github": "https://github.com/tnct-spc/procon2015"
       }
@@ -369,6 +373,7 @@
       "id": 21,
       "title": "アイエエ！ WA！？ WAナンデ！？",
       "school name": "旭川高専",
+      "rank": 5,
       "documents": {
         "github": "https://github.com/hal1437/Procon26",
         "twitter": "https://twitter.com/hal1437/status/653595440655433728"
@@ -380,7 +385,8 @@
     {
       "id": 22,
       "title": "パズル三銃士",
-      "school name": "大分高専"
+      "school name": "大分高専",
+      "rank": 15
     },
     {
       "id": 23,
@@ -418,7 +424,8 @@
     {
       "id": 29,
       "title": "いかぽっぽ",
-      "school name": "函館高専"
+      "school name": "函館高専",
+      "rank": 17
     },
     {
       "id": 30,
@@ -429,6 +436,7 @@
       "id": 31,
       "title": "石の意思は固かった —動かねぇぞこいつ—",
       "school name": "香川高専詫間キャンパス",
+      "rank": 16,
       "documents": {
         "other_repo": "https://twitter.com/taka_katsu0411/status/654592951008432128"
       }
@@ -441,12 +449,14 @@
     {
       "id": 33,
       "title": "赤点コーダー",
-      "school name": "沼津高専"
+      "school name": "沼津高専",
+      "rank": 11
     },
     {
       "id": 34,
       "title": "ネコミミはりけーん",
       "school name": "福井高専",
+      "rank": 12,
       "documents": {
         "github": "https://github.com/hr-ken/Nekomimi_Hurricane"
       }
@@ -484,6 +494,7 @@
       "id": 40,
       "title": "たんぽぽ",
       "school name": "都立産技高専品川キャンパス",
+      "rank": 2,
       "documents": {
         "site": "http://hokekyo1210.hatenablog.jp/entry/2015/10/15/181751"
       },
@@ -511,6 +522,7 @@
       "id": 44,
       "title": "進捗優先探索",
       "school name": "沖縄高専",
+      "rank": 10,
       "prize": [
         "特別賞"
       ]
@@ -534,6 +546,7 @@
       "id": 48,
       "title": "高専の敷き詰め理論1B",
       "school name": "長野高専",
+      "rank": 6,
       "documents": {
         "github": "https://github.com/MurakamiShun/-",
         "twitter": "https://twitter.com/shunEnshuu"
@@ -542,7 +555,8 @@
     {
       "id": 49,
       "title": "日本よくばり建設 —太平洋埋め立て計画—",
-      "school name": "サレジオ高専"
+      "school name": "サレジオ高専",
+      "rank": 14
     },
     {
       "id": 50,
@@ -568,6 +582,7 @@
       "id": 54,
       "title": "タタミミズク",
       "school name": "大阪府大高専",
+      "rank": 7,
       "prize": [
         "特別賞"
       ]
@@ -576,6 +591,7 @@
       "id": 55,
       "title": "石まみれで —あ〜もう発想が出るう〜〜—",
       "school name": "釧路高専",
+      "rank": 9,
       "documents": {
         "github": "https://github.com/KNCT-KPC/Bungo"
       }
@@ -598,7 +614,8 @@
     {
       "id": 59,
       "title": "式だせ！解だせ！[zk]だせ！",
-      "school name": "富山高専射水キャンパス"
+      "school name": "富山高専射水キャンパス",
+      "rank": 8
     },
     {
       "id": 60,
@@ -650,6 +667,7 @@
       "id": 68,
       "title": "紅のうさぎ",
       "school name": "神戸大学",
+      "rank": 4,
       "documents": {
         "github": "https://github.com/kmyk/procon26"
       }

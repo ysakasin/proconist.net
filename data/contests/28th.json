@@ -22,12 +22,20 @@
     {
       "id": 3,
       "title": "STEP —スコアブックと連動する動画閲覧システム—",
-      "school name": "鳥羽商船高専"
+      "school name": "鳥羽商船高専",
+      "prize": [
+        "文部科学大臣賞",
+        "最優秀賞",
+        "情報処理学会若手奨励賞"
+      ]
     },
     {
       "id": 4,
       "title": "Balloon Connector —熱気球競技観戦支援システム—",
-      "school name": "一関高専"
+      "school name": "一関高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 5,
@@ -57,7 +65,10 @@
     {
       "id": 10,
       "title": "BLOOD ピッと！",
-      "school name": "弓削商船高専"
+      "school name": "弓削商船高専",
+      "prize": [
+        "優秀賞"
+      ]
     },
     {
       "id": 11,
@@ -67,7 +78,10 @@
     {
       "id": 12,
       "title": "Colors —十人十色の色鬼—",
-      "school name": "松江高専"
+      "school name": "松江高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 13,
@@ -82,7 +96,10 @@
     {
       "id": 15,
       "title": "テレスコア",
-      "school name": "鳥羽商船高専"
+      "school name": "鳥羽商船高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 16,
@@ -92,7 +109,10 @@
     {
       "id": 17,
       "title": "AirRider —没入型パラグライディング体感システム—",
-      "school name": "大島商船高専"
+      "school name": "大島商船高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 18,
@@ -149,12 +169,18 @@
     {
       "id": 8,
       "title": "Angel Fishing —HMDを用いた新感覚VRゲーム到来—",
-      "school name": "大島商船高専"
+      "school name": "大島商船高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 9,
       "title": "Tanboo —水田監視システム—",
-      "school name": "長岡高専"
+      "school name": "長岡高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 10,
@@ -169,7 +195,11 @@
     {
       "id": 12,
       "title": "うみどり —ドローンを用いた水産業支援システム—",
-      "school name": "鳥羽商船高専"
+      "school name": "鳥羽商船高専",
+      "prize": [
+        "優秀賞",
+        "Second Prize"
+      ]
     },
     {
       "id": 13,
@@ -179,7 +209,13 @@
     {
       "id": 14,
       "title": "EachTouch",
-      "school name": "香川高専詫間キャンパス"
+      "school name": "香川高専詫間キャンパス",
+      "prize": [
+        "文部科学大臣賞",
+        "最優秀賞",
+        "情報処理学会若手奨励賞",
+        "Grand prize"
+      ]
     },
     {
       "id": 15,
@@ -194,7 +230,10 @@
     {
       "id": 17,
       "title": "つみきっず —つみきを用いた幼児向けプログラミング学習システム—",
-      "school name": "沖縄高専"
+      "school name": "沖縄高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 18,
@@ -214,12 +253,18 @@
     {
       "id": 21,
       "title": "FashionFinder",
-      "school name": "キングモンクット工科大学ラカバン校"
+      "school name": "キングモンクット工科大学ラカバン校",
+      "prize": [
+        "Special Prize"
+      ]
     },
     {
       "id": 22,
       "title": "SPMakers",
-      "school name": "シンガポール・ポリテクニック"
+      "school name": "シンガポール・ポリテクニック",
+      "prize": [
+        "Special Prize"
+      ]
     }
   ],
   "competition section": [
@@ -256,17 +301,20 @@
     {
       "id": 7,
       "title": "枠の中に、ピーズが、ある。解きにいくぉ！アッこの探索、深いッ",
-      "school name": "熊本高専八代キャンパス"
+      "school name": "熊本高専八代キャンパス",
+      "rank": 16
     },
     {
       "id": 8,
       "title": "さあ！次は101×65グリッドよ！もうやめてお姉さーん（泣）",
-      "school name": "米子高専"
+      "school name": "米子高専",
+      "rank": 4
     },
     {
       "id": 9,
       "title": "grow grass",
-      "school name": "秋田高専"
+      "school name": "秋田高専",
+      "rank": 14
     },
     {
       "id": 10,
@@ -291,7 +339,8 @@
     {
       "id": 14,
       "title": "ぱずふぃっと",
-      "school name": "津山高専"
+      "school name": "津山高専",
+      "rank": 15
     },
     {
       "id": 15,
@@ -316,7 +365,8 @@
     {
       "id": 19,
       "title": "しゅらのくにちほー",
-      "school name": "北九州高専"
+      "school name": "北九州高専",
+      "rank": 10
     },
     {
       "id": 20,
@@ -348,7 +398,11 @@
     {
       "id": 24,
       "title": "SAME",
-      "school name": "仙台高専広瀬キャンパス"
+      "school name": "仙台高専広瀬キャンパス",
+      "rank": 3,
+      "prize": [
+        "第三位"
+      ]
     },
     {
       "id": 25,
@@ -383,7 +437,8 @@
     {
       "id": 31,
       "title": "パズルをPCで解くプログラム",
-      "school name": "旭川高専"
+      "school name": "旭川高専",
+      "rank": 10
     },
     {
       "id": 32,
@@ -393,12 +448,18 @@
     {
       "id": 33,
       "title": "３人寄れば修羅の腕",
-      "school name": "大阪府大高専"
+      "school name": "大阪府大高専",
+      "rank": 2,
+      "prize": [
+        "準優勝",
+        "First Runner-up Prize"
+      ]
     },
     {
       "id": 34,
       "title": "タコイカ",
-      "school name": "佐世保高専"
+      "school name": "佐世保高専",
+      "rank": 9
     },
     {
       "id": 35,
@@ -408,7 +469,8 @@
     {
       "id": 36,
       "title": "ノギス計測のパイオニア",
-      "school name": "八戸高専"
+      "school name": "八戸高専",
+      "rank": 12
     },
     {
       "id": 37,
@@ -423,7 +485,14 @@
     {
       "id": 39,
       "title": "てんぱ組",
-      "school name": "都立産技高専品川キャンパス"
+      "school name": "都立産技高専品川キャンパス",
+      "rank": 1,
+      "prize": [
+        "文部科学大臣賞",
+        "優勝",
+        "情報処理学会若手奨励賞",
+        "Chanpion"
+      ]
     },
     {
       "id": 40,
@@ -433,7 +502,15 @@
     {
       "id": 41,
       "title": "中国山地のパズドラゴン",
-      "school name": "松江高専"
+      "school name": "松江高専",
+      "rank": 6,
+      "documents": {
+        "github": "https://github.com/mct-procon/procon2017-protocol/wiki/Procon2017-Home",
+        "twitter": "https://twitter.com/GnicoGplus"
+      },
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 42,
@@ -459,6 +536,7 @@
       "id": 46,
       "title": "ミラノ風パズル",
       "school name": "小山高専",
+      "rank": 8,
       "documents": {
         "github": "https://github.com/paralleltree/Procon27Comp"
       }
@@ -477,9 +555,13 @@
       "id": 49,
       "title": "Cult of the Party Parrot",
       "school name": "東京高専",
+      "rank": 5,
       "documents": {
         "github": "https://github.com/tnct-spc/procon2017-comp"
-      }
+      },
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 50,
@@ -489,7 +571,8 @@
     {
       "id": 51,
       "title": "WAKUDEKA PING",
-      "school name": "岐阜高専"
+      "school name": "岐阜高専",
+      "rank": 10
     },
     {
       "id": 52,
@@ -509,12 +592,17 @@
     {
       "id": 55,
       "title": "ファーストプラーイ's",
-      "school name": "久留米高専"
+      "school name": "久留米高専",
+      "rank": 16
     },
     {
       "id": 56,
       "title": "筋肉優先探索",
-      "school name": "仙台高専名取キャンパス"
+      "school name": "仙台高専名取キャンパス",
+      "rank": 7,
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 57,
@@ -534,27 +622,40 @@
     {
       "id": 60,
       "title": "Lucky Clover",
-      "school name": "ハノイ国家大学"
+      "school name": "ハノイ国家大学",
+      "prize": [
+        "Special Prize"
+      ]
     },
     {
       "id": 61,
       "title": "mustSolve",
-      "school name": "モンゴル科学技術大学"
+      "school name": "モンゴル科学技術大学",
+      "prize": [
+        "Special Prize"
+      ]
     },
     {
       "id": 62,
       "title": "UTP",
-      "school name": "ペトロナス工科大学"
+      "school name": "ペトロナス工科大学",
+      "prize": [
+        "Special Prize"
+      ]
     },
     {
       "id": 63,
       "title": "VTC Engineering",
-      "school name": "香港VCT"
+      "school name": "香港VCT",
+      "prize": [
+        "Special Prize"
+      ]
     },
     {
       "id": 64,
       "title": "徳川＆今川",
-      "school name": "豊橋技術科学大学"
+      "school name": "豊橋技術科学大学",
+      "rank": 16
     }
   ]
 }
