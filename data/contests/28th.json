@@ -301,17 +301,20 @@
     {
       "id": 7,
       "title": "枠の中に、ピーズが、ある。解きにいくぉ！アッこの探索、深いッ",
-      "school name": "熊本高専八代キャンパス"
+      "school name": "熊本高専八代キャンパス",
+      "rank": 16
     },
     {
       "id": 8,
       "title": "さあ！次は101×65グリッドよ！もうやめてお姉さーん（泣）",
-      "school name": "米子高専"
+      "school name": "米子高専",
+      "rank": 4
     },
     {
       "id": 9,
       "title": "grow grass",
-      "school name": "秋田高専"
+      "school name": "秋田高専",
+      "rank": 14
     },
     {
       "id": 10,
@@ -336,7 +339,8 @@
     {
       "id": 14,
       "title": "ぱずふぃっと",
-      "school name": "津山高専"
+      "school name": "津山高専",
+      "rank": 15
     },
     {
       "id": 15,
@@ -361,7 +365,8 @@
     {
       "id": 19,
       "title": "しゅらのくにちほー",
-      "school name": "北九州高専"
+      "school name": "北九州高専",
+      "rank": 10
     },
     {
       "id": 20,
@@ -394,6 +399,7 @@
       "id": 24,
       "title": "SAME",
       "school name": "仙台高専広瀬キャンパス",
+      "rank": 3,
       "prize": [
         "第三位"
       ]
@@ -431,7 +437,8 @@
     {
       "id": 31,
       "title": "パズルをPCで解くプログラム",
-      "school name": "旭川高専"
+      "school name": "旭川高専",
+      "rank": 10
     },
     {
       "id": 32,
@@ -442,6 +449,7 @@
       "id": 33,
       "title": "３人寄れば修羅の腕",
       "school name": "大阪府大高専",
+      "rank": 2,
       "prize": [
         "準優勝",
         "First Runner-up Prize"
@@ -450,7 +458,8 @@
     {
       "id": 34,
       "title": "タコイカ",
-      "school name": "佐世保高専"
+      "school name": "佐世保高専",
+      "rank": 9
     },
     {
       "id": 35,
@@ -460,7 +469,8 @@
     {
       "id": 36,
       "title": "ノギス計測のパイオニア",
-      "school name": "八戸高専"
+      "school name": "八戸高専",
+      "rank": 12
     },
     {
       "id": 37,
@@ -476,6 +486,7 @@
       "id": 39,
       "title": "てんぱ組",
       "school name": "都立産技高専品川キャンパス",
+      "rank": 1,
       "prize": [
         "文部科学大臣賞",
         "優勝",
@@ -492,6 +503,7 @@
       "id": 41,
       "title": "中国山地のパズドラゴン",
       "school name": "松江高専",
+      "rank": 6,
       "documents": {
         "github": "https://github.com/mct-procon/procon2017-protocol/wiki/Procon2017-Home",
         "twitter": "https://twitter.com/GnicoGplus"
@@ -524,6 +536,7 @@
       "id": 46,
       "title": "ミラノ風パズル",
       "school name": "小山高専",
+      "rank": 8,
       "documents": {
         "github": "https://github.com/paralleltree/Procon27Comp"
       }
@@ -542,6 +555,7 @@
       "id": 49,
       "title": "Cult of the Party Parrot",
       "school name": "東京高専",
+      "rank": 5,
       "documents": {
         "github": "https://github.com/tnct-spc/procon2017-comp"
       },
@@ -557,7 +571,8 @@
     {
       "id": 51,
       "title": "WAKUDEKA PING",
-      "school name": "岐阜高専"
+      "school name": "岐阜高専",
+      "rank": 10
     },
     {
       "id": 52,
@@ -577,12 +592,14 @@
     {
       "id": 55,
       "title": "ファーストプラーイ's",
-      "school name": "久留米高専"
+      "school name": "久留米高専",
+      "rank": 16
     },
     {
       "id": 56,
       "title": "筋肉優先探索",
       "school name": "仙台高専名取キャンパス",
+      "rank": 7,
       "prize": [
         "特別賞"
       ]
@@ -637,7 +654,8 @@
     {
       "id": 64,
       "title": "徳川＆今川",
-      "school name": "豊橋技術科学大学"
+      "school name": "豊橋技術科学大学",
+      "rank": 16
     }
   ]
 }
