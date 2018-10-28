@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  test:
+  build:
     working_directory: ~/proconist.net
     docker:
       - image: circleci/ruby:2.5.1-stretch-node-browsers
