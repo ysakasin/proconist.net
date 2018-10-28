@@ -39,7 +39,7 @@ require 'uri'
 
 helpers do
   def image_url(image)
-    URI.join(config[:host], "images", image.to_s)
+    URI.join(config[:host], "/images/", image.to_s)
   end
 end
 
