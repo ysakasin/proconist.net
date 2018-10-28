@@ -60,5 +60,5 @@ end
 activate :deploy do |deploy|
   deploy.deploy_method = :git
   deploy.build_before = true
-  deploy.commit_message = "Auto deploy at #{Time.now} [ci skip]"
+  deploy.commit_message = "Auto deploy at #{Time.now}"
 end
