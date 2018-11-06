@@ -16,12 +16,12 @@
     },
     {
       "id": 2,
-      "title": "MOSAIQ —ワンタイムQRコードによるモバイルスタンプラリー—",
+      "title": "MOSAIQ —ワンタイムQRコードによるモバイルスタンプラリー—",
       "school name": "東京高専"
     },
     {
       "id": 3,
-      "title": "Snip Memories —来る・見る・学ぶを切り取る図鑑—",
+      "title": "Snip Memories —来る・見る・学ぶを切り取る図鑑—",
       "school name": "福島高専"
     },
     {
@@ -36,12 +36,12 @@
     },
     {
       "id": 6,
-      "title": "リユニオン —観光地域づくりを支えるデジタルサイネージシステム—",
+      "title": "リユニオン —観光地域づくりを支えるデジタルサイネージシステム—",
       "school name": "一関高専"
     },
     {
       "id": 7,
-      "title": "スマートコンシェルジュ —民泊のためのグローバルシステム—",
+      "title": "スマートコンシェルジュ —民泊のためのグローバルシステム—",
       "school name": "明石高専"
     },
     {
@@ -51,18 +51,26 @@
     },
     {
       "id": 9,
-      "title": "ローカルコネクト —町内会向けウェブアプリケーション—",
-      "school name": "豊田高専"
+      "title": "ローカルコネクト —町内会向けウェブアプリケーション—",
+      "school name": "豊田高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 10,
-      "title": "すごろーかる —地域すごろく作成・運営支援システム—",
+      "title": "すごろーかる —地域すごろく作成・運営支援システム—",
       "school name": "徳山高専"
     },
     {
       "id": 11,
-      "title": "AKAMOKU —水中カメラとドローンによるアカモクの資源管理—",
-      "school name": "鳥羽商船高専"
+      "title": "AKAMOKU —水中カメラとドローンによるアカモクの資源管理—",
+      "school name": "鳥羽商船高専",
+      "prize": [
+        "文部科学大臣賞",
+        "最優秀賞",
+        "情報処理学会若手奨励賞"
+      ]
     },
     {
       "id": 12,
@@ -76,8 +84,11 @@
     },
     {
       "id": 14,
-      "title": "NeXcury —情報のバリアフリー化を目指して—",
-      "school name": "津山高専"
+      "title": "NeXcury —情報のバリアフリー化を目指して—",
+      "school name": "津山高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 15,
@@ -86,23 +97,29 @@
     },
     {
       "id": 16,
-      "title": "サバ×サバ —サバで時代を生き延びる—",
+      "title": "サバ×サバ —サバで時代を生き延びる—",
       "school name": "福井高専"
     },
     {
       "id": 17,
-      "title": "TABLETRAY —海鮮丼と醤油が乗るトレイ型デバイス—",
+      "title": "TABLETRAY —海鮮丼と醤油が乗るトレイ型デバイス—",
       "school name": "釧路高専"
     },
     {
       "id": 18,
-      "title": "SafetyPlus —外国人観光客安全運転サポートシステム—",
-      "school name": "沖縄高専"
+      "title": "SafetyPlus —外国人観光客安全運転サポートシステム—",
+      "school name": "沖縄高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 19,
-      "title": "やまおくのほそみち —見張り灯籠で安心安全—",
-      "school name": "阿南高専"
+      "title": "やまおくのほそみち —見張り灯籠で安心安全—",
+      "school name": "阿南高専",
+      "prize": [
+        "優秀賞"
+      ]
     },
     {
       "id": 20,
@@ -118,13 +135,19 @@
     },
     {
       "id": 2,
-      "title": "COUPOS —文化祭を盛り上げるWebクーポンとPOSレジ—",
+      "title": "COUPOS —文化祭を盛り上げるWebクーポンとPOSレジ—",
       "school name": "木更津高専"
     },
     {
       "id": 3,
-      "title": "わあるど —Wakka! Re learn&Discovery—",
-      "school name": "香川高専詫間キャンパス"
+      "title": "わあるど —Wakka! Re learn&Discovery—",
+      "school name": "香川高専詫間キャンパス",
+      "prize": [
+        "文部科学大臣賞",
+        "最優秀賞",
+        "情報処理学会若手奨励賞",
+        "Grand Prize"
+      ]
     },
     {
       "id": 4,
@@ -134,7 +157,11 @@
     {
       "id": 5,
       "title": "ぷらねっと —ARを用いた植物栽培教育支援システム—",
-      "school name": "香川高専高松キャンパス"
+      "school name": "香川高専高松キャンパス",
+      "prize": [
+        "優秀賞",
+        "Second Prize"
+      ]
     },
     {
       "id": 6,
@@ -143,17 +170,20 @@
     },
     {
       "id": 7,
-      "title": "どろーんフレンズ —目指せIoTマイスター!!—",
+      "title": "どろーんフレンズ —目指せIoTマイスター!!—",
       "school name": "旭川高専"
     },
     {
       "id": 8,
-      "title": "Mothman —エンジニアに、もっと\"Live\"なプレゼンを—",
-      "school name": "鈴鹿高専"
+      "title": "Mothman —エンジニアに、もっと\"Live\"なプレゼンを—",
+      "school name": "鈴鹿高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 9,
-      "title": "つながるくん —普通の家電にIoTを足し算するシステム—",
+      "title": "つながるくん —普通の家電にIoTを足し算するシステム—",
       "school name": "苫小牧高専"
     },
     {
@@ -163,7 +193,7 @@
     },
     {
       "id": 11,
-      "title": "ポーズでプログラミング —動きで動くロボット—",
+      "title": "ポーズでプログラミング —動きで動くロボット—",
       "school name": "福井高専"
     },
     {
@@ -184,21 +214,27 @@
     {
       "id": 15,
       "title": "UNDO‒KAI",
-      "school name": "鳥羽商船高専"
+      "school name": "鳥羽商船高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 16,
-      "title": "サーモマイスター —IoTでハウス換気判断支援—",
-      "school name": "阿南高専"
+      "title": "サーモマイスター —IoTでハウス換気判断支援—",
+      "school name": "阿南高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 17,
-      "title": "ごみソート ver2.0",
+      "title": "ごみソート ver2.0",
       "school name": "福島高専"
     },
     {
       "id": 18,
-      "title": "KYO —鏡が見守る今日の私—",
+      "title": "KYO —鏡が見守る今日の私—",
       "school name": "都城高専"
     },
     {
@@ -213,23 +249,35 @@
     },
     {
       "id": 21,
-      "title": "Sudo Coders",
-      "school name": "シンガポール・ポリテクニック"
+      "title": "TSUNA.I.",
+      "school name": "シンガポール・ポリテクニック",
+      "prize": [
+        "Special Prize"
+      ]
     },
     {
       "id": 22,
       "title": "Classnalytic: The Classroom Analytic Platform",
-      "school name": "キングモンクット工科大学ラカバン校"
+      "school name": "キングモンクット工科大学ラカバン校",
+      "prize": [
+        "Special Prize"
+      ]
     },
     {
       "id": 23,
       "title": "The Assistance System for Drug Dispensing Process",
-      "school name": "國立聯合大学"
+      "school name": "國立聯合大学",
+      "prize": [
+        "Special Prize"
+      ]
     },
     {
       "id": 24,
       "title": "Timetable Arranging Application (TTAP)",
-      "school name": "トゥンク・アブドゥル・ラフマン"
+      "school name": "トゥンク・アブドゥル・ラフマン大学",
+      "prize": [
+        "Special Prize"
+      ]
     }
   ],
   "competition section": [
@@ -336,7 +384,14 @@
     {
       "id": 21,
       "title": "高橋n段",
-      "school name": "仙台高専名取キャンパス"
+      "school name": "仙台高専名取キャンパス",
+      "rank": 1,
+      "prize": [
+        "文部科学大臣賞",
+        "優勝",
+        "情報処理学会若手奨励賞",
+        "Champion"
+      ]
     },
     {
       "id": 22,
@@ -346,7 +401,11 @@
     {
       "id": 23,
       "title": "大変申し訳ございませんでした。",
-      "school name": "阿南高専"
+      "school name": "阿南高専",
+      "rank": 3,
+      "prize": [
+        "第三位"
+      ]
     },
     {
       "id": 24,
@@ -421,7 +480,11 @@
     {
       "id": 38,
       "title": "自軍パネル破壊はテンポロス",
-      "school name": "福井高専"
+      "school name": "福井高専",
+      "rank": 3,
+      "prize": [
+        "第三位"
+      ]
     },
     {
       "id": 39,
@@ -461,7 +524,10 @@
     {
       "id": 46,
       "title": "山吹色のお菓子 —その時パネルが動いた—",
-      "school name": "佐世保高専"
+      "school name": "佐世保高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 47,
@@ -501,7 +567,12 @@
     {
       "id": 55,
       "title": "人間の力",
-      "school name": "東京高専"
+      "school name": "東京高専",
+      "rank": 2,
+      "prize": [
+        "準優勝",
+        "First Runner-up Prize"
+      ]
     },
     {
       "id": 56,
@@ -511,7 +582,10 @@
     {
       "id": 57,
       "title": "計算じゃ解けない疑問は手と手で探るの",
-      "school name": "久留米高専"
+      "school name": "久留米高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 58,
@@ -521,7 +595,10 @@
     {
       "id": 59,
       "title": "巡りマス人力の方が強くない？",
-      "school name": "大阪府立高専"
+      "school name": "大阪府立高専",
+      "prize": [
+        "特別賞"
+      ]
     },
     {
       "id": 60,
@@ -531,7 +608,34 @@
     {
       "id": 61,
       "title": "LAZYSHEEPS",
-      "school name": "モンゴル科学技術大学高専"
+      "school name": "モンゴル科学技術大学",
+      "prize": [
+        "Special Prize"
+      ]
+    },
+    {
+      "id": 62,
+      "title": "UET Arrow",
+      "school name": "ハノイ国家大学",
+      "prize": [
+        "Special Prize"
+      ]
+    },
+    {
+      "id": 63,
+      "title": "Universiti Teknologi PETRONAS (UTP)",
+      "school name": "ペトロナス工科大学",
+      "prize": [
+        "Special Prize"
+      ]
+    },
+    {
+      "id": 64,
+      "title": "VTC Engineering",
+      "school name": "香港VTC",
+      "prize": [
+        "Special Prize"
+      ]
     }
   ]
 }
