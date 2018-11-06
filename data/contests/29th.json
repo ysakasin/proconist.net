@@ -1,0 +1,537 @@
+{
+  "contest": {
+    "id": 29,
+    "name": "阿南大会",
+    "date": "2018年10月27日(土)〜28日(日)",
+    "place": "アスティとくしま",
+    "title": "ITの未来はここにあるでないで!",
+    "competition_title": "巡りマス",
+    "themed_title": "ICTを活用した地域活性化"
+  },
+  "themed section": [
+    {
+      "id": 1,
+      "title": "FoodConnecter —おすそ分けと食材有効利用システム—",
+      "school name": "豊田高専"
+    },
+    {
+      "id": 2,
+      "title": "MOSAIQ —ワンタイムQRコードによるモバイルスタンプラリー—",
+      "school name": "東京高専"
+    },
+    {
+      "id": 3,
+      "title": "Snip Memories —来る・見る・学ぶを切り取る図鑑—",
+      "school name": "福島高専"
+    },
+    {
+      "id": 4,
+      "title": "TechHunt —ICTを活用した罠情報管理・活用システム—",
+      "school name": "木更津高専"
+    },
+    {
+      "id": 5,
+      "title": "Star Gallery —素敵な星空を見に行こう—",
+      "school name": "阿南高専"
+    },
+    {
+      "id": 6,
+      "title": "リユニオン —観光地域づくりを支えるデジタルサイネージシステム—",
+      "school name": "一関高専"
+    },
+    {
+      "id": 7,
+      "title": "スマートコンシェルジュ —民泊のためのグローバルシステム—",
+      "school name": "明石高専"
+    },
+    {
+      "id": 8,
+      "title": "PHOTOS TO HINT —写真を用いた街中観光支援システム—",
+      "school name": "八戸高専"
+    },
+    {
+      "id": 9,
+      "title": "ローカルコネクト —町内会向けウェブアプリケーション—",
+      "school name": "豊田高専"
+    },
+    {
+      "id": 10,
+      "title": "すごろーかる —地域すごろく作成・運営支援システム—",
+      "school name": "徳山高専"
+    },
+    {
+      "id": 11,
+      "title": "AKAMOKU —水中カメラとドローンによるアカモクの資源管理—",
+      "school name": "鳥羽商船高専"
+    },
+    {
+      "id": 12,
+      "title": "ACMM —AI Can Make Movie—",
+      "school name": "岐阜高専"
+    },
+    {
+      "id": 13,
+      "title": "StampShot",
+      "school name": "仙台高専広瀬キャンパス"
+    },
+    {
+      "id": 14,
+      "title": "NeXcury —情報のバリアフリー化を目指して—",
+      "school name": "津山高専"
+    },
+    {
+      "id": 15,
+      "title": "SCOSCOPE —地域を再発見する望遠鏡システム—",
+      "school name": "徳山高専"
+    },
+    {
+      "id": 16,
+      "title": "サバ×サバ —サバで時代を生き延びる—",
+      "school name": "福井高専"
+    },
+    {
+      "id": 17,
+      "title": "TABLETRAY —海鮮丼と醤油が乗るトレイ型デバイス—",
+      "school name": "釧路高専"
+    },
+    {
+      "id": 18,
+      "title": "SafetyPlus —外国人観光客安全運転サポートシステム—",
+      "school name": "沖縄高専"
+    },
+    {
+      "id": 19,
+      "title": "やまおくのほそみち —見張り灯籠で安心安全—",
+      "school name": "阿南高専"
+    },
+    {
+      "id": 20,
+      "title": "WelICing —ICTと「歩く」運動促進システム—",
+      "school name": "舞鶴高専"
+    }
+  ],
+  "original section": [
+    {
+      "id": 1,
+      "title": "iBird —教室用掲示板—",
+      "school name": "東京高専"
+    },
+    {
+      "id": 2,
+      "title": "COUPOS —文化祭を盛り上げるWebクーポンとPOSレジ—",
+      "school name": "木更津高専"
+    },
+    {
+      "id": 3,
+      "title": "わあるど —Wakka! Re learn&Discovery—",
+      "school name": "香川高専詫間キャンパス"
+    },
+    {
+      "id": 4,
+      "title": "Voy !",
+      "school name": "長野高専"
+    },
+    {
+      "id": 5,
+      "title": "ぷらねっと —ARを用いた植物栽培教育支援システム—",
+      "school name": "香川高専高松キャンパス"
+    },
+    {
+      "id": 6,
+      "title": "DHS —Drones Help to Survey—",
+      "school name": "岐阜高専"
+    },
+    {
+      "id": 7,
+      "title": "どろーんフレンズ —目指せIoTマイスター!!—",
+      "school name": "旭川高専"
+    },
+    {
+      "id": 8,
+      "title": "Mothman —エンジニアに、もっと\"Live\"なプレゼンを—",
+      "school name": "鈴鹿高専"
+    },
+    {
+      "id": 9,
+      "title": "つながるくん —普通の家電にIoTを足し算するシステム—",
+      "school name": "苫小牧高専"
+    },
+    {
+      "id": 10,
+      "title": "WITH —見守り機能付き自律移動歩行車—",
+      "school name": "都立産技高専高専品川キャンパス"
+    },
+    {
+      "id": 11,
+      "title": "ポーズでプログラミング —動きで動くロボット—",
+      "school name": "福井高専"
+    },
+    {
+      "id": 12,
+      "title": "Virtual Rakugaki IOT —ストレス社会に新たな刺激を—",
+      "school name": "奈良高専"
+    },
+    {
+      "id": 13,
+      "title": "まきまき☆マキアート DX",
+      "school name": "広島商船高専"
+    },
+    {
+      "id": 14,
+      "title": "祭囃子 —VR音響体験拡張装置—",
+      "school name": "有明高専"
+    },
+    {
+      "id": 15,
+      "title": "UNDO‒KAI",
+      "school name": "鳥羽商船高専"
+    },
+    {
+      "id": 16,
+      "title": "サーモマイスター —IoTでハウス換気判断支援—",
+      "school name": "阿南高専"
+    },
+    {
+      "id": 17,
+      "title": "ごみソート ver2.0",
+      "school name": "福島高専"
+    },
+    {
+      "id": 18,
+      "title": "KYO —鏡が見守る今日の私—",
+      "school name": "都城高専"
+    },
+    {
+      "id": 19,
+      "title": "NEXTPERIENCES",
+      "school name": "熊本高専八代キャンパス"
+    },
+    {
+      "id": 20,
+      "title": "HoloGuide —近未来型駅案内システム—",
+      "school name": "仙台高専広瀬キャンパス"
+    },
+    {
+      "id": 21,
+      "title": "Sudo Coders",
+      "school name": "シンガポール・ポリテクニック"
+    },
+    {
+      "id": 22,
+      "title": "Classnalytic: The Classroom Analytic Platform",
+      "school name": "キングモンクット工科大学ラカバン校"
+    },
+    {
+      "id": 23,
+      "title": "The Assistance System for Drug Dispensing Process",
+      "school name": "國立聯合大学"
+    },
+    {
+      "id": 24,
+      "title": "Timetable Arranging Application (TTAP)",
+      "school name": "トゥンク・アブドゥル・ラフマン"
+    }
+  ],
+  "competition section": [
+    {
+      "id": 1,
+      "title": "レポートの柵",
+      "school name": "秋田高専"
+    },
+    {
+      "id": 2,
+      "title": "人力タイムプロコン",
+      "school name": "明石高専"
+    },
+    {
+      "id": 3,
+      "title": "シンタローズ",
+      "school name": "鈴鹿高専"
+    },
+    {
+      "id": 4,
+      "title": "あ^~よく寝た!!",
+      "school name": "香川高専詫間キャンパス"
+    },
+    {
+      "id": 5,
+      "title": "高専の陣取り概論",
+      "school name": "長野高専"
+    },
+    {
+      "id": 6,
+      "title": "囲碁アルゴ",
+      "school name": "鳥羽商船高専"
+    },
+    {
+      "id": 7,
+      "title": "クラマスカ？",
+      "school name": "呉高専"
+    },
+    {
+      "id": 8,
+      "title": "とらんポータル",
+      "school name": "新居浜高専"
+    },
+    {
+      "id": 9,
+      "title": "立て続けのジョーカーに何かを察したエージェントたち",
+      "school name": "八戸高専"
+    },
+    {
+      "id": 10,
+      "title": "Project Δ",
+      "school name": "沼津高専"
+    },
+    {
+      "id": 11,
+      "title": "塗、無言、枡目にて。 —わたしはずっとそうやって過ごしてきた—",
+      "school name": "沖縄高専"
+    },
+    {
+      "id": 12,
+      "title": "ジントリ！フレンズ",
+      "school name": "沼津高専"
+    },
+    {
+      "id": 13,
+      "title": "for (i=0;i<n;i++)",
+      "school name": "松江高専"
+    },
+    {
+      "id": 14,
+      "title": "ハッピーショーセンライフ",
+      "school name": "大島商船高専"
+    },
+    {
+      "id": 15,
+      "title": "囲碁カバディ部",
+      "school name": "香川高専高松キャンパス"
+    },
+    {
+      "id": 16,
+      "title": "KCB",
+      "school name": "木更津高専"
+    },
+    {
+      "id": 17,
+      "title": "巡る 8Byte",
+      "school name": "茨城高専"
+    },
+    {
+      "id": 18,
+      "title": "★このチーム名を決めるまでに90分かかりました★",
+      "school name": "豊田高専"
+    },
+    {
+      "id": 19,
+      "title": "八代の三銃士",
+      "school name": "熊本高専八代キャンパス"
+    },
+    {
+      "id": 20,
+      "title": "7 Months to Dice",
+      "school name": "仙台高専広瀬キャンパス"
+    },
+    {
+      "id": 21,
+      "title": "高橋n段",
+      "school name": "仙台高専名取キャンパス"
+    },
+    {
+      "id": 22,
+      "title": "すなぎも",
+      "school name": "群馬高専"
+    },
+    {
+      "id": 23,
+      "title": "大変申し訳ございませんでした。",
+      "school name": "阿南高専"
+    },
+    {
+      "id": 24,
+      "title": "ごっつぁんです。",
+      "school name": "大分高専"
+    },
+    {
+      "id": 25,
+      "title": "TMCITアラカワ",
+      "school name": "都立高専荒川キャンパス"
+    },
+    {
+      "id": 26,
+      "title": "NON STOP",
+      "school name": "弓削商船高専"
+    },
+    {
+      "id": 27,
+      "title": "米子のAッッッッッッッッッッッッッッッッッッッッッgent",
+      "school name": "米子高専"
+    },
+    {
+      "id": 28,
+      "title": "独立行政法人　国立高等専門学校機構　京都工業高等専門学校",
+      "school name": "舞鶴高専"
+    },
+    {
+      "id": 29,
+      "title": "1/2の確率で右上に進むチーム",
+      "school name": "都城高専"
+    },
+    {
+      "id": 30,
+      "title": "1/0",
+      "school name": "都立高専品川キャンパス"
+    },
+    {
+      "id": 31,
+      "title": "サレジオ情報局秘密情報部",
+      "school name": "サレジオ高専"
+    },
+    {
+      "id": 32,
+      "title": "高専におにはいません",
+      "school name": "石川高専"
+    },
+    {
+      "id": 33,
+      "title": "廻レ！限界高専生",
+      "school name": "長岡高専"
+    },
+    {
+      "id": 34,
+      "title": "俺たちがソルバー",
+      "school name": "熊本高専熊本キャンパス"
+    },
+    {
+      "id": 35,
+      "title": "俺らのドドスコ新競技 —僕AIで優勝したよ—",
+      "school name": "函館高専"
+    },
+    {
+      "id": 36,
+      "title": "この貴重な30文字を使って私たちの紹介をします！私たちの解放は",
+      "school name": "一関高専"
+    },
+    {
+      "id": 37,
+      "title": "陣地行動 —人力版バトロワ—",
+      "school name": "有明高専"
+    },
+    {
+      "id": 38,
+      "title": "自軍パネル破壊はテンポロス",
+      "school name": "福井高専"
+    },
+    {
+      "id": 39,
+      "title": "太陽先輩",
+      "school name": "北九州高専"
+    },
+    {
+      "id": 40,
+      "title": "HelloWorld",
+      "school name": "国際高専"
+    },
+    {
+      "id": 41,
+      "title": "司令塔の指示を優先する？ されはオメー人力だな",
+      "school name": "宇部高専"
+    },
+    {
+      "id": 42,
+      "title": "サウンド・オブ・ハイドロゲン",
+      "school name": "鹿児島高専"
+    },
+    {
+      "id": 43,
+      "title": "かんがえたくないでござる",
+      "school name": "神戸市立高専"
+    },
+    {
+      "id": 44,
+      "title": "囲号作戦",
+      "school name": "徳山高専"
+    },
+    {
+      "id": 45,
+      "title": "岐阜高専スイーツ同好会",
+      "school name": "岐阜高専"
+    },
+    {
+      "id": 46,
+      "title": "山吹色のお菓子 —その時パネルが動いた—",
+      "school name": "佐世保高専"
+    },
+    {
+      "id": 47,
+      "title": "極めて普通のプログラマ",
+      "school name": "小山高専"
+    },
+    {
+      "id": 48,
+      "title": "指示出す阿呆に動く阿呆、同じ阿呆なら",
+      "school name": "奈良高専"
+    },
+    {
+      "id": 49,
+      "title": "我ら身代わり隊",
+      "school name": "富山高専射水キャンパス"
+    },
+    {
+      "id": 50,
+      "title": "鶴岡マス取部",
+      "school name": "鶴岡高専"
+    },
+    {
+      "id": 51,
+      "title": "unlimted debug works",
+      "school name": "高知高専"
+    },
+    {
+      "id": 52,
+      "title": "何気ないプログラムがOSをきずつけた",
+      "school name": "旭川高専"
+    },
+    {
+      "id": 53,
+      "title": "SnailRush",
+      "school name": "広島商船高専"
+    },
+    {
+      "id": 55,
+      "title": "人間の力",
+      "school name": "東京高専"
+    },
+    {
+      "id": 56,
+      "title": "オールドAI-9685",
+      "school name": "福島高専"
+    },
+    {
+      "id": 57,
+      "title": "計算じゃ解けない疑問は手と手で探るの",
+      "school name": "久留米高専"
+    },
+    {
+      "id": 58,
+      "title": "KKM",
+      "school name": "釧路高専"
+    },
+    {
+      "id": 59,
+      "title": "巡りマス人力の方が強くない？",
+      "school name": "大阪府立高専"
+    },
+    {
+      "id": 60,
+      "title": "手旗共通鍵暗号通信",
+      "school name": "苫小牧高専"
+    },
+    {
+      "id": 61,
+      "title": "LAZYSHEEPS",
+      "school name": "モンゴル科学技術大学高専"
+    }
+  ]
+}
