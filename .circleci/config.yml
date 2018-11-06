@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/proconist.net
+    docker:
+      - image: circleci/ruby:2.5.1-stretch-node-browsers
+    steps:
+      - checkout
+      - run: echo "dummy"
