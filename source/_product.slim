@@ -9,7 +9,7 @@
           span.label.label-danger
             | 決勝#{product.rank}位
       h4.panel-title
-        | #{product[:"school name"]} 「#{product.title}」
+        | #{product[:"school name"]} 「#{h(product.title)}」
       - if product.prize.present?
         ul.label-group.list-inline
           - product.prize.each do |prize|
