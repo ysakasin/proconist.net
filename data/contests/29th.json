@@ -304,7 +304,10 @@
     {
       "id": 5,
       "title": "高専の陣取り概論",
-      "school name": "長野高専"
+      "school name": "長野高専",
+      "documents": {
+        "github": "https://github.com/nnct-jo-ken/procon29_kyogi"
+      }
     },
     {
       "id": 6,
@@ -334,12 +337,18 @@
     {
       "id": 11,
       "title": "塗、無言、枡目にて。 —わたしはずっとそうやって過ごしてきた—",
-      "school name": "沖縄高専"
+      "school name": "沖縄高専",
+      "documents": {
+        "github": "https://github.com/kurokoji/procon29-kyogi"
+      }
     },
     {
       "id": 12,
       "title": "ジントリ！フレンズ",
-      "school name": "沼津高専"
+      "school name": "津山高専",
+      "documents": {
+        "github": "https://github.com/TNCT-SYSKEN/Procon29-kyogi"
+      }
     },
     {
       "id": 13,
@@ -354,7 +363,10 @@
     {
       "id": 15,
       "title": "囲碁カバディ部",
-      "school name": "香川高専高松キャンパス"
+      "school name": "香川高専高松キャンパス",
+      "documents": {
+        "github": "https://github.com/nitk-pm/procon29"
+      }
     },
     {
       "id": 16,
@@ -379,7 +391,10 @@
     {
       "id": 20,
       "title": "7 Months to Dice",
-      "school name": "仙台高専広瀬キャンパス"
+      "school name": "仙台高専広瀬キャンパス",
+      "documents": {
+        "github": "https://github.com/s1500729/MeglimathSimulator"
+      }
     },
     {
       "id": 21,
@@ -470,7 +485,10 @@
     {
       "id": 36,
       "title": "この貴重な30文字を使って私たちの紹介をします！私たちの解放は",
-      "school name": "一関高専"
+      "school name": "一関高専",
+      "documents": {
+        "github": "https://github.com/inct-densan-org/procon29-kyogi"
+      }
     },
     {
       "id": 37,
@@ -499,7 +517,10 @@
     {
       "id": 41,
       "title": "司令塔の指示を優先する？ されはオメー人力だな",
-      "school name": "宇部高専"
+      "school name": "宇部高専",
+      "documents": {
+        "github": "https://github.com/ube-k-cclub/procon29-kyogi"
+      }
     },
     {
       "id": 42,
@@ -572,7 +593,10 @@
       "prize": [
         "準優勝",
         "First Runner-up Prize"
-      ]
+      ],
+      "documents": {
+        "github": "https://github.com/tnct-spc/procon2018-comp"
+      }
     },
     {
       "id": 56,
