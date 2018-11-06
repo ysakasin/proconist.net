@@ -26,14 +26,14 @@ h3#competition.heading-mark.heading-mark-competition
   small
     | 「#{contest.competition_title}」
 - competition.each do |product|
-  = partial 'product', locals: { product: product }
+  = partial 'product', locals: { product: product, section: "competition" }
 h3#themed.heading-mark.heading-mark-themed
   | 課題部門
   small
     | 「#{contest.themed_title}」
 - themed.each do |product|
-  = partial 'product', locals: { product: product }
+  = partial 'product', locals: { product: product, section: "themed" }
 h3#original.heading-mark.heading-mark-original
   | 自由部門
 - original.each do |product|
-  = partial 'product', locals: { product: product }
+  = partial 'product', locals: { product: product, section: "original" }
