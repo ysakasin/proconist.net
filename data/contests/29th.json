@@ -353,7 +353,11 @@
     {
       "id": 13,
       "title": "for (i=0;i<n;i++)",
-      "school name": "松江高専"
+      "school name": "松江高専",
+      "documents": {
+        "github": "https://github.com/mct-procon/procon2018-protocol/wiki/Procon2018-Home",
+        "twitter": "https://twitter.com/mct_joken"
+      }
     },
     {
       "id": 14,
